@@ -6,16 +6,28 @@ export async function LogInAccount(user) {
     //   return true;
       return {id:2,role:"NGO",message:"register successfully!"};
     } catch (error) {
-      console.log(error);
+      //console.log(error);
     }
   }
 
-  export async function RegisterAccount(user) {
+  export async function RegisterUserAccount(user) {
     try {
     //   const session = await axios.post(user.email, user.password);
     //   return true;
       return {message:"register successfully!",status:200};
     } catch (error) {
-      console.log(error);
+      //console.log(error);
+    }
+  }
+
+
+  
+  export async function RegisterNGOAccount(user) {
+    try {
+    //   const session = await axios.post(user.email, user.password);
+    //   return true;
+      return {message:"register successfully!",status:200};
+    } catch (error) {
+      //console.log(error);
     }
   }

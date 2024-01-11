@@ -13,12 +13,12 @@ const LoginAuth = ({navigation}) => {
 
   const handleLogin = async (user,{ resetForm }) => {
     const session = await LogInAccount(user);
-    console.log(session)
+    //console.log(session)
     if (session) {
       ToastAndroid.show('Request sent successfully!', ToastAndroid.SHORT);
       await AsyncStorage.setItem('user', JSON.stringify(session));
       resetForm()
-      console.log(session.role)  
+      //console.log(session.role)  
       if(session.role == "User"){
         navigation.navigate("UserHome");
       }else{

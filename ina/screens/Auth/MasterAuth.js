@@ -1,26 +1,10 @@
 import * as React from "react";
 import { View, StyleSheet, Modal, Text, Pressable, Alert } from "react-native";
 import { Button } from "react-native-paper";
-import {
-  BottomSheetModal,
-  BottomSheetModalProvider,
-} from '@gorhom/bottom-sheet';
 
 const MasterAuth = ({ navigation }) => {
-  const bottomSheetModalRef = useRef(null);
 
-  // variables
-  const snapPoints = useMemo(() => ['25%', '50%'], []);
-
-  // callbacks
-  const handlePresentModalPress = useCallback(() => {
-    bottomSheetModalRef.current?.present();
-  }, []);
-  const handleSheetChanges = useCallback((index) => {
-    console.log('handleSheetChanges', index);
-  }, []);
-
-
+  
   const navigateToAuth = (screenName) => {
     navigation.navigate(screenName);
   };
@@ -28,70 +12,58 @@ const MasterAuth = ({ navigation }) => {
   const [modalVisible, setModalVisible] = React.useState(false);
 
   return (
-    <BottomSheetModalProvider>
- <View style={styles.container}>
-        <Button
-          onPress={handlePresentModalPress}
-          title="Present Modal"
-          color="black"
-        />
-        <BottomSheetModal
-          ref={bottomSheetModalRef}
-          index={1}
-          snapPoints={snapPoints}
-          onChange={handleSheetChanges}
-        >
-          <View style={styles.contentContainer}>
-            <Text>Awesome 🎉</Text>
-          </View>
-        </BottomSheetModal>
-      </View>
-    <View style={styles.container}>
+    // <BottomSheetModalProvider>
+    <>
+      <View style={styles.container}>
         <Modal
-        animationType="slide"
-        transparent={true}
-        visible={modalVisible}
-        onRequestClose={() => {
-          Alert.alert('Modal has been closed.');
-          setModalVisible(!modalVisible);
-        }}>
-        <View style={styles.centeredView}>
-          <View style={styles.modalView}>
-            <Text style={styles .modalText}>Hello World!</Text>
-            <Pressable
-              style={[styles.button, styles.buttonClose]}
-              onPress={() => setModalVisible(!modalVisible)}>
-              <Text style={styles.textStyle}>User</Text>
-            </Pressable>
-            <Pressable
-              style={[styles.button, styles.buttonClose]}
-              onPress={() => setModalVisible(!modalVisible)}>
-              <Text style={styles.textStyle}>NGO</Text>
-            </Pressable>
+          animationType="slide"
+          transparent={true}
+          visible={modalVisible}
+          onRequestClose={() => {
+            Alert.alert("Modal has been closed.");
+            setModalVisible(!modalVisible);
+          }}
+        >
+          <View style={styles.centeredView}>
+            <View style={styles.modalView}>
+              <Text style={styles.modalText}>Hello World!</Text>
+              <Pressable
+                style={[styles.button, styles.buttonClose]}
+                onPress={() => { setModalVisible(!modalVisible); navigation.navigate("UserRegisterAuth")}}
+                >
+                <Text style={styles.textStyle}>User</Text>
+              </Pressable>
+              <Pressable
+                style={[styles.button, styles.buttonClose]}
+                onPress={() => {setModalVisible(!modalVisible); navigation.navigate("NGORegisterAuth")}}
+                // onPress={() =>}
+              >
+                <Text style={styles.textStyle}>NGO</Text>
+              </Pressable>
+            </View>
           </View>
+        </Modal>
+        <View style={styles.buttonContainer}>
+          <Button
+            mode="contained"
+            onPress={() => navigateToAuth("LoginAuth")}
+            style={styles.fullWidthButton}
+          >
+            Login
+          </Button>
+          <Button
+            mode="contained"
+            onPress={
+              () => setModalVisible(true)
+            }
+            style={styles.fullWidthButton}
+          >
+            Register
+          </Button>
         </View>
-      </Modal>
-      <View style={styles.buttonContainer}>
-        <Button
-          mode="contained"
-          onPress={() => navigateToAuth('LoginAuth')}
-          style={styles.fullWidthButton}
-          >
-          Login
-        </Button>
-        <Button
-          mode="contained"
-          onPress={() => 
-            setModalVisible(true)
-            // navigateToAuth('UserRegisterAuth')
-          }
-          style={styles.fullWidthButton}
-          >
-          Register
-        </Button>
       </View>
-    </View>
-          </BottomSheetModalProvider>
+    </>
+    // </BottomSheetModalProvider>
   );
 };
 
@@ -99,12 +71,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 24,
-    justifyContent: 'center',
-    backgroundColor: 'grey',
+    justifyContent: "center",
   },
   contentContainer: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: "center",
   },
   buttonContainer: {
     position: "absolute",
@@ -122,17 +93,18 @@ const styles = StyleSheet.create({
   },
   centeredView: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     marginTop: 22,
   },
   modalView: {
     margin: 20,
-    backgroundColor: 'white',
+    flexDirection:"column",
+    backgroundColor: "white",
     borderRadius: 20,
     padding: 35,
-    alignItems: 'center',
-    shadowColor: '#000',
+    alignItems: "center",
+    shadowColor: "#000",
     shadowOffset: {
       width: 0,
       height: 2,
@@ -147,19 +119,19 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   buttonOpen: {
-    backgroundColor: '#F194FF',
+    backgroundColor: "#F194FF",
   },
   buttonClose: {
-    backgroundColor: '#2196F3',
+    backgroundColor: "#2196F3",
   },
   textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
+    color: "white",
+    fontWeight: "bold",
+    textAlign: "center",
   },
   modalText: {
     marginBottom: 15,
-    textAlign: 'center',
+    textAlign: "center",
   },
 });
 

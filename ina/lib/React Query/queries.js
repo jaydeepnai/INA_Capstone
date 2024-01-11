@@ -1,5 +1,5 @@
 import { useMutation } from "react-query";
-import { LogInAccount, RegisterAccount } from "../DLL/api";
+import { LogInAccount, RegisterNGOAccount, RegisterUserAccount} from "../DLL/api";
 
 export const useLoginAccount = () => {
     return useMutation({
@@ -8,9 +8,15 @@ export const useLoginAccount = () => {
     });
   };
 
-  export const useRegisterAccount = () => {
+  export const useRegisterUserAccount = () => {
     return useMutation({
       mutationFn: (user) =>
-      RegisterAccount(user),
+      RegisterUserAccount(user),
+    });
+  };
+  export const useRegisterNGOAccount = () => {
+    return useMutation({
+      mutationFn: (user) =>
+      RegisterNGOAccount(user),
     });
   };

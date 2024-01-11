@@ -4,15 +4,15 @@ import { TextInput, Button, Title } from 'react-native-paper';
 import { UserRegisterValidation } from '../../lib/Validation/validation';
 import { Formik } from 'formik';
 import { RegisterUser } from '../../lib/Validation/initForm';
-import { useRegisterAccount } from '../../lib/React Query/queries';
+import {  useRegisterUserAccount } from '../../lib/React Query/queries';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const RegisterUserAuth = ({navigation}) => {
-  const { mutateAsync: RegisterAccount, isLoading } = useRegisterAccount();
+  const { mutateAsync: RegisterAccount, isLoading } = useRegisterUserAccount();
   
   const handleRegister = async (user,{ resetForm }) => {
     const RegisterResposnse = await RegisterAccount(user);
-    console.log(RegisterResposnse)
+    //console.log(RegisterResposnse)
     if (RegisterResposnse.status == 200) {
       await AsyncStorage.setItem('user', JSON.stringify(RegisterResposnse));
       ToastAndroid.show('Request sent successfully!', ToastAndroid.SHORT);

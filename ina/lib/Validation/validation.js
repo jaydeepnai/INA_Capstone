@@ -11,3 +11,17 @@ export const UserRegisterValidation = yup.object().shape({
     ),
     confirmPassword: yup.string().oneOf([yup.ref('password'), null], 'Passwords must match').required('Confirm Password is required'),
   });
+
+
+export const NGORegistervalidation = yup.object().shape({
+  name: yup.string().required('Name is required'),
+  email: yup.string().email('Invalid email').required('Email is required'),
+  phone: yup.string().required('Phone is required'),
+  username: yup.string().required('Username is required'),
+  password: yup.string().required('Password is required'),
+  confirmPassword: yup.string()
+    .oneOf([yup.ref('password'), null], 'Passwords must match')
+    .required('Confirm Password is required'),
+  logo: yup.mixed().required(),
+  registrationDocument: yup.mixed().required(),
+});

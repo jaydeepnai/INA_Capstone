@@ -6,3 +6,14 @@ export const RegisterUser = {
     password: '',
     confirmPassword: '',
   }
+
+export const RegisterNgo = {
+  name: '',
+  email: '',
+  phone: '',
+  username: '',
+  password: '',
+  confirmPassword: '',
+  logo: null,
+  registrationDocument: null,
+} 
