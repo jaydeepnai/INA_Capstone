@@ -17,7 +17,7 @@ const RegistrationForm = ({navigation}) => {
   const [documentPickerCancelled, setDocumentPickerCancelled] = useState(false);
   const [ImagePickerCancelled, setImagePickerCancelled] = useState(false);
 
-  const handleFormSubmit = async (values,{ resetForm }) => {
+  const handleFormSubmit = useCallback(async (values,{ resetForm }) => {
     const RegisterResposnse = await RegisterAccount(values);
     if (RegisterResposnse.status == 200) {
       await AsyncStorage.setItem('NGO', JSON.stringify(RegisterResposnse));
@@ -30,7 +30,7 @@ const RegistrationForm = ({navigation}) => {
       resetForm()
       return
     }
-  };
+  },[]);
 
   const pickImage = useCallback(async ({ setValues, values, setTouched, setErrors, errors, touched }) => {
     const result = await ImagePicker.launchImageLibraryAsync({

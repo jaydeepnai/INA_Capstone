@@ -20,7 +20,7 @@ const LoginAuth = ({navigation}) => {
       resetForm()
       //console.log(session.role)  
       if(session.role == "User"){
-        navigation.navigate("UserHome");
+        navigation.navigate("User");
       }else{
         navigation.navigate("NGOHome");
       }

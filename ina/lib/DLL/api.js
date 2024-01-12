@@ -4,7 +4,7 @@ export async function LogInAccount(user) {
     try {
     //   const session = await axios.post(user.email, user.password);
     //   return true;
-      return {id:2,role:"NGO",message:"register successfully!"};
+      return {id:2,role:"User",message:"register successfully!"};
     } catch (error) {
       //console.log(error);
     }
