@@ -4,6 +4,7 @@ import { AntDesign, Entypo, FontAwesome, FontAwesome5, FontAwesome6 } from '@exp
 import HeaderLeft, { HeaderRight } from '../components/User/Home/Header/Header';
 import Trending from '../screens/User/Home/Trending';
 import Search from '../screens/User/Search/Search';
+import Profile from '../screens/User/Profile/Profile';
 const Tab = createBottomTabNavigator();
 
 
@@ -89,7 +90,7 @@ export function BottomTabs() {
         /> */}
           <Tab.Screen
           name="UserProfile"
-          component={Trending}
+          component={Profile}
           options={{
             tabBarLabel: "Profile",
             tabBarLabelStyle: { color: "black" },

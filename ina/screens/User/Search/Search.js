@@ -1,8 +1,9 @@
 import { AntDesign, FontAwesome, Ionicons } from "@expo/vector-icons";
 import React from "react";
-import { SafeAreaView, View, ScrollView, Image, Text, StatusBar, } from "react-native";
+import { SafeAreaView, View, ScrollView, Image, Text, StatusBar, TouchableOpacity, } from "react-native";
+import { Button } from "react-native-paper";
 
-export default Search = (props) => {
+export default Search = ({navigation}) => {
     return (
         <>
        
@@ -12,14 +13,12 @@ export default Search = (props) => {
                 flex: 1,
                 backgroundColor: "#FFFFFF",
             }}>
-            <ScrollView
-                style={{
+            <ScrollView style={{
                     flex: 1,
                     backgroundColor: "white",
                     paddingTop: 20,
                     paddingBottom: 45,
-                    marginTop:20
-                }}>
+                    marginTop:20  }}>
                 <View
                     style={{
                         flexDirection: "row",
@@ -424,7 +423,8 @@ export default Search = (props) => {
 
                 </View>
             </View>
-            <View
+            <TouchableOpacity
+            onPress={()=>navigation.navigate("NGOResult")}
                 style={{
                     alignItems: "center",
                     backgroundColor: "#FFF400",
@@ -437,14 +437,10 @@ export default Search = (props) => {
 
                     bottom: 10,
                 }}>
-                <Text
-                    style={{
-                        color: "#FFFFFF",
-                        fontSize: 24,
-                    }}>
-                    {"Search "}
-                </Text>
-            </View>
+                   <Text>
+                   Search
+                    </Text>  
+            </TouchableOpacity>
         </SafeAreaView>
         </>
     )

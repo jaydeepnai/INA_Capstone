@@ -1,15 +1,11 @@
 import React, { useLayoutEffect } from "react";
-import { SafeAreaView, View, ScrollView, Image, Text, ImageBackground, } from "react-native";
-import { Avatar } from "react-native-paper";
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import Trending from "./Trending";
-import Foryou from "./Foryou";
+import { SafeAreaView, ScrollView, } from "react-native";
 
 export default ({navigation}) => {
 
   useLayoutEffect(() => {
     navigation.navigationOptions = {
-      headerTitle: 'My Screen',
+      headerTitle: 'My Screen1',
       headerStyle: {
         backgroundColor: 'blue',
       },
