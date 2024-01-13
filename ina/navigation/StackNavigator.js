@@ -15,8 +15,8 @@ const StackNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{presentation:"containedModal",headerShown:false}}>
-          <Stack.Screen name="LoginAuth" component={LoginAuth} />
           <Stack.Screen name="User" component={BottomTabs}   />
+          <Stack.Screen name="LoginAuth" component={LoginAuth} />
           <Stack.Screen name="MasterAuth" component={MasterAuth} />
           <Stack.Screen name="UserRegisterAuth" component={RegisterUserAuth} />
           <Stack.Screen name="NGORegisterAuth" component={RegisterNgoAuth} />

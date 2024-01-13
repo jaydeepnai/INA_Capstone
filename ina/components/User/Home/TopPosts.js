@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
+import { AntDesign, EvilIcons, Feather, FontAwesome5 } from '@expo/vector-icons';
 
 const TopPosts = () => {
     return (
@@ -49,12 +50,13 @@ export const Post = ()=>{
                 marginHorizontal: 32,
             }}>
                 <Image
-                    source={require("../../../assets/NGO/post.jpg")}
-                    resizeMode={"stretch"}
+                    source={require("../../../assets/profile.jpg")}
+                    resizeMode="cover"
                     style={{
                         width: 39,
                         height: 40,
                         marginRight: 11,
+                        borderRadius:50
                     }}
                 />
                 <View
@@ -79,22 +81,17 @@ export const Post = ()=>{
                         {"Vaccination of Animals  "}
                     </Text>
                 </View>
-                <Image
-                    source={require("../../../assets/NGO/post.jpg")}
-                    resizeMode={"stretch"}
-                    style={{
-                        width: 19,
-                        height: 20,
-                    }}
-                />
+                <Feather name="more-vertical" size={24} color="black" />
             </View>
             <Image
                 source={require("../../../assets/NGO/post3.jpg")}
-                resizeMode={"stretch"}
+                resizeMode="contain"
                 style={{
                     borderRadius: 10,
-                    height: 243,
-                    marginBottom: 19,
+                    height:200,
+                    width: "83%",
+                    backgroundColor:"red",
+                    marginBottom: 10,
                     marginHorizontal: 32,
                 }}
             />
@@ -102,49 +99,19 @@ export const Post = ()=>{
                 style={{
                     flexDirection: "row",
                     alignItems: "center",
-                    marginBottom: 10,
+                    marginBottom: 5,
                     marginHorizontal: 42,
                 }}>
-                <Image
-                    source={require("../../../assets/NGO/heart.png")}
-                    resizeMode={"stretch"}
-                    style={{
-                        width: 29,
-                        height: 30,
-                        marginRight: 13,
-                    }}
-                />
-                <Image
-                    source={require("../../../assets/NGO/comments.png")}
-                    resizeMode={"stretch"}
-                    style={{
-                        width: 29,
-                        height: 30,
-                        marginRight: 13,
-                    }}
-                />
-                <Image
-                    source={require("../../../assets/NGO/share.png")}
-                    resizeMode={"stretch"}
-                    style={{
-                        width: 29,
-                        height: 30,
-                    }}
-                />
+                <AntDesign style={{marginHorizontal:5}} name="heart" size={24} color="red" />
+                <FontAwesome5 style={{marginHorizontal:5}} name="comment" size={24} color="black" />
+                <AntDesign name="sharealt" style={{marginHorizontal:5}} size={24} color="black" />
                 <View
                     style={{
                         flex: 1,
                         alignSelf: "stretch",
                     }}>
                 </View>
-                <Image
-                    source={require("../../../assets/NGO/save.png")}
-                    resizeMode={"stretch"}
-                    style={{
-                        width: 29,
-                        height: 30,
-                    }}
-                />
+                <AntDesign name="star" size={24} color="black" />
             </View>
             <Text
                 style={{

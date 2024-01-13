@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
 const TopServices = () => {
@@ -38,8 +38,6 @@ const TopServices = () => {
 
 export default TopServices
 
-const styles = StyleSheet.create({})
-
 const Service = ()=>{
     return (
         <View style = {{
@@ -55,7 +53,9 @@ const Service = ()=>{
 							borderRadius: 10,
 							paddingVertical: 23,
 							paddingHorizontal: 15,
+							flexDirection:"row"
 						}}>
+							<View>
 						<Text 
 							style = {{
 								color: "#000000",
@@ -70,19 +70,17 @@ const Service = ()=>{
 								fontSize: 11,
 								width: 334,
 							}}>
-							{"Our NGO is dedicated to facilitating animal \nadoption, connecting compassionate individuals \nwith rescue animals in search of loving homes."}
+							{"Our NGOated to facilitating animal \nadoption, connecting compassionate individuals \nwith rescue animals in search of loving homes."}
 						</Text>
-					</View>
-					<View 
-						style = {{
-							position: "absolute",
-							bottom: -4,
-							right: -12,
-							width: 136,
-							height: 126,
-							borderColor: "#5E27FD",
-							borderWidth: 1,
-						}}>
+							</View>
+					<Image
+					source={require("../../../assets/NGOanimated.png")}
+					resizeMode="contain"
+					style={{
+						borderRadius: 10,
+						height:100,
+						width: 100,
+					}}/>
 					</View>
 				</View>
     )

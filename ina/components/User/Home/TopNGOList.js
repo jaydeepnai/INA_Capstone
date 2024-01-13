@@ -58,15 +58,19 @@ const NGOCard = () => {
                     width: 0,
                     height: 0
                 },
+                overflow: "hidden",
                 shadowRadius: 4,
                 elevation: 4,
             }}>
-            <Image
+            <ImageBackground
                 source={require("../../../assets/NGO/top2.png")}
-                resizeMode="contain"
-                // style={{
-                //     height: 97,
-                // }}
+                resizeMode="cover"
+                style={{
+                    height: 100,
+                    width:"100%",
+                    borderRadius:50,
+                    top:-10
+                }}
             />
             <View
                 style={{
