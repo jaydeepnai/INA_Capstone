@@ -58,7 +58,7 @@ const Categories = () => {
                             </Text>
                         </View>
                         <Image
-                            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
+                            source={ require("../../../assets/NGO/dog.png")}
                             resizeMode={"stretch"}
                             style={{
                                 position: "absolute",
@@ -99,7 +99,7 @@ const Categories = () => {
                             </Text>
                         </View>
                         <Image
-                            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
+                            source={ require("../../../assets/NGO/dog.png")}
                             resizeMode={"stretch"}
                             style={{
                                 position: "absolute",
@@ -140,287 +140,7 @@ const Categories = () => {
                             </Text>
                         </View>
                         <Image
-                            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
-                            resizeMode={"stretch"}
-                            style={{
-                                position: "absolute",
-                                top: -25,
-                                right: 2,
-                                width: 65,
-                                height: 63,
-                            }}
-                        />
-                    </View><View
-                        style={{
-                            width: 60,
-                            margin:10
-                        }}>
-                        <View
-                            style={{
-                                alignItems: "center",
-                                backgroundColor: "#FFFFFF",
-                                borderRadius: 35,
-                                paddingTop: 36,
-                                paddingBottom: 19,
-                                shadowColor: "#00000040",
-                                shadowOpacity: 0.3,
-                                shadowOffset: {
-                                    width: 0,
-                                    height: 0
-                                },
-                                shadowRadius: 4,
-                                elevation: 4,
-                            }}>
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: 13,
-                                }}>
-                                {"Animal"}
-                            </Text>
-                        </View>
-                        <Image
-                            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
-                            resizeMode={"stretch"}
-                            style={{
-                                position: "absolute",
-                                top: -25,
-                                right: 2,
-                                width: 65,
-                                height: 63,
-                            }}
-                        />
-                    </View><View
-                        style={{
-                            width: 60,
-                            margin:10
-                        }}>
-                        <View
-                            style={{
-                                alignItems: "center",
-                                backgroundColor: "#FFFFFF",
-                                borderRadius: 35,
-                                paddingTop: 36,
-                                paddingBottom: 19,
-                                shadowColor: "#00000040",
-                                shadowOpacity: 0.3,
-                                shadowOffset: {
-                                    width: 0,
-                                    height: 0
-                                },
-                                shadowRadius: 4,
-                                elevation: 4,
-                            }}>
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: 13,
-                                }}>
-                                {"Animal"}
-                            </Text>
-                        </View>
-                        <Image
-                            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
-                            resizeMode={"stretch"}
-                            style={{
-                                position: "absolute",
-                                top: -25,
-                                right: 2,
-                                width: 65,
-                                height: 63,
-                            }}
-                        />
-                    </View><View
-                        style={{
-                            width: 60,
-                            margin:10
-                        }}>
-                        <View
-                            style={{
-                                alignItems: "center",
-                                backgroundColor: "#FFFFFF",
-                                borderRadius: 35,
-                                paddingTop: 36,
-                                paddingBottom: 19,
-                                shadowColor: "#00000040",
-                                shadowOpacity: 0.3,
-                                shadowOffset: {
-                                    width: 0,
-                                    height: 0
-                                },
-                                shadowRadius: 4,
-                                elevation: 4,
-                            }}>
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: 13,
-                                }}>
-                                {"Animal"}
-                            </Text>
-                        </View>
-                        <Image
-                            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
-                            resizeMode={"stretch"}
-                            style={{
-                                position: "absolute",
-                                top: -25,
-                                right: 2,
-                                width: 65,
-                                height: 63,
-                            }}
-                        />
-                    </View><View
-                        style={{
-                            width: 60,
-                            margin:10
-                        }}>
-                        <View
-                            style={{
-                                alignItems: "center",
-                                backgroundColor: "#FFFFFF",
-                                borderRadius: 35,
-                                paddingTop: 36,
-                                paddingBottom: 19,
-                                shadowColor: "#00000040",
-                                shadowOpacity: 0.3,
-                                shadowOffset: {
-                                    width: 0,
-                                    height: 0
-                                },
-                                shadowRadius: 4,
-                                elevation: 4,
-                            }}>
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: 13,
-                                }}>
-                                {"Animal"}
-                            </Text>
-                        </View>
-                        <Image
-                            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
-                            resizeMode={"stretch"}
-                            style={{
-                                position: "absolute",
-                                top: -25,
-                                right: 2,
-                                width: 65,
-                                height: 63,
-                            }}
-                        />
-                    </View><View
-                        style={{
-                            width: 60,
-                            margin:10
-                        }}>
-                        <View
-                            style={{
-                                alignItems: "center",
-                                backgroundColor: "#FFFFFF",
-                                borderRadius: 35,
-                                paddingTop: 36,
-                                paddingBottom: 19,
-                                shadowColor: "#00000040",
-                                shadowOpacity: 0.3,
-                                shadowOffset: {
-                                    width: 0,
-                                    height: 0
-                                },
-                                shadowRadius: 4,
-                                elevation: 4,
-                            }}>
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: 13,
-                                }}>
-                                {"Animal"}
-                            </Text>
-                        </View>
-                        <Image
-                            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
-                            resizeMode={"stretch"}
-                            style={{
-                                position: "absolute",
-                                top: -25,
-                                right: 2,
-                                width: 65,
-                                height: 63,
-                            }}
-                        />
-                    </View><View
-                        style={{
-                            width: 60,
-                            margin:10
-                        }}>
-                        <View
-                            style={{
-                                alignItems: "center",
-                                backgroundColor: "#FFFFFF",
-                                borderRadius: 35,
-                                paddingTop: 36,
-                                paddingBottom: 19,
-                                shadowColor: "#00000040",
-                                shadowOpacity: 0.3,
-                                shadowOffset: {
-                                    width: 0,
-                                    height: 0
-                                },
-                                shadowRadius: 4,
-                                elevation: 4,
-                            }}>
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: 13,
-                                }}>
-                                {"Animal"}
-                            </Text>
-                        </View>
-                        <Image
-                            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
-                            resizeMode={"stretch"}
-                            style={{
-                                position: "absolute",
-                                top: -25,
-                                right: 2,
-                                width: 65,
-                                height: 63,
-                            }}
-                        />
-                    </View><View
-                        style={{
-                            width: 60,
-                            margin:10
-                        }}>
-                        <View
-                            style={{
-                                alignItems: "center",
-                                backgroundColor: "#FFFFFF",
-                                borderRadius: 35,
-                                paddingTop: 36,
-                                paddingBottom: 19,
-                                shadowColor: "#00000040",
-                                shadowOpacity: 0.3,
-                                shadowOffset: {
-                                    width: 0,
-                                    height: 0
-                                },
-                                shadowRadius: 4,
-                                elevation: 4,
-                            }}>
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: 13,
-                                }}>
-                                {"Animal"}
-                            </Text>
-                        </View>
-                        <Image
-                            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
+                            source={ require("../../../assets/NGO/dog.png")}
                             resizeMode={"stretch"}
                             style={{
                                 position: "absolute",
@@ -461,367 +181,7 @@ const Categories = () => {
                             </Text>
                         </View>
                         <Image
-                            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
-                            resizeMode={"stretch"}
-                            style={{
-                                position: "absolute",
-                                top: -25,
-                                right: 2,
-                                width: 65,
-                                height: 63,
-                            }}
-                        />
-                    </View><View
-                        style={{
-                            width: 60,
-                            margin:10
-                        }}>
-                        <View
-                            style={{
-                                alignItems: "center",
-                                backgroundColor: "#FFFFFF",
-                                borderRadius: 35,
-                                paddingTop: 36,
-                                paddingBottom: 19,
-                                shadowColor: "#00000040",
-                                shadowOpacity: 0.3,
-                                shadowOffset: {
-                                    width: 0,
-                                    height: 0
-                                },
-                                shadowRadius: 4,
-                                elevation: 4,
-                            }}>
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: 13,
-                                }}>
-                                {"Animal"}
-                            </Text>
-                        </View>
-                        <Image
-                            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
-                            resizeMode={"stretch"}
-                            style={{
-                                position: "absolute",
-                                top: -25,
-                                right: 2,
-                                width: 65,
-                                height: 63,
-                            }}
-                        />
-                    </View><View
-                        style={{
-                            width: 60,
-                            margin:10
-                        }}>
-                        <View
-                            style={{
-                                alignItems: "center",
-                                backgroundColor: "#FFFFFF",
-                                borderRadius: 35,
-                                paddingTop: 36,
-                                paddingBottom: 19,
-                                shadowColor: "#00000040",
-                                shadowOpacity: 0.3,
-                                shadowOffset: {
-                                    width: 0,
-                                    height: 0
-                                },
-                                shadowRadius: 4,
-                                elevation: 4,
-                            }}>
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: 13,
-                                }}>
-                                {"Animal"}
-                            </Text>
-                        </View>
-                        <Image
-                            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
-                            resizeMode={"stretch"}
-                            style={{
-                                position: "absolute",
-                                top: -25,
-                                right: 2,
-                                width: 65,
-                                height: 63,
-                            }}
-                        />
-                    </View><View
-                        style={{
-                            width: 60,
-                            margin:10
-                        }}>
-                        <View
-                            style={{
-                                alignItems: "center",
-                                backgroundColor: "#FFFFFF",
-                                borderRadius: 35,
-                                paddingTop: 36,
-                                paddingBottom: 19,
-                                shadowColor: "#00000040",
-                                shadowOpacity: 0.3,
-                                shadowOffset: {
-                                    width: 0,
-                                    height: 0
-                                },
-                                shadowRadius: 4,
-                                elevation: 4,
-                            }}>
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: 13,
-                                }}>
-                                {"Animal"}
-                            </Text>
-                        </View>
-                        <Image
-                            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
-                            resizeMode={"stretch"}
-                            style={{
-                                position: "absolute",
-                                top: -25,
-                                right: 2,
-                                width: 65,
-                                height: 63,
-                            }}
-                        />
-                    </View><View
-                        style={{
-                            width: 60,
-                            margin:10
-                        }}>
-                        <View
-                            style={{
-                                alignItems: "center",
-                                backgroundColor: "#FFFFFF",
-                                borderRadius: 35,
-                                paddingTop: 36,
-                                paddingBottom: 19,
-                                shadowColor: "#00000040",
-                                shadowOpacity: 0.3,
-                                shadowOffset: {
-                                    width: 0,
-                                    height: 0
-                                },
-                                shadowRadius: 4,
-                                elevation: 4,
-                            }}>
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: 13,
-                                }}>
-                                {"Animal"}
-                            </Text>
-                        </View>
-                        <Image
-                            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
-                            resizeMode={"stretch"}
-                            style={{
-                                position: "absolute",
-                                top: -25,
-                                right: 2,
-                                width: 65,
-                                height: 63,
-                            }}
-                        />
-                    </View><View
-                        style={{
-                            width: 60,
-                            margin:10
-                        }}>
-                        <View
-                            style={{
-                                alignItems: "center",
-                                backgroundColor: "#FFFFFF",
-                                borderRadius: 35,
-                                paddingTop: 36,
-                                paddingBottom: 19,
-                                shadowColor: "#00000040",
-                                shadowOpacity: 0.3,
-                                shadowOffset: {
-                                    width: 0,
-                                    height: 0
-                                },
-                                shadowRadius: 4,
-                                elevation: 4,
-                            }}>
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: 13,
-                                }}>
-                                {"Animal"}
-                            </Text>
-                        </View>
-                        <Image
-                            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
-                            resizeMode={"stretch"}
-                            style={{
-                                position: "absolute",
-                                top: -25,
-                                right: 2,
-                                width: 65,
-                                height: 63,
-                            }}
-                        />
-                    </View><View
-                        style={{
-                            width: 60,
-                            margin:10
-                        }}>
-                        <View
-                            style={{
-                                alignItems: "center",
-                                backgroundColor: "#FFFFFF",
-                                borderRadius: 35,
-                                paddingTop: 36,
-                                paddingBottom: 19,
-                                shadowColor: "#00000040",
-                                shadowOpacity: 0.3,
-                                shadowOffset: {
-                                    width: 0,
-                                    height: 0
-                                },
-                                shadowRadius: 4,
-                                elevation: 4,
-                            }}>
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: 13,
-                                }}>
-                                {"Animal"}
-                            </Text>
-                        </View>
-                        <Image
-                            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
-                            resizeMode={"stretch"}
-                            style={{
-                                position: "absolute",
-                                top: -25,
-                                right: 2,
-                                width: 65,
-                                height: 63,
-                            }}
-                        />
-                    </View><View
-                        style={{
-                            width: 60,
-                            margin:10
-                        }}>
-                        <View
-                            style={{
-                                alignItems: "center",
-                                backgroundColor: "#FFFFFF",
-                                borderRadius: 35,
-                                paddingTop: 36,
-                                paddingBottom: 19,
-                                shadowColor: "#00000040",
-                                shadowOpacity: 0.3,
-                                shadowOffset: {
-                                    width: 0,
-                                    height: 0
-                                },
-                                shadowRadius: 4,
-                                elevation: 4,
-                            }}>
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: 13,
-                                }}>
-                                {"Animal"}
-                            </Text>
-                        </View>
-                        <Image
-                            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
-                            resizeMode={"stretch"}
-                            style={{
-                                position: "absolute",
-                                top: -25,
-                                right: 2,
-                                width: 65,
-                                height: 63,
-                            }}
-                        />
-                    </View><View
-                        style={{
-                            width: 60,
-                            margin:10
-                        }}>
-                        <View
-                            style={{
-                                alignItems: "center",
-                                backgroundColor: "#FFFFFF",
-                                borderRadius: 35,
-                                paddingTop: 36,
-                                paddingBottom: 19,
-                                shadowColor: "#00000040",
-                                shadowOpacity: 0.3,
-                                shadowOffset: {
-                                    width: 0,
-                                    height: 0
-                                },
-                                shadowRadius: 4,
-                                elevation: 4,
-                            }}>
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: 13,
-                                }}>
-                                {"Animal"}
-                            </Text>
-                        </View>
-                        <Image
-                            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
-                            resizeMode={"stretch"}
-                            style={{
-                                position: "absolute",
-                                top: -25,
-                                right: 2,
-                                width: 65,
-                                height: 63,
-                            }}
-                        />
-                    </View><View
-                        style={{
-                            width: 60,
-                            margin:10
-                        }}>
-                        <View
-                            style={{
-                                alignItems: "center",
-                                backgroundColor: "#FFFFFF",
-                                borderRadius: 35,
-                                paddingTop: 36,
-                                paddingBottom: 19,
-                                shadowColor: "#00000040",
-                                shadowOpacity: 0.3,
-                                shadowOffset: {
-                                    width: 0,
-                                    height: 0
-                                },
-                                shadowRadius: 4,
-                                elevation: 4,
-                            }}>
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: 13,
-                                }}>
-                                {"Animal"}
-                            </Text>
-                        </View>
-                        <Image
-                            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
+                            source={ require("../../../assets/NGO/dog.png")}
                             resizeMode={"stretch"}
                             style={{
                                 position: "absolute",
@@ -832,6 +192,458 @@ const Categories = () => {
                             }}
                         />
                     </View>
+                    <View
+                        style={{
+                            width: 60,
+                            margin:10
+                        }}>
+                        <View
+                            style={{
+                                alignItems: "center",
+                                backgroundColor: "#FFFFFF",
+                                borderRadius: 35,
+                                paddingTop: 36,
+                                paddingBottom: 19,
+                                shadowColor: "#00000040",
+                                shadowOpacity: 0.3,
+                                shadowOffset: {
+                                    width: 0,
+                                    height: 0
+                                },
+                                shadowRadius: 4,
+                                elevation: 4,
+                            }}>
+                            <Text
+                                style={{
+                                    color: "#000000",
+                                    fontSize: 13,
+                                }}>
+                                {"Animal"}
+                            </Text>
+                        </View>
+                        <Image
+                            source={ require("../../../assets/NGO/dog.png")}
+                            resizeMode={"stretch"}
+                            style={{
+                                position: "absolute",
+                                top: -25,
+                                right: 2,
+                                width: 65,
+                                height: 63,
+                            }}
+                        />
+                    </View>
+                    <View
+                        style={{
+                            width: 60,
+                            margin:10
+                        }}>
+                        <View
+                            style={{
+                                alignItems: "center",
+                                backgroundColor: "#FFFFFF",
+                                borderRadius: 35,
+                                paddingTop: 36,
+                                paddingBottom: 19,
+                                shadowColor: "#00000040",
+                                shadowOpacity: 0.3,
+                                shadowOffset: {
+                                    width: 0,
+                                    height: 0
+                                },
+                                shadowRadius: 4,
+                                elevation: 4,
+                            }}>
+                            <Text
+                                style={{
+                                    color: "#000000",
+                                    fontSize: 13,
+                                }}>
+                                {"Animal"}
+                            </Text>
+                        </View>
+                        <Image
+                            source={ require("../../../assets/NGO/dog.png")}
+                            resizeMode={"stretch"}
+                            style={{
+                                position: "absolute",
+                                top: -25,
+                                right: 2,
+                                width: 65,
+                                height: 63,
+                            }}
+                        />
+                    </View>
+                    <View
+                        style={{
+                            width: 60,
+                            margin:10
+                        }}>
+                        <View
+                            style={{
+                                alignItems: "center",
+                                backgroundColor: "#FFFFFF",
+                                borderRadius: 35,
+                                paddingTop: 36,
+                                paddingBottom: 19,
+                                shadowColor: "#00000040",
+                                shadowOpacity: 0.3,
+                                shadowOffset: {
+                                    width: 0,
+                                    height: 0
+                                },
+                                shadowRadius: 4,
+                                elevation: 4,
+                            }}>
+                            <Text
+                                style={{
+                                    color: "#000000",
+                                    fontSize: 13,
+                                }}>
+                                {"Animal"}
+                            </Text>
+                        </View>
+                        <Image
+                            source={ require("../../../assets/NGO/dog.png")}
+                            resizeMode={"stretch"}
+                            style={{
+                                position: "absolute",
+                                top: -25,
+                                right: 2,
+                                width: 65,
+                                height: 63,
+                            }}
+                        />
+                    </View>
+                    <View
+                        style={{
+                            width: 60,
+                            margin:10
+                        }}>
+                        <View
+                            style={{
+                                alignItems: "center",
+                                backgroundColor: "#FFFFFF",
+                                borderRadius: 35,
+                                paddingTop: 36,
+                                paddingBottom: 19,
+                                shadowColor: "#00000040",
+                                shadowOpacity: 0.3,
+                                shadowOffset: {
+                                    width: 0,
+                                    height: 0
+                                },
+                                shadowRadius: 4,
+                                elevation: 4,
+                            }}>
+                            <Text
+                                style={{
+                                    color: "#000000",
+                                    fontSize: 13,
+                                }}>
+                                {"Animal"}
+                            </Text>
+                        </View>
+                        <Image
+                            source={ require("../../../assets/NGO/dog.png")}
+                            resizeMode={"stretch"}
+                            style={{
+                                position: "absolute",
+                                top: -25,
+                                right: 2,
+                                width: 65,
+                                height: 63,
+                            }}
+                        />
+                    </View>
+                    <View
+                        style={{
+                            width: 60,
+                            margin:10
+                        }}>
+                        <View
+                            style={{
+                                alignItems: "center",
+                                backgroundColor: "#FFFFFF",
+                                borderRadius: 35,
+                                paddingTop: 36,
+                                paddingBottom: 19,
+                                shadowColor: "#00000040",
+                                shadowOpacity: 0.3,
+                                shadowOffset: {
+                                    width: 0,
+                                    height: 0
+                                },
+                                shadowRadius: 4,
+                                elevation: 4,
+                            }}>
+                            <Text
+                                style={{
+                                    color: "#000000",
+                                    fontSize: 13,
+                                }}>
+                                {"Animal"}
+                            </Text>
+                        </View>
+                        <Image
+                            source={ require("../../../assets/NGO/dog.png")}
+                            resizeMode={"stretch"}
+                            style={{
+                                position: "absolute",
+                                top: -25,
+                                right: 2,
+                                width: 65,
+                                height: 63,
+                            }}
+                        />
+                    </View>
+                    <View
+                        style={{
+                            width: 60,
+                            margin:10
+                        }}>
+                        <View
+                            style={{
+                                alignItems: "center",
+                                backgroundColor: "#FFFFFF",
+                                borderRadius: 35,
+                                paddingTop: 36,
+                                paddingBottom: 19,
+                                shadowColor: "#00000040",
+                                shadowOpacity: 0.3,
+                                shadowOffset: {
+                                    width: 0,
+                                    height: 0
+                                },
+                                shadowRadius: 4,
+                                elevation: 4,
+                            }}>
+                            <Text
+                                style={{
+                                    color: "#000000",
+                                    fontSize: 13,
+                                }}>
+                                {"Animal"}
+                            </Text>
+                        </View>
+                        <Image
+                            source={ require("../../../assets/NGO/dog.png")}
+                            resizeMode={"stretch"}
+                            style={{
+                                position: "absolute",
+                                top: -25,
+                                right: 2,
+                                width: 65,
+                                height: 63,
+                            }}
+                        />
+                    </View>
+                    <View
+                        style={{
+                            width: 60,
+                            margin:10
+                        }}>
+                        <View
+                            style={{
+                                alignItems: "center",
+                                backgroundColor: "#FFFFFF",
+                                borderRadius: 35,
+                                paddingTop: 36,
+                                paddingBottom: 19,
+                                shadowColor: "#00000040",
+                                shadowOpacity: 0.3,
+                                shadowOffset: {
+                                    width: 0,
+                                    height: 0
+                                },
+                                shadowRadius: 4,
+                                elevation: 4,
+                            }}>
+                            <Text
+                                style={{
+                                    color: "#000000",
+                                    fontSize: 13,
+                                }}>
+                                {"Animal"}
+                            </Text>
+                        </View>
+                        <Image
+                            source={ require("../../../assets/NGO/dog.png")}
+                            resizeMode={"stretch"}
+                            style={{
+                                position: "absolute",
+                                top: -25,
+                                right: 2,
+                                width: 65,
+                                height: 63,
+                            }}
+                        />
+                    </View>
+                    <View
+                        style={{
+                            width: 60,
+                            margin:10
+                        }}>
+                        <View
+                            style={{
+                                alignItems: "center",
+                                backgroundColor: "#FFFFFF",
+                                borderRadius: 35,
+                                paddingTop: 36,
+                                paddingBottom: 19,
+                                shadowColor: "#00000040",
+                                shadowOpacity: 0.3,
+                                shadowOffset: {
+                                    width: 0,
+                                    height: 0
+                                },
+                                shadowRadius: 4,
+                                elevation: 4,
+                            }}>
+                            <Text
+                                style={{
+                                    color: "#000000",
+                                    fontSize: 13,
+                                }}>
+                                {"Animal"}
+                            </Text>
+                        </View>
+                        <Image
+                            source={ require("../../../assets/NGO/dog.png")}
+                            resizeMode={"stretch"}
+                            style={{
+                                position: "absolute",
+                                top: -25,
+                                right: 2,
+                                width: 65,
+                                height: 63,
+                            }}
+                        />
+                    </View>
+                    <View
+                        style={{
+                            width: 60,
+                            margin:10
+                        }}>
+                        <View
+                            style={{
+                                alignItems: "center",
+                                backgroundColor: "#FFFFFF",
+                                borderRadius: 35,
+                                paddingTop: 36,
+                                paddingBottom: 19,
+                                shadowColor: "#00000040",
+                                shadowOpacity: 0.3,
+                                shadowOffset: {
+                                    width: 0,
+                                    height: 0
+                                },
+                                shadowRadius: 4,
+                                elevation: 4,
+                            }}>
+                            <Text
+                                style={{
+                                    color: "#000000",
+                                    fontSize: 13,
+                                }}>
+                                {"Animal"}
+                            </Text>
+                        </View>
+                        <Image
+                            source={ require("../../../assets/NGO/dog.png")}
+                            resizeMode={"stretch"}
+                            style={{
+                                position: "absolute",
+                                top: -25,
+                                right: 2,
+                                width: 65,
+                                height: 63,
+                            }}
+                        />
+                    </View>
+                    <View
+                        style={{
+                            width: 60,
+                            margin:10
+                        }}>
+                        <View
+                            style={{
+                                alignItems: "center",
+                                backgroundColor: "#FFFFFF",
+                                borderRadius: 35,
+                                paddingTop: 36,
+                                paddingBottom: 19,
+                                shadowColor: "#00000040",
+                                shadowOpacity: 0.3,
+                                shadowOffset: {
+                                    width: 0,
+                                    height: 0
+                                },
+                                shadowRadius: 4,
+                                elevation: 4,
+                            }}>
+                            <Text
+                                style={{
+                                    color: "#000000",
+                                    fontSize: 13,
+                                }}>
+                                {"Animal"}
+                            </Text>
+                        </View>
+                        <Image
+                            source={ require("../../../assets/NGO/dog.png")}
+                            resizeMode={"stretch"}
+                            style={{
+                                position: "absolute",
+                                top: -25,
+                                right: 2,
+                                width: 65,
+                                height: 63,
+                            }}
+                        />
+                    </View>
+                    <View
+                        style={{
+                            width: 60,
+                            margin:10
+                        }}>
+                        <View
+                            style={{
+                                alignItems: "center",
+                                backgroundColor: "#FFFFFF",
+                                borderRadius: 35,
+                                paddingTop: 36,
+                                paddingBottom: 19,
+                                shadowColor: "#00000040",
+                                shadowOpacity: 0.3,
+                                shadowOffset: {
+                                    width: 0,
+                                    height: 0
+                                },
+                                shadowRadius: 4,
+                                elevation: 4,
+                            }}>
+                            <Text
+                                style={{
+                                    color: "#000000",
+                                    fontSize: 13,
+                                }}>
+                                {"Animal"}
+                            </Text>
+                        </View>
+                        <Image
+                            source={ require("../../../assets/NGO/dog.png")}
+                            resizeMode={"stretch"}
+                            style={{
+                                position: "absolute",
+                                top: -25,
+                                right: 2,
+                                width: 65,
+                                height: 63,
+                            }}
+                        />
+                    </View>
+                    
                 </View>
             </ScrollView>
         </>

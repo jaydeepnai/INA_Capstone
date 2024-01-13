@@ -37,7 +37,8 @@ const Trending = () => {
 					{"See All"}
 				</Text>
 			</View>
-			<TopNGOList />
+			<TopNGOList>
+			</TopNGOList>
 			<BrowseNGO />
 			<Achievers />
 			<TopServices />

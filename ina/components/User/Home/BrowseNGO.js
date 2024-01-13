@@ -21,7 +21,7 @@ const BrowseNGO = () => {
 								flex: 1,
 							}}>Browse NGOs</Text>
 						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+							source = {require("../../../assets/NGO/browse.png")} 
 							resizeMode = {"stretch"}
 							style = {{
 								width: 39,

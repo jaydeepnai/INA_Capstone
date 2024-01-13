@@ -49,7 +49,7 @@ export const Post = ()=>{
                 marginHorizontal: 32,
             }}>
                 <Image
-                    source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
+                    source={require("../../../assets/NGO/post.jpg")}
                     resizeMode={"stretch"}
                     style={{
                         width: 39,
@@ -80,7 +80,7 @@ export const Post = ()=>{
                     </Text>
                 </View>
                 <Image
-                    source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
+                    source={require("../../../assets/NGO/post.jpg")}
                     resizeMode={"stretch"}
                     style={{
                         width: 19,
@@ -89,7 +89,7 @@ export const Post = ()=>{
                 />
             </View>
             <Image
-                source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
+                source={require("../../../assets/NGO/post3.jpg")}
                 resizeMode={"stretch"}
                 style={{
                     borderRadius: 10,
@@ -106,7 +106,7 @@ export const Post = ()=>{
                     marginHorizontal: 42,
                 }}>
                 <Image
-                    source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
+                    source={require("../../../assets/NGO/heart.png")}
                     resizeMode={"stretch"}
                     style={{
                         width: 29,
@@ -115,7 +115,7 @@ export const Post = ()=>{
                     }}
                 />
                 <Image
-                    source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
+                    source={require("../../../assets/NGO/comments.png")}
                     resizeMode={"stretch"}
                     style={{
                         width: 29,
@@ -124,7 +124,7 @@ export const Post = ()=>{
                     }}
                 />
                 <Image
-                    source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
+                    source={require("../../../assets/NGO/share.png")}
                     resizeMode={"stretch"}
                     style={{
                         width: 29,
@@ -138,7 +138,7 @@ export const Post = ()=>{
                     }}>
                 </View>
                 <Image
-                    source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
+                    source={require("../../../assets/NGO/save.png")}
                     resizeMode={"stretch"}
                     style={{
                         width: 29,

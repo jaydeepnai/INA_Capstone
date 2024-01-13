@@ -53,7 +53,7 @@ const Achiever = () => {
     return (
                 <View style={{ width: 70,marginHorizontal:10}}>
                     <Image
-                        source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
+                        source={require("../../../assets/NGO/me.jpg")}
                         resizeMode={"stretch"}
                         style={{
                             borderRadius: 35,

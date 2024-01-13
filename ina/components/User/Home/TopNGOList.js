@@ -62,11 +62,11 @@ const NGOCard = () => {
                 elevation: 4,
             }}>
             <Image
-                source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
-                resizeMode={"stretch"}
-                style={{
-                    height: 97,
-                }}
+                source={require("../../../assets/NGO/top2.png")}
+                resizeMode="contain"
+                // style={{
+                //     height: 97,
+                // }}
             />
             <View
                 style={{
@@ -108,7 +108,7 @@ const NGOCard = () => {
                     marginHorizontal: 14,
                 }}>
                 <Image
-                    source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
+                    source={require("../../../assets/NGO/location.png")}
                     resizeMode={"stretch"}
                     style={{
                         width: 17,
@@ -130,7 +130,7 @@ const NGOCard = () => {
                     }}>
                 </View>
                 <Image
-                    source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
+                    source={require("../../../assets/NGO/star.png")}
                     resizeMode={"stretch"}
                     style={{
                         width: 13,
@@ -154,7 +154,7 @@ const NGOCard = () => {
                     marginHorizontal: 23,
                 }}>
                 <ImageBackground
-                    source={{ uri: 'https://i.imgur.com/1tMFzp8.png' }}
+                    source={require("../../../assets/NGO/profile.png")}
                     resizeMode={'stretch'}
                     style={{
                         width: 19,
@@ -178,7 +178,7 @@ const NGOCard = () => {
                     {"Resources"}
                 </Text>
                 <Image
-                    source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
+                    source={require("../../../assets/NGO/profile.png")}
                     resizeMode={"stretch"}
                     style={{
                         position: "absolute",
@@ -189,7 +189,7 @@ const NGOCard = () => {
                     }}
                 />
                 <Image
-                    source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
+                    source={require("../../../assets/NGO/profile.png")}
                     resizeMode={"stretch"}
                     style={{
                         position: "absolute",
@@ -200,7 +200,7 @@ const NGOCard = () => {
                     }}
                 />
                 <Image
-                    source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
+                    source={require("../../../assets/NGO/profile.png")}
                     resizeMode={"stretch"}
                     style={{
                         position: "absolute",
@@ -211,7 +211,7 @@ const NGOCard = () => {
                     }}
                 />
                 <Image
-                    source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
+                    source={require("../../../assets/NGO/profile.png")}
                     resizeMode={"stretch"}
                     style={{
                         position: "absolute",
@@ -222,7 +222,7 @@ const NGOCard = () => {
                     }}
                 />
                 <Image
-                    source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
+                    source={require("../../../assets/NGO/profile.png")}
                     resizeMode={"stretch"}
                     style={{
                         position: "absolute",
@@ -233,7 +233,7 @@ const NGOCard = () => {
                     }}
                 />
                 <Image
-                    source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
+                    source={require("../../../assets/NGO/profile.png")}
                     resizeMode={"stretch"}
                     style={{
                         position: "absolute",
