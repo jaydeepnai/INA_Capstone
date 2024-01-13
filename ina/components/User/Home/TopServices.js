@@ -47,6 +47,7 @@ const Service = ()=>{
                         marginHorizontal:20
 					}}>
 						
+						
 					<View 
 						style = {{
 							backgroundColor: "white",

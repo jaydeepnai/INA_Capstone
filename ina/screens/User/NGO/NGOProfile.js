@@ -25,11 +25,14 @@ export default NGOProfile = (props) => {
 						}}>
 						<Image
 							source = {require("../../../assets/NGO/two_dog.jpg")} 
-							resizeMode = {"stretch"}
-							style = {{
-								borderRadius: 15,
-								height: 281,
-							}}
+							resizeMode="contain"
+               				style={{
+                    			borderRadius: 15,
+                    			height:200,
+                    			width: "110%",
+                    			marginBottom: 19,
+                    			marginHorizontal: -10,
+								}}
 						/>
 						<Image
 							source = {require("../../../assets/NGO/NGO_pro.jpg")} 
@@ -40,6 +43,8 @@ export default NGOProfile = (props) => {
 								left: 43,
 								width: 115,
 								height: 115,
+								borderRadius: 15,
+								backgroundColor: "black",
 							}}
 						/>
 					</View>
@@ -588,16 +593,16 @@ export default NGOProfile = (props) => {
 							shadowRadius: 4,
 							elevation: 4,
 						}}>
-						<Text 
+						{/* <Text 
 							style = {{
 								color: "#000000",
 								fontSize: 12,
 								marginTop: 38,
 							}}>
 							{"Blood"}
-						</Text>
+						</Text> */}
 					</View>
-					<ImageBackground 
+					{/* <ImageBackground 
 						source={require("../../../assets/NGO/dog.png")} 
 						resizeMode = {'stretch'}
 						style = {{
@@ -617,7 +622,7 @@ export default NGOProfile = (props) => {
 							}}>
 							{"Blood"}
 						</Text>
-					</ImageBackground>
+					</ImageBackground> */}
 				</View>
 				<View 
 					style = {{
@@ -678,39 +683,16 @@ export default NGOProfile = (props) => {
 									width: 70,
 								}}>
 								<Image
-									source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-									resizeMode = {"stretch"}
-									style = {{
-										borderRadius: 35,
-										height: 70,
-									}}
+									source = {require("../../../assets/NGO/me.jpg")} 
+									resizeMode={"stretch"}
+                        				style={{
+                            			borderRadius: 35,
+                            			width: 70,
+                            			height: 70,
+                        				}}
 								/>
 								<Image
-									source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-									resizeMode = {"stretch"}
-									style = {{
-										position: "absolute",
-										bottom: 6,
-										right: -5,
-										width: 25,
-										height: 22,
-									}}
-								/>
-							</View>
-							<View 
-								style = {{
-									width: 70,
-								}}>
-								<Image
-									source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-									resizeMode = {"stretch"}
-									style = {{
-										borderRadius: 35,
-										height: 70,
-									}}
-								/>
-								<Image
-									source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+									source = {require("../../../assets/NGO/one.png")} 
 									resizeMode = {"stretch"}
 									style = {{
 										position: "absolute",
@@ -726,20 +708,21 @@ export default NGOProfile = (props) => {
 									width: 70,
 								}}>
 								<Image
-									source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-									resizeMode = {"stretch"}
-									style = {{
-										borderRadius: 35,
-										height: 70,
-									}}
+									source = {require("../../../assets/NGO/me.jpg")} 
+									resizeMode={"stretch"}
+                        				style={{
+                            			borderRadius: 35,
+                            			width: 70,
+                            			height: 70,
+                        				}}
 								/>
 								<Image
-									source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+									source = {require("../../../assets/NGO/one.png")} 
 									resizeMode = {"stretch"}
 									style = {{
 										position: "absolute",
 										bottom: 6,
-										right: -7,
+										right: -6,
 										width: 25,
 										height: 22,
 									}}
@@ -750,20 +733,21 @@ export default NGOProfile = (props) => {
 									width: 70,
 								}}>
 								<Image
-									source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-									resizeMode = {"stretch"}
-									style = {{
-										borderRadius: 35,
-										height: 70,
-									}}
+									source = {require("../../../assets/NGO/me.jpg")} 
+									resizeMode={"stretch"}
+                        				style={{
+                            			borderRadius: 35,
+                            			width: 70,
+                            			height: 70,
+                        				}}
 								/>
 								<Image
-									source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+									source = {require("../../../assets/NGO/one.png")} 
 									resizeMode = {"stretch"}
 									style = {{
 										position: "absolute",
 										bottom: 6,
-										right: -7,
+										right: -6,
 										width: 25,
 										height: 22,
 									}}
@@ -774,15 +758,41 @@ export default NGOProfile = (props) => {
 									width: 70,
 								}}>
 								<Image
-									source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-									resizeMode = {"stretch"}
-									style = {{
-										borderRadius: 35,
-										height: 70,
-									}}
+									source = {require("../../../assets/NGO/me.jpg")} 
+									resizeMode={"stretch"}
+                        				style={{
+                            			borderRadius: 35,
+                            			width: 70,
+                            			height: 70,
+                        				}}
 								/>
 								<Image
-									source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+									source = {require("../../../assets/NGO/one.png")} 
+									resizeMode = {"stretch"}
+									style = {{
+										position: "absolute",
+										bottom: 6,
+										right: -6,
+										width: 25,
+										height: 22,
+									}}
+								/>
+							</View>
+							<View 
+								style = {{
+									width: 70,
+								}}>
+								<Image
+									source = {require("../../../assets/NGO/me.jpg")} 
+									resizeMode={"stretch"}
+                        				style={{
+                            			borderRadius: 35,
+                            			width: 70,
+                            			height: 70,
+                        				}}
+								/>
+								<Image
+									source = {require("../../../assets/NGO/one.png")} 
 									resizeMode = {"stretch"}
 									style = {{
 										position: "absolute",
