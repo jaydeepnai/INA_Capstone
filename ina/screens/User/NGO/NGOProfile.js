@@ -28,7 +28,7 @@ export default NGOProfile = (props) => {
 							resizeMode="contain"
                				style={{
                     			borderRadius: 15,
-                    			height:200,
+                    			height:230,
                     			width: "110%",
                     			marginBottom: 19,
                     			marginHorizontal: -10,
@@ -38,13 +38,14 @@ export default NGOProfile = (props) => {
 							source = {require("../../../assets/NGO/NGO_pro.jpg")} 
 							resizeMode = {"stretch"}
 							style = {{
+								backgroundColor:"bleck",
 								position: "absolute",
 								bottom: -52,
-								left: 43,
-								width: 115,
-								height: 115,
+								left: 35,
+								width: 110,
+								height: 110,
 								borderRadius: 15,
-								backgroundColor: "black",
+								
 							}}
 						/>
 					</View>
@@ -75,87 +76,92 @@ export default NGOProfile = (props) => {
 						marginHorizontal: 39,
 					}}>
 					<ImageBackground 
-						source={{uri:"https://i.imgur.com/1tMFzp8.png"}}
-						resizeMode = {'stretch'}
-						style = {{
-							width: 42,
-							paddingHorizontal: 8,
-						}}
+						// source={{uri:"https://i.imgur.com/1tMFzp8.png"}}
+						// resizeMode = {'stretch'}
+						// style = {{
+						// 	width: 42,
+						// 	paddingHorizontal: 8,
+						// }}
 						>
 						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-							resizeMode = {"stretch"}
-							style = {{
-								height: 19,
-								marginTop: 7,
+							source={require("../../../assets/NGO/call.png")}
+							resizeMode={"stretch"}
+							style={{
+								borderRadius: 35,
+								width: 40,
+								height: 40,
 							}}
 						/>
 					</ImageBackground>
 					<ImageBackground 
-						source={{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-						resizeMode = {'stretch'}
-						style = {{
-							width: 42,
-							paddingHorizontal: 13,
-						}}
+						// source={{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+						// resizeMode = {'stretch'}
+						// style = {{
+						// 	width: 42,
+						// 	paddingHorizontal: 13,
+						// }}
 						>
 						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-							resizeMode = {"stretch"}
-							style = {{
-								height: 19,
-								marginTop: 12,
+							source={require("../../../assets/NGO/mail.png")}
+							resizeMode={"stretch"}
+							style={{
+								borderRadius: 35,
+								width: 40,
+								height: 40,
 							}}
 						/>
 					</ImageBackground>
 					<ImageBackground 
-						source={{uri:'https://i.imgur.com/1tMFzp8.png'}} 
-						resizeMode = {'stretch'}
-						style = {{
-							width: 42,
-							paddingHorizontal: 11,
-						}}
+						// source={{uri:'https://i.imgur.com/1tMFzp8.png'}} 
+						// resizeMode = {'stretch'}
+						// style = {{
+						// 	width: 42,
+						// 	paddingHorizontal: 11,
+						// }}
 						>
 						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-							resizeMode = {"stretch"}
-							style = {{
-								height: 19,
-								marginTop: 9,
+							source={require("../../../assets/NGO/facebook.png")}
+							resizeMode={"stretch"}
+							style={{
+								borderRadius: 35,
+								width: 40,
+								height: 40,
 							}}
 						/>
 					</ImageBackground>
 					<ImageBackground 
-						source={{uri:'https://i.imgur.com/1tMFzp8.png'}} 
-						resizeMode = {'stretch'}
-						style = {{
-							width: 42,
-							paddingHorizontal: 10,
-						}}
+						// source={{uri:'https://i.imgur.com/1tMFzp8.png'}} 
+						// resizeMode = {'stretch'}
+						// style = {{
+						// 	width: 42,
+						// 	paddingHorizontal: 10,
+						// }}
 						>
 						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-							resizeMode = {"stretch"}
-							style = {{
-								height: 19,
-								marginTop: 10,
+							source={require("../../../assets/NGO/instagram.png")}
+							resizeMode={"stretch"}
+							style={{
+								borderRadius: 35,
+								width: 40,
+								height: 40,
 							}}
 						/>
 					</ImageBackground>
 					<ImageBackground 
-						source={{uri:'https://i.imgur.com/1tMFzp8.png'}} 
-						resizeMode = {'stretch'}
-						style = {{
-							width: 42,
-							paddingHorizontal: 12,
-						}}
+						// source={{uri:'https://i.imgur.com/1tMFzp8.png'}} 
+						// resizeMode = {'stretch'}
+						// style = {{
+						// 	width: 42,
+						// 	paddingHorizontal: 12,
+						// }}
 						>
 						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-							resizeMode = {"stretch"}
-							style = {{
-								height: 19,
-								marginTop: 10,
+							source={require("../../../assets/NGO/twitter.png")}
+							resizeMode={"stretch"}
+							style={{
+								borderRadius: 35,
+								width: 40,
+								height: 40,
 							}}
 						/>
 					</ImageBackground>
@@ -241,7 +247,7 @@ export default NGOProfile = (props) => {
 					<Text 
 						style = {{
 							color: "#000000",
-							fontSize: 16,
+							fontSize: 10,
 							marginRight: 4,
 							flex: 1,
 						}}>
@@ -258,7 +264,7 @@ export default NGOProfile = (props) => {
 					<Text 
 						style = {{
 							color: "#000000",
-							fontSize: 16,
+							fontSize: 10,
 						}}>
 						{"    NGO services"}
 					</Text>
@@ -944,10 +950,11 @@ export default NGOProfile = (props) => {
 						marginHorizontal: 9,
 					}}>
 					<ImageBackground 
-						source={{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-						resizeMode = {'stretch'}
+						source = {require("../../../assets/NGO/photo_9.jpg")} 
+						resizeMode = {"stretch"}
 						style = {{
 							width: 133,
+							height: 133,
 						}}
 						>
 					</ImageBackground>
