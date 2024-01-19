@@ -23,5 +23,4 @@ export const NGORegistervalidation = yup.object().shape({
     .oneOf([yup.ref('password'), null], 'Passwords must match')
     .required('Confirm Password is required'),
   logo: yup.mixed().required(),
-  registrationDocument: yup.mixed().required(),
 });

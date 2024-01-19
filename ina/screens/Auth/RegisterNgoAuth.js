@@ -12,24 +12,44 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const RegistrationForm = ({navigation}) => {
   const { mutateAsync: RegisterAccount, isLoading } = useRegisterNGOAccount();
-  const [logo, setLogo] = useState(null);
-  const [registrationDocument, setRegistrationDocument] = useState(null);
+  const [logo, setLogo] = useState();
+  const [registrationDocument, setRegistrationDocument] = useState();
   const [documentPickerCancelled, setDocumentPickerCancelled] = useState(false);
   const [ImagePickerCancelled, setImagePickerCancelled] = useState(false);
+// console.log("SelectedLogo",logo)
+
 
   const handleFormSubmit = useCallback(async (values,{ resetForm }) => {
-    const RegisterResposnse = await RegisterAccount(values);
-    if (RegisterResposnse.status == 200) {
-      await AsyncStorage.setItem('NGO', JSON.stringify(RegisterResposnse));
-      ToastAndroid.show('Request sent successfully!', ToastAndroid.SHORT);
-      resetForm()
-      navigation.navigate("LoginAuth");
-      return
-    }else{
-      ToastAndroid.show('Registration Failed!', ToastAndroid.SHORT);
-      resetForm()
-      return
-    }
+    const ImagefileName = values.logo.split("/").pop();
+    const ImagefileType = ImagefileName.split(".").pop();
+    // console.log("ImagefileName" , ImagefileName)
+    // console.log("ImagefileType" ,ImagefileName, ImagefileType,)
+    // console.log("registrationDocument" , logo)
+    const DocfileName = values.registrationDocument.split("/").pop();
+    const DocfileType = DocfileName.split(".").pop();
+    const formData = new FormData();
+    formData.append("registrationDocument", {
+      name: DocfileName,
+      uri:values.registrationDocument,
+      type: `image/${DocfileType}`,
+    });
+    formData.append("name", "jaydeep nai is on");
+    formData.append("password", "aniket");
+    // console.log("formData" , formData)
+    // console.log("object")
+    const RegisterResposnse = await RegisterAccount(formData);
+    // console.log(RegisterResposnse)
+    // if (RegisterResposnse.status == 200) {
+    //   await AsyncStorage.setItem('NGO', JSON.stringify(RegisterResposnse));
+    //   ToastAndroid.show('Request sent successfully!', ToastAndroid.SHORT);
+    //   resetForm()
+    //   navigation.navigate("LoginAuth");
+    //   return
+    // }else{
+    //   ToastAndroid.show('Registration Failed!', ToastAndroid.SHORT);
+    //   resetForm()
+    //   return
+    // }
   },[]);
 
   const pickImage = useCallback(async ({ setValues, values, setTouched, setErrors, errors, touched }) => {
@@ -39,7 +59,8 @@ const RegistrationForm = ({navigation}) => {
       aspect: [1, 1],
       quality: 1,
     });
-    if (result.cancelled) {
+    // console.log('pickImage',result.assets[0].uri)
+    if (result.canceled) {
       setImagePickerCancelled(true)
       setTouched({ ...touched, logo: true });
       setErrors({ ...errors, logo: 'Please select logo' });
@@ -48,13 +69,14 @@ const RegistrationForm = ({navigation}) => {
       setTouched({ ...touched, logo: true });
       delete errors.logo
       setErrors({ ...errors });
-      setValues({ ...values, logo: result })
-      setLogo(result);
+      setValues({ ...values, logo: result.assets[0].uri })
+      setLogo(result.assets[0].uri);
     }
   }, []);
 
   const pickDocument = useCallback(async ({ setValues, values, setTouched, setErrors, errors, touched }) => {
     try {
+      // console.log(errors)
       const docRes = await DocumentPicker.getDocumentAsync();
 
       if (docRes.canceled) {
@@ -63,29 +85,12 @@ const RegistrationForm = ({navigation}) => {
         setErrors({ ...errors, registrationDocument: 'Please select Document' });
         return;
       }
-
-
-      const formData = new FormData();
-      const assets = docRes.assets;
-      if (!assets) return;
-
-      const file = assets[0];
-
-      const registrationDocument = {
-        name: file.name.split(".")[0],
-        uri: file.uri,
-        type: file.mimeType,
-        size: file.size,
-      };
-
-
-      formData.append("registrationDocument", registrationDocument);
-      setRegistrationDocument(registrationDocument);
       setTouched({ ...touched, registrationDocument: true });
+      setRegistrationDocument(docRes.assets[0].uri);
       delete errors.registrationDocument
       setErrors({ ...errors });
       setDocumentPickerCancelled(false)
-      setValues({ ...values, registrationDocument: file })
+      setValues({ ...values, registrationDocument: docRes.assets[0].uri })
     } catch (error) {
       //console.log("Error while selecting file: ", error);
     }
@@ -101,13 +106,14 @@ const RegistrationForm = ({navigation}) => {
         {({ handleChange, handleBlur, handleSubmit, setValues, values, errors, touched, setErrors, setTouched }) => (
           <View style={styles.container}>
               <Avatar.Image
-                source={logo ? { uri: logo.uri } : null}
+                source={logo ? { uri: logo} : null}
                 size={80}
                 style={{ marginBottom: 10 }}
               />
                {(ImagePickerCancelled) && errors.logo && (
               <HelperText type="error">{errors.logo}</HelperText>
             )}
+            {/* {console.log(errors)} */}
             <Button onPress={() => pickImage({ setErrors, values, setValues, setTouched, errors, touched })}>Select Logo</Button>
 
             <TextInput

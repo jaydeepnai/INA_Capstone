@@ -39,7 +39,7 @@ const styles = StyleSheet.create({})
 const NGOCard = () => {
     const navigation =useNavigation() 
     const handelClick = ()=>{
-        console.log("first")
+        // console.log("first")
         navigation.navigate("NGOProfile")
     }
     return (      
