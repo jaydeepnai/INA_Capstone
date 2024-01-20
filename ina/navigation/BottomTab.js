@@ -19,7 +19,7 @@ export function BottomTabs() {
             headerShown: true,
             tabBarIcon: ({ focused }) =>
               focused ? (
-                <Entypo name="home" size={24} color="yellow" />
+                <Entypo name="home" size={24} color="#2bc5b4" />
               ) : (
                 <AntDesign name="home" size={24} color="black" />
               ),
@@ -38,7 +38,7 @@ export function BottomTabs() {
             tabBarLabelStyle: { color: "#008E97" },
             tabBarIcon: ({ focused }) =>
               focused ? (
-                <FontAwesome name="search" size={24} color="yellow"/>
+                <FontAwesome name="search" size={24} color="#2bc5b4"/>
               ) : (
                 <AntDesign name="search1" size={24} color="black" />
               ),
@@ -52,7 +52,7 @@ export function BottomTabs() {
             tabBarLabelStyle: { color: "#008E97" },
             tabBarIcon: ({ focused }) =>
               focused ? (
-                <FontAwesome5 name="money-check-alt" size={24} color="yellow" />
+                <FontAwesome5 name="money-check-alt" size={24} color="#2bc5b4" />
               ) : (
                 <FontAwesome5 name="money-check-alt" size={24} color="black" />
               ),
@@ -66,7 +66,7 @@ export function BottomTabs() {
             tabBarLabelStyle: { color: "#008E97" },
             tabBarIcon: ({ focused }) =>
               focused ? (
-                <FontAwesome5 name="money-check" size={24} color="yellow"/>
+                <FontAwesome5 name="money-check" size={24} color="#2bc5b4"/>
               ) : (
                 <FontAwesome5 name="money-check" size={24} color="black" />
               ),
@@ -94,10 +94,11 @@ export function BottomTabs() {
           options={{
             tabBarLabel: "Profile",
             tabBarLabelStyle: { color: "black" },
+            
             headerShown: false,
             tabBarIcon: ({ focused }) =>
               focused ? (
-                <FontAwesome name="user-circle-o" size={24} color="yellow"/>
+                <FontAwesome name="user-circle-o" size={24} color="#2bc5b4"/>
               ) : (
                 // <FontAwesome name="user-o" size={24} color="black" />
                 <FontAwesome name="user-circle-o" size={24} color="black" />

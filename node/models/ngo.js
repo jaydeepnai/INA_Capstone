@@ -4,16 +4,13 @@ const ngoSchema = new mongoose.Schema({
   id: mongoose.Schema.Types.ObjectId,
   name: String,
   username: String,
+  password: String,
   description: String,
   aim: String,
   foundingDate: Date,
   logoURL: {
-    id: mongoose.Schema.Types.ObjectId,
-    type: String,
-    url: String,
-    caption: String,
-    createdAt: Date,
-    updatedAt: Date,
+    id: Number,
+    Image: String,
   },
   bannerImageURL: {
     id: mongoose.Schema.Types.ObjectId,
@@ -26,12 +23,8 @@ const ngoSchema = new mongoose.Schema({
   ImageIDs: [Number],
   documents: [
     {
-      id: mongoose.Schema.Types.ObjectId,
-      type: String,
-      Image: Number,
-      description: String,
-      createdAt: Date,
-      updatedAt: Date,
+      id: Number,
+      Image: String,
     },
   ],
   CategoryIDs: [Number],
@@ -51,8 +44,8 @@ const ngoSchema = new mongoose.Schema({
   ],
   contacts: [
     {
-      id: mongoose.Schema.Types.ObjectId,
-      contactNumber: Number,
+      id: Number,
+      contactNumber: String,
       primaryEmailAddress: String,
       nonPrimaryEmailAddress: String,
       socialMediaLinks: {

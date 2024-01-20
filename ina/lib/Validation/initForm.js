@@ -1,10 +1,10 @@
 export const RegisterUser = {
-    firstName: '',
-    lastName: '',
-    username: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
+    firstName: 'jaydeep',
+    lastName: 'nai',
+    username: 'jdnai',
+    email: 'nai@gmail.com',
+    password: 'Qwerty1',
+    confirmPassword: 'Qwerty1',
     profilePic:null
   }
 

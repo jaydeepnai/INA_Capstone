@@ -12,8 +12,8 @@ const RegisterUserAuth = ({navigation}) => {
   
   const handleRegister = async (user,{ resetForm }) => {
     const RegisterResposnse = await RegisterAccount(user);
-    //console.log(RegisterResposnse)
-    if (RegisterResposnse.status == 200) {
+    console.log(RegisterResposnse)
+    if (RegisterResposnse.status == 201) {
       await AsyncStorage.setItem('user', JSON.stringify(RegisterResposnse));
       ToastAndroid.show('Request sent successfully!', ToastAndroid.SHORT);
       resetForm()

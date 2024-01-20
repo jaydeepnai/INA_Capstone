@@ -21,8 +21,7 @@ const storage = multer.diskStorage({
     cb(null, uploadDir);
   },
   filename: function (req, file, cb) {
-    const ext = path.extname(file.originalname);
-    const fileName = `${Date.now()}_${Math.floor(Math.random() * 1000)}${ext}`;
+    const fileName = CusFileName(file);
     cb(null, fileName);
   },
 });
@@ -32,74 +31,68 @@ const upload = multer({ storage: storage });
 
 const cpUpload = upload.fields([
     { name: 'registrationDocument', maxCount: 1 },
+    { name: 'NGOlogo', maxCount: 1 },
 ]);
 
-
+const CusFileName = (file)=>{
+    const today = new Date();
+    const day = today.getDate();
+    const month = today.getMonth() + 1; 
+    const year = today.getFullYear();
+    const formattedToday = `${day < 10 ? '0' + day : day}-${month < 10 ? '0' + month : month}-${year}`;
+    return `${formattedToday}_${file.originalname}`;
+}
 
 
 router.post('/registerUser', async (req, res) => {
   try {
-    const { firstName, lastName, email, username, password } = req.body;
-    console.log( firstName, lastName, email, username, password)
-    // Hash the password before saving it
+    const {firstName,lastName, email,username,password} = req.body;
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Create a new user
+    // Create a new NGO
     const user = new User({
       firstName,
       lastName,
-      email,
+      contacts:[{contactID:Date.now(),primaryEmailAddress:email}],
       username,
       password: hashedPassword,
-      role: 'User'
+      role: 'User',
     });
 
-    // Save the user to the database
-    await user.save();
+    // Save the NGO to the database
+    const savedUser = await user.save();
+    res.status(201).json({ message: 'NGO registered successfully',NGO:savedUser });
 
-    res.status(201).json({ message: 'User registered successfully' });
   } catch (error) {
+    console.log({'erro':error })
     res.status(500).json({ error: error.message });
   }
 });
 
 router.post('/registerNgo', cpUpload, async (req, res) => {
-  console.log(req.body);
   try {
-    const {
-      name,
-      email,
-      phone,
-      username,
-      password,
-      confirmPassword,
-      registrationDocument,
-    } = req.body;
+    const {name, email,phone,username,password} = req.body;
+    const {registrationDocument,NGOlogo} = req.files
 
- 
-    // Hash the password before saving it
+    const RegistrationDocumentName = CusFileName(registrationDocument[0]) 
+    const NGOlogoName =  CusFileName(NGOlogo[0])
     const hashedPassword = await bcrypt.hash(password, 10);
-
-    // Extract the uploaded logo file
-    const logoFile = req.file;
-    const logoPath = logoFile ? logoFile.path : null;
 
     // Create a new NGO
     const ngo = new Ngo({
       name,
-      email,
-      phone,
+      contacts:[{id:Date.now(),contactNumber:phone,primaryEmailAddress:email}],
       username,
       password: hashedPassword,
-      registrationDocument,
-      logo: logoPath,
+      documents: [{id:Date.now(),Image:RegistrationDocumentName}],
+      logoURL: {id:Date.now(),Image:NGOlogoName},
       role: 'Ngo',
     });
 
     // Save the NGO to the database
-    await ngo.save();
-    console.log({ message: 'NGO registered successfully' })
-    res.status(201).json({ message: 'NGO registered successfully' });
+    const savedNGO = await ngo.save();
+    res.status(201).json({ message: 'NGO registered successfully',NGO:savedNGO });
+
   } catch (error) {
     console.log({'erro':error })
     res.status(500).json({ error: error.message });
@@ -110,30 +103,30 @@ router.post('/registerNgo', cpUpload, async (req, res) => {
 router.post('/login', async (req, res) => {
   try {
     const { username, password } = req.body;
-
+    console.log(username, password)
+    var ngo;
+    var Entity,Role;
+    
     // Find the user in the database
     var user = await User.findOne({ username });
-    var ngo;
     if (!user) {  
-      user = await Ngo.findOne({ username });
+      ngo = await Ngo.findOne({ username });
+      if (!ngo) { return res.status(401).json({ error: 'Invalid username or password' });}
+      Entity = ngo;Role = "NGO"
+    }else{
+      Entity = user;Role = "USER"
     }
+    console.log(Entity)
 
-    if (!user) {
-      return res.status(401).json({ error: 'Invalid username or password' });
-    }
-
-    // Compare the provided password with the stored hashed password
-    const passwordMatch = await bcrypt.compare(password, user.password);
-
+    const passwordMatch = await bcrypt.compare(password, Entity.password);
     if (!passwordMatch) {
       return res.status(401).json({ error: 'Invalid username or password' });
     }
+    const token = jwt.sign({ id: Entity._id }, 'your_secret_key', { expiresIn: '1h' });
 
-    // Create a JWT token
-    const token = jwt.sign({ userId: user._id }, 'your_secret_key', { expiresIn: '1h' });
-
-    res.json({ id:user._id, token, role });
+    res.status(200).json({ id:Entity._id, token, role:Role });
   } catch (error) {
+    console.log(error)
     res.status(500).json({ error: error.message });
   }
 });

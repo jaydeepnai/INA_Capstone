@@ -12,24 +12,21 @@ const LoginAuth = ({ navigation }) => {
   const { mutateAsync: LogInAccount, isLoading } = useLoginAccount();
 
   const handleLogin = async (user, { resetForm }) => {
-    const session = await LogInAccount(user);
-    //console.log(session)
-    if (session) {
-      ToastAndroid.show('Request sent successfully!', ToastAndroid.SHORT);
-      await AsyncStorage.setItem('user', JSON.stringify(session));
+    const LoginResposnse = await LogInAccount(user);
+    console.log(LoginResposnse)
+    if (LoginResposnse.status == 200) {
+      //setting into storage
+      LoginResposnse.data.role == "USER" ? 
+      await AsyncStorage.setItem('USER', JSON.stringify(LoginResposnse.data)) : await AsyncStorage.setItem('NGO', JSON.stringify(LoginResposnse.data));   
+      //Restting form
       resetForm()
-      //console.log(session.role)  
-      if (session.role == "User") {
-        navigation.navigate("User");
-      } else {
-        navigation.navigate("NGOHome");
-      }
+      //Redirecting
+      LoginResposnse.data.role == "USER" ?  navigation.navigate("User"): navigation.navigate("NGOHome");
+      return
+    }else{
+      resetForm()
       return
     }
-    // const isLoggedIn = await checkAuthUser();
-    ToastAndroid.show('Login failed. Please try again.', ToastAndroid.SHORT);
-    resetForm()
-    return;
   };
 
   return (
@@ -112,14 +109,15 @@ const LoginAuth = ({ navigation }) => {
                 secureTextEntry
               />
               <Text style={styles.errorText}>{errors.password}</Text>
-              <Text
+              <Text 
+              onPress={()=> navigation.navigate("MasterAuth")}
                 style={{
                   color: "#0B22F4",
                   fontSize: 16,
                   // marginHorizontal: 40,
                   margin:10
                 }}>
-                {"Didn't have an account?  SignUp"}
+                {"Didn't have an account?"}
               </Text>
               <Button mode="contained" onPress={handleSubmit}>
                 Login

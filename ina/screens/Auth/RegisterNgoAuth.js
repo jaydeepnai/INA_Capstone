@@ -16,40 +16,44 @@ const RegistrationForm = ({navigation}) => {
   const [registrationDocument, setRegistrationDocument] = useState();
   const [documentPickerCancelled, setDocumentPickerCancelled] = useState(false);
   const [ImagePickerCancelled, setImagePickerCancelled] = useState(false);
-// console.log("SelectedLogo",logo)
 
 
   const handleFormSubmit = useCallback(async (values,{ resetForm }) => {
-    const ImagefileName = values.logo.split("/").pop();
-    const ImagefileType = ImagefileName.split(".").pop();
-    // console.log("ImagefileName" , ImagefileName)
-    // console.log("ImagefileType" ,ImagefileName, ImagefileType,)
-    // console.log("registrationDocument" , logo)
+    const formData = new FormData();
+    
     const DocfileName = values.registrationDocument.split("/").pop();
     const DocfileType = DocfileName.split(".").pop();
-    const formData = new FormData();
     formData.append("registrationDocument", {
       name: DocfileName,
       uri:values.registrationDocument,
       type: `image/${DocfileType}`,
     });
-    formData.append("name", "jaydeep nai is on");
-    formData.append("password", "aniket");
-    // console.log("formData" , formData)
-    // console.log("object")
+
+    const ImagefileName = values.logo.split("/").pop();
+    const ImagefileType = ImagefileName.split(".").pop();
+    formData.append("NGOlogo", {
+      name: ImagefileName,
+      uri:values.logo,
+      type: `image/${ImagefileType}`,
+    });
+
+    formData.append("name", values.name);
+    formData.append("email", values.email);
+    formData.append("password", values.password);
+    formData.append("phone", values.phone);
+    formData.append("username", values.username);
+
     const RegisterResposnse = await RegisterAccount(formData);
-    // console.log(RegisterResposnse)
-    // if (RegisterResposnse.status == 200) {
-    //   await AsyncStorage.setItem('NGO', JSON.stringify(RegisterResposnse));
-    //   ToastAndroid.show('Request sent successfully!', ToastAndroid.SHORT);
-    //   resetForm()
-    //   navigation.navigate("LoginAuth");
-    //   return
-    // }else{
-    //   ToastAndroid.show('Registration Failed!', ToastAndroid.SHORT);
-    //   resetForm()
-    //   return
-    // }
+    
+    if (RegisterResposnse.status == 201) {
+      await AsyncStorage.setItem('NGO', JSON.stringify(RegisterResposnse));
+      resetForm()
+      navigation.navigate("LoginAuth");
+      return
+    }else{
+      resetForm()
+      return
+    }
   },[]);
 
   const pickImage = useCallback(async ({ setValues, values, setTouched, setErrors, errors, touched }) => {
@@ -59,7 +63,7 @@ const RegistrationForm = ({navigation}) => {
       aspect: [1, 1],
       quality: 1,
     });
-    // console.log('pickImage',result.assets[0].uri)
+
     if (result.canceled) {
       setImagePickerCancelled(true)
       setTouched({ ...touched, logo: true });
@@ -76,7 +80,6 @@ const RegistrationForm = ({navigation}) => {
 
   const pickDocument = useCallback(async ({ setValues, values, setTouched, setErrors, errors, touched }) => {
     try {
-      // console.log(errors)
       const docRes = await DocumentPicker.getDocumentAsync();
 
       if (docRes.canceled) {
@@ -92,7 +95,7 @@ const RegistrationForm = ({navigation}) => {
       setDocumentPickerCancelled(false)
       setValues({ ...values, registrationDocument: docRes.assets[0].uri })
     } catch (error) {
-      //console.log("Error while selecting file: ", error);
+      console.log("Error while selecting file: ", error);
     }
   }, []);
 
