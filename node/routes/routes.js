@@ -9,6 +9,7 @@ const bodyParser = require("body-parser");
 const path = require('path');
 const fs = require('fs');
 const cors = require("cors");
+const { NgoService, NgoSchedule } = require('../models/ngoService');
 
 
 // Set up the 'uploads' directory
@@ -131,5 +132,139 @@ router.post('/login', async (req, res) => {
   }
 });
 
+
+router.put('/updateUser/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const updateData = req.body;
+    console.log(req.body)
+    // Optional: Hash the password if it's being updated
+    if (updateData.password) {
+      updateData.password = await bcrypt.hash(updateData.password, 10);
+    }
+
+    const updatedUser = await User.findByIdAndUpdate(id, updateData, { new: true });
+
+    if (!updatedUser) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    res.json({ message: 'User updated successfully', updatedUser });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+router.post('/updateUserLogo/:userId', upload.single('logo'), async (req, res) => {
+  try {
+    const { userId } = req.params;
+    const {logo} = req.files
+
+    if (!logo) {
+      return res.status(400).json({ message: 'No logo file uploaded' });
+    }
+    const NGOlogoName =  CusFileName(logo[0])
+
+    const updatedUser = await User.findByIdAndUpdate(
+      userId,
+      { profilePicUrl: NGOlogoName },
+      { new: true }
+    );
+
+    if (!updatedUser) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    res.json({ message: 'User logo updated successfully', updatedUser });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+
+// Update NGO endpoint
+router.put('/updateNgo/:ngoId', async (req, res) => {
+  try {
+    const { ngoId } = req.params;
+    const updateData = req.body;
+
+    const updatedNgo = await Ngo.findByIdAndUpdate(ngoId, updateData, { new: true });
+
+    if (!updatedNgo) {
+      return res.status(404).json({ message: 'NGO not found' });
+    }
+
+    res.json({ message: 'NGO updated successfully', updatedNgo });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+
+// Create NgoService
+router.post('/ngoService', async (req, res) => {
+  try {
+    const ngoSchedule = new NgoSchedule(req.body.ngoSchedule);
+    const ngoService = new NgoService(req.body.ngoService);
+    ngoService._id 
+    await ngoService.save();
+    await ngoSchedule.save();
+    res.status(201).json(ngoService);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+// Read NgoService (all)
+router.get('/ngoServices', async (req, res) => {
+  try {
+    const ngoServices = await NgoService.find();
+    res.json(ngoServices);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Read NgoService (one)
+router.get('/ngoService/:id', async (req, res) => {
+  try {
+    const ngoService = await NgoService.findById(req.params.id);
+    if (!ngoService) {
+      return res.status(404).json({ message: 'NGO Service not found' });
+    }
+    res.json(ngoService);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Update NgoService
+router.put('/ngoService/:id', async (req, res) => {
+  try {
+    const updatedNgoService = await NgoService.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    if (!updatedNgoService) {
+      return res.status(404).json({ message: 'NGO Service not found' });
+    }
+    res.json(updatedNgoService);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+// Delete NgoService
+router.delete('/ngoService/:id', async (req, res) => {
+  try {
+    const ngoService = await NgoService.findByIdAndDelete(req.params.id);
+    if (!ngoService) {
+      return res.status(404).json({ message: 'NGO Service not found' });
+    }
+    res.json({ message: 'NGO Service deleted successfully' });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
 module.exports = router;

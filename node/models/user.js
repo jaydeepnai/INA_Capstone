@@ -1,46 +1,66 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const ContactSchema = new mongoose.Schema({
-  contactID: Number,
-  contactNumber: Number,
-  primaryEmailAddress: String,
-  nonPrimaryEmailAddress: String,
-  socialMediaLinks: {
-    facebook: String,
-    twitter: String,
-    website: String,
+  "contactID": {
+    type: mongoose.Schema.Types.ObjectId,
+    default: mongoose.Types.ObjectId,
+    unique: true
   },
-  createdAt: Date,
-  updatedAt: Date,
-});
+  "contactNumber": Number,
+  "primaryEmailAddress": String,
+  "nonPrimaryEmailAddress": String,
+  "socialMediaLinks": {
+    "facebook": String,
+    "twitter": String,
+    "website": String,
+  },
+  "createdAt": Date,
+  "updatedAt": Date,
+},);
 
 const AddressSchema = new mongoose.Schema({
-  addressID: Number,
-  street: String,
-  nearby: String,
-  region: String,
-  city: String,
-  stateProvince: String,
-  country: String,
-  postalCode: Number,
-  createdAt: Date,
-  updatedAt: Date,  
+  "addressID": {
+    type: mongoose.Schema.Types.ObjectId,
+    default: mongoose.Types.ObjectId,
+    unique: true
+  },
+  "street": String,
+  "nearby": String,
+  "region": String,
+  "city": String,
+  "stateProvince": String,
+  "country": String,
+  "postalCode": Number,
+  "createdAt": Date,
+  "updatedAt": Date,
+
 });
 
 const SkillSchema = new mongoose.Schema({
-  _id: Number,
-  name: String, // Name of the skill
-  description: String,
-  logoURL: String, // URL to the logo image
-  bannerImageURL: String, // URL to the banner image
-  createdAt: Date, // Date and time when the skill was created
-  updatedAt: Date, // Date and time of the last update
-});
+  "_id": {
+    type: mongoose.Schema.Types.ObjectId,
+    default: mongoose.Types.ObjectId,
+    unique: true
+  },
+  "name": String, // Name of the skill
+  "description": String,
+  "logoURL":String, // URL to the logo image
+  "bannerImageURL": String, // URL to the banner image
+  "createdAt": Date, // Date and time when the skill was created
+  "updatedAt": Date, // Date and time of the last update
+}
+);
 
 const LanguageSchema = new mongoose.Schema({
-  _id: Number,
-  name: Number,
+  name: {
+    type: String,
+    required: true,
+    unique: true
+  },
   description: String,
+  // Add any other fields relevant to your "Language" collection
+
+  // Timestamps to track when the document was created and last updated
   createdAt: {
     type: Date,
     default: Date,
@@ -48,7 +68,7 @@ const LanguageSchema = new mongoose.Schema({
   updatedAt: {
     type: Date,
     default: Date,
-  },
+  }
 });
 
 // Define the main User schema
@@ -57,15 +77,15 @@ const UserSchema = new mongoose.Schema({
   lastName: String,
   middlename: String,
   dateOfBirth: Date,
-  gender: { type: String, enum: ["Male", "Female"] },
+  gender:  String,
   username: String,
   password: String,
-  accountStatus: { type: String, enum: ["Active", "Inactive"] },
+  accountStatus:  String,
   bio: String,
   additionalInfo: String,
   contacts: [
     {
-      contactID: Number,
+      id: mongoose.Schema.Types.ObjectId,
       contactNumber: Number,
       primaryEmailAddress: String,
       nonPrimaryEmailAddress: String,
@@ -80,7 +100,7 @@ const UserSchema = new mongoose.Schema({
   ],
   address: [
     {
-      addressID: Number,
+      id: mongoose.Schema.Types.ObjectId,
       street: String,
       nearby: String,
       region: String,
@@ -97,19 +117,23 @@ const UserSchema = new mongoose.Schema({
   profilePicUrl: String,
   role: String,
   volunteerStatus: String,
-  registeredAt: Date,
-  isDeleted: Boolean,
+  registeredAt:  Date,
+  isDeleted: Boolean
 });
 
 // Create models for the related collections
-const Skill = mongoose.model("Skill", SkillSchema);
-const Language = mongoose.model("Language", LanguageSchema);
+const Contact = mongoose.model('Contact', ContactSchema);
+const Address = mongoose.model('Address', AddressSchema);
+const Skill = mongoose.model('Skill', SkillSchema);
+const Language = mongoose.model('Language', LanguageSchema);
 
 // Create the User model
-const User = mongoose.model("User", UserSchema);
+const User = mongoose.model('User', UserSchema);
 
 module.exports = {
   User,
+  Contact,
+  Address,
   Skill,
-  Language,
+  Language
 };
