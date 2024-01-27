@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const Ngo = require('../models/ngo');
 const router = express.Router();
-const {User} = require('../models/user');
+const {User, Contact, Address} = require('../models/user');
 const multer = require('multer');
 const bodyParser = require("body-parser");
 const path = require('path');
@@ -50,19 +50,27 @@ router.post('/registerUser', async (req, res) => {
     const {firstName,lastName, email,username,password} = req.body;
     const hashedPassword = await bcrypt.hash(password, 10);
 
+    const UserContact = new Contact({
+      primaryEmailAddress:email
+    }) 
+    
+    const savedUserContact = await UserContact.save();
+    console.log(savedUserContact)
+
     // Create a new NGO
     const user = new User({
       firstName,
       lastName,
-      contacts:[{contactID:Date.now(),primaryEmailAddress:email}],
+      contactID:savedUserContact._id,
       username,
       password: hashedPassword,
       role: 'User',
     });
 
-    // Save the NGO to the database
+    // // Save the NGO to the database
     const savedUser = await user.save();
-    res.status(201).json({ message: 'NGO registered successfully',NGO:savedUser });
+    res.status(201)
+    .json({ message: 'User registered successfully',User:savedUser });
 
   } catch (error) {
     console.log({'erro':error })
@@ -79,10 +87,17 @@ router.post('/registerNgo', cpUpload, async (req, res) => {
     const NGOlogoName =  CusFileName(NGOlogo[0])
     const hashedPassword = await bcrypt.hash(password, 10);
 
+    
+    const UserContact = new Contact({
+      primaryEmailAddress:email
+    }) 
+    
+    const savedUserContact = await UserContact.save();
+
     // Create a new NGO
     const ngo = new Ngo({
       name,
-      contacts:[{id:Date.now(),contactNumber:phone,primaryEmailAddress:email}],
+      contactID:savedUserContact._id,
       username,
       password: hashedPassword,
       documents: [{id:Date.now(),Image:RegistrationDocumentName}],
@@ -136,19 +151,29 @@ router.post('/login', async (req, res) => {
 router.put('/updateUser/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const updateData = req.body;
-    console.log(req.body)
-    // Optional: Hash the password if it's being updated
-    if (updateData.password) {
-      updateData.password = await bcrypt.hash(updateData.password, 10);
+    const user = req.body.user;
+    const contact = req.body.contact;
+    const address = req.body.address;
+
+    if (user.password) {
+      user.password = await bcrypt.hash(user.password, 10);
     }
 
-    const updatedUser = await User.findByIdAndUpdate(id, updateData, { new: true });
-
+    updatedContact = await Contact.findByIdAndUpdate(contact._id,contact, { new: true }) 
+    
+    if(!address._id) {
+      const UserAddress = new Address(address)
+      const CreatedAddress = await UserAddress.save() 
+      user.addressID = CreatedAddress._id;
+    }else{
+      updatedAddress = await Address.findByIdAndUpdate(address._id,address, { new: true }) 
+    }
+    
+    const updatedUser = await User.findByIdAndUpdate(id, user, { new: true });
     if (!updatedUser) {
       return res.status(404).json({ message: 'User not found' });
     }
-
+    
     res.json({ message: 'User updated successfully', updatedUser });
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -185,13 +210,35 @@ router.post('/updateUserLogo/:userId', upload.single('logo'), async (req, res) =
 router.put('/updateNgo/:ngoId', async (req, res) => {
   try {
     const { ngoId } = req.params;
-    const updateData = req.body;
+    const ngo = req.body.ngo;
+    const contact = req.body.contact;
+    const address = req.body.address;
 
-    const updatedNgo = await Ngo.findByIdAndUpdate(ngoId, updateData, { new: true });
-
-    if (!updatedNgo) {
-      return res.status(404).json({ message: 'NGO not found' });
+    if (ngo.password) {
+      ngo.password = await bcrypt.hash(ngo.password, 10);
     }
+
+    updatedContact = await Contact.findByIdAndUpdate(contact._id,contact, { new: true }) 
+    
+    if(!address._id) {
+      const UserAddress = new Address(address)
+      const CreatedAddress = await UserAddress.save() 
+      user.addressID = CreatedAddress._id;
+    }else{
+      updatedAddress = await Address.findByIdAndUpdate(address._id,address, { new: true }) 
+    }
+    
+    const updatedUser = await User.findByIdAndUpdate(id, user, { new: true });
+    if (!updatedUser) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    // const updateData = req.body;
+
+    // const updatedNgo = await Ngo.findByIdAndUpdate(ngoId, updateData, { new: true });
+
+    // if (!updatedNgo) {
+    //   return res.status(404).json({ message: 'NGO not found' });
+    // }
 
     res.json({ message: 'NGO updated successfully', updatedNgo });
   } catch (error) {

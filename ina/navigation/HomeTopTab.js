@@ -5,11 +5,9 @@ import Foryou from "../screens/User/Home/Foryou";
 const HomeTopTab = createMaterialTopTabNavigator();
 export function HomeTopTabs() {
     return (
-      // <SafeAreaView>
       <HomeTopTab.Navigator screenOptions={{ headerShown:false }}>
         <HomeTopTab.Screen name="Trending" component={Trending} />
         <HomeTopTab.Screen name="ForYou" component={Foryou} />
       </HomeTopTab.Navigator>
-      // </SafeAreaView>
     );
   }

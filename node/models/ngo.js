@@ -1,25 +1,14 @@
 const mongoose = require("mongoose");
 
 const ngoSchema = new mongoose.Schema({
-  id: mongoose.Schema.Types.ObjectId,
   name: String,
   username: String,
   password: String,
   description: String,
   aim: String,
   foundingDate: Date,
-  logoURL: {
-    id: Number,
-    Image: String,
-  },
-  bannerImageURL: {
-    id: mongoose.Schema.Types.ObjectId,
-    type: String,
-    url: String,
-    caption: String,
-    createdAt: Date,
-    updatedAt: Date,
-  },
+  logoURL: String,
+  bannerImageURL: String,
   ImageIDs: [Number],
   documents: [
     {
@@ -28,35 +17,14 @@ const ngoSchema = new mongoose.Schema({
     },
   ],
   CategoryIDs: [Number],
-  address: [
-    {
-      id: mongoose.Schema.Types.ObjectId,
-      street: String,
-      nearby: String,
-      region: String,
-      city: String,
-      stateProvince: String,
-      country: String,
-      postalCode: Number,
-      createdAt: Date,
-      updatedAt: Date,
-    },
-  ],
-  contacts: [
-    {
-      id: Number,
-      contactNumber: String,
-      primaryEmailAddress: String,
-      nonPrimaryEmailAddress: String,
-      socialMediaLinks: {
-        facebook: String,
-        twitter: String,
-        website: String,
-      },
-      createdAt: Date,
-      updatedAt: Date,
-    },
-  ],
+  addressID: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Address",
+  },
+  contactID: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Contact",
+  },
   team: [
     {
       userID: Number,

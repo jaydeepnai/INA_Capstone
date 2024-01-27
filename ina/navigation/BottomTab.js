@@ -5,6 +5,9 @@ import HeaderLeft, { HeaderRight } from '../components/User/Home/Header/Header';
 import Trending from '../screens/User/Home/Trending';
 import Search from '../screens/User/Search/Search';
 import Profile from '../screens/User/Profile/Profile';
+import DonationList from '../screens/User/Donation/DonationList';
+import FundReqList from '../screens/User/FundReq/FundList';
+import { DonationTopTabs } from './DonationTopTab';
 const Tab = createBottomTabNavigator();
 
 
@@ -46,30 +49,36 @@ export function BottomTabs() {
         />
         <Tab.Screen
           name="UserDonation"
-          component={Trending}
+          component={DonationList}
           options={{
             tabBarLabel: "Donation",
-            tabBarLabelStyle: { color: "#008E97" },
+            headerShown: true,
             tabBarIcon: ({ focused }) =>
               focused ? (
-                <FontAwesome5 name="money-check-alt" size={24} color="#2bc5b4" />
+                <Entypo name="home" size={24} color="#2bc5b4" />
               ) : (
-                <FontAwesome5 name="money-check-alt" size={24} color="black" />
+                <AntDesign name="home" size={24} color="black" />
               ),
+              headerLeft : ()=><HeaderLeft/>,
+              headerRight : ()=><HeaderRight/>,
+              headerTitleAlign : "center"
           }}
         />
         <Tab.Screen
           name="FundReq"
-          component={Trending}
+          component={DonationTopTabs}
           options={{
             tabBarLabel: "Funds",
-            tabBarLabelStyle: { color: "#008E97" },
+            headerShown: true,
             tabBarIcon: ({ focused }) =>
               focused ? (
                 <FontAwesome5 name="money-check" size={24} color="#2bc5b4"/>
               ) : (
                 <FontAwesome5 name="money-check" size={24} color="black" />
               ),
+              headerLeft : ()=><HeaderLeft/>,
+              headerRight : ()=><HeaderRight/>,
+              headerTitleAlign : "center"
           }}
         />
 

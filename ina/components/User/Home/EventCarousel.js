@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import * as React from 'react';
 import {
     Animated,
@@ -5,6 +6,7 @@ import {
     Text,
     View,
     StyleSheet,
+    TouchableOpacity,
 } from 'react-native';
 
 const { width, height } = Dimensions.get('screen');
@@ -32,9 +34,9 @@ const data = images.map((image, index) => ({
     )}.jpg`,
 }));
 
-export const Events = () => {
+export const Events = ({}) => {
     const scrollX = React.useRef(new Animated.Value(0)).current;
-
+    const navigation = useNavigation()
     return (
         <>
             <Text style={{ fontSize: 23, marginHorizontal: 20, marginVertical: 10 }}>
@@ -61,25 +63,7 @@ export const Events = () => {
                             outputRange: [-width * 0.70, 0, width * 0.70]
                         })
                         return (
-                            <View style={{ width, justifyContent: "center", alignItems: "center" }}>
-                                <View style={{
-                                    width: ITEM_WIDTH,
-                                    height: ITEM_HEIGHT,
-                                    overflow: "hidden",
-                                    borderRadius: 10, margin: 20
-                                }}>
-                                    <Animated.Image
-                                        style={{
-                                            width: ITEM_WIDTH * 1.4,
-                                            height: ITEM_HEIGHT,
-                                            resizeMode: "cover",
-                                            transform: [
-                                                { translateX }
-                                            ]
-                                        }}
-                                        source={{ uri: item.photo }} />
-                                </View>
-                            </View>
+                            <EventCard scrollX={scrollX} navigation={navigation} item={item} translateX={translateX}/>
                         )
                     }}
                 />
@@ -87,6 +71,36 @@ export const Events = () => {
         </>
     )
 }
+
+
+const NavigateEvent = (navigation) =>{
+    navigation.navigate("EventDetails")
+}
+
+
+export const EventCard = ({scrollX,item,translateX,navigation})=>{
+    return (
+        <TouchableOpacity onPress={()=>NavigateEvent(navigation)} style={{ width, justifyContent: "center", alignItems: "center" }}>
+        <View style={{
+            width: ITEM_WIDTH,
+            height: ITEM_HEIGHT,
+            overflow: "hidden",
+            borderRadius: 10, margin: 20
+        }}>
+            <Animated.Image
+                style={{
+                    width: ITEM_WIDTH * 1.4,
+                    height: ITEM_HEIGHT,
+                    resizeMode: "cover",
+                    transform: [
+                        { translateX }
+                    ]
+                }}
+                source={{ uri: item.photo }} />
+        </View>
+    </TouchableOpacity>
+    )
+} 
 
 
 

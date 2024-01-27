@@ -1,4 +1,4 @@
-import { Image, ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Image, ImageBackground, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import Categories from '../../../components/User/Home/Categories'
 import TopNGOList from '../../../components/User/Home/TopNGOList'
@@ -7,8 +7,10 @@ import Achievers from '../../../components/User/Home/Achievers'
 import TopServices from '../../../components/User/Home/TopServices'
 import TopPosts from '../../../components/User/Home/TopPosts'
 import { Events } from '../../../components/User/Home/EventCarousel'
+import { useNavigation } from '@react-navigation/native'
 
 const Trending = () => {
+	const navigation = useNavigation()
 	return (
 		<ScrollView>
 			<Events />
@@ -29,6 +31,9 @@ const Trending = () => {
 					}}>
 					{"TOP POVERTY NGO "}
 				</Text>
+				<TouchableOpacity onPress={()=>{
+					navigation.navigate("NGOResult");
+				}}>
 				<Text
 					style={{
 						color: "#679D0A",
@@ -36,6 +41,7 @@ const Trending = () => {
 					}}>
 					{"See All"}
 				</Text>
+				</TouchableOpacity>
 			</View>
 			<TopNGOList>
 			</TopNGOList>

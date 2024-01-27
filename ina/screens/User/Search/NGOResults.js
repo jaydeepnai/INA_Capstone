@@ -1,6 +1,7 @@
 import { AntDesign, Feather, FontAwesome, Ionicons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { SafeAreaView, View, ScrollView, Image, Text, } from "react-native";
+import { SafeAreaView, View, ScrollView, Image, Text, TouchableOpacity, } from "react-native";
 
 export default NGOResult = (props) => {
 
@@ -153,8 +154,12 @@ export default NGOResult = (props) => {
 }
 
 
-const NGOCard = () => (
-    <View
+const NGOCard = () => {
+    const navigation = useNavigation()
+
+    return (
+    <TouchableOpacity
+        onPress={()=> navigation.navigate("NGOProfile")}
         style={{
             backgroundColor: "white",
             borderRadius: 15,
@@ -269,5 +274,5 @@ const NGOCard = () => (
                     </View>
             </View>
         </View>
-    </View>
-)
+    </TouchableOpacity>
+)}
