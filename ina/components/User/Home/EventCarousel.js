@@ -7,12 +7,12 @@ import {
   View,
   StyleSheet,
   TouchableOpacity,
+  Image,
 } from "react-native";
-import LinearGradient from 'react-native-linear-gradient';
-
+import { LinearGradient } from "expo-linear-gradient";
 
 const { width, height } = Dimensions.get("screen");
-const ITEM_WIDTH = width * 0.85;
+const ITEM_WIDTH = width * 0.90;
 const ITEM_HEIGHT = ITEM_WIDTH * 1.2;
 
 const images = [
@@ -40,7 +40,7 @@ export const Events = ({}) => {
   const navigation = useNavigation();
   return (
     <>
-      <Text style={{ fontSize: 23, marginHorizontal: 20, marginVertical: 10 }}>
+      <Text style={{ fontSize: 23, marginHorizontal: 20, marginTop: 5 }}>
         Top Events of the Week
       </Text>
       <View style={styles.container}>
@@ -96,12 +96,9 @@ export const EventCard = ({ scrollX, item, translateX, navigation }) => {
           overflow: "hidden",
           borderRadius: 10,
           margin: 20,
+        //   marginLeft:50
         }}
       >
-         <LinearGradient
-        colors={['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0.5)']}  // Adjust these colors as needed
-        locations={[0, 0.8]}  // Adjust the gradient stops
-        style={styles.gradient}>
         <Animated.Image
           style={{
             width: ITEM_WIDTH * 1.4,
@@ -110,17 +107,54 @@ export const EventCard = ({ scrollX, item, translateX, navigation }) => {
             transform: [{ translateX }],
           }}
           source={{ uri: item.photo }}
-        />
-
+        ></Animated.Image>
+        <LinearGradient
+          colors={["transparent", "transparent", "rgba(0,0,0,0.8)"]}
+          style={{ height: "100%", width: "100%", position: "absolute" }}
+        >
+          {/* <View> */}
+          <Image
+            style={{
+              width: 100,
+              height: 100,
+              resizeMode: "cover",
+              borderRadius: 100,
+              position: "absolute",
+              bottom: 60,
+              left: "35%",
+              alignItems: "center",
+              justifyContent: "center",
+              borderColor:"white",
+              borderWidth:2,
+            }}
+            source={{ uri: item.photo }}
+          ></Image>
+          <Text
+            style={{
+              position: "absolute",
+              bottom: 25,
+              left: "33%",
+              fontWeight: "bold",
+              fontSize: 20,
+              color: "white",
+            }}
+          >
+            Hare Krishna
+          </Text>
+          <Text
+            style={{
+              position: "absolute",
+              bottom: 10,
+              left: "33%",
+              fontWeight: "bold",
+              fontSize: 15,
+              color: "white",
+            }}
+          >
+            Hare Krishna
+          </Text>
+          {/* </View> */}
         </LinearGradient>
-        <Text style={{
-            position:"absolute",
-            fontWeight:"bold",
-            fontSize:20,
-            color: "white",
-        }}>
-            hare krishna
-        </Text>
       </View>
     </TouchableOpacity>
   );
@@ -137,7 +171,7 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
   },
 });
