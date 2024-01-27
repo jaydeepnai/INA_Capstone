@@ -1,1183 +1,1200 @@
-import { StyleSheet, Text, View,Image, ScrollView } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
+import React from "react";
 import { AntDesign } from "@expo/vector-icons";
-
+import { FAB } from "react-native-paper";
 
 const ComplatedFunds = () => {
   return (
+    <View>
     <ScrollView>
-    <View
-      style={{
-        width: "auto",
-        height: 95,
-        marginBottom: 40,
-      }}
-    >
       <View
         style={{
-          margin: 20,
-          // marginBottom: 40,
+          width: "auto",
+          height: 95,
+          marginBottom: 40,
         }}
       >
         <View
           style={{
-            backgroundColor: "#D2F694",
-            borderRadius: 10,
-            paddingVertical: 14,
-            paddingLeft: 65,
-            marginLeft: 70,
-          //   marginBottom:10
+            margin: 20,
+            // marginBottom: 40,
           }}
         >
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 18,
-              marginBottom: 5,
-            }}
-          >
-            {"ATELIER AFRICA SAFARIS"}
-          </Text>
           <View
             style={{
-              flexDirection: "row",
-              marginRight: 22,
+              backgroundColor: "#D2F694",
+              borderRadius: 10,
+              paddingVertical: 14,
+              paddingLeft: 65,
+              marginLeft: 70,
+              //   marginBottom:10
+            }}
+          >
+            <Text
+              style={{
+                color: "#000000",
+                fontSize: 18,
+                marginBottom: 5,
+              }}
+            >
+              {"ATELIER AFRICA SAFARIS"}
+            </Text>
+            <View
+              style={{
+                flexDirection: "row",
+                marginRight: 22,
+              }}
+            >
+              <View
+                style={{
+                  flex: 1,
+                  alignSelf: "flex-start",
+                  marginRight: 4,
+                }}
+              >
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 12,
+                    marginBottom: 4,
+                  }}
+                >
+                  {"Requirement: 5,00,000 "}
+                </Text>
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 12,
+                  }}
+                >
+                  {"Fulfill: 2,54,015 "}
+                </Text>
+              </View>
+              <View>
+                <AntDesign name="piechart" size={24} color="black" />
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 14,
+                  }}
+                >
+                  {"50.68%"}
+                </Text>
+              </View>
+            </View>
+            <Text
+              style={{
+                color: "#000000",
+                fontSize: 14,
+              }}
+            >
+              {"Days left: 39 DAYS "}
+            </Text>
+          </View>
+          <Image
+            source={require("../../../assets/animals.jpg")}
+            resizeMode={"stretch"}
+            style={{
+              position: "absolute",
+              bottom: -4,
+              left: 0,
+              borderRadius: 100,
+              width: 120,
+              height: 120,
+            }}
+          />
+        </View>
+      </View>
+      <View
+        style={{
+          width: "auto",
+          height: 95,
+          marginBottom: 40,
+        }}
+      >
+        <View
+          style={{
+            margin: 20,
+            // marginBottom: 40,
+          }}
+        >
+          <View
+            style={{
+              backgroundColor: "#D2F694",
+              borderRadius: 10,
+              paddingVertical: 14,
+              paddingLeft: 65,
+              marginLeft: 70,
+              //   marginBottom:10
+            }}
+          >
+            <Text
+              style={{
+                color: "#000000",
+                fontSize: 18,
+                marginBottom: 5,
+              }}
+            >
+              {"ATELIER AFRICA SAFARIS"}
+            </Text>
+            <View
+              style={{
+                flexDirection: "row",
+                marginRight: 22,
+              }}
+            >
+              <View
+                style={{
+                  flex: 1,
+                  alignSelf: "flex-start",
+                  marginRight: 4,
+                }}
+              >
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 12,
+                    marginBottom: 4,
+                  }}
+                >
+                  {"Requirement: 5,00,000 "}
+                </Text>
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 12,
+                  }}
+                >
+                  {"Fulfill: 2,54,015 "}
+                </Text>
+              </View>
+              <View>
+                <AntDesign name="piechart" size={24} color="black" />
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 14,
+                  }}
+                >
+                  {"50.68%"}
+                </Text>
+              </View>
+            </View>
+            <Text
+              style={{
+                color: "#000000",
+                fontSize: 14,
+              }}
+            >
+              {"Days left: 39 DAYS "}
+            </Text>
+          </View>
+          <Image
+            source={require("../../../assets/animals.jpg")}
+            resizeMode={"stretch"}
+            style={{
+              position: "absolute",
+              bottom: -4,
+              left: 0,
+              borderRadius: 100,
+              width: 120,
+              height: 120,
+            }}
+          />
+        </View>
+      </View>
+      <View
+        style={{
+          width: "auto",
+          height: 95,
+          marginBottom: 40,
+        }}
+      >
+        <View
+          style={{
+            margin: 20,
+            // marginBottom: 40,
+          }}
+        >
+          <View
+            style={{
+              backgroundColor: "#D2F694",
+              borderRadius: 10,
+              paddingVertical: 14,
+              paddingLeft: 65,
+              marginLeft: 70,
+              //   marginBottom:10
+            }}
+          >
+            <Text
+              style={{
+                color: "#000000",
+                fontSize: 18,
+                marginBottom: 5,
+              }}
+            >
+              {"ATELIER AFRICA SAFARIS"}
+            </Text>
+            <View
+              style={{
+                flexDirection: "row",
+                marginRight: 22,
+              }}
+            >
+              <View
+                style={{
+                  flex: 1,
+                  alignSelf: "flex-start",
+                  marginRight: 4,
+                }}
+              >
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 12,
+                    marginBottom: 4,
+                  }}
+                >
+                  {"Requirement: 5,00,000 "}
+                </Text>
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 12,
+                  }}
+                >
+                  {"Fulfill: 2,54,015 "}
+                </Text>
+              </View>
+              <View>
+                <AntDesign name="piechart" size={24} color="black" />
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 14,
+                  }}
+                >
+                  {"50.68%"}
+                </Text>
+              </View>
+            </View>
+            <Text
+              style={{
+                color: "#000000",
+                fontSize: 14,
+              }}
+            >
+              {"Days left: 39 DAYS "}
+            </Text>
+          </View>
+          <Image
+            source={require("../../../assets/animals.jpg")}
+            resizeMode={"stretch"}
+            style={{
+              position: "absolute",
+              bottom: -4,
+              left: 0,
+              borderRadius: 100,
+              width: 120,
+              height: 120,
+            }}
+          />
+        </View>
+      </View>
+      <View
+        style={{
+          width: "auto",
+          height: 95,
+          marginBottom: 40,
+        }}
+      >
+        <View
+          style={{
+            margin: 20,
+            // marginBottom: 40,
+          }}
+        >
+          <View
+            style={{
+              backgroundColor: "#D2F694",
+              borderRadius: 10,
+              paddingVertical: 14,
+              paddingLeft: 65,
+              marginLeft: 70,
+              //   marginBottom:10
+            }}
+          >
+            <Text
+              style={{
+                color: "#000000",
+                fontSize: 18,
+                marginBottom: 5,
+              }}
+            >
+              {"ATELIER AFRICA SAFARIS"}
+            </Text>
+            <View
+              style={{
+                flexDirection: "row",
+                marginRight: 22,
+              }}
+            >
+              <View
+                style={{
+                  flex: 1,
+                  alignSelf: "flex-start",
+                  marginRight: 4,
+                }}
+              >
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 12,
+                    marginBottom: 4,
+                  }}
+                >
+                  {"Requirement: 5,00,000 "}
+                </Text>
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 12,
+                  }}
+                >
+                  {"Fulfill: 2,54,015 "}
+                </Text>
+              </View>
+              <View>
+                <AntDesign name="piechart" size={24} color="black" />
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 14,
+                  }}
+                >
+                  {"50.68%"}
+                </Text>
+              </View>
+            </View>
+            <Text
+              style={{
+                color: "#000000",
+                fontSize: 14,
+              }}
+            >
+              {"Days left: 39 DAYS "}
+            </Text>
+          </View>
+          <Image
+            source={require("../../../assets/animals.jpg")}
+            resizeMode={"stretch"}
+            style={{
+              position: "absolute",
+              bottom: -4,
+              left: 0,
+              borderRadius: 100,
+              width: 120,
+              height: 120,
+            }}
+          />
+        </View>
+      </View>
+      <View
+        style={{
+          width: "auto",
+          height: 95,
+          marginBottom: 40,
+        }}
+      >
+        <View
+          style={{
+            margin: 20,
+            // marginBottom: 40,
+          }}
+        >
+          <View
+            style={{
+              backgroundColor: "#D2F694",
+              borderRadius: 10,
+              paddingVertical: 14,
+              paddingLeft: 65,
+              marginLeft: 70,
+              //   marginBottom:10
+            }}
+          >
+            <Text
+              style={{
+                color: "#000000",
+                fontSize: 18,
+                marginBottom: 5,
+              }}
+            >
+              {"ATELIER AFRICA SAFARIS"}
+            </Text>
+            <View
+              style={{
+                flexDirection: "row",
+                marginRight: 22,
+              }}
+            >
+              <View
+                style={{
+                  flex: 1,
+                  alignSelf: "flex-start",
+                  marginRight: 4,
+                }}
+              >
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 12,
+                    marginBottom: 4,
+                  }}
+                >
+                  {"Requirement: 5,00,000 "}
+                </Text>
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 12,
+                  }}
+                >
+                  {"Fulfill: 2,54,015 "}
+                </Text>
+              </View>
+              <View>
+                <AntDesign name="piechart" size={24} color="black" />
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 14,
+                  }}
+                >
+                  {"50.68%"}
+                </Text>
+              </View>
+            </View>
+            <Text
+              style={{
+                color: "#000000",
+                fontSize: 14,
+              }}
+            >
+              {"Days left: 39 DAYS "}
+            </Text>
+          </View>
+          <Image
+            source={require("../../../assets/animals.jpg")}
+            resizeMode={"stretch"}
+            style={{
+              position: "absolute",
+              bottom: -4,
+              left: 0,
+              borderRadius: 100,
+              width: 120,
+              height: 120,
+            }}
+          />
+        </View>
+      </View>
+      <View
+        style={{
+          width: "auto",
+          height: 95,
+          marginBottom: 40,
+        }}
+      >
+        <View
+          style={{
+            margin: 20,
+            // marginBottom: 40,
+          }}
+        >
+          <View
+            style={{
+              backgroundColor: "#D2F694",
+              borderRadius: 10,
+              paddingVertical: 14,
+              paddingLeft: 65,
+              marginLeft: 70,
+              //   marginBottom:10
+            }}
+          >
+            <Text
+              style={{
+                color: "#000000",
+                fontSize: 18,
+                marginBottom: 5,
+              }}
+            >
+              {"ATELIER AFRICA SAFARIS"}
+            </Text>
+            <View
+              style={{
+                flexDirection: "row",
+                marginRight: 22,
+              }}
+            >
+              <View
+                style={{
+                  flex: 1,
+                  alignSelf: "flex-start",
+                  marginRight: 4,
+                }}
+              >
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 12,
+                    marginBottom: 4,
+                  }}
+                >
+                  {"Requirement: 5,00,000 "}
+                </Text>
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 12,
+                  }}
+                >
+                  {"Fulfill: 2,54,015 "}
+                </Text>
+              </View>
+              <View>
+                <AntDesign name="piechart" size={24} color="black" />
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 14,
+                  }}
+                >
+                  {"50.68%"}
+                </Text>
+              </View>
+            </View>
+            <Text
+              style={{
+                color: "#000000",
+                fontSize: 14,
+              }}
+            >
+              {"Days left: 39 DAYS "}
+            </Text>
+          </View>
+          <Image
+            source={require("../../../assets/animals.jpg")}
+            resizeMode={"stretch"}
+            style={{
+              position: "absolute",
+              bottom: -4,
+              left: 0,
+              borderRadius: 100,
+              width: 120,
+              height: 120,
+            }}
+          />
+        </View>
+      </View>
+      <View
+        style={{
+          width: "auto",
+          height: 95,
+          marginBottom: 40,
+        }}
+      >
+        <View
+          style={{
+            margin: 20,
+            // marginBottom: 40,
+          }}
+        >
+          <View
+            style={{
+              backgroundColor: "#D2F694",
+              borderRadius: 10,
+              paddingVertical: 14,
+              paddingLeft: 65,
+              marginLeft: 70,
+              //   marginBottom:10
+            }}
+          >
+            <Text
+              style={{
+                color: "#000000",
+                fontSize: 18,
+                marginBottom: 5,
+              }}
+            >
+              {"ATELIER AFRICA SAFARIS"}
+            </Text>
+            <View
+              style={{
+                flexDirection: "row",
+                marginRight: 22,
+              }}
+            >
+              <View
+                style={{
+                  flex: 1,
+                  alignSelf: "flex-start",
+                  marginRight: 4,
+                }}
+              >
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 12,
+                    marginBottom: 4,
+                  }}
+                >
+                  {"Requirement: 5,00,000 "}
+                </Text>
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 12,
+                  }}
+                >
+                  {"Fulfill: 2,54,015 "}
+                </Text>
+              </View>
+              <View>
+                <AntDesign name="piechart" size={24} color="black" />
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 14,
+                  }}
+                >
+                  {"50.68%"}
+                </Text>
+              </View>
+            </View>
+            <Text
+              style={{
+                color: "#000000",
+                fontSize: 14,
+              }}
+            >
+              {"Days left: 39 DAYS "}
+            </Text>
+          </View>
+          <Image
+            source={require("../../../assets/animals.jpg")}
+            resizeMode={"stretch"}
+            style={{
+              position: "absolute",
+              bottom: -4,
+              left: 0,
+              borderRadius: 100,
+              width: 120,
+              height: 120,
+            }}
+          />
+        </View>
+        <View
+          style={{
+            width: "auto",
+            height: 95,
+            marginBottom: 40,
+          }}
+        >
+          <View
+            style={{
+              margin: 20,
+              // marginBottom: 40,
             }}
           >
             <View
               style={{
-                flex: 1,
-                alignSelf: "flex-start",
-                marginRight: 4,
+                backgroundColor: "#D2F694",
+                borderRadius: 10,
+                paddingVertical: 14,
+                paddingLeft: 65,
+                marginLeft: 70,
+                //   marginBottom:10
               }}
             >
               <Text
                 style={{
                   color: "#000000",
-                  fontSize: 12,
-                  marginBottom: 4,
+                  fontSize: 18,
+                  marginBottom: 5,
                 }}
               >
-                {"Requirement: 5,00,000 "}
+                {"ATELIER AFRICA SAFARIS"}
               </Text>
-              <Text
+              <View
                 style={{
-                  color: "#000000",
-                  fontSize: 12,
+                  flexDirection: "row",
+                  marginRight: 22,
                 }}
               >
-                {"Fulfill: 2,54,015 "}
-              </Text>
-            </View>
-            <View>
-              <AntDesign name="piechart" size={24} color="black" />
+                <View
+                  style={{
+                    flex: 1,
+                    alignSelf: "flex-start",
+                    marginRight: 4,
+                  }}
+                >
+                  <Text
+                    style={{
+                      color: "#000000",
+                      fontSize: 12,
+                      marginBottom: 4,
+                    }}
+                  >
+                    {"Requirement: 5,00,000 "}
+                  </Text>
+                  <Text
+                    style={{
+                      color: "#000000",
+                      fontSize: 12,
+                    }}
+                  >
+                    {"Fulfill: 2,54,015 "}
+                  </Text>
+                </View>
+                <View>
+                  <AntDesign name="piechart" size={24} color="black" />
+                  <Text
+                    style={{
+                      color: "#000000",
+                      fontSize: 14,
+                    }}
+                  >
+                    {"50.68%"}
+                  </Text>
+                </View>
+              </View>
               <Text
                 style={{
                   color: "#000000",
                   fontSize: 14,
                 }}
               >
-                {"50.68%"}
+                {"Days left: 39 DAYS "}
               </Text>
             </View>
+            <Image
+              source={require("../../../assets/animals.jpg")}
+              resizeMode={"stretch"}
+              style={{
+                position: "absolute",
+                bottom: -4,
+                left: 0,
+                borderRadius: 100,
+                width: 120,
+                height: 120,
+              }}
+            />
           </View>
-          <Text
+        </View>
+        <View
+          style={{
+            width: "auto",
+            height: 95,
+            marginBottom: 40,
+          }}
+        >
+          <View
             style={{
-              color: "#000000",
-              fontSize: 14,
+              margin: 20,
+              // marginBottom: 40,
             }}
           >
-            {"Days left: 39 DAYS "}
-          </Text>
+            <View
+              style={{
+                backgroundColor: "#D2F694",
+                borderRadius: 10,
+                paddingVertical: 14,
+                paddingLeft: 65,
+                marginLeft: 70,
+                //   marginBottom:10
+              }}
+            >
+              <Text
+                style={{
+                  color: "#000000",
+                  fontSize: 18,
+                  marginBottom: 5,
+                }}
+              >
+                {"ATELIER AFRICA SAFARIS"}
+              </Text>
+              <View
+                style={{
+                  flexDirection: "row",
+                  marginRight: 22,
+                }}
+              >
+                <View
+                  style={{
+                    flex: 1,
+                    alignSelf: "flex-start",
+                    marginRight: 4,
+                  }}
+                >
+                  <Text
+                    style={{
+                      color: "#000000",
+                      fontSize: 12,
+                      marginBottom: 4,
+                    }}
+                  >
+                    {"Requirement: 5,00,000 "}
+                  </Text>
+                  <Text
+                    style={{
+                      color: "#000000",
+                      fontSize: 12,
+                    }}
+                  >
+                    {"Fulfill: 2,54,015 "}
+                  </Text>
+                </View>
+                <View>
+                  <AntDesign name="piechart" size={24} color="black" />
+                  <Text
+                    style={{
+                      color: "#000000",
+                      fontSize: 14,
+                    }}
+                  >
+                    {"50.68%"}
+                  </Text>
+                </View>
+              </View>
+              <Text
+                style={{
+                  color: "#000000",
+                  fontSize: 14,
+                }}
+              >
+                {"Days left: 39 DAYS "}
+              </Text>
+            </View>
+            <Image
+              source={require("../../../assets/animals.jpg")}
+              resizeMode={"stretch"}
+              style={{
+                position: "absolute",
+                bottom: -4,
+                left: 0,
+                borderRadius: 100,
+                width: 120,
+                height: 120,
+              }}
+            />
+          </View>
         </View>
-        <Image
-          source={require("../../../assets/animals.jpg")}
-          resizeMode={"stretch"}
+        <View
           style={{
-            position: "absolute",
-            bottom: -4,
-            left: 0,
-            borderRadius: 100,
-            width: 120,
-            height: 120,
+            width: "auto",
+            height: 95,
+            marginBottom: 40,
           }}
-        />
+        >
+          <View
+            style={{
+              margin: 20,
+              // marginBottom: 40,
+            }}
+          >
+            <View
+              style={{
+                backgroundColor: "#D2F694",
+                borderRadius: 10,
+                paddingVertical: 14,
+                paddingLeft: 65,
+                marginLeft: 70,
+                //   marginBottom:10
+              }}
+            >
+              <Text
+                style={{
+                  color: "#000000",
+                  fontSize: 18,
+                  marginBottom: 5,
+                }}
+              >
+                {"ATELIER AFRICA SAFARIS"}
+              </Text>
+              <View
+                style={{
+                  flexDirection: "row",
+                  marginRight: 22,
+                }}
+              >
+                <View
+                  style={{
+                    flex: 1,
+                    alignSelf: "flex-start",
+                    marginRight: 4,
+                  }}
+                >
+                  <Text
+                    style={{
+                      color: "#000000",
+                      fontSize: 12,
+                      marginBottom: 4,
+                    }}
+                  >
+                    {"Requirement: 5,00,000 "}
+                  </Text>
+                  <Text
+                    style={{
+                      color: "#000000",
+                      fontSize: 12,
+                    }}
+                  >
+                    {"Fulfill: 2,54,015 "}
+                  </Text>
+                </View>
+                <View>
+                  <AntDesign name="piechart" size={24} color="black" />
+                  <Text
+                    style={{
+                      color: "#000000",
+                      fontSize: 14,
+                    }}
+                  >
+                    {"50.68%"}
+                  </Text>
+                </View>
+              </View>
+              <Text
+                style={{
+                  color: "#000000",
+                  fontSize: 14,
+                }}
+              >
+                {"Days left: 39 DAYS "}
+              </Text>
+            </View>
+            <Image
+              source={require("../../../assets/animals.jpg")}
+              resizeMode={"stretch"}
+              style={{
+                position: "absolute",
+                bottom: -4,
+                left: 0,
+                borderRadius: 100,
+                width: 120,
+                height: 120,
+              }}
+            />
+          </View>
+        </View>
+        <View
+          style={{
+            width: "auto",
+            height: 95,
+            marginBottom: 40,
+          }}
+        >
+          <View
+            style={{
+              margin: 20,
+              // marginBottom: 40,
+            }}
+          >
+            <View
+              style={{
+                backgroundColor: "#D2F694",
+                borderRadius: 10,
+                paddingVertical: 14,
+                paddingLeft: 65,
+                marginLeft: 70,
+                //   marginBottom:10
+              }}
+            >
+              <Text
+                style={{
+                  color: "#000000",
+                  fontSize: 18,
+                  marginBottom: 5,
+                }}
+              >
+                {"ATELIER AFRICA SAFARIS"}
+              </Text>
+              <View
+                style={{
+                  flexDirection: "row",
+                  marginRight: 22,
+                }}
+              >
+                <View
+                  style={{
+                    flex: 1,
+                    alignSelf: "flex-start",
+                    marginRight: 4,
+                  }}
+                >
+                  <Text
+                    style={{
+                      color: "#000000",
+                      fontSize: 12,
+                      marginBottom: 4,
+                    }}
+                  >
+                    {"Requirement: 5,00,000 "}
+                  </Text>
+                  <Text
+                    style={{
+                      color: "#000000",
+                      fontSize: 12,
+                    }}
+                  >
+                    {"Fulfill: 2,54,015 "}
+                  </Text>
+                </View>
+                <View>
+                  <AntDesign name="piechart" size={24} color="black" />
+                  <Text
+                    style={{
+                      color: "#000000",
+                      fontSize: 14,
+                    }}
+                  >
+                    {"50.68%"}
+                  </Text>
+                </View>
+              </View>
+              <Text
+                style={{
+                  color: "#000000",
+                  fontSize: 14,
+                }}
+              >
+                {"Days left: 39 DAYS "}
+              </Text>
+            </View>
+            <Image
+              source={require("../../../assets/animals.jpg")}
+              resizeMode={"stretch"}
+              style={{
+                position: "absolute",
+                bottom: -4,
+                left: 0,
+                borderRadius: 100,
+                width: 120,
+                height: 120,
+              }}
+            />
+          </View>
+        </View>
+        <View
+          style={{
+            width: "auto",
+            height: 95,
+            marginBottom: 40,
+          }}
+        >
+          <View
+            style={{
+              margin: 20,
+              // marginBottom: 40,
+            }}
+          >
+            <View
+              style={{
+                backgroundColor: "#D2F694",
+                borderRadius: 10,
+                paddingVertical: 14,
+                paddingLeft: 65,
+                marginLeft: 70,
+                //   marginBottom:10
+              }}
+            >
+              <Text
+                style={{
+                  color: "#000000",
+                  fontSize: 18,
+                  marginBottom: 5,
+                }}
+              >
+                {"ATELIER AFRICA SAFARIS"}
+              </Text>
+              <View
+                style={{
+                  flexDirection: "row",
+                  marginRight: 22,
+                }}
+              >
+                <View
+                  style={{
+                    flex: 1,
+                    alignSelf: "flex-start",
+                    marginRight: 4,
+                  }}
+                >
+                  <Text
+                    style={{
+                      color: "#000000",
+                      fontSize: 12,
+                      marginBottom: 4,
+                    }}
+                  >
+                    {"Requirement: 5,00,000 "}
+                  </Text>
+                  <Text
+                    style={{
+                      color: "#000000",
+                      fontSize: 12,
+                    }}
+                  >
+                    {"Fulfill: 2,54,015 "}
+                  </Text>
+                </View>
+                <View>
+                  <AntDesign name="piechart" size={24} color="black" />
+                  <Text
+                    style={{
+                      color: "#000000",
+                      fontSize: 14,
+                    }}
+                  >
+                    {"50.68%"}
+                  </Text>
+                </View>
+              </View>
+              <Text
+                style={{
+                  color: "#000000",
+                  fontSize: 14,
+                }}
+              >
+                {"Days left: 39 DAYS "}
+              </Text>
+            </View>
+            <Image
+              source={require("../../../assets/animals.jpg")}
+              resizeMode={"stretch"}
+              style={{
+                position: "absolute",
+                bottom: -4,
+                left: 0,
+                borderRadius: 100,
+                width: 120,
+                height: 120,
+              }}
+            />
+          </View>
+        </View>
       </View>
+    </ScrollView>
     </View>
-    <View
-      style={{
-        width: "auto",
-        height: 95,
-        marginBottom: 40,
-      }}
-    >
-      <View
-        style={{
-          margin: 20,
-          // marginBottom: 40,
-        }}
-      >
-        <View
-          style={{
-            backgroundColor: "#D2F694",
-            borderRadius: 10,
-            paddingVertical: 14,
-            paddingLeft: 65,
-            marginLeft: 70,
-          //   marginBottom:10
-          }}
-        >
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 18,
-              marginBottom: 5,
-            }}
-          >
-            {"ATELIER AFRICA SAFARIS"}
-          </Text>
-          <View
-            style={{
-              flexDirection: "row",
-              marginRight: 22,
-            }}
-          >
-            <View
-              style={{
-                flex: 1,
-                alignSelf: "flex-start",
-                marginRight: 4,
-              }}
-            >
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                  marginBottom: 4,
-                }}
-              >
-                {"Requirement: 5,00,000 "}
-              </Text>
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                }}
-              >
-                {"Fulfill: 2,54,015 "}
-              </Text>
-            </View>
-            <View>
-              <AntDesign name="piechart" size={24} color="black" />
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 14,
-                }}
-              >
-                {"50.68%"}
-              </Text>
-            </View>
-          </View>
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 14,
-            }}
-          >
-            {"Days left: 39 DAYS "}
-          </Text>
-        </View>
-        <Image
-          source={require("../../../assets/animals.jpg")}
-          resizeMode={"stretch"}
-          style={{
-            position: "absolute",
-            bottom: -4,
-            left: 0,
-            borderRadius: 100,
-            width: 120,
-            height: 120,
-          }}
-        />
-      </View>
-    </View>
-    <View
-      style={{
-        width: "auto",
-        height: 95,
-        marginBottom: 40,
-      }}
-    >
-      <View
-        style={{
-          margin: 20,
-          // marginBottom: 40,
-        }}
-      >
-        <View
-          style={{
-            backgroundColor: "#D2F694",
-            borderRadius: 10,
-            paddingVertical: 14,
-            paddingLeft: 65,
-            marginLeft: 70,
-          //   marginBottom:10
-          }}
-        >
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 18,
-              marginBottom: 5,
-            }}
-          >
-            {"ATELIER AFRICA SAFARIS"}
-          </Text>
-          <View
-            style={{
-              flexDirection: "row",
-              marginRight: 22,
-            }}
-          >
-            <View
-              style={{
-                flex: 1,
-                alignSelf: "flex-start",
-                marginRight: 4,
-              }}
-            >
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                  marginBottom: 4,
-                }}
-              >
-                {"Requirement: 5,00,000 "}
-              </Text>
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                }}
-              >
-                {"Fulfill: 2,54,015 "}
-              </Text>
-            </View>
-            <View>
-              <AntDesign name="piechart" size={24} color="black" />
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 14,
-                }}
-              >
-                {"50.68%"}
-              </Text>
-            </View>
-          </View>
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 14,
-            }}
-          >
-            {"Days left: 39 DAYS "}
-          </Text>
-        </View>
-        <Image
-          source={require("../../../assets/animals.jpg")}
-          resizeMode={"stretch"}
-          style={{
-            position: "absolute",
-            bottom: -4,
-            left: 0,
-            borderRadius: 100,
-            width: 120,
-            height: 120,
-          }}
-        />
-      </View>
-    </View><View
-      style={{
-        width: "auto",
-        height: 95,
-        marginBottom: 40,
-      }}
-    >
-      <View
-        style={{
-          margin: 20,
-          // marginBottom: 40,
-        }}
-      >
-        <View
-          style={{
-            backgroundColor: "#D2F694",
-            borderRadius: 10,
-            paddingVertical: 14,
-            paddingLeft: 65,
-            marginLeft: 70,
-          //   marginBottom:10
-          }}
-        >
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 18,
-              marginBottom: 5,
-            }}
-          >
-            {"ATELIER AFRICA SAFARIS"}
-          </Text>
-          <View
-            style={{
-              flexDirection: "row",
-              marginRight: 22,
-            }}
-          >
-            <View
-              style={{
-                flex: 1,
-                alignSelf: "flex-start",
-                marginRight: 4,
-              }}
-            >
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                  marginBottom: 4,
-                }}
-              >
-                {"Requirement: 5,00,000 "}
-              </Text>
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                }}
-              >
-                {"Fulfill: 2,54,015 "}
-              </Text>
-            </View>
-            <View>
-              <AntDesign name="piechart" size={24} color="black" />
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 14,
-                }}
-              >
-                {"50.68%"}
-              </Text>
-            </View>
-          </View>
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 14,
-            }}
-          >
-            {"Days left: 39 DAYS "}
-          </Text>
-        </View>
-        <Image
-          source={require("../../../assets/animals.jpg")}
-          resizeMode={"stretch"}
-          style={{
-            position: "absolute",
-            bottom: -4,
-            left: 0,
-            borderRadius: 100,
-            width: 120,
-            height: 120,
-          }}
-        />
-      </View>
-    </View><View
-      style={{
-        width: "auto",
-        height: 95,
-        marginBottom: 40,
-      }}
-    >
-      <View
-        style={{
-          margin: 20,
-          // marginBottom: 40,
-        }}
-      >
-        <View
-          style={{
-            backgroundColor: "#D2F694",
-            borderRadius: 10,
-            paddingVertical: 14,
-            paddingLeft: 65,
-            marginLeft: 70,
-          //   marginBottom:10
-          }}
-        >
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 18,
-              marginBottom: 5,
-            }}
-          >
-            {"ATELIER AFRICA SAFARIS"}
-          </Text>
-          <View
-            style={{
-              flexDirection: "row",
-              marginRight: 22,
-            }}
-          >
-            <View
-              style={{
-                flex: 1,
-                alignSelf: "flex-start",
-                marginRight: 4,
-              }}
-            >
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                  marginBottom: 4,
-                }}
-              >
-                {"Requirement: 5,00,000 "}
-              </Text>
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                }}
-              >
-                {"Fulfill: 2,54,015 "}
-              </Text>
-            </View>
-            <View>
-              <AntDesign name="piechart" size={24} color="black" />
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 14,
-                }}
-              >
-                {"50.68%"}
-              </Text>
-            </View>
-          </View>
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 14,
-            }}
-          >
-            {"Days left: 39 DAYS "}
-          </Text>
-        </View>
-        <Image
-          source={require("../../../assets/animals.jpg")}
-          resizeMode={"stretch"}
-          style={{
-            position: "absolute",
-            bottom: -4,
-            left: 0,
-            borderRadius: 100,
-            width: 120,
-            height: 120,
-          }}
-        />
-      </View>
-    </View><View
-      style={{
-        width: "auto",
-        height: 95,
-        marginBottom: 40,
-      }}
-    >
-      <View
-        style={{
-          margin: 20,
-          // marginBottom: 40,
-        }}
-      >
-        <View
-          style={{
-            backgroundColor: "#D2F694",
-            borderRadius: 10,
-            paddingVertical: 14,
-            paddingLeft: 65,
-            marginLeft: 70,
-          //   marginBottom:10
-          }}
-        >
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 18,
-              marginBottom: 5,
-            }}
-          >
-            {"ATELIER AFRICA SAFARIS"}
-          </Text>
-          <View
-            style={{
-              flexDirection: "row",
-              marginRight: 22,
-            }}
-          >
-            <View
-              style={{
-                flex: 1,
-                alignSelf: "flex-start",
-                marginRight: 4,
-              }}
-            >
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                  marginBottom: 4,
-                }}
-              >
-                {"Requirement: 5,00,000 "}
-              </Text>
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                }}
-              >
-                {"Fulfill: 2,54,015 "}
-              </Text>
-            </View>
-            <View>
-              <AntDesign name="piechart" size={24} color="black" />
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 14,
-                }}
-              >
-                {"50.68%"}
-              </Text>
-            </View>
-          </View>
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 14,
-            }}
-          >
-            {"Days left: 39 DAYS "}
-          </Text>
-        </View>
-        <Image
-          source={require("../../../assets/animals.jpg")}
-          resizeMode={"stretch"}
-          style={{
-            position: "absolute",
-            bottom: -4,
-            left: 0,
-            borderRadius: 100,
-            width: 120,
-            height: 120,
-          }}
-        />
-      </View>
-    </View><View
-      style={{
-        width: "auto",
-        height: 95,
-        marginBottom: 40,
-      }}
-    >
-      <View
-        style={{
-          margin: 20,
-          // marginBottom: 40,
-        }}
-      >
-        <View
-          style={{
-            backgroundColor: "#D2F694",
-            borderRadius: 10,
-            paddingVertical: 14,
-            paddingLeft: 65,
-            marginLeft: 70,
-          //   marginBottom:10
-          }}
-        >
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 18,
-              marginBottom: 5,
-            }}
-          >
-            {"ATELIER AFRICA SAFARIS"}
-          </Text>
-          <View
-            style={{
-              flexDirection: "row",
-              marginRight: 22,
-            }}
-          >
-            <View
-              style={{
-                flex: 1,
-                alignSelf: "flex-start",
-                marginRight: 4,
-              }}
-            >
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                  marginBottom: 4,
-                }}
-              >
-                {"Requirement: 5,00,000 "}
-              </Text>
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                }}
-              >
-                {"Fulfill: 2,54,015 "}
-              </Text>
-            </View>
-            <View>
-              <AntDesign name="piechart" size={24} color="black" />
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 14,
-                }}
-              >
-                {"50.68%"}
-              </Text>
-            </View>
-          </View>
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 14,
-            }}
-          >
-            {"Days left: 39 DAYS "}
-          </Text>
-        </View>
-        <Image
-          source={require("../../../assets/animals.jpg")}
-          resizeMode={"stretch"}
-          style={{
-            position: "absolute",
-            bottom: -4,
-            left: 0,
-            borderRadius: 100,
-            width: 120,
-            height: 120,
-          }}
-        />
-      </View>
-      <View
-      style={{
-        width: "auto",
-        height: 95,
-        marginBottom: 40,
-      }}
-    >
-      <View
-        style={{
-          margin: 20,
-          // marginBottom: 40,
-        }}
-      >
-        <View
-          style={{
-            backgroundColor: "#D2F694",
-            borderRadius: 10,
-            paddingVertical: 14,
-            paddingLeft: 65,
-            marginLeft: 70,
-          //   marginBottom:10
-          }}
-        >
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 18,
-              marginBottom: 5,
-            }}
-          >
-            {"ATELIER AFRICA SAFARIS"}
-          </Text>
-          <View
-            style={{
-              flexDirection: "row",
-              marginRight: 22,
-            }}
-          >
-            <View
-              style={{
-                flex: 1,
-                alignSelf: "flex-start",
-                marginRight: 4,
-              }}
-            >
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                  marginBottom: 4,
-                }}
-              >
-                {"Requirement: 5,00,000 "}
-              </Text>
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                }}
-              >
-                {"Fulfill: 2,54,015 "}
-              </Text>
-            </View>
-            <View>
-              <AntDesign name="piechart" size={24} color="black" />
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 14,
-                }}
-              >
-                {"50.68%"}
-              </Text>
-            </View>
-          </View>
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 14,
-            }}
-          >
-            {"Days left: 39 DAYS "}
-          </Text>
-        </View>
-        <Image
-          source={require("../../../assets/animals.jpg")}
-          resizeMode={"stretch"}
-          style={{
-            position: "absolute",
-            bottom: -4,
-            left: 0,
-            borderRadius: 100,
-            width: 120,
-            height: 120,
-          }}
-        />
-      </View>
-    </View><View
-      style={{
-        width: "auto",
-        height: 95,
-        marginBottom: 40,
-      }}
-    >
-      <View
-        style={{
-          margin: 20,
-          // marginBottom: 40,
-        }}
-      >
-        <View
-          style={{
-            backgroundColor: "#D2F694",
-            borderRadius: 10,
-            paddingVertical: 14,
-            paddingLeft: 65,
-            marginLeft: 70,
-          //   marginBottom:10
-          }}
-        >
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 18,
-              marginBottom: 5,
-            }}
-          >
-            {"ATELIER AFRICA SAFARIS"}
-          </Text>
-          <View
-            style={{
-              flexDirection: "row",
-              marginRight: 22,
-            }}
-          >
-            <View
-              style={{
-                flex: 1,
-                alignSelf: "flex-start",
-                marginRight: 4,
-              }}
-            >
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                  marginBottom: 4,
-                }}
-              >
-                {"Requirement: 5,00,000 "}
-              </Text>
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                }}
-              >
-                {"Fulfill: 2,54,015 "}
-              </Text>
-            </View>
-            <View>
-              <AntDesign name="piechart" size={24} color="black" />
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 14,
-                }}
-              >
-                {"50.68%"}
-              </Text>
-            </View>
-          </View>
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 14,
-            }}
-          >
-            {"Days left: 39 DAYS "}
-          </Text>
-        </View>
-        <Image
-          source={require("../../../assets/animals.jpg")}
-          resizeMode={"stretch"}
-          style={{
-            position: "absolute",
-            bottom: -4,
-            left: 0,
-            borderRadius: 100,
-            width: 120,
-            height: 120,
-          }}
-        />
-      </View>
-    </View><View
-      style={{
-        width: "auto",
-        height: 95,
-        marginBottom: 40,
-      }}
-    >
-      <View
-        style={{
-          margin: 20,
-          // marginBottom: 40,
-        }}
-      >
-        <View
-          style={{
-            backgroundColor: "#D2F694",
-            borderRadius: 10,
-            paddingVertical: 14,
-            paddingLeft: 65,
-            marginLeft: 70,
-          //   marginBottom:10
-          }}
-        >
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 18,
-              marginBottom: 5,
-            }}
-          >
-            {"ATELIER AFRICA SAFARIS"}
-          </Text>
-          <View
-            style={{
-              flexDirection: "row",
-              marginRight: 22,
-            }}
-          >
-            <View
-              style={{
-                flex: 1,
-                alignSelf: "flex-start",
-                marginRight: 4,
-              }}
-            >
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                  marginBottom: 4,
-                }}
-              >
-                {"Requirement: 5,00,000 "}
-              </Text>
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                }}
-              >
-                {"Fulfill: 2,54,015 "}
-              </Text>
-            </View>
-            <View>
-              <AntDesign name="piechart" size={24} color="black" />
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 14,
-                }}
-              >
-                {"50.68%"}
-              </Text>
-            </View>
-          </View>
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 14,
-            }}
-          >
-            {"Days left: 39 DAYS "}
-          </Text>
-        </View>
-        <Image
-          source={require("../../../assets/animals.jpg")}
-          resizeMode={"stretch"}
-          style={{
-            position: "absolute",
-            bottom: -4,
-            left: 0,
-            borderRadius: 100,
-            width: 120,
-            height: 120,
-          }}
-        />
-      </View>
-    </View><View
-      style={{
-        width: "auto",
-        height: 95,
-        marginBottom: 40,
-      }}
-    >
-      <View
-        style={{
-          margin: 20,
-          // marginBottom: 40,
-        }}
-      >
-        <View
-          style={{
-            backgroundColor: "#D2F694",
-            borderRadius: 10,
-            paddingVertical: 14,
-            paddingLeft: 65,
-            marginLeft: 70,
-          //   marginBottom:10
-          }}
-        >
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 18,
-              marginBottom: 5,
-            }}
-          >
-            {"ATELIER AFRICA SAFARIS"}
-          </Text>
-          <View
-            style={{
-              flexDirection: "row",
-              marginRight: 22,
-            }}
-          >
-            <View
-              style={{
-                flex: 1,
-                alignSelf: "flex-start",
-                marginRight: 4,
-              }}
-            >
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                  marginBottom: 4,
-                }}
-              >
-                {"Requirement: 5,00,000 "}
-              </Text>
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                }}
-              >
-                {"Fulfill: 2,54,015 "}
-              </Text>
-            </View>
-            <View>
-              <AntDesign name="piechart" size={24} color="black" />
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 14,
-                }}
-              >
-                {"50.68%"}
-              </Text>
-            </View>
-          </View>
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 14,
-            }}
-          >
-            {"Days left: 39 DAYS "}
-          </Text>
-        </View>
-        <Image
-          source={require("../../../assets/animals.jpg")}
-          resizeMode={"stretch"}
-          style={{
-            position: "absolute",
-            bottom: -4,
-            left: 0,
-            borderRadius: 100,
-            width: 120,
-            height: 120,
-          }}
-        />
-      </View>
-    </View><View
-      style={{
-        width: "auto",
-        height: 95,
-        marginBottom: 40,
-      }}
-    >
-      <View
-        style={{
-          margin: 20,
-          // marginBottom: 40,
-        }}
-      >
-        <View
-          style={{
-            backgroundColor: "#D2F694",
-            borderRadius: 10,
-            paddingVertical: 14,
-            paddingLeft: 65,
-            marginLeft: 70,
-          //   marginBottom:10
-          }}
-        >
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 18,
-              marginBottom: 5,
-            }}
-          >
-            {"ATELIER AFRICA SAFARIS"}
-          </Text>
-          <View
-            style={{
-              flexDirection: "row",
-              marginRight: 22,
-            }}
-          >
-            <View
-              style={{
-                flex: 1,
-                alignSelf: "flex-start",
-                marginRight: 4,
-              }}
-            >
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                  marginBottom: 4,
-                }}
-              >
-                {"Requirement: 5,00,000 "}
-              </Text>
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 12,
-                }}
-              >
-                {"Fulfill: 2,54,015 "}
-              </Text>
-            </View>
-            <View>
-              <AntDesign name="piechart" size={24} color="black" />
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 14,
-                }}
-              >
-                {"50.68%"}
-              </Text>
-            </View>
-          </View>
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 14,
-            }}
-          >
-            {"Days left: 39 DAYS "}
-          </Text>
-        </View>
-        <Image
-          source={require("../../../assets/animals.jpg")}
-          resizeMode={"stretch"}
-          style={{
-            position: "absolute",
-            bottom: -4,
-            left: 0,
-            borderRadius: 100,
-            width: 120,
-            height: 120,
-          }}
-        />
-      </View>
-    </View>
-    </View>
-  </ScrollView>
-  )
-}
+  );
+};
 
-export default ComplatedFunds
+export default ComplatedFunds;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  fab: {
+    position: 'absolute',
+    margin: 16,
+    right: 0,
+    bottom: 0,
+  },
+})

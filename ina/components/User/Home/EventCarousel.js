@@ -1,113 +1,143 @@
-import { useNavigation } from '@react-navigation/native';
-import * as React from 'react';
+import { useNavigation } from "@react-navigation/native";
+import * as React from "react";
 import {
-    Animated,
-    Dimensions,
-    Text,
-    View,
-    StyleSheet,
-    TouchableOpacity,
-} from 'react-native';
+  Animated,
+  Dimensions,
+  Text,
+  View,
+  StyleSheet,
+  TouchableOpacity,
+} from "react-native";
+import LinearGradient from 'react-native-linear-gradient';
 
-const { width, height } = Dimensions.get('screen');
+
+const { width, height } = Dimensions.get("screen");
 const ITEM_WIDTH = width * 0.85;
-const ITEM_HEIGHT = ITEM_WIDTH * 1.20;
-
+const ITEM_HEIGHT = ITEM_WIDTH * 1.2;
 
 const images = [
-    'https://images.unsplash.com/photo-1551316679-9c6ae9dec224?w=800&q=80',
-    'https://images.unsplash.com/photo-1562569633-622303bafef5?w=800&q=80',
-    'https://images.unsplash.com/photo-1503656142023-618e7d1f435a?w=800&q=80',
-    'https://images.unsplash.com/photo-1555096462-c1c5eb4e4d64?w=800&q=80',
-    'https://images.unsplash.com/photo-1517957754642-2870518e16f8?w=800&q=80',
-    'https://images.unsplash.com/photo-1546484959-f9a381d1330d?w=800&q=80',
-    'https://images.unsplash.com/photo-1548761208-b7896a6ff225?w=800&q=80',
-    'https://images.unsplash.com/photo-1511208687438-2c5a5abb810c?w=800&q=80',
-    'https://images.unsplash.com/photo-1548614606-52b4451f994b?w=800&q=80',
-    'https://images.unsplash.com/photo-1548600916-dc8492f8e845?w=800&q=80',
+  "https://images.unsplash.com/photo-1551316679-9c6ae9dec224?w=800&q=80",
+  "https://images.unsplash.com/photo-1562569633-622303bafef5?w=800&q=80",
+  "https://images.unsplash.com/photo-1503656142023-618e7d1f435a?w=800&q=80",
+  "https://images.unsplash.com/photo-1555096462-c1c5eb4e4d64?w=800&q=80",
+  "https://images.unsplash.com/photo-1517957754642-2870518e16f8?w=800&q=80",
+  "https://images.unsplash.com/photo-1546484959-f9a381d1330d?w=800&q=80",
+  "https://images.unsplash.com/photo-1548761208-b7896a6ff225?w=800&q=80",
+  "https://images.unsplash.com/photo-1511208687438-2c5a5abb810c?w=800&q=80",
+  "https://images.unsplash.com/photo-1548614606-52b4451f994b?w=800&q=80",
+  "https://images.unsplash.com/photo-1548600916-dc8492f8e845?w=800&q=80",
 ];
 const data = images.map((image, index) => ({
-    key: String(index),
-    photo: image,
-    avatar_url: `https://randomuser.me/api/portraits/women/${Math.floor(
-        Math.random() * 40
-    )}.jpg`,
+  key: String(index),
+  photo: image,
+  avatar_url: `https://randomuser.me/api/portraits/women/${Math.floor(
+    Math.random() * 40
+  )}.jpg`,
 }));
 
 export const Events = ({}) => {
-    const scrollX = React.useRef(new Animated.Value(0)).current;
-    const navigation = useNavigation()
-    return (
-        <>
-            <Text style={{ fontSize: 23, marginHorizontal: 20, marginVertical: 10 }}>
-                Top Events of the Week
-            </Text>
-            <View style={styles.container}>
-                <Animated.FlatList
-                    data={data}
-                    keyExtractor={(item) => item.key}
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                    pagingEnabled
-                    onScroll={Animated.event(
-                        [{ nativeEvent: { contentOffset: { x: scrollX } } }], { useNativeDriver: true })
-                    }
-                    renderItem={({ item, index }) => {
-                        const inputRange = [
-                            (index - 1) * width,
-                            index * width,
-                            (index + 1) * width,
-                        ]
-                        const translateX = scrollX.interpolate({
-                            inputRange,
-                            outputRange: [-width * 0.70, 0, width * 0.70]
-                        })
-                        return (
-                            <EventCard scrollX={scrollX} navigation={navigation} item={item} translateX={translateX}/>
-                        )
-                    }}
-                />
-            </View>
-        </>
-    )
-}
+  const scrollX = React.useRef(new Animated.Value(0)).current;
+  const navigation = useNavigation();
+  return (
+    <>
+      <Text style={{ fontSize: 23, marginHorizontal: 20, marginVertical: 10 }}>
+        Top Events of the Week
+      </Text>
+      <View style={styles.container}>
+        <Animated.FlatList
+          data={data}
+          keyExtractor={(item) => item.key}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          pagingEnabled
+          onScroll={Animated.event(
+            [{ nativeEvent: { contentOffset: { x: scrollX } } }],
+            { useNativeDriver: true }
+          )}
+          renderItem={({ item, index }) => {
+            const inputRange = [
+              (index - 1) * width,
+              index * width,
+              (index + 1) * width,
+            ];
+            const translateX = scrollX.interpolate({
+              inputRange,
+              outputRange: [-width * 0.7, 0, width * 0.7],
+            });
+            return (
+              <EventCard
+                scrollX={scrollX}
+                navigation={navigation}
+                item={item}
+                translateX={translateX}
+              />
+            );
+          }}
+        />
+      </View>
+    </>
+  );
+};
 
+const NavigateEvent = (navigation) => {
+  navigation.navigate("EventDetails");
+};
 
-const NavigateEvent = (navigation) =>{
-    navigation.navigate("EventDetails")
-}
-
-
-export const EventCard = ({scrollX,item,translateX,navigation})=>{
-    return (
-        <TouchableOpacity onPress={()=>NavigateEvent(navigation)} style={{ width, justifyContent: "center", alignItems: "center" }}>
-        <View style={{
-            width: ITEM_WIDTH,
+export const EventCard = ({ scrollX, item, translateX, navigation }) => {
+  return (
+    <TouchableOpacity
+      onPress={() => NavigateEvent(navigation)}
+      style={{ width, justifyContent: "center", alignItems: "center" }}
+    >
+      <View
+        style={{
+          width: ITEM_WIDTH,
+          height: ITEM_HEIGHT,
+          overflow: "hidden",
+          borderRadius: 10,
+          margin: 20,
+        }}
+      >
+         <LinearGradient
+        colors={['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0.5)']}  // Adjust these colors as needed
+        locations={[0, 0.8]}  // Adjust the gradient stops
+        style={styles.gradient}>
+        <Animated.Image
+          style={{
+            width: ITEM_WIDTH * 1.4,
             height: ITEM_HEIGHT,
-            overflow: "hidden",
-            borderRadius: 10, margin: 20
+            resizeMode: "cover",
+            transform: [{ translateX }],
+          }}
+          source={{ uri: item.photo }}
+        />
+
+        </LinearGradient>
+        <Text style={{
+            position:"absolute",
+            fontWeight:"bold",
+            fontSize:20,
+            color: "white",
         }}>
-            <Animated.Image
-                style={{
-                    width: ITEM_WIDTH * 1.4,
-                    height: ITEM_HEIGHT,
-                    resizeMode: "cover",
-                    transform: [
-                        { translateX }
-                    ]
-                }}
-                source={{ uri: item.photo }} />
-        </View>
+            hare krishna
+        </Text>
+      </View>
     </TouchableOpacity>
-    )
-} 
-
-
+  );
+};
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  gradient: {
+    ...StyleSheet.absoluteFillObject,
+  },
+  image: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+  },
 });
