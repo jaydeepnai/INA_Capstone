@@ -2,6 +2,7 @@ import { Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { TouchableRipple } from "react-native-paper";
+import { getFontSize, responsiveMargin } from "../../../lib/Validation/RelativeValues";
 
 const TopServices = () => {
   const navigation = useNavigation()
@@ -46,7 +47,7 @@ const TopServices = () => {
 
 export default TopServices;
 
-const Service = () => {
+export const Service = () => {
   const navigation = useNavigation();
   return (
     <TouchableOpacity
@@ -70,11 +71,13 @@ const Service = () => {
 		  justifyContent:"space-around"
         }}
       >
-        <View>
+        <View style={{
+          width:"70%"
+        }}>
           <Text
             style={{
               color: "#000000",
-              fontSize: 16,
+              fontSize: getFontSize(15),
               marginBottom: 13,
             }}
           >
@@ -83,12 +86,12 @@ const Service = () => {
           <Text
             style={{
               color: "#000000",
-              fontSize: 11,
-            //   width: 334,
+              fontSize: getFontSize(10),
+
             }}
           >
             {
-              "Our NGOated to facilitating animal \nadoption, connecting compassionate individuals \nwith rescue animals in search of loving homes."
+              "Our NGOated to facilitating animal adoption, connecting compassionate individuals with rescue animals in search of loving homes."
             }
           </Text>
         </View>
@@ -97,8 +100,8 @@ const Service = () => {
           resizeMode="contain"
           style={{
             borderRadius: 10,
-            height: 80,
-            width: 80,
+            height: responsiveMargin(20),
+            width: responsiveMargin(20),
           }}
         />
       </View>
