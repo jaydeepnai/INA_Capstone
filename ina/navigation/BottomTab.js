@@ -59,9 +59,10 @@ export function BottomTabs() {
               ) : (
                 <MaterialIcons name="attach-money" size={24} color="black" />
               ),
-              headerLeft : ()=><HeaderLeft/>,
-              headerRight : ()=><HeaderRight/>,
-              headerTitleAlign : "center"
+              // headerLeft : ()=><HeaderLeft/>,
+              // headerRight : ()=><HeaderRight/>,
+              headerTitleAlign : "center",
+              title:"Donation List"
           }}
         />
         <Tab.Screen
