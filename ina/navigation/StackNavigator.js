@@ -19,6 +19,7 @@ import CreateFund from "../screens/User/FundReq/CreateFund";
 import NGOTotalImages from "../screens/User/NGO/NGOTotalImages";
 // import NGOTotalImages from "../screens/User/NGO/NGOTotalImages";
 import NGOService from "../screens/User/NGO/NGOService";
+import WorkHistory from "../screens/User/Profile/WorkHistory";
 // import Achievers from '../screens/User/NGO/NGOhomescreen';
 const Stack = createNativeStackNavigator();
 
@@ -34,8 +35,8 @@ const StackNavigator = () => {
           name="Categories"
           options={{
             headerShown: true,
-            headerLeft: () => <HeaderLeft />,
-            headerRight: () => <HeaderRight />,
+            // headerLeft: () => <HeaderLeft />,
+            // headerRight: () => <HeaderRight />,
             headerTitleAlign: "center",
           }}
           component={Categories}
@@ -44,9 +45,10 @@ const StackNavigator = () => {
           name="ServiceList"
           options={{
             headerShown: true,
-            headerLeft: () => <HeaderLeft />,
-            headerRight: () => <HeaderRight />,
+            // headerLeft: () => <HeaderLeft />,
+            // headerRight: () => <HeaderRight />,
             headerTitleAlign: "center",
+            title:"Services"
           }}
           component={ServiceList}
         />
@@ -76,6 +78,16 @@ const StackNavigator = () => {
             headerTitleAlign: "center",
             title: 'NGO IMAGES'
           }} />
+
+        <Stack.Screen name="WorkHistory" component={WorkHistory} options={{
+          headerShown: true,
+          headerTitleAlign: "center",
+          title: 'USER WORKHISTORY'
+        }}/>
+
+        
+
+
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -225,7 +225,11 @@ export default Profile = (props) => {
           </View>
           <Entypo name="calendar" size={24} color="black" />
         </TouchableOpacity>
+
+
         <TouchableOpacity
+
+        onPress={() => props.navigation.navigate("WorkHistory")}
           style={{
             flexDirection: "row",
             justifyContent: "space-between",
