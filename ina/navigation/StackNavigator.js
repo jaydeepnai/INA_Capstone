@@ -16,6 +16,7 @@ import Categories from "../screens/User/Home/Categories";
 import HeaderLeft, { HeaderRight } from "../components/User/Home/Header/Header";
 import ServiceList from "../screens/User/Home/ServiceList";
 import CreateFund from "../screens/User/FundReq/CreateFund";
+import NGOService from "../screens/User/NGO/NGOService";
 // import Achievers from '../screens/User/NGO/NGOhomescreen';
 const Stack = createNativeStackNavigator();
 
@@ -50,6 +51,7 @@ const StackNavigator = () => {
         <Stack.Screen name="Achievers" component={Achievers} />
         <Stack.Screen name="UserSchedule" component={Schedule} />
         <Stack.Screen name="EventDetails" component={EventDetails} />
+        <Stack.Screen name="NGOServiceDetails" component={NGOService} />
         <Stack.Screen name="CreateFund" component={CreateFund} />
 
         <Stack.Screen name="MasterAuth" component={MasterAuth} />

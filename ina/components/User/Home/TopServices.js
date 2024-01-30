@@ -1,6 +1,7 @@
 import { Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
+import { TouchableRipple } from "react-native-paper";
 
 const TopServices = () => {
   const navigation = useNavigation()
@@ -46,8 +47,12 @@ const TopServices = () => {
 export default TopServices;
 
 const Service = () => {
+  const navigation = useNavigation();
   return (
-    <View
+    <TouchableOpacity
+    onPress={()=>{
+      navigation.navigate("NGOServiceDetails")
+    }}
       style={{
         width: "auto",
         height: 122,
@@ -92,11 +97,11 @@ const Service = () => {
           resizeMode="contain"
           style={{
             borderRadius: 10,
-            height: 50,
-            width: 50,
+            height: 80,
+            width: 80,
           }}
         />
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };

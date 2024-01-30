@@ -2,6 +2,7 @@ import { AntDesign, Feather, FontAwesome, Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { SafeAreaView, View, ScrollView, Image, Text, TouchableOpacity, } from "react-native";
+import { Base_Color } from "../../../lib/React Query/variables";
 
 export default NGOResult = (props) => {
 
@@ -38,7 +39,6 @@ export default NGOResult = (props) => {
                         <FontAwesome name="search" size={24} color="black" />
                         <Text
                             style={{
-                                color: "gray",
                                 fontSize: 15,
                                 flex: 1,
                                 marginLeft: 10
@@ -54,7 +54,7 @@ export default NGOResult = (props) => {
                         <View style={{
                             position: "absolute",
                             top: -7,
-                            backgroundColor: "yellow",
+                            backgroundColor: Base_Color,
                             borderRadius: 50,
                             justifyContent: "center",
                             alignContent: "center",
@@ -80,7 +80,7 @@ export default NGOResult = (props) => {
                             flexDirection: "row",
                             justifyContent: "space-between",
                             alignItems: "center",
-                            backgroundColor: "#FFF400",
+                            backgroundColor: Base_Color,
                             borderRadius: 15,
                             paddingVertical: 7,
                             paddingHorizontal: 8,
@@ -88,7 +88,7 @@ export default NGOResult = (props) => {
                         }}>
                         <Text
                             style={{
-                                color: "gray",
+                                color: "white",
                                 fontSize: 16,
                             }}>
                             {"Animals"}
@@ -102,7 +102,7 @@ export default NGOResult = (props) => {
                             flexDirection: "row",
                             justifyContent: "space-between",
                             alignItems: "center",
-                            backgroundColor: "#FFF400",
+                            backgroundColor: Base_Color,
                             borderRadius: 15,
                             paddingVertical: 7,
                             paddingHorizontal: 8,
@@ -110,7 +110,7 @@ export default NGOResult = (props) => {
                         }}>
                         <Text
                             style={{
-                                color: "gray",
+                                color: "white",
                                 fontSize: 16,
                             }}>
                             {"Animals"}
@@ -124,7 +124,7 @@ export default NGOResult = (props) => {
                             flexDirection: "row",
                             justifyContent: "space-between",
                             alignItems: "center",
-                            backgroundColor: "#FFF400",
+                            backgroundColor: Base_Color,
                             borderRadius: 15,
                             paddingVertical: 7,
                             paddingHorizontal: 8,
@@ -132,7 +132,7 @@ export default NGOResult = (props) => {
                         }}>
                         <Text
                             style={{
-                                color: "gray",
+                                color: "white",
                                 fontSize: 16,
                             }}>
                             {"Animals"}
@@ -221,14 +221,14 @@ const NGOCard = () => {
                             flexDirection: "row",
                             justifyContent: "center",
                             alignItems: "center",
-                            backgroundColor: "#D2F694",
+                            backgroundColor: Base_Color,
                             borderRadius: 30,
                             padding: 5,
                         }}>
-                        <AntDesign name="star" size={20} color="black" />
+                        <AntDesign name="star" size={20} color="white" />
                         <Text
                             style={{
-                                color: "#000000",
+                                color: "white",
                                 fontSize: 17,
                             }}>
                             {"4.0"}
@@ -239,14 +239,14 @@ const NGOCard = () => {
                             flexDirection: "row",
                             justifyContent: "center",
                             alignItems: "center",
-                            backgroundColor: "#D2F694",
+                            backgroundColor: Base_Color,
                             borderRadius: 30,
                             padding: 7,
                         }}>
-                        <AntDesign name="clockcircle" size={15} color="black" />
+                        <AntDesign name="clockcircle" size={15} color="white" />
                         <Text
                             style={{
-                                color: "#000000",
+                                color: "white",
                                 fontSize: 17,
                                 paddingLeft:4
                             }}>
@@ -256,16 +256,16 @@ const NGOCard = () => {
                     <View
                         style={{
                             alignItems: "center",
-                            backgroundColor: "#D2F694",
+                            backgroundColor: Base_Color,
                             borderRadius: 30,
                             padding: 5,
                             flexDirection: "row",
                             // paddingLeft:4
                         }}>
-                        <Feather name="map-pin" size={15} color="black" />
+                        <Feather name="map-pin" size={15} color="white" />
                         <Text
                             style={{
-                                color: "#000000",
+                                color: "white",
                                 fontSize: 17,
                                 paddingLeft:4
                             }}>

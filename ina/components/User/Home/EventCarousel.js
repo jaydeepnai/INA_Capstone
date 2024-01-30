@@ -10,6 +10,7 @@ import {
   Image,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { TouchableRipple } from "react-native-paper";
 
 const { width, height } = Dimensions.get("screen");
 const ITEM_WIDTH = width * 0.90;
@@ -62,7 +63,7 @@ export const Events = ({}) => {
             ];
             const translateX = scrollX.interpolate({
               inputRange,
-              outputRange: [-width * 0.7, 0, width * 0.7],
+              outputRange: [-width * 0.9, 0, width * 0.9],
             });
             return (
               <EventCard
@@ -88,6 +89,7 @@ export const EventCard = ({ scrollX, item, translateX, navigation }) => {
     <TouchableOpacity
       onPress={() => NavigateEvent(navigation)}
       style={{ width, justifyContent: "center", alignItems: "center" }}
+      rippleColor="rgba(0, 0, 0, .32)"
     >
       <View
         style={{
@@ -95,7 +97,7 @@ export const EventCard = ({ scrollX, item, translateX, navigation }) => {
           height: ITEM_HEIGHT,
           overflow: "hidden",
           borderRadius: 10,
-          margin: 20,
+          margin: 10,
         //   marginLeft:50
         }}
       >

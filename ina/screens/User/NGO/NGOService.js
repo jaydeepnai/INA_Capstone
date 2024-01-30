@@ -17,15 +17,17 @@ import {
 } from "react-native";
 // import { PieChart } from 'react-native-svg-charts';
 import PieChart from "react-native-pie-chart";
-import Categories from "./Categories";
+// import Categories from "./Categories";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import { Button, Card } from "react-native-paper";
-import { Post } from "./TopPosts";
+import Categories from "../../../components/User/Home/Categories";
+import { Post } from "../../../components/User/Home/TopPosts";
+// import { Post } from "./TopPosts";
 const widthAndHeight = 60;
 const series = [50, 20];
 const sliceColor = ["orange", "white"];
 
-export default EventDetails = (props) => {
+export default NGOService = (props) => {
   const Tab = createMaterialTopTabNavigator();
   return (
     <SafeAreaView
@@ -675,26 +677,26 @@ const About = () => {
               }}
             />
             <View
+              style={{
+                // position: "absolute",
+                bottom: 0,
+                left: -2,
+                width: "33%",
+                height: 133,
+                backgroundColor: "#00000099",
+              }}
+            >
+              <Text
                 style={{
-                  // position: "absolute",
-                  bottom: 0,
-                  left: -2,
-                  width: "33%",
-                  height: 133,
-                  backgroundColor: "#00000099",
+                  color: "#FFF730",
+                  fontSize: 20,
+                  marginTop: 58,
+                  alignSelf: "center",
                 }}
               >
-                <Text
-                  style={{
-                    color: "#FFF730",
-                    fontSize: 20,
-                    marginTop: 58,
-                    alignSelf: "center",
-                  }}
-                >
-                  {"SEE MORE"}
-                </Text>
-              </View>
+                {"SEE MORE"}
+              </Text>
+            </View>
           </View>
         </Card.Content>
       </Card>
@@ -702,18 +704,18 @@ const About = () => {
   );
 };
 
-const Posts = ()=>{
+const Posts = () => {
   return (
-    <ScrollView style={{marginTop:20}}>
-       <Post/>
-       <Post/>
-       <Post/>
-       <Post/>
-       <Post/>
-       <Post/>
+    <ScrollView style={{ marginTop: 20 }}>
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
     </ScrollView>
-  )
-}
+  );
+};
 
 const EventHeader = () => {
   return (
@@ -725,7 +727,7 @@ const EventHeader = () => {
           backgroundColor="white"
           translucent={true}
         />
-        <View style={{ marginBottom: 80,marginTop:25}}>
+        <View style={{ marginBottom: 80, marginTop: 25 }}>
           <ImageBackground
             source={require("../../../assets/family.jpg")}
             resizeMode={"contain"}
@@ -750,7 +752,7 @@ const EventHeader = () => {
                   fontSize: 25,
                 }}
               >
-                {"Event"}
+                {"Services"}
               </Text>
               <FontAwesome name="share-alt" size={24} color="white" />
             </View>
@@ -761,7 +763,7 @@ const EventHeader = () => {
                 marginHorizontal: 102,
                 marginLeft: 150,
                 // paddingTop:100,
-                top:35,
+                top: 35,
                 width: "70%",
                 fontWeight: "bold",
               }}
@@ -774,7 +776,7 @@ const EventHeader = () => {
                 fontSize: 13,
                 marginBottom: 5,
                 paddingTop: 20,
-                top:30,
+                top: 30,
                 marginHorizontal: 102,
                 marginLeft: 150,
                 width: "70%",

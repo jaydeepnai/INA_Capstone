@@ -8,14 +8,14 @@ const TopPosts = () => {
             <View style={{
                 flexDirection: "row",
                 alignItems: "center",
-                marginBottom: 31,
-                marginHorizontal: 33,
+                marginBottom: 10,
+                marginHorizontal: 15,
             }}>
                 <Text
                     style={{
                         color: "#000000",
                         fontSize: 20,
-                        marginRight: 4,
+                        margin:10,
                         flex: 1,
                     }}>
                     {"TOP POST FROM NGOs "}

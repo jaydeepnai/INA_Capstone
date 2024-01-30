@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { HomeTopTabs } from './HomeTopTab';
-import { AntDesign, Entypo, FontAwesome, FontAwesome5, FontAwesome6 } from '@expo/vector-icons';
+import { AntDesign, Entypo, FontAwesome, FontAwesome5, FontAwesome6, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 import HeaderLeft, { HeaderRight } from '../components/User/Home/Header/Header';
 import Trending from '../screens/User/Home/Trending';
 import Search from '../screens/User/Search/Search';
@@ -55,9 +55,9 @@ export function BottomTabs() {
             headerShown: true,
             tabBarIcon: ({ focused }) =>
               focused ? (
-                <Entypo name="home" size={24} color="#2bc5b4" />
+                <MaterialIcons name="attach-money" size={24} color="#2bc5b4" />
               ) : (
-                <AntDesign name="home" size={24} color="black" />
+                <MaterialIcons name="attach-money" size={24} color="black" />
               ),
               headerLeft : ()=><HeaderLeft/>,
               headerRight : ()=><HeaderRight/>,
@@ -72,9 +72,9 @@ export function BottomTabs() {
             headerShown: true,
             tabBarIcon: ({ focused }) =>
               focused ? (
-                <FontAwesome5 name="money-check" size={24} color="#2bc5b4"/>
+                <MaterialCommunityIcons name="piggy-bank" size={24} color="#2bc5b4" />
               ) : (
-                <FontAwesome5 name="money-check" size={24} color="black" />
+                <MaterialCommunityIcons name="piggy-bank" size={24} color="black" />
               ),
               headerLeft : ()=><HeaderLeft/>,
               headerRight : ()=><HeaderRight/>,

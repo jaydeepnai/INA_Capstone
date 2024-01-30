@@ -2,6 +2,7 @@ import { AntDesign, FontAwesome, Ionicons } from "@expo/vector-icons";
 import React from "react";
 import { SafeAreaView, View, ScrollView, Image, Text, StatusBar, TouchableOpacity, } from "react-native";
 import { Button } from "react-native-paper";
+import { Base_Color } from "../../../lib/React Query/variables";
 
 export default Search = ({navigation}) => {
     return (
@@ -56,7 +57,7 @@ export default Search = ({navigation}) => {
                         <View style={{
                             position: "absolute",
                             top: -7,
-                            backgroundColor: "yellow",
+                            backgroundColor: Base_Color,
                             borderRadius: 50,
                             justifyContent: "center",
                             alignContent: "center",
@@ -70,7 +71,6 @@ export default Search = ({navigation}) => {
                 </View>
                 <Text
                     style={{
-                        color: "gray",
                         fontSize: 20,
                         marginBottom: 10,
                         marginHorizontal: 21,
@@ -96,15 +96,15 @@ export default Search = ({navigation}) => {
                                 flexDirection: "row",
                                 justifyContent: "center",
                                 alignItems: "center",
-                                backgroundColor: "#FFF400",
+                                backgroundColor: Base_Color,
                                 borderRadius: 15,
                                 paddingVertical: 5,
                                 marginRight: 10,
                             }}>
-                            <AntDesign name="star" size={20} color="black" />
+                            <AntDesign name="star" size={20} color="white" />
                             <Text
                                 style={{
-                                    color: "gray",
+                                    color: "white",
                                     fontSize: 20,
                                 }}>
                                 {"5.0"}
@@ -173,7 +173,6 @@ export default Search = ({navigation}) => {
                 </View>
                 <Text
                     style={{
-                        color: "gray",
                         fontSize: 20,
                         marginBottom: 10,
                         marginHorizontal: 30,
@@ -184,7 +183,7 @@ export default Search = ({navigation}) => {
                     <View style={{
                         flexDirection: "row",
                         alignItems: "center",
-                        backgroundColor: "#FFF400",
+                        backgroundColor: Base_Color,
                         borderRadius: 10,
                         paddingHorizontal: 4,
                         marginBottom: 15,
@@ -201,7 +200,7 @@ export default Search = ({navigation}) => {
                         />
                         <Text
                             style={{
-                                color: "gray",
+                                color: "white",
                                 fontSize: 20,
                                 flex: 1,
                             }}>
@@ -211,7 +210,7 @@ export default Search = ({navigation}) => {
                     <View style={{
                         flexDirection: "row",
                         alignItems: "center",
-                        backgroundColor: "#FFF400",
+                        backgroundColor: Base_Color,
                         borderRadius: 10,
                         paddingHorizontal: 4,
                         marginBottom: 15,
@@ -228,7 +227,7 @@ export default Search = ({navigation}) => {
                         />
                         <Text
                             style={{
-                                color: "gray",
+                                color: "white",
                                 fontSize: 20,
                                 flex: 1,
                             }}>
@@ -238,7 +237,7 @@ export default Search = ({navigation}) => {
                     <View style={{
                         flexDirection: "row",
                         alignItems: "center",
-                        backgroundColor: "#FFF400",
+                        backgroundColor: Base_Color,
                         borderRadius: 10,
                         paddingHorizontal: 4,
                         marginBottom: 15,
@@ -255,7 +254,7 @@ export default Search = ({navigation}) => {
                         />
                         <Text
                             style={{
-                                color: "gray",
+                                color: "white",
                                 fontSize: 20,
                                 flex: 1,
                             }}>
@@ -265,7 +264,7 @@ export default Search = ({navigation}) => {
                     <View style={{
                         flexDirection: "row",
                         alignItems: "center",
-                        backgroundColor: "#FFF400",
+                        backgroundColor: Base_Color,
                         borderRadius: 10,
                         paddingHorizontal: 4,
                         marginBottom: 15,
@@ -282,7 +281,7 @@ export default Search = ({navigation}) => {
                         />
                         <Text
                             style={{
-                                color: "gray",
+                                color: "white",
                                 fontSize: 20,
                                 flex: 1,
                             }}>
@@ -292,7 +291,7 @@ export default Search = ({navigation}) => {
                     <View style={{
                         flexDirection: "row",
                         alignItems: "center",
-                        backgroundColor: "#FFF400",
+                        backgroundColor: Base_Color,
                         borderRadius: 10,
                         paddingHorizontal: 4,
                         marginBottom: 15,
@@ -309,7 +308,7 @@ export default Search = ({navigation}) => {
                         />
                         <Text
                             style={{
-                                color: "gray",
+                                color: "white",
                                 fontSize: 20,
                                 flex: 1,
                             }}>
@@ -319,7 +318,7 @@ export default Search = ({navigation}) => {
                     <View style={{
                         flexDirection: "row",
                         alignItems: "center",
-                        backgroundColor: "#FFF400",
+                        backgroundColor: Base_Color,
                         borderRadius: 10,
                         paddingHorizontal: 4,
                         marginBottom: 15,
@@ -336,7 +335,7 @@ export default Search = ({navigation}) => {
                         />
                         <Text
                             style={{
-                                color: "gray",
+                                color: "white",
                                 fontSize: 20,
                                 flex: 1,
                             }}>
@@ -362,7 +361,7 @@ export default Search = ({navigation}) => {
                         flexDirection: "row",
                         justifyContent: "space-between",
                         alignItems: "center",
-                        backgroundColor: "#FFF400",
+                        backgroundColor: Base_Color,
                         borderRadius: 15,
                         paddingVertical: 7,
                         paddingHorizontal: 8,
@@ -370,7 +369,7 @@ export default Search = ({navigation}) => {
                     }}>
                     <Text
                         style={{
-                            color: "gray",
+                            color: "white",
                             fontSize: 16,
                         }}>
                         {"Animals"}
@@ -384,7 +383,7 @@ export default Search = ({navigation}) => {
                         flexDirection: "row",
                         justifyContent: "space-between",
                         alignItems: "center",
-                        backgroundColor: "#FFF400",
+                        backgroundColor: Base_Color,
                         borderRadius: 15,
                         paddingVertical: 7,
                         paddingHorizontal: 8,
@@ -392,7 +391,7 @@ export default Search = ({navigation}) => {
                     }}>
                     <Text
                         style={{
-                            color: "gray",
+                            color: "white",
                             fontSize: 16,
                         }}>
                         {"Animals"}
@@ -406,7 +405,7 @@ export default Search = ({navigation}) => {
                         flexDirection: "row",
                         justifyContent: "space-between",
                         alignItems: "center",
-                        backgroundColor: "#FFF400",
+                        backgroundColor: Base_Color,
                         borderRadius: 15,
                         paddingVertical: 7,
                         paddingHorizontal: 8,
@@ -414,7 +413,7 @@ export default Search = ({navigation}) => {
                     }}>
                     <Text
                         style={{
-                            color: "gray",
+                            color: "white",
                             fontSize: 16,
                         }}>
                         {"Animals"}
@@ -427,17 +426,19 @@ export default Search = ({navigation}) => {
             onPress={()=>navigation.navigate("NGOResult")}
                 style={{
                     alignItems: "center",
-                    backgroundColor: "#FFF400",
+                    backgroundColor: Base_Color,
                     borderRadius: 30,
                     position: "absolute",
                     width: "95%",
                     padding: 10,
                     marginLeft: 10,
                     justifyContent: "center",
-
+                    
                     bottom: 10,
                 }}>
-                   <Text>
+                   <Text style={{
+                    color: "white",
+                   }}>
                    Search
                     </Text>  
             </TouchableOpacity>
