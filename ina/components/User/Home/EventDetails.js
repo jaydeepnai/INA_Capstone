@@ -21,6 +21,7 @@ import Categories from "./Categories";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import { Button, Card } from "react-native-paper";
 import { Post } from "./TopPosts";
+import { getFontSize, responsiveMargin, width } from "../../../lib/Validation/RelativeValues";
 const widthAndHeight = 60;
 const series = [50, 20];
 const sliceColor = ["orange", "white"];
@@ -49,7 +50,7 @@ const About = () => {
       <Text
         style={{
           color: "#000000",
-          fontSize: 20,
+          fontSize: getFontSize(20),
           marginVertical: 20,
           marginHorizontal: 20,
         }}
@@ -59,7 +60,7 @@ const About = () => {
       <View
         style={{
           flexDirection: "row",
-          justifyContent: "space-between",
+          // justifyContent: "space-between",
           alignItems: "center",
           marginBottom: 5,
           marginHorizontal: 20,
@@ -67,17 +68,18 @@ const About = () => {
       >
         <View
           style={{
-            width: 110,
+            width: width*0.30,
             alignItems: "center",
             backgroundColor: "white",
             borderRadius: 10,
             paddingVertical: 5,
+            marginRight:responsiveMargin(2)
           }}
         >
           <Text
             style={{
               color: "#000000",
-              fontSize: 15,
+              fontSize: getFontSize(13),
             }}
           >
             {"English"}
@@ -85,17 +87,18 @@ const About = () => {
         </View>
         <View
           style={{
-            width: 110,
+            width: width*0.30,
             alignItems: "center",
             backgroundColor: "white",
             borderRadius: 10,
             paddingVertical: 5,
+            marginRight:responsiveMargin(2)
           }}
         >
           <Text
             style={{
               color: "#000000",
-              fontSize: 15,
+              fontSize: getFontSize(13),
             }}
           >
             {"English"}
@@ -103,22 +106,43 @@ const About = () => {
         </View>
         <View
           style={{
-            width: 110,
+            width: width*0.30,
             alignItems: "center",
             backgroundColor: "white",
             borderRadius: 10,
             paddingVertical: 5,
+            marginRight:responsiveMargin(2)
           }}
         >
           <Text
             style={{
               color: "#000000",
-              fontSize: 15,
+              fontSize: getFontSize(13),
             }}
           >
             {"English"}
           </Text>
         </View>
+        <View
+          style={{
+            width: width*0.30,
+            alignItems: "center",
+            backgroundColor: "white",
+            borderRadius: 10,
+            paddingVertical: 5,
+            marginRight:responsiveMargin(2)
+          }}
+        >
+          <Text
+            style={{
+              color: "#000000",
+              fontSize: getFontSize(13),
+            }}
+          >
+            {"English"}
+          </Text>
+        </View>
+       
       </View>
 
       <Text
@@ -134,7 +158,6 @@ const About = () => {
       <View
         style={{
           flexDirection: "row",
-          justifyContent: "space-between",
           alignItems: "center",
           marginBottom: 10,
           marginHorizontal: 23,
@@ -142,53 +165,37 @@ const About = () => {
       >
         <View
           style={{
-            width: 110,
+            width: width*0.30,
             alignItems: "center",
             backgroundColor: "white",
             borderRadius: 10,
             paddingVertical: 5,
+            marginRight:responsiveMargin(2)
           }}
         >
           <Text
             style={{
               color: "#000000",
-              fontSize: 15,
+              fontSize: getFontSize(13),
             }}
           >
             {"English"}
           </Text>
         </View>
-        <View
+         <View
           style={{
-            width: 110,
+            width: width*0.30,
             alignItems: "center",
             backgroundColor: "white",
             borderRadius: 10,
             paddingVertical: 5,
+            marginRight:responsiveMargin(2)
           }}
         >
           <Text
             style={{
               color: "#000000",
-              fontSize: 15,
-            }}
-          >
-            {"English"}
-          </Text>
-        </View>
-        <View
-          style={{
-            width: 110,
-            alignItems: "center",
-            backgroundColor: "white",
-            borderRadius: 10,
-            paddingVertical: 5,
-          }}
-        >
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 15,
+              fontSize: getFontSize(13),
             }}
           >
             {"English"}
@@ -429,7 +436,7 @@ const About = () => {
         <Text
           style={{
             color: "#000000",
-            fontSize: 18,
+            fontSize: getFontSize(15),
             width: 340,
           }}
         >
@@ -533,7 +540,7 @@ const About = () => {
       </View>
       <View
         style={{
-          width: 390,
+          width: width*0.93,
           height: 70,
           flexDirection: "row",
           justifyContent: "space-between",
@@ -549,7 +556,7 @@ const About = () => {
         <Text
           style={{
             color: "#000000",
-            fontSize: 20,
+            fontSize: getFontSize(20),
           }}
         >
           {"JOIN AS A VOLUNTEER"}
@@ -725,7 +732,7 @@ const EventHeader = () => {
           backgroundColor="white"
           translucent={true}
         />
-        <View style={{ marginBottom: 80,marginTop:25}}>
+        <View style={{ marginBottom: responsiveMargin(20),marginTop:25}}>
           <ImageBackground
             source={require("../../../assets/family.jpg")}
             resizeMode={"contain"}
@@ -738,8 +745,9 @@ const EventHeader = () => {
                 flexDirection: "row",
                 justifyContent: "space-between",
                 alignItems: "center",
-                marginBottom: 158,
-                marginHorizontal: 20,
+                marginBottom: responsiveMargin(38),
+                marginHorizontal: responsiveMargin(5),
+                paddingTop: responsiveMargin(3)
               }}
             >
               <Ionicons name="arrow-back-circle" size={34} color="white" />
@@ -758,7 +766,7 @@ const EventHeader = () => {
               style={{
                 color: "white",
                 fontSize: 24,
-                marginHorizontal: 102,
+                marginHorizontal: responsiveMargin(10),
                 marginLeft: 150,
                 // paddingTop:100,
                 top:35,
@@ -771,10 +779,10 @@ const EventHeader = () => {
             <Text
               style={{
                 color: "#000000",
-                fontSize: 13,
-                marginBottom: 5,
-                paddingTop: 20,
-                top:30,
+                fontSize: getFontSize(15),
+                // marginBottom: 5,
+                paddingTop: responsiveMargin(5),
+                top:responsiveMargin(5),
                 marginHorizontal: 102,
                 marginLeft: 150,
                 width: "70%",
@@ -799,8 +807,8 @@ const EventHeader = () => {
           />
           <View
             style={{
-              marginTop: 10,
-              top: 35,
+              marginTop: responsiveMargin(2),
+              top: responsiveMargin(8),
             }}
           >
             <View

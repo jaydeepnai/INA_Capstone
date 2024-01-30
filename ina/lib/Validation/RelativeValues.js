@@ -4,4 +4,4 @@ const { width} = Dimensions.get('window');
 const getFontSize = size => size / fontScale;
 const responsiveMargin =(marginPercentage)=> (width * marginPercentage) / 100;
 
-export {getFontSize, responsiveMargin}
+export {getFontSize, responsiveMargin,width}
