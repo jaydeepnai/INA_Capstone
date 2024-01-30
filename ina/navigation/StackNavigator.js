@@ -16,6 +16,8 @@ import Categories from "../screens/User/Home/Categories";
 import HeaderLeft, { HeaderRight } from "../components/User/Home/Header/Header";
 import ServiceList from "../screens/User/Home/ServiceList";
 import CreateFund from "../screens/User/FundReq/CreateFund";
+import NGOTotalImages from "../screens/User/NGO/NGOTotalImages";
+// import NGOTotalImages from "../screens/User/NGO/NGOTotalImages";
 import NGOService from "../screens/User/NGO/NGOService";
 // import Achievers from '../screens/User/NGO/NGOhomescreen';
 const Stack = createNativeStackNavigator();
@@ -65,6 +67,15 @@ const StackNavigator = () => {
           component={NGOResults}
           options={{ headerShown: false }}
         />
+
+        
+        <Stack.Screen name="NGOTotalImages" component={NGOTotalImages} options={{
+            headerShown: true,
+            headerLeft: () => <HeaderLeft />,
+            headerRight: () => <HeaderRight />,
+            headerTitleAlign: "center",
+            title: 'NGO IMAGES'
+          }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
