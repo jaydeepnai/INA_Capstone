@@ -1,7 +1,8 @@
 import { Entypo, FontAwesome5 } from "@expo/vector-icons";
 import React, { useLayoutEffect } from "react";
-import { SafeAreaView, View, ScrollView, Image, Text } from "react-native";
-import { TextInput } from "react-native-paper";
+import { SafeAreaView, View, ScrollView, Image, Text, Dimensions } from "react-native";
+import { getFontSize, responsiveMargin } from "../../../lib/Validation/RelativeValues";
+
 
 export default Schedule = ({ navigation }) => {
   return (
@@ -37,7 +38,7 @@ export default Schedule = ({ navigation }) => {
             <Text
               style={{
                 color: "#000000",
-                fontSize: 25,
+                fontSize: getFontSize(24),
                 marginBottom: 13,
               }}
             >
@@ -80,7 +81,7 @@ export default Schedule = ({ navigation }) => {
             <Text
               style={{
                 color: "#000000",
-                fontSize: 25,
+                fontSize: getFontSize(15),
               }}
             >
               {"Mon\n 11"}
@@ -97,7 +98,7 @@ export default Schedule = ({ navigation }) => {
             <Text
               style={{
                 color: "#000000",
-                fontSize: 25,
+                fontSize: getFontSize(15),
               }}
             >
               {"Mon\n 11"}
@@ -114,7 +115,7 @@ export default Schedule = ({ navigation }) => {
             <Text
               style={{
                 color: "#000000",
-                fontSize: 25,
+                fontSize: getFontSize(15),
               }}
             >
               {"Mon\n 11"}
@@ -131,7 +132,7 @@ export default Schedule = ({ navigation }) => {
             <Text
               style={{
                 color: "#000000",
-                fontSize: 25,
+                fontSize: getFontSize(15),
               }}
             >
               {"Mon\n 11"}
@@ -148,24 +149,7 @@ export default Schedule = ({ navigation }) => {
             <Text
               style={{
                 color: "#000000",
-                fontSize: 25,
-              }}
-            >
-              {"Mon\n 11"}
-            </Text>
-          </View>
-          <View
-            style={{
-              backgroundColor: "whitesmoke",
-              padding: 10,
-              borderRadius: 10,
-              marginLeft: 20,
-            }}
-          >
-            <Text
-              style={{
-                color: "#000000",
-                fontSize: 25,
+                fontSize: getFontSize(15),
               }}
             >
               {"Mon\n 11"}
@@ -174,71 +158,17 @@ export default Schedule = ({ navigation }) => {
           
           
         </View>
-        {/* <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            marginBottom: 56,
-            marginHorizontal: 32,
-          }}
-        >
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 30,
-              marginRight: 4,
-              flex: 1,
-            }}
-          >
-            {"11"}
-          </Text>
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 30,
-              marginRight: 57,
-            }}
-          >
-            {"12"}
-          </Text>
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 30,
-              marginRight: 56,
-            }}
-          >
-            {"13"}
-          </Text>
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 30,
-              marginRight: 39,
-            }}
-          >
-            {"14"}
-          </Text>
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 30,
-            }}
-          >
-            {"15"}
-          </Text>
-        </View> */}
         <View
           style={{
             flexDirection: "row",
             justifyContent: "space-between",
-            marginBottom: 34,
-            marginHorizontal: 18,
+            marginBottom: responsiveMargin(10),
+            marginHorizontal: responsiveMargin(2),
           }}
         >
           <View
             style={{
-              width: 91,
+              width: "20%",
               alignSelf: "flex-start",
               marginTop: 5,
             }}
@@ -246,9 +176,9 @@ export default Schedule = ({ navigation }) => {
             <Text
               style={{
                 color: "#000000",
-                fontSize: 24,
+                fontSize: getFontSize(20),
                 marginBottom: 65,
-                marginHorizontal: 9,
+                marginHorizontal: responsiveMargin(2),
               }}
             >
               {"10:00"}
@@ -256,19 +186,19 @@ export default Schedule = ({ navigation }) => {
           </View>
           <View
             style={{
-              width: 274,
+              width: "80%",
               alignSelf: "flex-start",
               backgroundColor: "#F1B7B7",
               borderRadius: 15,
-              paddingVertical: 19,
+              paddingVertical: 10,
             }}
           >
             <Text
               style={{
                 color: "#000000",
-                fontSize: 24,
+                fontSize: getFontSize(20),
                 marginBottom: 9,
-                marginHorizontal: 21,
+                marginHorizontal: 10,
               }}
             >
               {"Design the project"}
@@ -284,208 +214,7 @@ export default Schedule = ({ navigation }) => {
               <Text
                 style={{
                   color: "#948D8D",
-                  fontSize: 20,
-                  flex: 1,
-                  paddingLeft: 10
-                }}
-              >
-                {"9:30-10:30"}
-              </Text>
-            </View>
-           
-          </View>
-        </View>
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
-            marginBottom: 34,
-            marginHorizontal: 18,
-          }}
-        >
-          <View
-            style={{
-              width: 91,
-              alignSelf: "flex-start",
-              marginTop: 5,
-            }}
-          >
-            <Text
-              style={{
-                color: "#000000",
-                fontSize: 24,
-                marginBottom: 65,
-                marginHorizontal: 9,
-              }}
-            >
-              {"10:00"}
-            </Text>
-          </View>
-          <View
-            style={{
-              width: 274,
-              alignSelf: "flex-start",
-              backgroundColor: "#F1B7B7",
-              borderRadius: 15,
-              paddingVertical: 19,
-            }}
-          >
-            <Text
-              style={{
-                color: "#000000",
-                fontSize: 24,
-                marginBottom: 9,
-                marginHorizontal: 21,
-              }}
-            >
-              {"Design the project"}
-            </Text>
-            <View
-              style={{
-                flexDirection: "row",
-                alignItems: "center",
-                marginHorizontal: 15,
-              }}
-            >
-              <Entypo name="stopwatch" size={24} color="black" />
-              <Text
-                style={{
-                  color: "#948D8D",
-                  fontSize: 20,
-                  flex: 1,
-                  paddingLeft: 10
-                }}
-              >
-                {"9:30-10:30"}
-              </Text>
-            </View>
-           
-          </View>
-        </View>
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
-            marginBottom: 34,
-            marginHorizontal: 18,
-          }}
-        >
-          <View
-            style={{
-              width: 91,
-              alignSelf: "flex-start",
-              marginTop: 5,
-            }}
-          >
-            <Text
-              style={{
-                color: "#000000",
-                fontSize: 24,
-                marginBottom: 65,
-                marginHorizontal: 9,
-              }}
-            >
-              {"10:00"}
-            </Text>
-          </View>
-          <View
-            style={{
-              width: 274,
-              alignSelf: "flex-start",
-              backgroundColor: "#F1B7B7",
-              borderRadius: 15,
-              paddingVertical: 19,
-            }}
-          >
-            <Text
-              style={{
-                color: "#000000",
-                fontSize: 24,
-                marginBottom: 9,
-                marginHorizontal: 21,
-              }}
-            >
-              {"Design the project"}
-            </Text>
-            <View
-              style={{
-                flexDirection: "row",
-                alignItems: "center",
-                marginHorizontal: 15,
-              }}
-            >
-              <Entypo name="stopwatch" size={24} color="black" />
-              <Text
-                style={{
-                  color: "#948D8D",
-                  fontSize: 20,
-                  flex: 1,
-                  paddingLeft: 10
-                }}
-              >
-                {"9:30-10:30"}
-              </Text>
-            </View>
-           
-          </View>
-        </View>
-         <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
-            marginBottom: 34,
-            marginHorizontal: 18,
-          }}
-        >
-          <View
-            style={{
-              width: 91,
-              alignSelf: "flex-start",
-              marginTop: 5,
-            }}
-          >
-            <Text
-              style={{
-                color: "#000000",
-                fontSize: 24,
-                marginBottom: 65,
-                marginHorizontal: 9,
-              }}
-            >
-              {"10:00"}
-            </Text>
-          </View>
-          <View
-            style={{
-              width: 274,
-              alignSelf: "flex-start",
-              backgroundColor: "#F1B7B7",
-              borderRadius: 15,
-              paddingVertical: 19,
-            }}
-          >
-            <Text
-              style={{
-                color: "#000000",
-                fontSize: 24,
-                marginBottom: 9,
-                marginHorizontal: 21,
-              }}
-            >
-              {"Design the project"}
-            </Text>
-            <View
-              style={{
-                flexDirection: "row",
-                alignItems: "center",
-                marginHorizontal: 15,
-              }}
-            >
-              <Entypo name="stopwatch" size={24} color="black" />
-              <Text
-                style={{
-                  color: "#948D8D",
-                  fontSize: 20,
+                  fontSize: getFontSize(15),
                   flex: 1,
                   paddingLeft: 10
                 }}
