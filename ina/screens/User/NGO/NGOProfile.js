@@ -6,9 +6,17 @@ import {
   Image,
   Text,
   ImageBackground,
+  Pressable,
 } from "react-native";
 
 export default NGOProfile = (props) => {
+
+
+  const seeAllImages = ()=>{
+    props.navigation.navigate("NGOTotalImages")  
+  }
+  
+
   return (
     <SafeAreaView
       style={{
@@ -1061,28 +1069,25 @@ export default NGOProfile = (props) => {
                 height: 133,
               }}
             />
-            <View
+            <Pressable onPress={seeAllImages}
               style={{
                 position: "absolute",
                 bottom: 0,
                 left: -2,
-                width: 133,
-                height: 132,
+                width: "100%",
+                height: "100%",
                 backgroundColor: "#00000099",
                 paddingLeft: 26,
                 paddingRight: 15,
+                alignItems:"center"
               }}
             >
-              <Text
-                style={{
-                  color: "#FFF730",
-                  fontSize: 20,
-                  marginTop: 58,
-                }}
-              >
+              <Text style={{color: "#FFF730",fontSize: 20,marginTop: 40, alignItems:"center"}}>
                 {"SEE MORE"}
               </Text>
-            </View>
+              
+
+            </Pressable>
           </View>
         </View>
         <View
