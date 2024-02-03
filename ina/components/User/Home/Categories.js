@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
+import { width } from "../../../lib/Validation/RelativeValues";
 
 const Categories = ({}) => {
   const navigation = useNavigation();
@@ -107,7 +108,7 @@ const Categories = ({}) => {
                     fontSize: 18,
                     position: "absolute",
                     top:55,
-                    width: "90%",
+                    width: width*0.90,
                     height: "100%",
                   }}
                 >

@@ -263,7 +263,7 @@ export default Profile = (props) => {
           </View>
           <FontAwesome name="newspaper-o" size={24} color="black" />
         </TouchableOpacity>
-        <TouchableOpacity
+        <TouchableOpacity onPress={() => props.navigation.navigate("Appointment")}
           style={{
             flexDirection: "row",
             justifyContent: "space-between",

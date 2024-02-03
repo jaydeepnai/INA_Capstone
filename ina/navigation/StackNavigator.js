@@ -17,10 +17,11 @@ import HeaderLeft, { HeaderRight } from "../components/User/Home/Header/Header";
 import ServiceList from "../screens/User/Home/ServiceList";
 import CreateFund from "../screens/User/FundReq/CreateFund";
 import NGOTotalImages from "../screens/User/NGO/NGOTotalImages";
+// import Appointment from "../components/User/Home/Appointment";
 // import NGOTotalImages from "../screens/User/NGO/NGOTotalImages";
 import NGOService from "../screens/User/NGO/NGOService";
 import WorkHistory from "../screens/User/Profile/WorkHistory";
-// import Achievers from '../screens/User/NGO/NGOhomescreen';
+import Appointment from "../components/User/Home/Appointment";
 const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
@@ -64,11 +65,9 @@ const StackNavigator = () => {
         <Stack.Screen name="LoginAuth" component={LoginAuth} />
 
         <Stack.Screen name="NGOProfile" component={NGOProfile} />
-        <Stack.Screen
-          name="NGOResult"
-          component={NGOResults}
-          options={{ headerShown: false }}
-        />
+        <Stack.Screen name="Appointment" options={{
+          headerShown: true,
+        }} component={Appointment} />
 
         
         <Stack.Screen name="NGOTotalImages" component={NGOTotalImages} options={{
