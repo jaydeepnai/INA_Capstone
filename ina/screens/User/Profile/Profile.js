@@ -332,7 +332,7 @@ export default Profile = (props) => {
           </View>
           <MaterialIcons name="attach-money" size={24} color="black" />
         </TouchableOpacity>
-        <TouchableOpacity
+        <TouchableOpacity onPress={() => props.navigation.navigate("Edit_screen")}
           style={{
             flexDirection: "row",
             justifyContent: "space-between",

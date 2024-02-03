@@ -1,6 +1,6 @@
 import React from "react";
 import { SafeAreaView, View, ScrollView, Image, Text } from "react-native";
-import { width } from "../../../lib/Validation/RelativeValues";
+import { responsiveMargin, width } from "../../../lib/Validation/RelativeValues";
 
 export default Categories = (props) => {
   return (
@@ -16,7 +16,8 @@ export default Categories = (props) => {
           backgroundColor: "#FFFFFF",
           paddingTop: 20,
           paddingBottom: 98,
-          paddingHorizontal: 39,
+          // paddingHorizontal: 39,
+          paddingLeft: responsiveMargin(7),
         }}
       >
         <View style={{marginBottom:20}}>
@@ -32,8 +33,8 @@ export default Categories = (props) => {
           style={{
             flexDirection: "row",
             justifyContent: "space-between",
-            alignItems: "center",
-            marginBottom: 14,
+            // alignItems: "center",
+            marginBottom: responsiveMargin(2),
           }}
         >
           <View
@@ -42,14 +43,7 @@ export default Categories = (props) => {
               backgroundColor: "#FFFFFF",
               borderRadius: 20,
               paddingHorizontal: 5,
-              shadowColor: "#00000040",
-              shadowOpacity: 0.3,
-              shadowOffset: {
-                width: 0,
-                height: 0,
-              },
-              shadowRadius: 4,
-              elevation: 4,
+              marginBottom: responsiveMargin(4),
             }}
           >
             <Image
@@ -57,12 +51,13 @@ export default Categories = (props) => {
               resizeMode={"cover"}
               style={{
                 borderRadius: 15,
-                height: 120,
-                width: width*0.35, 
-                marginTop: 5,
+                height: 140,
+                width: width*0.40, 
+                marginLeft: responsiveMargin(1),
+                
               }}
             />
-            <Text style={{textAlign:"center",fontSize:20}}>
+            <Text style={{textAlign:"center",fontSize:18}}>
                 Animal
             </Text>
           </View>
@@ -72,14 +67,8 @@ export default Categories = (props) => {
               backgroundColor: "#FFFFFF",
               borderRadius: 20,
               paddingHorizontal: 5,
-              shadowColor: "#00000040",
-              shadowOpacity: 0.3,
-              shadowOffset: {
-                width: 0,
-                height: 0,
-              },
-              shadowRadius: 4,
-              elevation: 4,
+              marginBottom: responsiveMargin(4),
+
             }}
           >
             <Image
@@ -87,22 +76,102 @@ export default Categories = (props) => {
               resizeMode={"cover"}
               style={{
                 borderRadius: 15,
-                height: 120,
-                width: width*0.35, 
-                marginTop: 5,
+                height: 140,
+                width: width*0.40, 
+                marginLeft: responsiveMargin(1),
+                
               }}
             />
-            <Text style={{textAlign:"center",fontSize:20}}>
+            <Text style={{textAlign:"center",fontSize:18}}>
                 Animal
             </Text>
           </View>
+          <View
+            style={{
+              width: 160,
+              backgroundColor: "#FFFFFF",
+              borderRadius: 20,
+              paddingHorizontal: 5,
+            }}
+          >
+          </View>
+      </View>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            // alignItems: "center",
+            marginBottom: responsiveMargin(2),
+          }}
+        >
+          <View
+            style={{
+              width: 160,
+              backgroundColor: "#FFFFFF",
+              borderRadius: 20,
+              paddingHorizontal: 5,
+              marginBottom: responsiveMargin(4),
+
+            }}
+          >
+            <Image
+              source={require("../../../assets/family.jpg")}
+              resizeMode={"cover"}
+              style={{
+                borderRadius: 15,
+                height: 140,
+                width: width*0.40, 
+                marginLeft: responsiveMargin(1),
+                
+              }}
+            />
+            <Text style={{textAlign:"center",fontSize:18}}>
+                Animal
+            </Text>
+          </View>
+          <View
+            style={{
+              width: 160,
+              backgroundColor: "#FFFFFF",
+              borderRadius: 20,
+              paddingHorizontal: 5,
+              marginBottom: responsiveMargin(4),
+
+            }}
+          >
+            <Image
+              source={require("../../../assets/family.jpg")}
+              resizeMode={"cover"}
+              style={{
+                borderRadius: 15,
+                height: 140,
+                width: width*0.40, 
+                marginLeft: responsiveMargin(1),
+              }}
+            />
+            <Text style={{textAlign:"center",fontSize:18}}>
+                Animal
+            </Text>
+          </View>
+          <View
+            style={{
+              width: 160,
+              backgroundColor: "#FFFFFF",
+              borderRadius: 20,
+              paddingHorizontal: 5,
+            }}
+          >
+          </View>
+
+          
+          
         </View>
         <View
           style={{
             flexDirection: "row",
             justifyContent: "space-between",
-            alignItems: "center",
-            marginBottom: 14,
+            // alignItems: "center",
+            marginBottom: responsiveMargin(2),
           }}
         >
           <View
@@ -111,14 +180,8 @@ export default Categories = (props) => {
               backgroundColor: "#FFFFFF",
               borderRadius: 20,
               paddingHorizontal: 5,
-              shadowColor: "#00000040",
-              shadowOpacity: 0.3,
-              shadowOffset: {
-                width: 0,
-                height: 0,
-              },
-              shadowRadius: 4,
-              elevation: 4,
+              marginBottom: responsiveMargin(4),
+
             }}
           >
             <Image
@@ -126,12 +189,12 @@ export default Categories = (props) => {
               resizeMode={"cover"}
               style={{
                 borderRadius: 15,
-                height: 150,
-                width: 120, 
-                marginTop: 5,
+                height: 140,
+                width: width*0.40, 
+                marginLeft: responsiveMargin(1),
               }}
             />
-            <Text style={{textAlign:"center",fontSize:20}}>
+            <Text style={{textAlign:"center",fontSize:18}}>
                 Animal
             </Text>
           </View>
@@ -141,14 +204,6 @@ export default Categories = (props) => {
               backgroundColor: "#FFFFFF",
               borderRadius: 20,
               paddingHorizontal: 5,
-              shadowColor: "#00000040",
-              shadowOpacity: 0.3,
-              shadowOffset: {
-                width: 0,
-                height: 0,
-              },
-              shadowRadius: 4,
-              elevation: 4,
             }}
           >
             <Image
@@ -156,22 +211,34 @@ export default Categories = (props) => {
               resizeMode={"cover"}
               style={{
                 borderRadius: 15,
-                height: 150,
-                width: 120, 
-                marginTop: 5,
+                height: 140,
+                width: width*0.40, 
+                marginLeft: responsiveMargin(1),
               }}
             />
-            <Text style={{textAlign:"center",fontSize:20}}>
+            <Text style={{textAlign:"center",fontSize:18}}>
                 Animal
             </Text>
           </View>
+          <View
+            style={{
+              width: 160,
+              backgroundColor: "#FFFFFF",
+              borderRadius: 20,
+              paddingHorizontal: 5,
+            }}
+          >
+          </View>
+
+          
+          
         </View>
         <View
           style={{
             flexDirection: "row",
             justifyContent: "space-between",
-            alignItems: "center",
-            marginBottom: 14,
+            // alignItems: "center",
+            marginBottom: responsiveMargin(2),
           }}
         >
           <View
@@ -180,14 +247,6 @@ export default Categories = (props) => {
               backgroundColor: "#FFFFFF",
               borderRadius: 20,
               paddingHorizontal: 5,
-              shadowColor: "#00000040",
-              shadowOpacity: 0.3,
-              shadowOffset: {
-                width: 0,
-                height: 0,
-              },
-              shadowRadius: 4,
-              elevation: 4,
             }}
           >
             <Image
@@ -195,12 +254,12 @@ export default Categories = (props) => {
               resizeMode={"cover"}
               style={{
                 borderRadius: 15,
-                height: 150,
-                width: 120, 
-                marginTop: 5,
+                height: 140,
+                width: width*0.40, 
+                marginLeft: responsiveMargin(1),
               }}
             />
-            <Text style={{textAlign:"center",fontSize:20}}>
+            <Text style={{textAlign:"center",fontSize:18}}>
                 Animal
             </Text>
           </View>
@@ -210,14 +269,6 @@ export default Categories = (props) => {
               backgroundColor: "#FFFFFF",
               borderRadius: 20,
               paddingHorizontal: 5,
-              shadowColor: "#00000040",
-              shadowOpacity: 0.3,
-              shadowOffset: {
-                width: 0,
-                height: 0,
-              },
-              shadowRadius: 4,
-              elevation: 4,
             }}
           >
             <Image
@@ -225,22 +276,30 @@ export default Categories = (props) => {
               resizeMode={"cover"}
               style={{
                 borderRadius: 15,
-                height: 150,
-                width: 120, 
-                marginTop: 5,
+                height: 140,
+                width: width*0.40, 
+                marginLeft: responsiveMargin(1),
               }}
             />
-            <Text style={{textAlign:"center",fontSize:20}}>
+            <Text style={{textAlign:"center",fontSize:18}}>
                 Animal
             </Text>
           </View>
-        </View>
-        <View
+          <View
+            style={{
+              width: 160,
+              backgroundColor: "#FFFFFF",
+              borderRadius: 20,
+              paddingHorizontal: 5,
+            }}
+          >
+          </View>
+          <View
           style={{
             flexDirection: "row",
             justifyContent: "space-between",
-            alignItems: "center",
-            marginBottom: 14,
+            // alignItems: "center",
+            marginBottom: responsiveMargin(2),
           }}
         >
           <View
@@ -249,14 +308,6 @@ export default Categories = (props) => {
               backgroundColor: "#FFFFFF",
               borderRadius: 20,
               paddingHorizontal: 5,
-              shadowColor: "#00000040",
-              shadowOpacity: 0.3,
-              shadowOffset: {
-                width: 0,
-                height: 0,
-              },
-              shadowRadius: 4,
-              elevation: 4,
             }}
           >
             <Image
@@ -264,12 +315,12 @@ export default Categories = (props) => {
               resizeMode={"cover"}
               style={{
                 borderRadius: 15,
-                height: 150,
-                width: 120, 
-                marginTop: 5,
+                height: 140,
+                width: width*0.40, 
+                marginLeft: responsiveMargin(1),
               }}
             />
-            <Text style={{textAlign:"center",fontSize:20}}>
+            <Text style={{textAlign:"center",fontSize:18}}>
                 Animal
             </Text>
           </View>
@@ -279,14 +330,8 @@ export default Categories = (props) => {
               backgroundColor: "#FFFFFF",
               borderRadius: 20,
               paddingHorizontal: 5,
-              shadowColor: "#00000040",
-              shadowOpacity: 0.3,
-              shadowOffset: {
-                width: 0,
-                height: 0,
-              },
-              shadowRadius: 4,
-              elevation: 4,
+              marginBottom: responsiveMargin(4),
+
             }}
           >
             <Image
@@ -294,16 +339,26 @@ export default Categories = (props) => {
               resizeMode={"cover"}
               style={{
                 borderRadius: 15,
-                height: 150,
-                width: 120, 
-                marginTop: 5,
+                height: 140,
+                width: width*0.40, 
+                marginLeft: responsiveMargin(1),
               }}
             />
-            <Text style={{textAlign:"center",fontSize:20}}>
+            <Text style={{textAlign:"center",fontSize:18}}>
                 Animal
             </Text>
           </View>
+          <View
+            style={{
+              width: 160,
+              backgroundColor: "#FFFFFF",
+              borderRadius: 20,
+              paddingHorizontal: 5,
+            }}
+          >
+          </View>
         </View>
+      </View>
       </ScrollView>
     </SafeAreaView>
   );
