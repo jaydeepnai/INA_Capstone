@@ -22,6 +22,7 @@ import NGOTotalImages from "../screens/User/NGO/NGOTotalImages";
 import NGOService from "../screens/User/NGO/NGOService";
 import WorkHistory from "../screens/User/Profile/WorkHistory";
 import Appointment from "../components/User/Home/Appointment";
+import Edit_screen from "../components/Edit_screen";
 const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
@@ -58,12 +59,11 @@ const StackNavigator = () => {
         <Stack.Screen name="EventDetails" component={EventDetails} />
         <Stack.Screen name="NGOServiceDetails" component={NGOService} />
         <Stack.Screen name="CreateFund" component={CreateFund} />
-
         <Stack.Screen name="MasterAuth" component={MasterAuth} />
+        <Stack.Screen name="Edit_screen" component={Edit_screen} />
         <Stack.Screen name="UserRegisterAuth" component={RegisterUserAuth} />
         <Stack.Screen name="NGORegisterAuth" component={RegisterNgoAuth} />
         <Stack.Screen name="LoginAuth" component={LoginAuth} />
-
         <Stack.Screen name="NGOProfile" component={NGOProfile} />
         <Stack.Screen name="Appointment" options={{
           headerShown: true,
@@ -83,10 +83,6 @@ const StackNavigator = () => {
           headerTitleAlign: "center",
           title: 'USER WORKHISTORY'
         }}/>
-
-        
-
-
       </Stack.Navigator>
     </NavigationContainer>
   );
