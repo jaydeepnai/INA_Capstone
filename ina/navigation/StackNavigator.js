@@ -21,6 +21,7 @@ import NGOTotalImages from "../screens/User/NGO/NGOTotalImages";
 // import NGOTotalImages from "../screens/User/NGO/NGOTotalImages";
 import NGOService from "../screens/User/NGO/NGOService";
 import WorkHistory from "../screens/User/Profile/WorkHistory";
+import TopAchievers from "../components/User/Home/TopAchievers";
 import Appointment from "../components/User/Home/Appointment";
 const Stack = createNativeStackNavigator();
 
@@ -83,6 +84,15 @@ const StackNavigator = () => {
           headerTitleAlign: "center",
           title: 'USER WORKHISTORY'
         }}/>
+
+
+      <Stack.Screen name="TopAchievers" component={TopAchievers} options={{
+            headerShown: true,
+            headerLeft: () => <HeaderLeft />,
+            headerRight: () => <HeaderRight />,
+            headerTitleAlign: "center",
+            title: 'TOP ACHIEVERS'}}
+            />
 
         
 
