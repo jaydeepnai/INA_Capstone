@@ -2,10 +2,12 @@ import * as React from "react";
 import { StyleSheet, Modal, Pressable, Alert } from "react-native";
 import { Button } from "react-native-paper";
 import { SafeAreaView, View, ScrollView, Image, Text } from "react-native";
+import { getFontSize, height, responsiveMargin } from "../../lib/Validation/RelativeValues";
+import { Base_Color } from "../../lib/React Query/variables";
 
 export default MasterAuth = ({ navigation }) => {
 
-  
+
   const navigateToAuth = (screenName) => {
     navigation.navigate(screenName);
   };
@@ -15,114 +17,118 @@ export default MasterAuth = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-    <Modal
-      animationType="slide"
-      transparent={true}
-      visible={modalVisible}
-     
-      onRequestClose={() => {
-        Alert.alert("Modal has been closed.");
-        setModalVisible(!modalVisible);
-      }}
-    >
-      <View style={[styles.centeredView]}>
-        <View style={styles.modalView}>
-          <Text style={styles.modalText}>Please Select a Registration Type</Text>
-          <View style={{flexDirection:"row",justifyContent:"space-between"}}>
-          <Pressable
-            style={[styles.button, styles.buttonClose]}
-            onPress={() => { setModalVisible(!modalVisible); navigation.navigate("UserRegisterAuth")}}
-            >
-            <Text style={styles.textStyle}>User</Text>
-          </Pressable>
-          <Pressable
-            style={[styles.button, styles.buttonClose]}
-            onPress={() => {setModalVisible(!modalVisible); navigation.navigate("NGORegisterAuth")}}
-            // onPress={() =>}
-          >
-            <Text style={styles.textStyle}>NGO</Text>
-          </Pressable>
-          </View>
-        </View>
-      </View>
-    </Modal>
-    <SafeAreaView
-      style={{
-        flex: 1,
-        backgroundColor: "#FFFFFF",
-      }}
-    >
-      <ScrollView
-        style={{
-          flex: 1,
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
         }}
       >
-        <Image
-          source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
-          resizeMode={"stretch"}
-          style={{
-            height: 208,
-            marginTop: 105,
-            marginHorizontal: 100,
-          }}
-        />
-        <View style={{marginTop:150}}>
-        <Text
-          style={{
-            marginHorizontal: 45,
-            fontSize: 25,
-            marginBottom:20
-          }}
-        >
-          {"Together \nWe Make a Difference."}
-        </Text>
-        <Text
-          style={{
-            marginHorizontal: 45,
-            fontSize: 20,
-            marginVertical:20,
-            textAlign: "center"
-          }}
-        >
-          {"Let's Continue with "}
-        </Text>
-        <Button
-          style={{
-            backgroundColor: "#74e3d1",
-            marginHorizontal: 50,
-            marginVertical: 10,
-          }}
-          mode="contained"
-          onPress={() => navigateToAuth("LoginAuth")}
-        >
-          Login
-        </Button>
-        <Text
-          style={{
-            marginHorizontal: 45,
-            fontSize: 20,
-            marginVertical:5,
-            textAlign: "center"
-          }}
-        >
-          or
-        </Text>
-        <Button
-          style={{
-            backgroundColor: "#74e3d1",
-            marginHorizontal: 50,
-            marginVertical: 10,
-          }}
-          mode="contained"
-            onPress={
-              () => setModalVisible(true)
-            } 
-        >
-          Register
-        </Button>
+        <View style={[styles.centeredView]}>
+          <View style={styles.modalView}>
+            <Text style={styles.modalText}>Please Select a Registration Type</Text>
+            <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+              <Pressable
+                style={[styles.button, styles.buttonClose]}
+                onPress={() => { setModalVisible(!modalVisible); navigation.navigate("UserRegisterAuth") }}
+              >
+                <Text style={styles.textStyle}>User</Text>
+              </Pressable>
+              <Pressable
+                style={[styles.button, styles.buttonClose]}
+                onPress={() => { setModalVisible(!modalVisible); navigation.navigate("NGORegisterAuth") }}
+              // onPress={() =>}
+              >
+                <Text style={styles.textStyle}>NGO</Text>
+              </Pressable>
+            </View>
+          </View>
         </View>
-      </ScrollView>
-    </SafeAreaView>
+      </Modal>
+      <SafeAreaView
+        style={{
+          flex: 1,
+          backgroundColor: "#FFFFFF",
+        }}
+      >
+        <ScrollView
+          style={{
+            flex: 1,
+          }}
+        >
+          <Image
+            source={require("../../assets/mainbanner.png")}
+            resizeMode={"stretch"}
+            style={{
+              width: "100%",
+              height: height * 0.30,
+              marginTop: responsiveMargin(20),
+            }}
+          />
+          <View style={{flexDirection:"row",justifyContent:"center",alignItems:"center",marginTop: responsiveMargin(5)}}>
+            <Text style={{ fontSize: getFontSize(40), fontWeight: "bold" }}>INA</Text>
+            <Text style={{ fontSize: getFontSize(20), fontWeight: "bold" }}>
+              - Indian NGOs Alliance
+            </Text>
+          </View>
+          <View style={{ marginTop: responsiveMargin(20) }}>
+            <Text
+              style={{
+                marginHorizontal:  responsiveMargin(17),
+                fontSize: getFontSize(23),
+                marginBottom: responsiveMargin(5)
+              }}
+            >
+              {"Together \nWe Make a Difference."}
+            </Text>
+            <Text
+              style={{
+                marginHorizontal: responsiveMargin(20),
+                fontSize: getFontSize(15),
+                marginVertical: 20,
+                textAlign: "center"
+              }}
+            >
+              {"Let's Continue with "}
+            </Text>
+            <Button
+              style={{
+                backgroundColor: Base_Color,
+                marginHorizontal: 50,
+                marginVertical: 10,
+              }}
+              mode="contained"
+              onPress={() => navigateToAuth("LoginAuth")}
+            >
+              Login
+            </Button>
+            <Text
+              style={{
+                marginHorizontal: 45,
+                fontSize: 20,
+                marginVertical: 5,
+                textAlign: "center"
+              }}
+            >
+              or
+            </Text>
+            <Button
+              style={{
+                backgroundColor: Base_Color,
+                marginHorizontal: 50,
+                marginVertical: 10,
+              }}
+              mode="contained"
+              onPress={
+                () => setModalVisible(true)
+              }
+            >
+              Register
+            </Button>
+          </View>
+        </ScrollView>
+      </SafeAreaView>
     </View>
   );
 };
@@ -160,16 +166,16 @@ const styles = StyleSheet.create({
   },
   modalView: {
     margin: 20,
-    flexDirection:"column",
+    flexDirection: "column",
     backgroundColor: "white",
     borderRadius: 20,
     padding: 35,
-    backgroundColor:"#c9c9c9",
-    width:"100%",
+    backgroundColor: "whitesmoke",
+    width: "100%",
     alignItems: "center",
-    flexDirection:"column",
-    bottom:-35,
-    position:"absolute",
+    flexDirection: "column",
+    bottom: -35,
+    position: "absolute",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -183,14 +189,14 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     padding: 10,
     elevation: 2,
-    width:"50%",
-    marginLeft:10
+    width: "50%",
+    marginLeft: 10
   },
   buttonOpen: {
-    backgroundColor: "#F194FF",
+    backgroundColor: Base_Color,
   },
   buttonClose: {
-    backgroundColor: "#2196F3",
+    backgroundColor: Base_Color,
   },
   textStyle: {
     color: "white",

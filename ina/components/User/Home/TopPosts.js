@@ -128,7 +128,7 @@ export const Post = ()=>{
                     fontSize: 16,
                     marginBottom: 29,
                     marginHorizontal: 42,
-                }}>View all 89 comments
+                }}>View all 80 comments
             </Text>
         </View>
     )

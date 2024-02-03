@@ -4,9 +4,9 @@ import { Formik } from "formik";
 import { Button, TextInput } from "react-native-paper";
 import { useLoginAccount } from "../../lib/React Query/queries";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { getFontSize, height, responsiveMargin } from "../../lib/Validation/RelativeValues";
+import { Base_Color } from "../../lib/React Query/variables";
 
-
-const API_URL = "your_api_endpoint_here";
 
 const LoginAuth = ({ navigation }) => {
   const { mutateAsync: LogInAccount, isLoading } = useLoginAccount();
@@ -33,22 +33,20 @@ const LoginAuth = ({ navigation }) => {
     <ScrollView
       style={{
         backgroundColor: "#FFFFFF",
-        paddingTop: 40,
-        paddingBottom: 69,
       }}>
       <Image
         source={require("../../assets/loginlogo.png")}
-        resizeMode={"stretch"}
+        resizeMode={"contain"}
         style={{
-          height: 173,
-          width: "90%",
-          marginLeft: 20
+          height: height*0.30,
+          width: "100%",
+          marginTop:responsiveMargin(10)
         }}
       />
       <Text  style={{
           color: "#000000",
-          fontSize: 35,
-          marginHorizontal: 53,
+          fontSize: getFontSize(30),
+          textAlign: "center"
         }}>
         Welcome to INA
       </Text>
@@ -56,18 +54,18 @@ const LoginAuth = ({ navigation }) => {
       <Text
         style={{
           color: "#000000",
-          fontSize: 35,
-          marginHorizontal: 10,
+          fontSize: getFontSize(25),
+          marginHorizontal: responsiveMargin(5),
           width:"100%"
         }}>
         Let's Make a change Together
       </Text>
       <Text
         style={{
-          color: "#80C718",
-          fontSize: 28,
-          marginBottom: 20,
-          marginTop: 20,
+          color: Base_Color,
+          fontSize: getFontSize(25),
+          marginHorizontal: responsiveMargin(4),
+          marginBottom: responsiveMargin(5),
         }}>
         {" Log in to continue"}
       </Text>
@@ -88,9 +86,10 @@ const LoginAuth = ({ navigation }) => {
           {({ handleChange, handleBlur, handleSubmit, values, errors }) => (
             <View>
               <TextInput
-                mode="outlined"
                 label="UserName"
-                // style={styles.input}
+                mode="outlined"
+                outlineColor={Base_Color}
+                activeOutlineColor={Base_Color}
                 onChangeText={handleChange("username")}
                 onBlur={handleBlur("username")}
                 value={values.username}
@@ -101,6 +100,8 @@ const LoginAuth = ({ navigation }) => {
               <TextInput
                 label="Password"
                 // style={styles.input}
+                outlineColor={Base_Color}
+                activeOutlineColor={Base_Color}
                 mode="outlined"
                 onChangeText={handleChange("password")}
                 onBlur={handleBlur("password")}
@@ -112,14 +113,13 @@ const LoginAuth = ({ navigation }) => {
               <Text 
               onPress={()=> navigation.navigate("MasterAuth")}
                 style={{
-                  color: "#0B22F4",
+                  color: "gray",
                   fontSize: 16,
-                  // marginHorizontal: 40,
-                  margin:10
+                  margin:responsiveMargin(2)
                 }}>
                 {"Didn't have an account?"}
               </Text>
-              <Button mode="contained" onPress={handleSubmit}>
+              <Button mode="contained" buttonColor={Base_Color} onPress={handleSubmit}>
                 Login
               </Button>
 
@@ -135,21 +135,12 @@ const LoginAuth = ({ navigation }) => {
           marginBottom: 42,
           marginHorizontal: 10,
         }}>
-        <View
-          style={{
-            width: 25,
-            height: 25,
-            backgroundColor: "#D9D9D9",
-            borderRadius: 5,
-            marginRight: 10,
-          }}>
-        </View>
         <Text
           style={{
             color: "#000000",
             fontSize: 16,
           }}>
-          {"Remember me"}
+          {/* {"Remember me"} */}
         </Text>
         <View
           style={{
@@ -159,7 +150,7 @@ const LoginAuth = ({ navigation }) => {
         </View>
         <Text
           style={{
-            color: "#0B22F4",
+            color: "gray",
             fontSize: 16,
           }}>
           {"Forget password?"}

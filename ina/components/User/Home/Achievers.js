@@ -1,9 +1,12 @@
 import { StyleSheet, Text, View, Image, ScrollView } from 'react-native'
 import React from 'react'
+import { useNavigation } from '@react-navigation/native'
 
 const Achievers = () => {
+    const navigation = useNavigation()
     return (
         <View>
+            <View style={{flexDirection:"row",alignItems:"center"}}>
             <Text
                 style={{
                     color: "#000000",
@@ -13,6 +16,14 @@ const Achievers = () => {
                 }}>
                 TOP ACHIEVERS OF THE MONTH
             </Text>
+            <Text onPress={()=>{
+                navigation.navigate("TopAchivers");
+            }} style={{
+                    color: "green",
+                }}>
+                See All
+            </Text>
+            </View>
             <View
                 style={{
                     width: 414,

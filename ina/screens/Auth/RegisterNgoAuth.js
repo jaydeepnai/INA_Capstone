@@ -8,9 +8,11 @@ import { RegisterNgo } from '../../lib/Validation/initForm';
 import { NGORegistervalidation } from '../../lib/Validation/validation';
 import { useRegisterNGOAccount } from '../../lib/React Query/queries';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Base_Color } from '../../lib/React Query/variables';
+import { getFontSize, responsiveMargin } from '../../lib/Validation/RelativeValues';
 
 
-const RegistrationForm = ({navigation}) => {
+const RegistrationForm = ({ navigation }) => {
   const { mutateAsync: RegisterAccount, isLoading } = useRegisterNGOAccount();
   const [logo, setLogo] = useState();
   const [registrationDocument, setRegistrationDocument] = useState();
@@ -18,14 +20,14 @@ const RegistrationForm = ({navigation}) => {
   const [ImagePickerCancelled, setImagePickerCancelled] = useState(false);
 
 
-  const handleFormSubmit = useCallback(async (values,{ resetForm }) => {
+  const handleFormSubmit = useCallback(async (values, { resetForm }) => {
     const formData = new FormData();
-    
+
     const DocfileName = values.registrationDocument.split("/").pop();
     const DocfileType = DocfileName.split(".").pop();
     formData.append("registrationDocument", {
       name: DocfileName,
-      uri:values.registrationDocument,
+      uri: values.registrationDocument,
       type: `image/${DocfileType}`,
     });
 
@@ -33,7 +35,7 @@ const RegistrationForm = ({navigation}) => {
     const ImagefileType = ImagefileName.split(".").pop();
     formData.append("NGOlogo", {
       name: ImagefileName,
-      uri:values.logo,
+      uri: values.logo,
       type: `image/${ImagefileType}`,
     });
 
@@ -44,17 +46,17 @@ const RegistrationForm = ({navigation}) => {
     formData.append("username", values.username);
 
     const RegisterResposnse = await RegisterAccount(formData);
-    
+
     if (RegisterResposnse.status == 201) {
       await AsyncStorage.setItem('NGO', JSON.stringify(RegisterResposnse));
       resetForm()
       navigation.navigate("LoginAuth");
       return
-    }else{
+    } else {
       resetForm()
       return
     }
-  },[]);
+  }, []);
 
   const pickImage = useCallback(async ({ setValues, values, setTouched, setErrors, errors, touched }) => {
     const result = await ImagePicker.launchImageLibraryAsync({
@@ -100,7 +102,7 @@ const RegistrationForm = ({navigation}) => {
   }, []);
 
   return (
-    <ScrollView>
+    <ScrollView style={styles.mainContainer}>
       <Formik
         initialValues={RegisterNgo}
         validationSchema={NGORegistervalidation}
@@ -108,18 +110,30 @@ const RegistrationForm = ({navigation}) => {
       >
         {({ handleChange, handleBlur, handleSubmit, setValues, values, errors, touched, setErrors, setTouched }) => (
           <View style={styles.container}>
+            <View style={{ flexDirection: "row" }}>
               <Avatar.Image
-                source={logo ? { uri: logo} : null}
+                source={logo ? { uri: logo } : null}
                 size={80}
-                style={{ marginBottom: 10 }}
+                style={{ marginBottom: 10, backgroundColor: "whitesmoke" }}
               />
-               {(ImagePickerCancelled) && errors.logo && (
-              <HelperText type="error">{errors.logo}</HelperText>
-            )}
-            {/* {console.log(errors)} */}
-            <Button onPress={() => pickImage({ setErrors, values, setValues, setTouched, errors, touched })}>Select Logo</Button>
+              {(ImagePickerCancelled) && errors.logo && (
+                <HelperText type="error">{errors.logo}</HelperText>
+              )}
+              <View style={{marginHorizontal:responsiveMargin(10),marginTop:responsiveMargin(5)}}>
+                <Text style={{fontSize:getFontSize(20),fontWeight:"bold"}}>
+                  Register Now
+                </Text>
+                <Text>
+                  Please Register To Login
+                </Text>
+              </View>
+            </View>
+            <Button textColor={Base_Color} onPress={() => pickImage({ setErrors, values, setValues, setTouched, errors, touched })}>Select Logo</Button>
 
             <TextInput
+              mode="outlined"
+              outlineColor={Base_Color}
+              activeOutlineColor={Base_Color}
               label="NGO Name"
               onChangeText={handleChange('name')}
               onBlur={handleBlur('name')}
@@ -128,6 +142,9 @@ const RegistrationForm = ({navigation}) => {
             {touched.name && errors.name ? <Text style={styles.errorText}>{errors.name}</Text> : <Text></Text>}
 
             <TextInput
+              mode="outlined"
+              outlineColor={Base_Color}
+              activeOutlineColor={Base_Color}
               label="Email"
               onChangeText={handleChange('email')}
               onBlur={handleBlur('email')}
@@ -137,6 +154,9 @@ const RegistrationForm = ({navigation}) => {
 
             <TextInput
               label="Phone"
+              mode="outlined"
+              outlineColor={Base_Color}
+              activeOutlineColor={Base_Color}
               onChangeText={handleChange('phone')}
               onBlur={handleBlur('phone')}
               value={values.phone}
@@ -144,6 +164,9 @@ const RegistrationForm = ({navigation}) => {
             {touched.phone && errors.phone ? <Text style={styles.errorText}>{errors.phone}</Text> : <Text></Text>}
 
             <TextInput
+              mode="outlined"
+              outlineColor={Base_Color}
+              activeOutlineColor={Base_Color}
               label="Username"
               onChangeText={handleChange('username')}
               onBlur={handleBlur('username')}
@@ -152,6 +175,9 @@ const RegistrationForm = ({navigation}) => {
             {touched.username && errors.username ? <Text style={styles.errorText}>{errors.username}</Text> : <Text></Text>}
             <TextInput
               label="Password"
+              mode="outlined"
+              outlineColor={Base_Color}
+              activeOutlineColor={Base_Color}
               secureTextEntry
               onChangeText={handleChange('password')}
               onBlur={handleBlur('password')}
@@ -159,6 +185,9 @@ const RegistrationForm = ({navigation}) => {
             />
             {touched.password && errors.password ? <Text style={styles.errorText}>{errors.password}</Text> : <Text></Text>}
             <TextInput
+              mode="outlined"
+              outlineColor={Base_Color}
+              activeOutlineColor={Base_Color}
               label="Confirm Password"
               secureTextEntry
               onChangeText={handleChange('confirmPassword')}
@@ -166,7 +195,7 @@ const RegistrationForm = ({navigation}) => {
               value={values.confirmPassword}
             />
             {touched.confirmPassword && errors.confirmPassword ? <Text style={styles.errorText}>{errors.confirmPassword}</Text> : <Text></Text>}
-            <Button onPress={() => pickDocument({ setErrors, setValues, values, setTouched, errors, touched })} style={{ marginTop: 10 }}>
+            <Button textColor={Base_Color} onPress={() => pickDocument({ setErrors, setValues, values, setTouched, errors, touched })} style={{ marginTop: 10, }}>
               Select Registration Document
             </Button>
             {(documentPickerCancelled) && errors.registrationDocument && (
@@ -185,14 +214,19 @@ const RegistrationForm = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
+    backgroundColor: "white",
     marginTop: 40
+  },
+  mainContainer: {
+    backgroundColor: "white",
   },
   errorText: {
     color: 'red',
-    marginBottom: 10,
+    marginBottom: 2,
   },
   button: {
     marginTop: 20,
+    backgroundColor: Base_Color
   },
 });
 

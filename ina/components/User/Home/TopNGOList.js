@@ -1,32 +1,15 @@
 import { StyleSheet, Text, View, Image, ImageBackground, Touchable, TouchableHighlight, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
+import { Base_Color } from '../../../lib/React Query/variables'
+import { AntDesign, Feather } from '@expo/vector-icons'
 
 const TopNGOList = () => {
     return (
-        <View>
-            <View
-                style={{
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    margin: 15,
-                    marginTop: 0
-                }}>
+        <View style={{marginTop:-10}}>
                 <NGOCard />
                 <NGOCard />
-            </View>
-            <View
-                style={{
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    margin: 15,
-                    marginTop: 0
-                }}>
                 <NGOCard />
-                <NGOCard />
-            </View>
         </View>
     )
 }
@@ -37,217 +20,124 @@ const styles = StyleSheet.create({})
 
 
 const NGOCard = () => {
-    const navigation =useNavigation() 
-    const handelClick = ()=>{
-        // console.log("first")
-        navigation.navigate("NGOProfile")
-    }
-    return (      
-        <TouchableOpacity 
-        // onclick={() => navigation.navigate("NGOProfile") }
-        onPress={handelClick }
-            style={{
-                width: "48%",
-                backgroundColor: "#FFFFFF",
-                borderRadius: 20,
-                paddingTop: 6,
-                paddingBottom: 16,
-                shadowColor: "#00000040",
-                shadowOpacity: 0.3,
-                shadowOffset: {
-                    width: 0,
-                    height: 0
-                },
-                overflow: "hidden",
-                shadowRadius: 4,
-                elevation: 4,
-            }}>
-            <ImageBackground
-                source={require("../../../assets/NGO/top2.png")}
-                resizeMode="cover"
+    const navigation = useNavigation()
+
+    return (
+    <TouchableOpacity
+        onPress={()=> navigation.navigate("NGOProfile")}
+        style={{
+            backgroundColor: "white",
+            borderRadius: 15,
+            paddingVertical: 15,
+            paddingHorizontal: 10,
+            marginBottom: 15,
+            marginHorizontal: 20,
+            elevation: 4
+        }}>
+        <View>
+            <View style={{ marginBottom: 15, }}>
+                <Image source={require("../../../assets/animals.jpg")}
+                    resizeMode={"cover"}
+                    style={{
+                        borderRadius: 10,
+                        height: 175,
+                        width: "100%"
+                    }} />
+                <Image source={require("../../../assets/ngologo.jpg")}
+                    resizeMode={"stretch"}
+                    style={{
+                        position: "absolute",
+                        bottom: -40,
+                        left: 2,
+                        borderRadius: 50,
+                        width: 90,
+                        height: 90,
+                        borderColor: "white",
+                        borderWidth: 5
+                    }}
+                />
+            </View>
+            <Text
                 style={{
-                    height: 100,
-                    width:"100%",
-                    borderRadius:50,
-                    top:-10
-                }}
-            />
+                    color: "#000000",
+                    fontSize: 15,
+                    marginLeft: 95,
+                    bottom: 10,
+                }}>
+                ANIMAL FRIENDS UNITED
+            </Text>
+            <Text
+                style={{
+                    color: "#000000",
+                    fontSize: 10,
+                    marginLeft: 95,
+                    bottom: 10,
+                }}>
+                {"Empowering Paws, Enriching Lives"}
+            </Text>
             <View
                 style={{
                     flexDirection: "row",
                     justifyContent: "space-between",
                     alignItems: "center",
-                    marginBottom: 6,
-                    marginHorizontal: 6,
                 }}>
-                <Text
-                    style={{
-                        color: "#000000",
-                        fontSize: 16,
-                    }}>
-                    {"OPAD"}
-                </Text>
-                <View
-                    style={{
-                        width: 92,
-                        alignItems: "center",
-                        backgroundColor: "#A4EC2880",
-                        borderRadius: 30,
-                        paddingVertical: 8,
-                    }}>
-                    <Text
+                    <View
                         style={{
-                            color: "#000000",
-                            fontSize: 13,
+                            flexDirection: "row",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            backgroundColor: Base_Color,
+                            borderRadius: 30,
+                            padding: 5,
                         }}>
-                        {"10am - 6pm"}
-                    </Text>
-                </View>
-            </View>
-            <View
-                style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    marginBottom: 7,
-                    marginHorizontal: 14,
-                }}>
-                <Image
-                    source={require("../../../assets/NGO/location.png")}
-                    resizeMode={"stretch"}
-                    style={{
-                        width: 17,
-                        height: 18,
-                        marginRight: 10,
-                    }}
-                />
-                <Text
-                    style={{
-                        color: "#000000",
-                        fontSize: 10,
-                    }}>
-                    {"Brooklyn Park"}
-                </Text>
-                <View
-                    style={{
-                        flex: 1,
-                        alignSelf: "stretch",
-                    }}>
-                </View>
-                <Image
-                    source={require("../../../assets/NGO/star.png")}
-                    resizeMode={"stretch"}
-                    style={{
-                        width: 13,
-                        height: 13,
-                        marginRight: 8,
-                    }}
-                />
-                <Text
-                    style={{
-                        color: "#000000",
-                        fontSize: 12,
-                    }}>
-                    {"5.0"}
-                </Text>
-            </View>
-            <View
-                style={{
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    marginHorizontal: 23,
-                }}>
-                <ImageBackground
-                    source={require("../../../assets/NGO/profile.png")}
-                    resizeMode={'stretch'}
-                    style={{
-                        width: 19,
-                        alignItems: "center",
-                        paddingVertical: 8,
-                    }}
-                >
-                    <Text
+                        <AntDesign name="star" size={20} color="white" />
+                        <Text
+                            style={{
+                                color: "white",
+                                fontSize: 17,
+                            }}>
+                            {"4.0"}
+                        </Text>
+                    </View>
+                    <View
                         style={{
-                            color: "#000000",
-                            fontSize: 8,
+                            flexDirection: "row",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            backgroundColor: Base_Color,
+                            borderRadius: 30,
+                            padding: 7,
                         }}>
-                        {"+9"}
-                    </Text>
-                </ImageBackground>
-                <Text
-                    style={{
-                        color: "#000000",
-                        fontSize: 14,
-                    }}>
-                    {"Resources"}
-                </Text>
-                <Image
-                    source={require("../../../assets/NGO/profile.png")}
-                    resizeMode={"stretch"}
-                    style={{
-                        position: "absolute",
-                        bottom: 0,
-                        left: 0,
-                        width: 19,
-                        height: 20,
-                    }}
-                />
-                <Image
-                    source={require("../../../assets/NGO/profile.png")}
-                    resizeMode={"stretch"}
-                    style={{
-                        position: "absolute",
-                        bottom: 0,
-                        left: 3,
-                        width: 19,
-                        height: 20,
-                    }}
-                />
-                <Image
-                    source={require("../../../assets/NGO/profile.png")}
-                    resizeMode={"stretch"}
-                    style={{
-                        position: "absolute",
-                        bottom: 0,
-                        left: 15,
-                        width: 19,
-                        height: 20,
-                    }}
-                />
-                <Image
-                    source={require("../../../assets/NGO/profile.png")}
-                    resizeMode={"stretch"}
-                    style={{
-                        position: "absolute",
-                        bottom: 0,
-                        left: 18,
-                        width: 19,
-                        height: 20,
-                    }}
-                />
-                <Image
-                    source={require("../../../assets/NGO/profile.png")}
-                    resizeMode={"stretch"}
-                    style={{
-                        position: "absolute",
-                        bottom: 0,
-                        left: 30,
-                        width: 19,
-                        height: 20,
-                    }}
-                />
-                <Image
-                    source={require("../../../assets/NGO/profile.png")}
-                    resizeMode={"stretch"}
-                    style={{
-                        position: "absolute",
-                        bottom: 0,
-                        left: 32,
-                        width: 19,
-                        height: 20,
-                    }}
-                />
+                        <AntDesign name="clockcircle" size={15} color="white" />
+                        <Text
+                            style={{
+                                color: "white",
+                                fontSize: 17,
+                                paddingLeft:4
+                            }}>
+                            {"10am - 6pm"}
+                        </Text>
+                    </View>
+                    <View
+                        style={{
+                            alignItems: "center",
+                            backgroundColor: Base_Color,
+                            borderRadius: 30,
+                            padding: 5,
+                            flexDirection: "row",
+                            // paddingLeft:4
+                        }}>
+                        <Feather name="map-pin" size={15} color="white" />
+                        <Text
+                            style={{
+                                color: "white",
+                                fontSize: 17,
+                                paddingLeft:4
+                            }}>
+                            {"Maninagar"}
+                        </Text>
+                    </View>
             </View>
-        </TouchableOpacity>
-    )
-}
+        </View>
+    </TouchableOpacity>
+)}
