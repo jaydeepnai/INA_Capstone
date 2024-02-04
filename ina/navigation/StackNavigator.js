@@ -79,20 +79,21 @@ const StackNavigator = () => {
           headerShown: true,
           headerTitleAlign: "center",
           title: 'USER WORKHISTORY'
-        }} />
-        <Stack.Screen name="TopAchievers" component={TopAchievers} options={{
-          headerShown: true,
-          headerLeft: () => <HeaderLeft />,
-          headerRight: () => <HeaderRight />,
-          headerTitleAlign: "center",
-          title: 'TOP ACHIEVERS'
-        }}
-        />
-        <Stack.Screen
-          name="NGOResult"
-          component={NGOResults}
-          options={{ headerShown: false }}
-        />
+        }}/>
+
+
+      <Stack.Screen name="TopAchievers" component={TopAchievers} options={{
+            headerShown: true,
+            // headerLeft: () => <HeaderLeft />,
+            // headerRight: () => <HeaderRight />,
+            headerTitleAlign: "center",
+            title: 'TOP ACHIEVERS'}}
+            />
+
+
+        
+
+
       </Stack.Navigator>
     </NavigationContainer>
   );
