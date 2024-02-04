@@ -6,8 +6,10 @@ import BrowseNGO from '../../../components/User/Home/BrowseNGO'
 import Achievers from '../../../components/User/Home/Achievers'
 import TopServices from '../../../components/User/Home/TopServices'
 import TopPosts from '../../../components/User/Home/TopPosts'
+import TopAchievers from '../../../components/User/Home/TopAchievers'
 import { Events } from '../../../components/User/Home/EventCarousel'
 import { useNavigation } from '@react-navigation/native'
+
 
 const Trending = () => {
 	const navigation = useNavigation()
@@ -15,6 +17,8 @@ const Trending = () => {
 		<ScrollView>
 			<Events />
 			<Categories />
+
+
 			<View
 				style={{
 					flexDirection: "row",
@@ -43,9 +47,41 @@ const Trending = () => {
 				</Text>
 				</TouchableOpacity>
 			</View>
+
+
 			<TopNGOList>
 			</TopNGOList>
 			<BrowseNGO />
+
+			<View style={{
+                flex:1,
+                flexDirection:'row',
+                alignItems:'center',
+            }}>
+                <Text
+                    style={{
+                        color: "#000000",
+                        fontSize: 20,
+                        margin: 10,
+                        marginHorizontal: 15,
+                    }}>
+                    TOP ACHIEVERS OF THE MONTH
+                </Text>
+
+                <TouchableOpacity onPress={() => navigation.navigate("TopAchievers")}>
+                    <Text
+                        style={{
+                            textAlign: "center",
+                            marginRight: 20,
+                            color: "green",
+                        }}
+                    >
+                        See All
+                    </Text>
+                </TouchableOpacity>
+            </View>
+
+
 			<Achievers />
 			<TopServices />
 			<TopPosts />
