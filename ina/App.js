@@ -8,10 +8,10 @@ const queryClient = new QueryClient();
 export default function App() {
   return (
     <>
-       <StatusBar barStyle = "dark-content" hidden = {false} backgroundColor = "white" translucent = {true}/>
-    <QueryClientProvider client={queryClient}>
-      <StackNavigator/>
-    </QueryClientProvider>
+      <StatusBar barStyle="dark-content" hidden={false} backgroundColor="white" translucent={true} />
+      <QueryClientProvider client={queryClient}>
+        <StackNavigator />
+      </QueryClientProvider>
     </>
   );
 }

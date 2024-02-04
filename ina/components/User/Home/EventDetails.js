@@ -14,6 +14,7 @@ import {
   Text,
   ImageBackground,
   StatusBar,
+  TouchableOpacity,
 } from "react-native";
 // import { PieChart } from 'react-native-svg-charts';
 import PieChart from "react-native-pie-chart";
@@ -22,12 +23,13 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import { Button, Card } from "react-native-paper";
 import { Post } from "./TopPosts";
 import { getFontSize, responsiveMargin, width } from "../../../lib/Validation/RelativeValues";
+import { useNavigation } from "@react-navigation/native";
 const widthAndHeight = 60;
 const series = [50, 20];
 const sliceColor = ["orange", "white"];
 
+const Tab = createMaterialTopTabNavigator();
 export default EventDetails = (props) => {
-  const Tab = createMaterialTopTabNavigator();
   return (
     <SafeAreaView
       style={{
@@ -45,6 +47,10 @@ export default EventDetails = (props) => {
 };
 
 const About = () => {
+  const navigation = useNavigation();
+  const seeAllImages = () => {
+    navigation.navigate("NGOTotalImages");
+  };
   return (
     <ScrollView>
       <Text
@@ -681,15 +687,15 @@ const About = () => {
                 height: 133,
               }}
             />
-            <View
+            <TouchableOpacity
                 style={{
-                  // position: "absolute",
                   bottom: 0,
                   left: -2,
                   width: "33%",
                   height: 133,
                   backgroundColor: "#00000099",
                 }}
+                onPress={seeAllImages}
               >
                 <Text
                   style={{
@@ -701,7 +707,7 @@ const About = () => {
                 >
                   {"SEE MORE"}
                 </Text>
-              </View>
+              </TouchableOpacity>
           </View>
         </Card.Content>
       </Card>

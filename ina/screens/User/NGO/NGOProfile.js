@@ -8,11 +8,13 @@ import {
   ImageBackground,
   Pressable,
   StatusBar,
+  TouchableOpacity,
 } from "react-native";
 import {
   responsiveMargin,
   getFontSize,
   width,
+  height,
 } from "../../../lib/Validation/RelativeValues";
 import {
   AntDesign,
@@ -25,11 +27,9 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import TopPosts from "../../../components/User/Home/TopPosts";
 import { useNavigation } from "@react-navigation/native";
 import { Card, Chip } from "react-native-paper";
+import { Base_Color } from "../../../lib/React Query/variables";
 
 export default NGOProfile = (props) => {
-  const seeAllImages = () => {
-    props.navigation.navigate("NGOTotalImages");
-  };
   const Tab = createMaterialTopTabNavigator();
 
   return (
@@ -219,6 +219,19 @@ const About = () => {
   const seeAllImages = () => {
     navigation.navigate("NGOTotalImages");
   };
+  const goToService = () => {
+    navigation.navigate("NGOServiceDetails");
+  };
+  const RedirectTOAchiever = () => {
+    navigation.navigate("TopAchievers");
+  };
+  const RedirectTOEvent = () => {
+    navigation.navigate("EventDetails");
+  };
+  const RedirectToVolunteer = () => {
+    navigation.navigate("ApplyVolunteer");
+  };
+
   return (
     <ScrollView>
       <View
@@ -430,131 +443,104 @@ const About = () => {
           >
             <Card mode="elevated" style={{ margin: 5 }}>
               <Card.Content>
-                <Image
-                  source={require("../../../assets/NGO/dog_adopt.jpg")}
-                  resizeMode={"stretch"}
-                  style={{
-                    borderRadius: 10,
-                    width: width * 0.6,
-                    height: 254,
-                  }}
-                />
-                <View
-                  style={{
-                    padding: responsiveMargin(1),
-                  }}
-                >
-                  <Text style={{ fontSize: getFontSize(18) }}>Hare Krishn</Text>
-                  <View style={{ flexDirection: "row" }}>
-                    <Chip
-                      style={{
-                        fontSize: getFontSize(15),
-                        margin: responsiveMargin(1),
-                      }}
-                    >
-                      24th Jan 24
-                    </Chip>
-                    <Chip
-                      style={{
-                        fontSize: getFontSize(15),
-                        margin: responsiveMargin(1),
-                      }}
-                    >
-                      Vejalpur
-                    </Chip>
+                <TouchableOpacity onPress={goToService}>
+                  <Image
+                    source={require("../../../assets/NGO/dog_adopt.jpg")}
+                    resizeMode={"stretch"}
+                    style={{
+                      borderRadius: 10,
+                      width: width * 0.6,
+                      height: 254,
+                    }}
+                  />
+                  <View
+                    style={{
+                      padding: responsiveMargin(1),
+                    }}
+                  >
+                    <Text style={{ fontSize: getFontSize(18) }}>Hare Krishn</Text>
+                    <View style={{ flexDirection: "row" }}>
+                      <Chip
+                        style={{
+                          fontSize: getFontSize(15),
+                          margin: responsiveMargin(1),
+                        }}
+                      >
+                        24th Jan 24
+                      </Chip>
+                      <Chip
+                        style={{
+                          fontSize: getFontSize(15),
+                          margin: responsiveMargin(1),
+                        }}
+                      >
+                        Vejalpur
+                      </Chip>
+                    </View>
                   </View>
-                </View>
+                </TouchableOpacity>
               </Card.Content>
             </Card>
             <Card mode="elevated" style={{ margin: 5 }}>
               <Card.Content>
-                <Image
-                  source={require("../../../assets/NGO/dog_adopt.jpg")}
-                  resizeMode={"stretch"}
-                  style={{
-                    borderRadius: 10,
-                    width: width * 0.6,
-                    height: 254,
-                  }}
-                />
-                <View
-                  style={{
-                    padding: responsiveMargin(1),
-                  }}
-                >
-                  <Text style={{ fontSize: getFontSize(18) }}>Hare Krishn</Text>
-                  <View style={{ flexDirection: "row" }}>
-                    <Chip
-                      style={{
-                        fontSize: getFontSize(15),
-                        margin: responsiveMargin(1),
-                      }}
-                    >
-                      24th Jan 24
-                    </Chip>
-                    <Chip
-                      style={{
-                        fontSize: getFontSize(15),
-                        margin: responsiveMargin(1),
-                      }}
-                    >
-                      Vejalpur
-                    </Chip>
+                <TouchableOpacity onPress={goToService}>
+                  <Image
+                    source={require("../../../assets/NGO/dog_adopt.jpg")}
+                    resizeMode={"stretch"}
+                    style={{
+                      borderRadius: 10,
+                      width: width * 0.6,
+                      height: 254,
+                    }}
+                  />
+                  <View
+                    style={{
+                      padding: responsiveMargin(1),
+                    }}
+                  >
+                    <Text style={{ fontSize: getFontSize(18) }}>Hare Krishn</Text>
+                    <View style={{ flexDirection: "row" }}>
+                      <Chip
+                        style={{
+                          fontSize: getFontSize(15),
+                          margin: responsiveMargin(1),
+                        }}
+                      >
+                        24th Jan 24
+                      </Chip>
+                      <Chip
+                        style={{
+                          fontSize: getFontSize(15),
+                          margin: responsiveMargin(1),
+                        }}
+                      >
+                        Vejalpur
+                      </Chip>
+                    </View>
                   </View>
-                </View>
-              </Card.Content>
-            </Card>
-            <Card mode="elevated" style={{ margin: 5 }}>
-              <Card.Content>
-                <Image
-                  source={require("../../../assets/NGO/dog_adopt.jpg")}
-                  resizeMode={"stretch"}
-                  style={{
-                    borderRadius: 10,
-                    width: width * 0.6,
-                    height: 254,
-                  }}
-                />
-                <View
-                  style={{
-                    padding: responsiveMargin(1),
-                  }}
-                >
-                  <Text style={{ fontSize: getFontSize(18) }}>Hare Krishn</Text>
-                  <View style={{ flexDirection: "row" }}>
-                    <Chip
-                      style={{
-                        fontSize: getFontSize(15),
-                        margin: responsiveMargin(1),
-                      }}
-                    >
-                      24th Jan 24
-                    </Chip>
-                    <Chip
-                      style={{
-                        fontSize: getFontSize(15),
-                        margin: responsiveMargin(1),
-                      }}
-                    >
-                      Vejalpur
-                    </Chip>
-                  </View>
-                </View>
+                </TouchableOpacity>
               </Card.Content>
             </Card>
           </ScrollView>
         </View>
       </View>
-      <Text
-        style={{
-          color: "#000000",
-          fontSize: 20,
-          marginBottom: 15,
-          marginHorizontal: 25,
-        }}
-      >
-        {"TOP ACHIVERS OF THE MONTH"}
-      </Text>
+      <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+        <Text
+          style={{
+            color: "#000000",
+            fontSize: 20,
+            marginBottom: 15,
+            marginHorizontal: 25,
+          }}
+        >
+          {"TOP ACHIVERS OF THE MONTH"}
+        </Text>
+        <TouchableOpacity onPress={RedirectTOAchiever}>
+          <Text style={{ color: Base_Color, paddingRight: responsiveMargin(2), paddingBottom: responsiveMargin(3), paddingRight: responsiveMargin(5) }}>
+            See All
+          </Text>
+        </TouchableOpacity>
+      </View>
       <View
         style={{
           marginBottom: 21,
@@ -577,7 +563,7 @@ const About = () => {
             <View
               style={{
                 width: 70,
-                marginLeft:responsiveMargin(3)
+                marginLeft: responsiveMargin(3)
               }}
             >
               <Image
@@ -600,14 +586,14 @@ const About = () => {
                   height: 22,
                 }}
               />
-              <Text style={{textAlign:"center"}}>
+              <Text style={{ textAlign: "center" }}>
                 Rubina
               </Text>
             </View>
             <View
               style={{
                 width: 70,
-                marginLeft:responsiveMargin(3)
+                marginLeft: responsiveMargin(3)
               }}
             >
               <Image
@@ -630,14 +616,14 @@ const About = () => {
                   height: 22,
                 }}
               />
-              <Text style={{textAlign:"center"}}>
+              <Text style={{ textAlign: "center" }}>
                 Rubina
               </Text>
             </View>
             <View
               style={{
                 width: 70,
-                marginLeft:responsiveMargin(3)
+                marginLeft: responsiveMargin(3)
               }}
             >
               <Image
@@ -660,11 +646,11 @@ const About = () => {
                   height: 22,
                 }}
               />
-              <Text style={{textAlign:"center"}}>
+              <Text style={{ textAlign: "center" }}>
                 Rubina
               </Text>
             </View>
-            
+
           </View>
         </View>
         <Image
@@ -680,451 +666,234 @@ const About = () => {
           }}
         />
       </View>
-      <Text
-        style={{
-          color: "#000000",
-          fontSize: getFontSize(20),
-          marginHorizontal: responsiveMargin(8),
-        }}
-      >
-        {"UPCOMING EVENTS"}
-      </Text>
-      <ScrollView
-            horizontal
-            style={{
-              marginTop: responsiveMargin(3),
-              marginHorizontal: 1,
-              paddingBottom: responsiveMargin(3)
-            }}
-          >
-            <Card mode="elevated" style={{ marginLeft: responsiveMargin(5),marginBottom:responsiveMargin(2) }}>
-              <Card.Content>
-                <Image
-                  source={require("../../../assets/NGO/dog_adopt.jpg")}
-                  resizeMode={"stretch"}
-                  style={{
-                    borderRadius: 10,
-                    width: width * 0.6,
-                    height: 254,
-                  }}
-                />
-                <View
-                  style={{
-                    padding: responsiveMargin(1),
-                  }}
-                >
-                  <Text style={{ fontSize: getFontSize(18) }}>Hare Krishn</Text>
-                  <View style={{ flexDirection: "row" }}>
-                    <Chip
-                      style={{
-                        fontSize: getFontSize(15),
-                        margin: responsiveMargin(1),
-                      }}
-                    >
-                      24th Jan 24
-                    </Chip>
-                    <Chip
-                      style={{
-                        fontSize: getFontSize(15),
-                        margin: responsiveMargin(1),
-                      }}
-                    >
-                      Vejalpur
-                    </Chip>
-                  </View>
-                </View>
-              </Card.Content>
-            </Card>
-            <Card mode="elevated" style={{ marginLeft: responsiveMargin(5),marginBottom:responsiveMargin(2) }}>
-              <Card.Content>
-                <Image
-                  source={require("../../../assets/NGO/dog_adopt.jpg")}
-                  resizeMode={"stretch"}
-                  style={{
-                    borderRadius: 10,
-                    width: width * 0.6,
-                    height: 254,
-                  }}
-                />
-                <View
-                  style={{
-                    padding: responsiveMargin(1),
-                  }}
-                >
-                  <Text style={{ fontSize: getFontSize(18) }}>Hare Krishn</Text>
-                  <View style={{ flexDirection: "row" }}>
-                    <Chip
-                      style={{
-                        fontSize: getFontSize(15),
-                        margin: responsiveMargin(1),
-                      }}
-                    >
-                      24th Jan 24
-                    </Chip>
-                    <Chip
-                      style={{
-                        fontSize: getFontSize(15),
-                        margin: responsiveMargin(1),
-                      }}
-                    >
-                      Vejalpur
-                    </Chip>
-                  </View>
-                </View>
-              </Card.Content>
-            </Card>
-            <Card mode="elevated" style={{ marginLeft: responsiveMargin(5),marginBottom:responsiveMargin(2) }}>
-              <Card.Content>
-                <Image
-                  source={require("../../../assets/NGO/dog_adopt.jpg")}
-                  resizeMode={"stretch"}
-                  style={{
-                    borderRadius: 10,
-                    width: width * 0.6,
-                    height: 254,
-                  }}
-                />
-                <View
-                  style={{
-                    padding: responsiveMargin(1),
-                  }}
-                >
-                  <Text style={{ fontSize: getFontSize(18) }}>Hare Krishn</Text>
-                  <View style={{ flexDirection: "row" }}>
-                    <Chip
-                      style={{
-                        fontSize: getFontSize(15),
-                        margin: responsiveMargin(1),
-                      }}
-                    >
-                      24th Jan 24
-                    </Chip>
-                    <Chip
-                      style={{
-                        fontSize: getFontSize(15),
-                        margin: responsiveMargin(1),
-                      }}
-                    >
-                      Vejalpur
-                    </Chip>
-                  </View>
-                </View>
-              </Card.Content>
-            </Card>
-          </ScrollView>
-      <View
-        style={{
-          flexDirection: "row",
-          alignItems: "center",
-          backgroundColor: "white",
-          borderRadius: 15,
-          justifyContent: "space-between",
-          paddingHorizontal:responsiveMargin(2),
-          margin: responsiveMargin(5)
-        }}
-      >
+      <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
         <Text
           style={{
-            fontSize: getFontSize(20),
-            paddingLeft: responsiveMargin(3)
+            color: "#000000",
+            fontSize: 20,
+            marginBottom: 15,
+            marginHorizontal: 25,
           }}
         >
-          {"Join as a Volunteer"}
+          {"UPCOMING EVENTS"}
         </Text>
-        <Image
-          source={require("../../../assets/NGO/volunteer.jpg")}
-          resizeMode={"stretch"}
-          style={{
-            width: width*0.20,
-            height:70
-          }}
-        />
       </View>
-      <Text
+      <ScrollView
+        horizontal
         style={{
-          color: "#000000",
-          fontSize: 20,
-          marginBottom: 25,
-          marginHorizontal: 10,
+          marginTop: responsiveMargin(3),
+          marginHorizontal: 1,
+          paddingBottom: responsiveMargin(3)
         }}
       >
-        {"SARVED UPLOADED MEDIA"}
-      </Text>
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "center",
-          marginBottom: 4,
-          marginHorizontal: 9,
-        }}
-      >
-        <ImageBackground
-          source={require("../../../assets/NGO/photo_9.jpg")}
-          resizeMode={"stretch"}
-          style={{
-            width: 133,
-            height: 133,
-          }}
-        ></ImageBackground>
-        <Image
-          source={require("../../../assets/NGO/photo_9.jpg")}
-          resizeMode={"stretch"}
-          style={{
-            width: 133,
-            height: 133,
-          }}
-        />
-        <Image
-          source={require("../../../assets/NGO/photo_9.jpg")}
-          resizeMode={"stretch"}
-          style={{
-            width: 133,
-            height: 133,
-          }}
-        />
-      </View>
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "center",
-          marginBottom: 6,
-          marginHorizontal: 9,
-        }}
-      >
-        <Image
-          source={require("../../../assets/NGO/photo_9.jpg")}
-          resizeMode={"stretch"}
-          style={{
-            width: 133,
-            height: 133,
-          }}
-        />
-        <Image
-          source={require("../../../assets/NGO/photo_9.jpg")}
-          resizeMode={"stretch"}
-          style={{
-            width: 133,
-            height: 133,
-          }}
-        />
-        <Image
-          source={require("../../../assets/NGO/photo_9.jpg")}
-          resizeMode={"stretch"}
-          style={{
-            width: 133,
-            height: 133,
-          }}
-        />
-      </View>
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "center",
-          marginBottom: 27,
-          marginHorizontal: 9,
-        }}
-      >
-        <Image
-          source={require("../../../assets/NGO/photo_9.jpg")}
-          resizeMode={"stretch"}
-          style={{
-            width: 133,
-            height: 133,
-          }}
-        />
-        <Image
-          source={require("../../../assets/NGO/photo_9.jpg")}
-          resizeMode={"stretch"}
-          style={{
-            width: 133,
-            height: 133,
-          }}
-        />
-        <View
-          style={{
-            width: 133,
-          }}
-        >
-          <Image
-            source={{ uri: "https://i.imgur.com/1tMFzp8.png" }}
-            resizeMode={"stretch"}
+        <Card mode="elevated" style={{ marginLeft: responsiveMargin(5), marginBottom: responsiveMargin(2) }}>
+          <Card.Content>
+            <TouchableOpacity onPress={RedirectTOEvent}>
+              <Image
+                source={require("../../../assets/NGO/dog_adopt.jpg")}
+                resizeMode={"stretch"}
+                style={{
+                  borderRadius: 10,
+                  width: width * 0.6,
+                  height: 254,
+                }}
+              />
+              <View
+                style={{
+                  padding: responsiveMargin(1),
+                }}
+              >
+                <Text style={{ fontSize: getFontSize(18) }}>Hare Krishn</Text>
+                <View style={{ flexDirection: "row" }}>
+                  <Chip
+                    style={{
+                      fontSize: getFontSize(15),
+                      margin: responsiveMargin(1),
+                    }}
+                  >
+                    24th Jan 24
+                  </Chip>
+                  <Chip
+                    style={{
+                      fontSize: getFontSize(15),
+                      margin: responsiveMargin(1),
+                    }}
+                  >
+                    Vejalpur
+                  </Chip>
+                </View>
+              </View>
+            </TouchableOpacity>
+          </Card.Content>
+        </Card>
+      </ScrollView>
+      <Card style={{
+        margin: responsiveMargin(5)
+        ,backgroundColor: "white",
+      }}>
+        <Card.Content>
+          <TouchableOpacity
+          onPress={RedirectToVolunteer}
             style={{
-              height: 133,
-            }}
-          />
-          <Pressable
-            onPress={seeAllImages}
-            style={{
-              position: "absolute",
-              bottom: 0,
-              left: -2,
-              width: "100%",
-              height: "100%",
-              backgroundColor: "#00000099",
-              paddingLeft: 26,
-              paddingRight: 15,
+              flexDirection: "row",
               alignItems: "center",
+              borderRadius: 15,
+              justifyContent: "space-between",
             }}
           >
             <Text
               style={{
-                color: "#FFF730",
-                fontSize: 20,
-                marginTop: 40,
-                alignItems: "center",
+                fontSize: getFontSize(20),
+                paddingLeft: responsiveMargin(3)
               }}
             >
-              {"SEE MORE"}
+              {"Join as a Volunteer"}
             </Text>
-          </Pressable>
-        </View>
-      </View>
-      <View
-        style={{
-          width: 364,
-          height: 85,
-          marginBottom: 31,
-          marginHorizontal: 28,
-        }}
-      >
-        <View
-          style={{
-            backgroundColor: "#F5F5F5",
-            borderRadius: 10,
-            paddingVertical: 19,
-            paddingLeft: 128,
-            paddingRight: 52,
-          }}
-        >
-          <Text
-            style={{
-              color: "#000000",
-              fontSize: 20,
-              width: 184,
-            }}
-          >
-            {"Give us your Honest Feedback NOW!"}
-          </Text>
-        </View>
-        <Image
-          source={require("../../../assets/NGO/feedback.png")}
-          resizeMode={"stretch"}
-          style={{
-            position: "absolute",
-            top: -14,
-            left: -13,
-            width: 84,
-            height: 96,
-          }}
-        />
-      </View>
+            <Image
+              source={require("../../../assets/NGO/volunteer.jpg")}
+              resizeMode={"stretch"}
+              style={{
+                width: width * 0.20,
+                height: 70
+              }}
+            />
+          </TouchableOpacity>
+        </Card.Content>
+      </Card>
       <Text
         style={{
           color: "#000000",
-          fontSize: 24,
-          marginBottom: 5,
-          marginHorizontal: 11,
+          fontSize: getFontSize(20),
+          marginHorizontal:responsiveMargin(5)
         }}
       >
-        {"Resource Available"}
+        {"SARVED UPLOADED MEDIA"}
       </Text>
-      <View style={{}}>
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            backgroundColor: "#FFFFFF",
-            paddingVertical: 41,
-            paddingHorizontal: 4,
-          }}
-        >
+      <Card
+        mode="elevated"
+        style={{
+          margin: 10,
+          backgroundColor:"white"
+        }}
+      >
+        <Card.Content>
           <View
             style={{
-              width: 201,
-              marginRight: 5,
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+              marginBottom: 4,
+              marginHorizontal: 3,
             }}
           >
-            <View
-              style={{
-                alignItems: "center",
-                backgroundColor: "#D2F694",
-                borderRadius: 19,
-                paddingTop: 76,
-                paddingBottom: 22,
-              }}
-            >
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 32,
-                }}
-              >
-                {"Food"}
-              </Text>
-            </View>
             <Image
-              source={require("../../../assets/NGO/food.jpg")}
+              source={require("../../../assets/NGO/photo_9.jpg")}
               resizeMode={"stretch"}
               style={{
-                position: "absolute",
-                top: -41,
-                left: 51,
-                width: 96,
-                height: 96,
+                width: "33%",
+                height: 133,
+              }}
+            ></Image>
+            <Image
+              source={require("../../../assets/NGO/photo_9.jpg")}
+              resizeMode={"stretch"}
+              style={{
+                width: "33%",
+                height: 133,
+              }}
+            />
+            <Image
+              source={require("../../../assets/NGO/photo_9.jpg")}
+              resizeMode={"stretch"}
+              style={{
+                width: "33%",
+                height: 133,
               }}
             />
           </View>
           <View
             style={{
-              width: 201,
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+              marginBottom: 4,
+              marginHorizontal: 3,
             }}
           >
-            <View
-              style={{
-                alignItems: "center",
-                backgroundColor: "#D2F694",
-                borderRadius: 19,
-                paddingTop: 76,
-                paddingBottom: 22,
-              }}
-            >
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 32,
-                }}
-              >
-                {"Clothes"}
-              </Text>
-            </View>
             <Image
-              source={require("../../../assets/NGO/cloth.jpg")}
+              source={require("../../../assets/NGO/photo_9.jpg")}
               resizeMode={"stretch"}
               style={{
-                position: "absolute",
-                top: -41,
-                left: 51,
-                width: 96,
-                height: 96,
+                width: "33%",
+                height: 133,
+              }}
+            ></Image>
+            <Image
+              source={require("../../../assets/NGO/photo_9.jpg")}
+              resizeMode={"stretch"}
+              style={{
+                width: "33%",
+                height: 133,
+              }}
+            />
+            <Image
+              source={require("../../../assets/NGO/photo_9.jpg")}
+              resizeMode={"stretch"}
+              style={{
+                width: "33%",
+                height: 133,
               }}
             />
           </View>
-        </View>
-        <View
-          style={{
-            position: "absolute",
-            bottom: 33,
-            right: -187,
-            width: 201,
-            height: 130,
-            backgroundColor: "#D2F694",
-            borderRadius: 19,
-          }}
-        ></View>
-      </View>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+              marginBottom: 4,
+              marginHorizontal: 3,
+            }}
+          >
+            <Image
+              source={require("../../../assets/NGO/photo_9.jpg")}
+              resizeMode={"stretch"}
+              style={{
+                width: "33%",
+                height: 133,
+              }}
+            ></Image>
+            <Image
+              source={require("../../../assets/NGO/photo_9.jpg")}
+              resizeMode={"stretch"}
+              style={{
+                width: "33%",
+                height: 133,
+              }}
+            />
+            <TouchableOpacity
+                style={{
+                  bottom: 0,
+                  left: -2,
+                  width: "33%",
+                  height: 133,
+                  backgroundColor: "#00000099",
+                }}
+                onPress={seeAllImages}
+              >
+                <Text
+                  style={{
+                    color: "#FFF730",
+                    fontSize: 20,
+                    marginTop: 58,
+                    alignSelf: "center",
+                  }}
+                >
+                  {"SEE MORE"}
+                </Text>
+              </TouchableOpacity>
+          </View>
+        </Card.Content>
+      </Card>
     </ScrollView>
   );
 };

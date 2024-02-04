@@ -24,6 +24,7 @@ import WorkHistory from "../screens/User/Profile/WorkHistory";
 import TopAchievers from "../components/User/Home/TopAchievers";
 import Appointment from "../components/User/Home/Appointment";
 import Edit_screen from "../components/Edit_screen";
+import NGOImage from "../screens/User/NGO/NGOImage";
 const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
@@ -33,13 +34,15 @@ const StackNavigator = () => {
         screenOptions={{ presentation: "containedModal", headerShown: false }}
       >
         <Stack.Screen name="User" component={BottomTabs} />
+        <Stack.Screen name="NGOImage" options={{
+            headerShown: true,
+            headerTitleAlign: "center",
+          }} component={NGOImage} />
         <Stack.Screen name="Homescreen" component={Homescreen} />
         <Stack.Screen
           name="Categories"
           options={{
             headerShown: true,
-            // headerLeft: () => <HeaderLeft />,
-            // headerRight: () => <HeaderRight />,
             headerTitleAlign: "center",
           }}
           component={Categories}
@@ -48,10 +51,8 @@ const StackNavigator = () => {
           name="ServiceList"
           options={{
             headerShown: true,
-            // headerLeft: () => <HeaderLeft />,
-            // headerRight: () => <HeaderRight />,
             headerTitleAlign: "center",
-            title:"Services"
+            title: "Services"
           }}
           component={ServiceList}
         />
@@ -69,34 +70,29 @@ const StackNavigator = () => {
         <Stack.Screen name="Appointment" options={{
           headerShown: true,
         }} component={Appointment} />
-
-        
         <Stack.Screen name="NGOTotalImages" component={NGOTotalImages} options={{
-            headerShown: true,
-            headerLeft: () => <HeaderLeft />,
-            headerRight: () => <HeaderRight />,
-            headerTitleAlign: "center",
-            title: 'NGO IMAGES'
-          }} />
-
+          headerShown: true,
+          headerTitleAlign: "center",
+          title: 'NGO IMAGES'
+        }} />
         <Stack.Screen name="WorkHistory" component={WorkHistory} options={{
           headerShown: true,
           headerTitleAlign: "center",
           title: 'USER WORKHISTORY'
-        }}/>
-
-
-      <Stack.Screen name="TopAchievers" component={TopAchievers} options={{
-            headerShown: true,
-            headerLeft: () => <HeaderLeft />,
-            headerRight: () => <HeaderRight />,
-            headerTitleAlign: "center",
-            title: 'TOP ACHIEVERS'}}
-            />
-
-        
-
-
+        }} />
+        <Stack.Screen name="TopAchievers" component={TopAchievers} options={{
+          headerShown: true,
+          headerLeft: () => <HeaderLeft />,
+          headerRight: () => <HeaderRight />,
+          headerTitleAlign: "center",
+          title: 'TOP ACHIEVERS'
+        }}
+        />
+        <Stack.Screen
+          name="NGOResult"
+          component={NGOResults}
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
