@@ -9,9 +9,9 @@ import {
   } from "react-native";
   import React from "react";
   import { useNavigation } from "@react-navigation/native";
-  import { width } from "../../../lib/Validation/RelativeValues";
+  import { getFontSize, width } from "../../../lib/Validation/RelativeValues";
   
-  const Categories = ({}) => {
+  const NGOCategories = ({}) => {
 	const navigation = useNavigation();
 	return (
 	  <>
@@ -26,7 +26,8 @@ import {
 		  <Text
 			style={{
 			  color: "#000000",
-			  fontSize: 20,
+			  fontSize: getFontSize(20),
+			  fontWeight: "bold",
 			  // marginBottom: 7,
 			  marginHorizontal: 23,
 			}}
@@ -185,7 +186,7 @@ import {
 	);
   };
   
-  export default Categories;
+  export default NGOCategories;
   
   const styles = StyleSheet.create({});
   
