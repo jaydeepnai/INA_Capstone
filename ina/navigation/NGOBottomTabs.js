@@ -1,5 +1,4 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { HomeTopTabs } from './HomeTopTab';
 import { AntDesign, Entypo, FontAwesome, FontAwesome5, FontAwesome6, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 import HeaderLeft, { HeaderRight } from '../components/User/Home/Header/Header';
 import Trending from '../screens/User/Home/Trending';
@@ -8,6 +7,7 @@ import Profile from '../screens/User/Profile/Profile';
 import DonationList from '../screens/User/Donation/DonationList';
 import FundReqList from '../screens/User/FundReq/FundList';
 import { DonationTopTabs } from './DonationTopTab';
+import { NGOTopTab } from './NGOTopTab';
 const Tab = createBottomTabNavigator();
 
 
@@ -16,7 +16,7 @@ export function NGOBottomTabs() {
       <Tab.Navigator>
         <Tab.Screen
           name="NGOHome1"
-          component={HomeTopTabs}
+          component={NGOTopTab}
           options={{
             tabBarLabel: "Home",
             headerShown: true,
@@ -28,7 +28,8 @@ export function NGOBottomTabs() {
               ),
               headerLeft : ()=><HeaderLeft/>,
               headerRight : ()=><HeaderRight/>,
-              headerTitleAlign : "center"
+              headerTitleAlign : "center",
+              title:'NGO Home'
           }}
         />
 

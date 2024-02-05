@@ -26,6 +26,7 @@ import Appointment from "../components/User/Home/Appointment";
 import Edit_screen from "../components/Edit_screen";
 import NGOImage from "../screens/User/NGO/NGOImage";
 import { NGOBottomTabs } from "./NGOBottomTabs";
+import Trending from "../screens/NGO/Home/Trending";
 const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
@@ -91,12 +92,9 @@ const StackNavigator = () => {
             headerTitleAlign: "center",
             title: 'TOP ACHIEVERS'}}
             />
-
-
-        
-
-
       </Stack.Navigator>
+
+
     </NavigationContainer>
   );
 };
