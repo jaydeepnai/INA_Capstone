@@ -25,6 +25,7 @@ import TopAchievers from "../components/User/Home/TopAchievers";
 import Appointment from "../components/User/Home/Appointment";
 import Edit_screen from "../components/Edit_screen";
 import NGOImage from "../screens/User/NGO/NGOImage";
+import { NGOBottomTabs } from "./NGOBottomTabs";
 const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
@@ -33,6 +34,7 @@ const StackNavigator = () => {
       <Stack.Navigator
         screenOptions={{ presentation: "containedModal", headerShown: false }}
       >
+        <Stack.Screen name="NGO" component={NGOBottomTabs} />
         <Stack.Screen name="User" component={BottomTabs} />
         <Stack.Screen name="NGOImage" options={{
             headerShown: true,
