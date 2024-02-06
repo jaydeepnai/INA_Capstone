@@ -228,12 +228,13 @@ const Trending = () => {
                                     paddingVertical: 16,
                                     paddingHorizontal: 11,
                                     marginRight: 137,
+                                    justifyContent:"flex-start"
                                 }}>
                                 <Image
                                     source={require("../../../assets/family.jpg")}
                                     resizeMode={"stretch"}
                                     style={{
-                                        borderRadius: 20,
+                                        borderRadius: 100,
                                         width: 40,
                                         height: 40,
                                         marginRight: 24,
@@ -250,10 +251,11 @@ const Trending = () => {
                             </View>
                             <Image
                                 source={require("../../../assets/family.jpg")}
-                                resizeMode={"stretch"}
+                                resizeMode={"cover"}
                                 style={{
                                     width: 40,
                                     height: 40,
+                                    borderRadius:100
                                 }}
                             />
                         </View>
@@ -305,7 +307,8 @@ const Trending = () => {
                                 {"Lorem Ipsum is simply dummy text of the printing \nand typesetting industry. Lorem Ipsum has been \nthe industry's standard dummy text ever since the \n1500s, when an unknown printer took a galley of type\nand scrambled it to make a type specimen bookIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, READ MORE"}
                             </Text>
                         </View>
-                        <View
+
+                        {/* <View
                             style={{
                                 flexDirection: "row",
                                 alignItems: "center",
@@ -361,8 +364,9 @@ const Trending = () => {
                                     height: 20,
                                 }}
                             />
-                        </View>
-                        <View
+                        </View> */}
+
+                        {/* <View
                             style={{
                                 flexDirection: "row",
                                 justifyContent: "space-between",
@@ -377,14 +381,7 @@ const Trending = () => {
                                 }}>
                                 {"Liked by jaydeep,aniket and 100 others"}
                             </Text>
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: 12,
-                                }}>
-                                {"Liked by jaydeep,aniket and 100 others"}
-                            </Text>
-                        </View>
+                        </View> */}
                         <View
                             style={{
                                 flexDirection: "row",
