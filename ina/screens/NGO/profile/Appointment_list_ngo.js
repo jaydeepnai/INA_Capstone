@@ -1,11 +1,13 @@
 import React from "react";
 import { SafeAreaView, View, ScrollView, Image, Text } from "react-native";
-import {
-  getFontSize,
-  responsiveMargin,
-} from "../../lib/Validation/RelativeValues";
+import { responsiveMargin } from "../../../lib/Validation/RelativeValues";
+// import {
+//   getFontSize,
+//   responsiveMargin,
+// }
+// from "../../../../lib/Validation/RelativeValues";
 
-const Appointment_list = () => {
+const Appointment_list_ngo = () => {
   return (
     <SafeAreaView
       style={{
@@ -37,7 +39,7 @@ const Appointment_list = () => {
           }}
         >
           <Image
-            source={require("../../assets/animals.jpg")}
+            source={require("../../../assets/animals.jpg")}
             resizeMode={"stretch"}
             style={{
               width: 60,
@@ -99,7 +101,7 @@ const Appointment_list = () => {
                   }}
                 >
                   <Image
-                    source={require("../../assets/NGO/location.png")}
+                    source={require("../../../assets/NGO/location.png")}
                     // resizeMode={"stretch"}
                     style={{
                       width: 20,
@@ -143,7 +145,7 @@ const Appointment_list = () => {
           }}
         >
           <Image
-            source={require("../../assets/animals.jpg")}
+            source={require("../../../assets/animals.jpg")}
             resizeMode={"stretch"}
             style={{
               width: 60,
@@ -205,7 +207,7 @@ const Appointment_list = () => {
                   }}
                 >
                   <Image
-                    source={require("../../assets/NGO/location.png")}
+                    source={require("../../../assets/NGO/location.png")}
                     // resizeMode={"stretch"}
                     style={{
                       width: 20,
@@ -249,7 +251,7 @@ const Appointment_list = () => {
           }}
         >
           <Image
-            source={require("../../assets/animals.jpg")}
+            source={require("../../../assets/animals.jpg")}
             resizeMode={"stretch"}
             style={{
               width: 60,
@@ -311,7 +313,7 @@ const Appointment_list = () => {
                   }}
                 >
                   <Image
-                    source={require("../../assets/NGO/location.png")}
+                    source={require("../../../assets/NGO/location.png")}
                     // resizeMode={"stretch"}
                     style={{
                       width: 20,
@@ -355,7 +357,7 @@ const Appointment_list = () => {
           }}
         >
           <Image
-            source={require("../../assets/animals.jpg")}
+            source={require("../../../assets/animals.jpg")}
             resizeMode={"stretch"}
             style={{
               width: 60,
@@ -417,7 +419,7 @@ const Appointment_list = () => {
                   }}
                 >
                   <Image
-                    source={require("../../assets/NGO/location.png")}
+                    source={require("../../../assets/NGO/location.png")}
                     // resizeMode={"stretch"}
                     style={{
                       width: 20,
@@ -461,7 +463,7 @@ const Appointment_list = () => {
           }}
         >
           <Image
-            source={require("../../assets/animals.jpg")}
+            source={require("../../../assets/animals.jpg")}
             resizeMode={"stretch"}
             style={{
               width: 60,
@@ -523,7 +525,7 @@ const Appointment_list = () => {
                   }}
                 >
                   <Image
-                    source={require("../../assets/NGO/location.png")}
+                    source={require("../../../assets/NGO/location.png")}
                     // resizeMode={"stretch"}
                     style={{
                       width: 20,
@@ -555,4 +557,4 @@ const Appointment_list = () => {
     </SafeAreaView>
   );
 };
-export default Appointment_list;
+export default Appointment_list_ngo;

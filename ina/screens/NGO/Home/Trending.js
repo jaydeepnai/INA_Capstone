@@ -1,6 +1,5 @@
 import { Image, ImageBackground, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import * as Progress from 'react-native-progress';
 import { LinearGradient } from 'expo-linear-gradient'
 import TopNGOListforNGO from '../../../components/NGO/Home/TopNGOListforNGO'
 import TopAchieverNGO from '../../../components/NGO/Home/TopAchieverNGO'
@@ -161,7 +160,7 @@ const Trending = () => {
                             alignItems:'center',
                             marginBottom:responsiveMargin(6)
                         }}>
-                            <Progress.Bar progress={0.7} width={350} />
+                            {/* <Progress.Bar progress={0.7} width={350} /> */}
                         </View>
 
                         <View

@@ -27,6 +27,12 @@ import Edit_screen from "../components/Edit_screen";
 import NGOImage from "../screens/User/NGO/NGOImage";
 import { NGOBottomTabs } from "./NGOBottomTabs";
 import Trending from "../screens/NGO/Home/Trending";
+import Edit_screen_ngo from "../screens/NGO/profile/Edit_screen_ngo";
+import work_history_ngo from "../screens/NGO/profile/work_history_ngo";
+import schedule_ngo from "../screens/NGO/profile/Schedule_ngo";
+import Appointment_ngo from "../screens/NGO/profile/Appointment_ngo";
+import Appointment_list_ngo from "../screens/NGO/profile/Appointment_list_ngo";
+import Appointment_com_ngo from "../screens/NGO/profile/Appointment_com_ngo";
 const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
@@ -37,6 +43,10 @@ const StackNavigator = () => {
       >
         <Stack.Screen name="NGO" component={NGOBottomTabs} />
         <Stack.Screen name="User" component={BottomTabs} />
+        
+        
+        
+        
         <Stack.Screen name="NGOImage" options={{
             headerShown: true,
             headerTitleAlign: "center",
@@ -68,6 +78,15 @@ const StackNavigator = () => {
         <Stack.Screen name="Edit_screen" component={Edit_screen} />
         <Stack.Screen name="UserRegisterAuth" component={RegisterUserAuth} />
         <Stack.Screen name="NGORegisterAuth" component={RegisterNgoAuth} />
+
+        {/* ngo edit screen */}
+        <Stack.Screen name="Edit_screen_ngo" component={Edit_screen_ngo} />
+        <Stack.Screen name="work_history_ngo" component={work_history_ngo} />
+        <Stack.Screen name="schedule_ngo" component={schedule_ngo} />
+        <Stack.Screen name="Appointment_ngo" component={Appointment_ngo} />
+        <Stack.Screen name="Appointment_list_ngo" component={Appointment_list_ngo} />
+        <Stack.Screen name="Appointment_com_ngo" component={Appointment_com_ngo} />
+
         <Stack.Screen name="LoginAuth" component={LoginAuth} />
         <Stack.Screen name="NGOProfile" component={NGOProfile} />
         <Stack.Screen name="Appointment" options={{

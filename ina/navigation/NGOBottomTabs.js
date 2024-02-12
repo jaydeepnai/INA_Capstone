@@ -3,11 +3,13 @@ import { AntDesign, Entypo, FontAwesome, FontAwesome5, FontAwesome6, MaterialCom
 import HeaderLeft, { HeaderRight } from '../components/User/Home/Header/Header';
 import Trending from '../screens/User/Home/Trending';
 import Search from '../screens/User/Search/Search';
-import Profile from '../screens/User/Profile/Profile';
+// import Profile from '../screens/User/Profile/Profile';
 import DonationList from '../screens/User/Donation/DonationList';
 import FundReqList from '../screens/User/FundReq/FundList';
 import { DonationTopTabs } from './DonationTopTab';
 import { NGOTopTab } from './NGOTopTab';
+import Master_profile from '../screens/NGO/profile/Master_profile';
+// import Master_profile from '../screens/NGO/profile/master_profile';
 const Tab = createBottomTabNavigator();
 
 
@@ -84,24 +86,10 @@ export function NGOBottomTabs() {
           }}
         />
 
-        {/* <Tab.Screen
-          name="UserVollunteer"
-          component={UserHome}
-          options={{
-            tabBarLabel: "Vollunteer",
-            tabBarLabelStyle: { color: "#008E97" },
-            headerShown: false,
-            tabBarIcon: ({ focused }) =>
-              focused ? (
-                <AntDesign name="shoppingcart" size={24} color="#008E97" />
-              ) : (
-                <AntDesign name="shoppingcart" size={24} color="black" />
-              ),
-          }}
-        /> */}
+       
           <Tab.Screen
-          name="UserProfile"
-          component={Profile}
+          name="Master_profile"
+          component={Master_profile}
           options={{
             tabBarLabel: "Profile",
             tabBarLabelStyle: { color: "black" },
