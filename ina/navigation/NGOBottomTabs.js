@@ -1,16 +1,11 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { AntDesign, Entypo, FontAwesome, FontAwesome5, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 import HeaderLeft, { HeaderRight } from '../components/User/Home/Header/Header';
-import Trending from '../screens/User/Home/Trending';
-import Search from '../screens/User/Search/Search';
-import Profile from '../screens/User/Profile/Profile';
 import DonationList from '../screens/User/Donation/DonationList';
-import FundReqList from '../screens/User/FundReq/FundList';
-import { DonationTopTabs } from './DonationTopTab';
+import { HiringSearch } from '../screens/NGO/Hiring/HiringFilter';
 import { NGOTopTab } from './NGOTopTab';
 import Plan from '../screens/NGO/Plans/Plan';
 const Tab = createBottomTabNavigator();
-
 
 export function NGOBottomTabs() {
   return (
@@ -36,7 +31,7 @@ export function NGOBottomTabs() {
 
       <Tab.Screen
         name="Hiring"
-        component={Search}
+        component={HiringSearch}
         options={{
           tabBarLabel: "Hiring",
           headerShown: false,
@@ -88,42 +83,38 @@ export function NGOBottomTabs() {
         }}
       />
 
-      <Tab.Screen
-        name="Collabrations"
-        component={Profile}
-        options={{
-          tabBarLabel: "Collabrations",
-          tabBarLabelStyle: { color: "black" },
-
-          headerShown: false,
-          tabBarIcon: ({ focused }) =>
-            focused ? (
-              <FontAwesome5 name="people-carry" size={24} color="#2bc5b4" />
-            ) : (
-              <FontAwesome5 name="people-carry" size={24} color="black" />
-            ),
-        }}
-      />
-
-      <Tab.Screen
-        name="NGOProfile"
-        component={Profile}
-        options={{
-          tabBarLabel: "Profile",
-          tabBarLabelStyle: { color: "black" },
-
-          headerShown: false,
-          tabBarIcon: ({ focused }) =>
-            focused ? (
-              <FontAwesome name="user-circle-o" size={24} color="#2bc5b4" />
-            ) : (
-              // <FontAwesome name="user-o" size={24} color="black" />
-              <FontAwesome name="user-circle-o" size={24} color="black" />
-            ),
-        }}
-      />
-
-
-    </Tab.Navigator>
-  );
-}
+        {/* <Tab.Screen
+          name="UserVollunteer"
+          component={UserHome}
+          options={{
+            tabBarLabel: "Vollunteer",
+            tabBarLabelStyle: { color: "#008E97" },
+            headerShown: false,
+            tabBarIcon: ({ focused }) =>
+              focused ? (
+                <AntDesign name="shoppingcart" size={24} color="#008E97" />
+              ) : (
+                <AntDesign name="shoppingcart" size={24} color="black" />
+              ),
+          }}
+        /> */}
+          <Tab.Screen
+          name="UserProfile"
+          component={Profile}
+          options={{
+            tabBarLabel: "Profile",
+            tabBarLabelStyle: { color: "black" },
+            
+            headerShown: false,
+            tabBarIcon: ({ focused }) =>
+              focused ? (
+                <FontAwesome name="user-circle-o" size={24} color="#2bc5b4"/>
+              ) : (
+                // <FontAwesome name="user-o" size={24} color="black" />
+                <FontAwesome name="user-circle-o" size={24} color="black" />
+              ),
+          }}
+        />
+      </Tab.Navigator>
+    );
+  }

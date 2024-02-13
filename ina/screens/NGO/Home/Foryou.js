@@ -3,7 +3,7 @@ import React from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import { getFontSize, responsiveMargin } from '../../../lib/Validation/RelativeValues'
 import TopAchieverNGO from '../../../components/NGO/Home/TopAchieverNGO'
-import * as Progress from 'react-native-progress';
+// import * as Progress from 'react-native-progress';
 
 const Foryou = () => {
   return (
@@ -424,7 +424,7 @@ const Foryou = () => {
                             alignItems:'center',
                             marginBottom:responsiveMargin(6)
                         }}>
-                            <Progress.Bar progress={0.7} width={350} />
+                            {/* <Progress.Bar progress={0.7} width={350} /> */}
                         </View>
 
                         <View
@@ -599,7 +599,7 @@ const Foryou = () => {
                             alignItems:'center',
                             marginBottom:responsiveMargin(6)
                         }}>
-                            <Progress.Bar progress={0.7} width={350} />
+                            {/* <Progress.Bar progress={0.7} width={350} /> */}
                         </View>
 
                         <View
@@ -775,7 +775,7 @@ const Foryou = () => {
                             alignItems:'center',
                             marginBottom:responsiveMargin(6)
                         }}>
-                            <Progress.Bar progress={0.7} width={350} />
+                            {/* <Progress.Bar progress={0.7} width={350} /> */}
                         </View>
 
                         <View
