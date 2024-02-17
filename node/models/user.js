@@ -26,11 +26,6 @@ const AddressSchema = new mongoose.Schema({
 });
 
 const SkillSchema = new mongoose.Schema({
-  _id: {
-    type: mongoose.Schema.Types.ObjectId,
-    default: mongoose.Types.ObjectId,
-    unique: true,
-  },
   name: String, // Name of the skill
   description: String,
   logoURL: String, // URL to the logo image

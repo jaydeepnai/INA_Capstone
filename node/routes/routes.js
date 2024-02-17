@@ -10,7 +10,8 @@ const path = require('path');
 const fs = require('fs');
 const cors = require("cors");
 const { NgoService, NgoSchedule } = require('../models/ngoService');
-const Post = require('../models/post');
+const { Post, Comment } = require('../models/post')
+// const Post = require('../models/post');
 
 
 // Set up the 'uploads' directory
@@ -46,7 +47,25 @@ const CusFileName = (file) => {
   return `${formattedToday}_${file.originalname}`;
 }
 
+const imageToBase64 = (imagePath) => {
+  return new Promise((resolve, reject) => {
+    fs.readFile(imagePath, (err, data) => {
+      if (err) {
+        reject(err); // Handle file read errors
+      } else {
+        const base64Image = Buffer.from(data).toString('base64');
+        const imgSrcString = `data:image/jpeg;base64,${base64Image}`;
+        resolve(imgSrcString); // Return the Base64 string
+      }
+    });
+  });
+};
 
+
+
+
+
+//Registration 
 router.post('/registerUser', async (req, res) => {
   try {
     const { firstName, lastName, email, username, password } = req.body;
@@ -103,7 +122,7 @@ router.post('/registerNgo', cpUpload, async (req, res) => {
       username,
       password: hashedPassword,
       documents: [{ id: Date.now(), Image: RegistrationDocumentName }],
-      logoURL: { id: Date.now(), Image: NGOlogoName },
+      logoURL: NGOlogoName,
       role: 'Ngo',
     });
 
@@ -117,81 +136,6 @@ router.post('/registerNgo', cpUpload, async (req, res) => {
   }
 });
 
-router.post('/createPost', upload.single('image'), async (req, res) => {
-  const { ngoID, NGOServiceID, content, image } = req.body;
-  console.log(req.body, req.file)
-  const PostImageName = CusFileName(req.file)
-  var post = new Post({
-    ngoID, NGOServiceID, content, image: PostImageName
-  })
-  await post.save();
-  res.status(201).json({ message: 'Post Created successfully' });
-});
-
-
-// router.get('/getAllPost', async (req, res) => {
-//   var posts = await Post.find({})
-//   posts.map((p) => {
-//     const imagePath = path.join(__dirname, 'uploads', p.image);
-//     var imgSrcString;
-//     fs.readFile(imagePath, (err, data) => {
-//       if (err) {
-//         console.error(err);
-//         return res.status(404).send('Image not found');
-//       }
-//       const base64Image = Buffer.from(data).toString('base64');
-//       imgSrcString = `data:image/jpeg;base64,${base64Image}`;
-//       // console.log(imgSrcString);
-//     });
-//     return {
-//       ...p,
-//       image: imgSrcString
-//     }
-//   })
-//   console.log(posts)
-//   res.send(posts)
-
-// });
-// Function to asynchronously convert an image file to a Base64 string
-const imageToBase64 = (imagePath) => {
-  return new Promise((resolve, reject) => {
-    fs.readFile(imagePath, (err, data) => {
-      if (err) {
-        reject(err); // Handle file read errors
-      } else {
-        const base64Image = Buffer.from(data).toString('base64');
-        const imgSrcString = `data:image/jpeg;base64,${base64Image}`;
-        resolve(imgSrcString); // Return the Base64 string
-      }
-    });
-  });
-};
-
-router.get('/getAllPost', async (req, res) => {
-  try {
-    var posts = await Post.find({})
-    const updatedPosts = await Promise.all(posts.map(async (post) => {
-      const imagePath = path.join(__dirname, 'uploads', post.image);
-      try {
-        const imgSrcString = await imageToBase64(imagePath);
-        return {
-          ...post.toObject(), // Convert Mongoose document to plain JavaScript object
-          image: imgSrcString // Update the image property with Base64 string
-        };
-      } catch (error) {
-        console.error(error);
-        return { ...post.toObject(), image: null }; // Handle images that couldn't be converted
-      }
-    }));
-
-    res.send(updatedPosts); // Send the updated posts array
-  } catch (error) {
-    console.error('Error fetching posts:', error);
-    res.status(500).send('Internal Server Error');
-  }
-});
-
-// Login endpoint
 router.post('/login', async (req, res) => {
   try {
     const { username, password } = req.body;
@@ -224,6 +168,8 @@ router.post('/login', async (req, res) => {
 });
 
 
+
+//Profile 
 router.put('/updateUser/:id', async (req, res) => {
   try {
     const { id } = req.params;
@@ -281,8 +227,6 @@ router.post('/updateUserLogo/:userId', upload.single('logo'), async (req, res) =
   }
 });
 
-
-// Update NGO endpoint
 router.put('/updateNgo/:ngoId', async (req, res) => {
   try {
     const { ngoId } = req.params;
@@ -323,7 +267,10 @@ router.put('/updateNgo/:ngoId', async (req, res) => {
 });
 
 
-// Create NgoService
+
+
+
+// NgoService
 router.post('/ngoService', async (req, res) => {
   try {
     const ngoSchedule = new NgoSchedule(req.body.ngoSchedule);
@@ -337,7 +284,6 @@ router.post('/ngoService', async (req, res) => {
   }
 });
 
-// Read NgoService (all)
 router.get('/ngoServices', async (req, res) => {
   try {
     const ngoServices = await NgoService.find();
@@ -347,7 +293,6 @@ router.get('/ngoServices', async (req, res) => {
   }
 });
 
-// Read NgoService (one)
 router.get('/ngoService/:id', async (req, res) => {
   try {
     const ngoService = await NgoService.findById(req.params.id);
@@ -360,7 +305,6 @@ router.get('/ngoService/:id', async (req, res) => {
   }
 });
 
-// Update NgoService
 router.put('/ngoService/:id', async (req, res) => {
   try {
     const updatedNgoService = await NgoService.findByIdAndUpdate(
@@ -377,7 +321,6 @@ router.put('/ngoService/:id', async (req, res) => {
   }
 });
 
-// Delete NgoService
 router.delete('/ngoService/:id', async (req, res) => {
   try {
     const ngoService = await NgoService.findByIdAndDelete(req.params.id);
@@ -387,6 +330,158 @@ router.delete('/ngoService/:id', async (req, res) => {
     res.json({ message: 'NGO Service deleted successfully' });
   } catch (error) {
     res.status(500).json({ error: error.message });
+  }
+});
+
+
+
+
+//Fetch Search Results
+router.get('/getNGOs', async (req, res) => {
+  try {
+    const ngos = await Ngo.find({}) // Assuming you want to exclude deleted NGOs
+      .populate('addressID', 'city') // Populate only the city field from the Address collection
+      .select('name aim bannerImageURL logoURL reviews timing addressID')
+      .lean(); // Use lean() to get plain JavaScript objects
+
+    const updatedNgos = await Promise.all(ngos.map(async (ngo) => {
+      const ratings = ngo.reviews.map(review => review.rating);
+      const averageRating = ratings.length ? ratings.reduce((a, b) => a + b, 0) / ratings.length : null;
+
+      const bannerPath = path.join(__dirname, 'uploads', ngo.bannerImageURL);
+      const logoPath = path.join(__dirname, 'uploads', ngo.logoURL);
+      const bannerString = await imageToBase64(bannerPath);
+      const logoString = await imageToBase64(logoPath);
+      // console.log("ngo.addressID",ngo.addressID)
+      return {
+        ngoID: ngo._id,
+        name: ngo.name,
+        aim: ngo.aim,
+        bannerImageURL: bannerString,
+        logoURL: logoString,
+        rating: averageRating,
+        timing: ngo.timing,
+        city: ngo.addressID?.city // Assuming addressID is populated with the city field
+      };
+    }));
+
+    res.json(updatedNgos);
+  } catch (error) {
+    console.error('Error fetching NGOs:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+
+
+
+//Posts 
+router.post('/createPost', upload.single('image'), async (req, res) => {
+  const { ngoID, NGOServiceID, content, image } = req.body;
+  console.log(req.body, req.file)
+  const PostImageName = CusFileName(req.file)
+  var post = new Post({
+    ngoID, NGOServiceID, content, image: PostImageName
+  })
+  await post.save();
+  res.status(201).json({ message: 'Post Created successfully' });
+});
+
+router.post('/likePost', async (req, res) => {
+  const { postID, userID, action } = req.body; // action can be 'inc' for increment or 'dcr' for decrement
+
+  try {
+    const post = await Post.findById(postID);
+    if (!post) {
+      return res.status(404).send('Post not found');
+    }
+
+    const likeIndex = post.likes.findIndex(like => like.userId && like.userId.equals(userID));
+
+    if (action === 'inc') {
+      if (likeIndex === -1) {
+        post.likes.push({ userId: userID, count: 1 });
+      } else {
+        post.likes[likeIndex].count += 1;
+      }
+    } else if (action === 'dcr') {
+      if (likeIndex !== -1 && post.likes[likeIndex].count > 0) {
+        post.likes[likeIndex].count -= 1;
+        if (post.likes[likeIndex].count === 0) {
+          post.likes.splice(likeIndex, 1);
+        }
+      }
+    } else {
+      return res.status(400).send('Invalid action');
+    }
+
+    await post.save();
+    res.status(200).json(post);
+  } catch (error) {
+    console.error("Error updating likes:", error);
+    res.status(500).send('Error updating likes');
+  }
+});
+
+router.post('/AddComment', async (req, res) => {
+  const { postID, userID, ngoID, text, toreplyID } = req.body;
+
+  try {
+    // Create a new comment
+    const comment = new Comment({
+      postID,
+      userID,
+      ngoID,
+      text,
+      toreplyID, // Optional, include if the comment is a reply
+    });
+
+    // Save the comment to the database
+    const savedComment = await comment.save();
+
+    // Find the corresponding post and add the comment's ID to its comments array
+    const post = await Post.findById(postID);
+    if (!post) {
+      return res.status(404).send('Post not found');
+    }
+    post.comments.push(savedComment._id);
+    await post.save();
+
+    // Send back the saved comment
+    res.status(201).json(savedComment);
+  } catch (error) {
+    console.error("Error adding comment:", error);
+    res.status(500).send('Error adding comment');
+  }
+});
+
+router.get('/getAllPost', async (req, res) => {
+  try {
+    var posts = await Post.find({}).populate({
+      path: 'comments', // Populate comments
+      populate: {
+        path: 'userID', // Then populate userID within each comment
+        model: 'User' // Assuming 'User' is the name of your user model
+      }
+    });
+    const updatedPosts = await Promise.all(posts.map(async (post) => {
+      const imagePath = path.join(__dirname, 'uploads', post.image);
+      try {
+        const imgSrcString = await imageToBase64(imagePath);
+        return {
+          ...post.toObject(), // Convert Mongoose document to plain JavaScript object
+          image: imgSrcString, // Update the image property with Base64 string
+          comments: post.comments // Include the populated comments
+        };
+      } catch (error) {
+        console.error(error);
+        return { ...post.toObject(), image: null, comments: post.comments }; // Handle images that couldn't be converted
+      }
+    }));
+    res.send(updatedPosts); // Send the updated posts array
+  } catch (error) {
+    console.error('Error fetching posts:', error);
+    res.status(500).send('Internal Server Error');
   }
 });
 

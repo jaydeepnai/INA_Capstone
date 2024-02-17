@@ -31,9 +31,24 @@ const ngoSchema = new mongoose.Schema({
       role: String,
     },
   ],
+  timing:String,
   createdAt: Date,
   updatedAt: Date,
   isDeleted: Boolean,
+  reviews: [
+    {
+      userID: {
+        type: mongoose.Schema.Types.ObjectId, // Assuming users are stored in a User collection
+        ref: "User",
+      },
+      text: String,
+      rating: Number,
+      createdAt: {
+        type: Date,
+        default: Date.now,
+      },
+    },
+  ],
 });
 
 const Ngo = mongoose.model("Ngo", ngoSchema);

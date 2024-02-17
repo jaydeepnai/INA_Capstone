@@ -38,15 +38,7 @@ const ngoServiceSchema = new mongoose.Schema({
     ],
     createdOn: Date,
     updatedOn: Date,
-    Images: [
-        {
-            "type": String,
-            "url": String,
-            "caption": String,
-            "createdAt": Date,
-            "updatedAt": Date,
-        }
-    ],
+    Images: [String],
     additionalDetails: {
         contactPerson: String,
         contactEmail: String,

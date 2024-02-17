@@ -117,7 +117,7 @@ const StackNavigator = () => {
           title: 'TOP ACHIEVERS'
         }}
         />
-                <Stack.Screen
+        <Stack.Screen
           name="NGOResult"
           component={NGOResults}
           options={{ headerShown: false }}

@@ -61,14 +61,6 @@ const Trending = () => {
                 </View>
 
                 <TopAchieverNGO />
-
-
-
-
-
-
-
-
                 <View>
 
                     <Text
