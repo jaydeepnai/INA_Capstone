@@ -82,7 +82,7 @@ export function BottomTabs() {
               headerTitleAlign : "center"
           }}
         />
-
+        
         {/* <Tab.Screen
           name="UserVollunteer"
           component={UserHome}
@@ -98,6 +98,7 @@ export function BottomTabs() {
               ),
           }}
         /> */}
+
           <Tab.Screen
           name="UserProfile"
           component={Profile}

@@ -8,6 +8,8 @@ import {
   StyleSheet,
   TouchableOpacity,
   Image,
+  Touchable,
+  Pressable,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { TouchableRipple } from "react-native-paper";
@@ -86,7 +88,7 @@ const NavigateEvent = (navigation) => {
 
 export const EventCard = ({ scrollX, item, translateX, navigation }) => {
   return (
-    <TouchableOpacity
+    <Pressable
       onPress={() => NavigateEvent(navigation)}
       style={{ width, justifyContent: "center", alignItems: "center" }}
       rippleColor="rgba(0, 0, 0, .32)"
@@ -101,6 +103,7 @@ export const EventCard = ({ scrollX, item, translateX, navigation }) => {
         //   marginLeft:50
         }}
       >
+        
         <Animated.Image
           style={{
             width: ITEM_WIDTH * 1.4,
@@ -158,7 +161,7 @@ export const EventCard = ({ scrollX, item, translateX, navigation }) => {
           {/* </View> */}
         </LinearGradient>
       </View>
-    </TouchableOpacity>
+    </Pressable>
   );
 };
 

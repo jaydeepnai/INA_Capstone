@@ -62,7 +62,7 @@ const LoginAuth = ({ navigation }) => {
       </Text>
       <Text
         style={{
-          color: Base_Color,
+          color: "#1eccb0",
           fontSize: getFontSize(25),
           marginHorizontal: responsiveMargin(4),
           marginBottom: responsiveMargin(5),
@@ -88,8 +88,8 @@ const LoginAuth = ({ navigation }) => {
               <TextInput
                 label="UserName"
                 mode="outlined"
-                outlineColor={Base_Color}
-                activeOutlineColor={Base_Color}
+                outlineColor={"#1eccb0"}
+                activeOutlineColor={"#1eccb0"}
                 onChangeText={handleChange("username")}
                 onBlur={handleBlur("username")}
                 value={values.username}
@@ -99,9 +99,8 @@ const LoginAuth = ({ navigation }) => {
 
               <TextInput
                 label="Password"
-                // style={styles.input}
-                outlineColor={Base_Color}
-                activeOutlineColor={Base_Color}
+                outlineColor={"#1eccb0"}
+                activeOutlineColor={"#1eccb0"}
                 mode="outlined"
                 onChangeText={handleChange("password")}
                 onBlur={handleBlur("password")}
@@ -119,7 +118,7 @@ const LoginAuth = ({ navigation }) => {
                 }}>
                 {"Didn't have an account?"}
               </Text>
-              <Button mode="contained" buttonColor={Base_Color} onPress={handleSubmit}>
+              <Button mode="contained" buttonColor={"#1eccb0"} onPress={handleSubmit}>
                 Login
               </Button>
 

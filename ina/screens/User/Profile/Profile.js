@@ -18,11 +18,10 @@ import {
   Text,
   StatusBar,
   TouchableOpacity,
+  Pressable,
 } from "react-native";
 
 export default Profile = (props) => {
-
-
   return (
     <SafeAreaView
       style={{
@@ -66,7 +65,12 @@ export default Profile = (props) => {
                   marginHorizontal: 20,
                 }}
               >
-                <Ionicons name="arrow-back-circle" size={34} color="white" />
+                
+                <Pressable onPress={() => props.navigation.navigate(goback())}>
+                
+                  <Ionicons name="arrow-back-circle" size={34} color="white" />
+                </Pressable>
+
                 <Text
                   style={{
                     color: "white",
@@ -226,10 +230,8 @@ export default Profile = (props) => {
           <Entypo name="calendar" size={24} color="black" />
         </TouchableOpacity>
 
-
         <TouchableOpacity
-
-        onPress={() => props.navigation.navigate("WorkHistory")}
+          onPress={() => props.navigation.navigate("WorkHistory")}
           style={{
             flexDirection: "row",
             justifyContent: "space-between",
@@ -263,7 +265,8 @@ export default Profile = (props) => {
           </View>
           <FontAwesome name="newspaper-o" size={24} color="black" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => props.navigation.navigate("Appointment")}
+        <TouchableOpacity
+          onPress={() => props.navigation.navigate("Appointment")}
           style={{
             flexDirection: "row",
             justifyContent: "space-between",
@@ -332,7 +335,8 @@ export default Profile = (props) => {
           </View>
           <MaterialIcons name="attach-money" size={24} color="black" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => props.navigation.navigate("Edit_screen")}
+        <TouchableOpacity
+          onPress={() => props.navigation.navigate("Edit_screen")}
           style={{
             flexDirection: "row",
             justifyContent: "space-between",

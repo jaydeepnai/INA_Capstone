@@ -4,7 +4,7 @@ import { SafeAreaView, View, ScrollView, Image, Text, Dimensions } from "react-n
 import { getFontSize, responsiveMargin } from "../../../lib/Validation/RelativeValues";
 
 
-export default schedule_ngo = ({ navigation }) => {
+export default Schedule_ngo = ({ navigation }) => {
   return (
     <SafeAreaView
       style={{

@@ -23,7 +23,7 @@ import { AntDesign, Entypo } from "@expo/vector-icons";
 //   )
 // }
 
-export default work_history_ngo = (props) => {
+export default Work_history_ngo = (props) => {
   const Tab = createMaterialTopTabNavigator();
   return (
     <SafeAreaView

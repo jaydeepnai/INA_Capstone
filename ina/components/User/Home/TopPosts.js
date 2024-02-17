@@ -1,8 +1,28 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { AntDesign, EvilIcons, Feather, FontAwesome5 } from '@expo/vector-icons';
+import axios from 'axios';
 
 const TopPosts = () => {
+
+    const [posts, setPosts] = useState([]);
+
+    console.log(posts)
+    useEffect(() => {
+        const fetchPosts = async () => {
+            try {
+                // Using axios to fetch data
+                const response = await axios.get('http://192.168.33.127:3000/getAllPost');
+                setPosts(response.data); // Axios automatically parses the JSON response
+            } catch (error) {
+                console.error("Failed to fetch posts:", error);
+            }
+        };
+
+        fetchPosts();
+    }, []); // The empty array means this effect runs once on mount
+
+
     return (
         <View>
             <View style={{
@@ -15,7 +35,7 @@ const TopPosts = () => {
                     style={{
                         color: "#000000",
                         fontSize: 20,
-                        margin:10,
+                        margin: 10,
                         flex: 1,
                     }}>
                     {"TOP POST FROM NGOs "}
@@ -28,9 +48,9 @@ const TopPosts = () => {
                     See All
                 </Text>
             </View>
-            <Post/>
-            <Post/>
-            <Post/>
+            {
+                posts.map((post, index) => <Post post={post} />)
+            }
         </View>
     )
 }
@@ -40,23 +60,25 @@ export default TopPosts
 const styles = StyleSheet.create({})
 
 
-export const Post = ()=>{
+export const Post = ({ post }) => {
+
+    console.log("post", post)
     return (
         <View>
-               <View style={{
+            <View style={{
                 flexDirection: "row",
                 alignItems: "center",
                 marginBottom: 8,
                 marginHorizontal: 32,
             }}>
                 <Image
-                    source={require("../../../assets/profile.jpg")}
+                    source={{ uri: post?.image }}
                     resizeMode="cover"
                     style={{
                         width: 39,
                         height: 40,
                         marginRight: 11,
-                        borderRadius:50
+                        borderRadius: 50
                     }}
                 />
                 <View
@@ -84,13 +106,13 @@ export const Post = ()=>{
                 <Feather name="more-vertical" size={24} color="black" />
             </View>
             <Image
-                source={require("../../../assets/NGO/post3.jpg")}
+                source={{ uri: post?.image }}
                 resizeMode="contain"
                 style={{
                     borderRadius: 10,
-                    height:200,
+                    height: 200,
                     width: "83%",
-                    backgroundColor:"red",
+                    backgroundColor: "red",
                     marginBottom: 10,
                     marginHorizontal: 32,
                 }}
@@ -102,9 +124,9 @@ export const Post = ()=>{
                     marginBottom: 5,
                     marginHorizontal: 42,
                 }}>
-                <AntDesign style={{marginHorizontal:5}} name="heart" size={24} color="red" />
-                <FontAwesome5 style={{marginHorizontal:5}} name="comment" size={24} color="black" />
-                <AntDesign name="sharealt" style={{marginHorizontal:5}} size={24} color="black" />
+                <AntDesign style={{ marginHorizontal: 5 }} name="heart" size={24} color="red" />
+                <FontAwesome5 style={{ marginHorizontal: 5 }} name="comment" size={24} color="black" />
+                <AntDesign name="sharealt" style={{ marginHorizontal: 5 }} size={24} color="black" />
                 <View
                     style={{
                         flex: 1,
@@ -113,6 +135,15 @@ export const Post = ()=>{
                 </View>
                 <AntDesign name="star" size={24} color="black" />
             </View>
+            <Text
+                style={{
+                    color: "#000000",
+                    fontSize: 16,
+                    marginBottom: 7,
+                    marginHorizontal: 46,
+                }}>
+                {post.content}
+            </Text>
             <Text
                 style={{
                     color: "#000000",

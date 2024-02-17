@@ -91,7 +91,7 @@ const Categories = ({}) => {
               }}
             >
             <Image
-              source={require("../../../assets/NGO/dog.png")}
+                
               resizeMode={"stretch"}
               style={{
                   position: "absolute",

@@ -1,10 +1,12 @@
 import { Image, ImageBackground, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
+// import * as Progress from 'react-native-progress';
 import { LinearGradient } from 'expo-linear-gradient'
 import TopNGOListforNGO from '../../../components/NGO/Home/TopNGOListforNGO'
 import TopAchieverNGO from '../../../components/NGO/Home/TopAchieverNGO'
 import { getFontSize, responsiveMargin } from '../../../lib/Validation/RelativeValues'
 import NGOCategories from '../../../components/NGO/Home/NGOCategories'
+import { Events } from '../../../components/User/Home/EventCarousel'
 
 const Trending = () => {
     return (
@@ -17,17 +19,14 @@ const Trending = () => {
                 style={{
                     flex: 1,
                     backgroundColor: "#ffffff",
-                    paddingTop: 27,
                     paddingBottom: 300,
                 }}>
+                <Events />
+
+                <NGOCategories />
 
 
-
-            
-            <NGOCategories/>
-
-
-            <View
+                <View
                     style={{
                         flexDirection: "row",
                         alignItems: "center",
@@ -55,188 +54,64 @@ const Trending = () => {
                             {"See All"}
                         </Text>
                     </TouchableOpacity>
-            </View>
+                </View>
 
-            <TopAchieverNGO />
-
-                
-
-                
+                <TopAchieverNGO />
 
 
 
 
-            <View>
-                
-                <Text
-                    style={{
-                        color: "#000000",
-                        fontSize: getFontSize(20),
-                        fontWeight: "bold",
-                        marginLeft: 29,
-                    }}>
-                    {"FUND RAISED"}
-                </Text>
 
-                <View
-                    style={{
-                        marginBottom: 24,
-                        marginHorizontal: 12,
-                    }}>
+
+
+
+                <View>
+
+                    <Text
+                        style={{
+                            color: "#000000",
+                            fontSize: getFontSize(20),
+                            fontWeight: "bold",
+                            marginLeft: 29,
+                        }}>
+                        {"FUND RAISED"}
+                    </Text>
+
                     <View
                         style={{
-                            backgroundColor: "#ffffff",
-                            borderRadius: 20,
-                            paddingTop: 19,
-                            paddingBottom: 8,
-                            shadowColor: "#00000040",
-                            shadowOpacity: 0.3,
-                            shadowOffset: {
-                                width: 0,
-                                height: 4
-                            },
-                            shadowRadius: 4,
-                            elevation: 4,
+                            marginBottom: 24,
+                            marginHorizontal: 12,
                         }}>
                         <View
                             style={{
-                                flexDirection: "row",
-                                alignItems: "center",
-                                marginBottom: responsiveMargin(2),
-                                marginHorizontal: 9,
-                            }}>
-                            <Image
-                                source={require("../../../assets/profile.jpg")}
-                                resizeMode={"cover"}
-                                style={{
-                                    width: 50,
-                                    height: 50,
-                                    borderRadius:100,
-                                    marginRight: 13,
-                                }}
-                            />
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: getFontSize(16),
-                                    flex: 1,
-                                }}>
-                                {"NGO name"}
-                            </Text>
-                        </View>
-                        <Text
-                            style={{
-                                color: "#000000",
-                                fontSize: getFontSize(16),
-                                marginBottom: 15,
-                                marginHorizontal: 21,
-                                width: 364,
-                            }}>
-                            {"Help Little Padma Saranya Dance Back to \nHealth!"}
-                        </Text>
-                        <Image
-                            source={require("../../../assets/family.jpg")}
-                            style={{
+                                backgroundColor: "#ffffff",
                                 borderRadius: 20,
-                                height: 180,
-                                width:350,
-                                marginBottom: 26,
-                                marginHorizontal: responsiveMargin(2.5),
-                            }}
-                        />
-
-
-                        <Text
-                            style={{
-                                color: "#000000",
-                                fontSize: getFontSize(16),
-                                marginBottom: responsiveMargin(6),
-                                marginLeft: 30,
-                            }}>
-                            {"₹ 13,948 raised of ₹ 20,000"}
-                        </Text>
-
-                        <View style={{
-                            alignItems:'center',
-                            marginBottom:responsiveMargin(6)
-                        }}>
-                            {/* <Progress.Bar progress={0.7} width={350} /> */}
-                        </View>
-
-                        <View
-                            style={{
-                                flexDirection: "row",
-                                alignItems: "center",
-                                marginBottom: 8,
-                                marginHorizontal: 20,
-                            }}>
-                            <Image
-                                source={require("../../../assets/family.jpg")}
-                                resizeMode={"cover"}
-                                style={{
-                                    width: 40,
-                                    height: 40,
-                                    marginRight: 10,
-                                    borderRadius:100,
-                                }}
-                            />
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: getFontSize(16),
-                                }}>
-                                {"12 days left"}
-                            </Text>
-                            <View
-                                style={{
-                                    flex: 1,
-                                    alignSelf: "stretch",
-                                }}>
-                            </View>
-                            <Image
-                                source={require("../../../assets/family.jpg")}
-                                resizeMode={"stretch"}
-                                style={{
-                                    width: 40,
-                                    height: 40,
-                                    marginRight: 12,
-                                    borderRadius:100
-                                }}
-                            />
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: getFontSize(16),
-                                }}>
-                                {"Volunteers"}
-                            </Text>
-                        </View>
-                        <View
-                            style={{
-                                flexDirection: "row",
-                                alignItems: "center",
-                                marginHorizontal: 7,
+                                paddingTop: 19,
+                                paddingBottom: 8,
+                                shadowColor: "#00000040",
+                                shadowOpacity: 0.3,
+                                shadowOffset: {
+                                    width: 0,
+                                    height: 4
+                                },
+                                shadowRadius: 4,
+                                elevation: 4,
                             }}>
                             <View
                                 style={{
-                                    width: 152,
                                     flexDirection: "row",
                                     alignItems: "center",
-                                    backgroundColor: "#ffffff",
-                                    borderRadius: 20,
-                                    paddingVertical: 16,
-                                    paddingHorizontal: 11,
-                                    marginRight: 137,
-                                    justifyContent:"flex-start"
+                                    marginBottom: responsiveMargin(2),
+                                    marginHorizontal: 9,
                                 }}>
                                 <Image
-                                    source={require("../../../assets/family.jpg")}
-                                    resizeMode={"stretch"}
+                                    source={require("../../../assets/profile.jpg")}
+                                    resizeMode={"cover"}
                                     style={{
+                                        width: 50,
+                                        height: 50,
                                         borderRadius: 100,
-                                        width: 40,
-                                        height: 40,
-                                        marginRight: 24,
+                                        marginRight: 13,
                                     }}
                                 />
                                 <Text
@@ -245,25 +120,149 @@ const Trending = () => {
                                         fontSize: getFontSize(16),
                                         flex: 1,
                                     }}>
-                                    {"Share"}
+                                    {"NGO name"}
                                 </Text>
                             </View>
+                            <Text
+                                style={{
+                                    color: "#000000",
+                                    fontSize: getFontSize(16),
+                                    marginBottom: 15,
+                                    marginHorizontal: 21,
+                                    width: 364,
+                                }}>
+                                {"Help Little Padma Saranya Dance Back to \nHealth!"}
+                            </Text>
                             <Image
                                 source={require("../../../assets/family.jpg")}
-                                resizeMode={"cover"}
                                 style={{
-                                    width: 40,
-                                    height: 40,
-                                    borderRadius:100
+                                    borderRadius: 20,
+                                    height: 180,
+                                    width: 350,
+                                    marginBottom: 26,
+                                    marginHorizontal: responsiveMargin(2.5),
                                 }}
                             />
+
+
+                            <Text
+                                style={{
+                                    color: "#000000",
+                                    fontSize: getFontSize(16),
+                                    marginBottom: responsiveMargin(6),
+                                    marginLeft: 30,
+                                }}>
+                                {"₹ 13,948 raised of ₹ 20,000"}
+                            </Text>
+
+                            <View style={{
+                                alignItems: 'center',
+                                marginBottom: responsiveMargin(6)
+                            }}>
+                                {/* {/* <Progress.Bar progress={0.7} width={350} /> */} */}
+                            </View>
+
+                            <View
+                                style={{
+                                    flexDirection: "row",
+                                    alignItems: "center",
+                                    marginBottom: 8,
+                                    marginHorizontal: 20,
+                                }}>
+                                <Image
+                                    source={require("../../../assets/family.jpg")}
+                                    resizeMode={"cover"}
+                                    style={{
+                                        width: 40,
+                                        height: 40,
+                                        marginRight: 10,
+                                        borderRadius: 100,
+                                    }}
+                                />
+                                <Text
+                                    style={{
+                                        color: "#000000",
+                                        fontSize: getFontSize(16),
+                                    }}>
+                                    {"12 days left"}
+                                </Text>
+                                <View
+                                    style={{
+                                        flex: 1,
+                                        alignSelf: "stretch",
+                                    }}>
+                                </View>
+                                <Image
+                                    source={require("../../../assets/family.jpg")}
+                                    resizeMode={"stretch"}
+                                    style={{
+                                        width: 40,
+                                        height: 40,
+                                        marginRight: 12,
+                                        borderRadius: 100
+                                    }}
+                                />
+                                <Text
+                                    style={{
+                                        color: "#000000",
+                                        fontSize: getFontSize(16),
+                                    }}>
+                                    {"Volunteers"}
+                                </Text>
+                            </View>
+                            <View
+                                style={{
+                                    flexDirection: "row",
+                                    alignItems: "center",
+                                    marginHorizontal: 7,
+                                }}>
+                                <View
+                                    style={{
+                                        width: 152,
+                                        flexDirection: "row",
+                                        alignItems: "center",
+                                        backgroundColor: "#ffffff",
+                                        borderRadius: 20,
+                                        paddingVertical: 16,
+                                        paddingHorizontal: 11,
+                                        marginRight: 137,
+                                        justifyContent: "flex-start"
+                                    }}>
+                                    <Image
+                                        source={require("../../../assets/family.jpg")}
+                                        resizeMode={"stretch"}
+                                        style={{
+                                            borderRadius: 100,
+                                            width: 40,
+                                            height: 40,
+                                            marginRight: 24,
+                                        }}
+                                    />
+                                    <Text
+                                        style={{
+                                            color: "#000000",
+                                            fontSize: getFontSize(16),
+                                            flex: 1,
+                                        }}>
+                                        {"Share"}
+                                    </Text>
+                                </View>
+                                <Image
+                                    source={require("../../../assets/family.jpg")}
+                                    resizeMode={"cover"}
+                                    style={{
+                                        width: 40,
+                                        height: 40,
+                                        borderRadius: 100
+                                    }}
+                                />
+                            </View>
                         </View>
                     </View>
                 </View>
-            </View>
 
 
-                
+
 
                 <Text
                     style={{
