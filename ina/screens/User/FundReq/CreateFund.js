@@ -15,7 +15,7 @@ import { Formik } from "formik";
 import * as ImagePicker from "expo-image-picker";
 import { SelectList } from "react-native-dropdown-select-list";
 import DateTimePicker from '@react-native-community/datetimepicker';
-
+ 
 
 const MyForm = () => {
     const [date, setDate] = useState(new Date());
@@ -93,17 +93,9 @@ const MyForm = () => {
             />
             <View style={styles.input}>
               <Text style={styles.label}>Fund Type</Text>
-              {/* <Picker
-                selectedValue={formikProps.values.fundType}
-                style={{ height: 50, width: '100%' }}
-                onValueChange={itemValue =>
-                  formikProps.setFieldValue('fundType', itemValue)
-                }
-              >
-                <Picker.Item label="Donation" value="Donation" />
-                <Picker.Item label="Sponsorship" value="Sponsorship" />
-                <Picker.Item label="Grant" value="Grant" />
-              </Picker> */}
+
+
+
               <SelectList
                 setSelected={(val) => setSelected(val)}
                 data={data}

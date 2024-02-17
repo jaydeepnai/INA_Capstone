@@ -32,20 +32,20 @@ import Appointment_ngo from "../screens/NGO/profile/Appointment_ngo";
 import Appointment_list_ngo from "../screens/NGO/profile/Appointment_list_ngo";
 import Appointment_com_ngo from "../screens/NGO/profile/Appointment_com_ngo";
 import Create_event from "../screens/NGO/Plans/Create_event";
+import FormCheck from "../screens/NGO/Home/FormCheck";
+import Post_reivew from "../components/User/Post_reivew";
 const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator
+      <Stack.Navigator 
         screenOptions={{ presentation: "containedModal", headerShown: false }}
       >
         <Stack.Screen name="User" component={BottomTabs} />
+        <Stack.Screen name="User" component={BottomTabs} />
         <Stack.Screen name="NGO" component={NGOBottomTabs} />
-        
-        
-        
-        
+        <Stack.Screen name="User" component={BottomTabs} />
         <Stack.Screen name="NGOImage" options={{
           headerShown: true,
           headerTitleAlign: "center",
@@ -69,6 +69,9 @@ const StackNavigator = () => {
           component={ServiceList}
         />
         <Stack.Screen name="Achievers" component={Achievers} />
+
+        <Stack.Screen name="NGOResult" component={NGOResults} options={{headerShown:false}}/>
+
         <Stack.Screen name="UserSchedule" component={Schedule} />
         <Stack.Screen name="EventDetails" component={EventDetails} />
         <Stack.Screen name="NGOServiceDetails" component={NGOService} />
@@ -88,6 +91,7 @@ const StackNavigator = () => {
         <Stack.Screen name="Appointment_com_ngo" component={Appointment_com_ngo} />
 
         <Stack.Screen name="LoginAuth" component={LoginAuth} />
+        <Stack.Screen name="Post_reivew" component={Post_reivew} />
         <Stack.Screen name="NGOProfile" component={NGOProfile} />
         <Stack.Screen name="HiringResult" component={HiringResult} />
         <Stack.Screen name="Appointment" options={{
@@ -120,6 +124,8 @@ const StackNavigator = () => {
         />
 
       </Stack.Navigator>
+
+
 
 
 

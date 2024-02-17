@@ -1,7 +1,8 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { AntDesign, EvilIcons, Feather, FontAwesome5 } from '@expo/vector-icons';
-import axios from 'axios';
+import { useNavigation } from '@react-navigation/native';
+const  navigation = useNavigation();    import axios from 'axios';
 
 const TopPosts = () => {
 
@@ -124,9 +125,22 @@ export const Post = ({ post }) => {
                     marginBottom: 5,
                     marginHorizontal: 42,
                 }}>
-                <AntDesign style={{ marginHorizontal: 5 }} name="heart" size={24} color="red" />
-                <FontAwesome5 style={{ marginHorizontal: 5 }} name="comment" size={24} color="black" />
-                <AntDesign name="sharealt" style={{ marginHorizontal: 5 }} size={24} color="black" />
+                <AntDesign style={{marginHorizontal:5}} name="heart" size={24} color="red" />
+                
+                <TouchableOpacity
+                    onPress={() => navigation.navigate("Post_reivew")}>
+                <FontAwesome5  style={{marginHorizontal:5}} name="comment" size={24} color="black" />
+                {/* <View>
+                    <Text>
+                        {"naishal modi"}
+                    </Text>
+                </View> */}
+                </TouchableOpacity>
+
+                
+                    
+                <AntDesign name="sharealt" style={{marginHorizontal:5}} size={24} color="black" />
+
                 <View
                     style={{
                         flex: 1,

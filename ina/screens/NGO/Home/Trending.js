@@ -7,8 +7,12 @@ import TopAchieverNGO from '../../../components/NGO/Home/TopAchieverNGO'
 import { getFontSize, responsiveMargin } from '../../../lib/Validation/RelativeValues'
 import NGOCategories from '../../../components/NGO/Home/NGOCategories'
 import { Events } from '../../../components/User/Home/EventCarousel'
+import { useNavigation } from '@react-navigation/native';
+
+
 
 const Trending = () => {
+    const navigation = useNavigation()
     return (
         <SafeAreaView
             style={{
@@ -49,7 +53,7 @@ const Trending = () => {
                         <Text
                             style={{
                                 color: "#679D0A",
-                                fontSize: 12,
+                                fontSize: getFontSize(12),
                             }}>
                             {"See All"}
                         </Text>
@@ -159,7 +163,7 @@ const Trending = () => {
                                 alignItems: 'center',
                                 marginBottom: responsiveMargin(6)
                             }}>
-                                {/* {/* <Progress.Bar progress={0.7} width={350} /> */} */}
+                                {/* {/* <Progress.Bar progress={0.7} width={350} /> */} */
                             </View>
 
                             <View
@@ -427,6 +431,32 @@ const Trending = () => {
                         </Text>
                     </View>
                 </View>
+
+                <View style={{
+                    flex:1,
+                    alignItems:'center',
+                    justifyContent:'center',
+                }}>
+                    <TouchableOpacity onPress={() => {
+                        navigation.navigate("FormCheck");
+                    }}>
+
+                        <Text
+                            style={{
+                                color: "#679D0A",
+                                fontSize: getFontSize(12),
+                            }}>
+                            {"CHECK YOUR FORM"}
+                        </Text>
+
+                    </TouchableOpacity>
+                </View>
+
+                <View style={{
+                    marginBottom:100
+                }}></View>
+
+
             </ScrollView>
         </SafeAreaView>
     )

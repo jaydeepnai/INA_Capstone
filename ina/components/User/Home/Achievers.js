@@ -1,7 +1,9 @@
 import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity, Pressable, Alert, Modal, } from 'react-native'
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
-import { getFontSize, responsiveMargin } from '../../../lib/Validation/RelativeValues'
+import { getFontSize, responsiveMargin, width } from '../../../lib/Validation/RelativeValues'
+import { AntDesign } from '@expo/vector-icons'
+import { Base_Color } from '../../../lib/React Query/variables'
 
 
 
@@ -47,12 +49,12 @@ export default Achievers
 
 
 const Achiever = () => {
-    
+
     const [modalVisible, setModalVisible] = useState(false);
-    
+
     return (
-    <View>
-        <Modal
+        <View>
+            <Modal
                 animationType="slide"
                 transparent={true}
                 visible={modalVisible}
@@ -60,266 +62,268 @@ const Achiever = () => {
                     Alert.alert('Modal has been closed.');
                     setModalVisible(!modalVisible);
                 }}>
+
+
+
+
                 <View style={styles.centeredView}>
                     <View style={styles.modalView}>
-                        
-                        
 
-                <View
-                    style={{
-                        backgroundColor: "#f2f3f7",
-                        borderRadius: 15,
-                        paddingVertical: 14,
-                        marginBottom: responsiveMargin(3),
-                        marginHorizontal: responsiveMargin(4),
-                        
-                    }}>
-                    <View
-                        style={{
-                            flexDirection: "row",
-                            alignItems: "center",
-                            marginBottom: responsiveMargin(4),
-                            marginHorizontal:responsiveMargin(7),
-                        }}> 
-                        <Text
-                            style={{
-                                color: "#000000",
-                                fontSize: getFontSize(18),
-                                marginRight: 4,
-                                flex: 1,
-                            }}>
-                            {"Rubina Shah"}
-                        </Text>
-                        <Text
-                            style={{
-                                color: "#000000",
-                                fontSize: getFontSize(14),
-                                paddingRight:responsiveMargin(16)
-                            }}>
-                            {"Reivews"}
-                        </Text>
-                    </View>
-                    <View
-                        style={{
-                            flexDirection: "row",
-                            marginHorizontal: 20,
-                        }}>
-
-                        <Image
-                            source={require("../../../assets/images/TopAchievers/Achiever1.jpg")}
-                            style={{
-                                borderRadius: 100,
-                                width: 100,
-                                height: 100,
-                            }}
-                        />
+                        <Pressable
+                            style={[styles.button, styles.buttonClose]}
+                            onPress={() => setModalVisible(!modalVisible)}>
+                            <AntDesign name="close" size={24} color="white" />
+                        </Pressable>
 
                         <View
                             style={{
-                                flex: 1,
-                            }}>
-                        </View>
-                        <View
-                            style={{
-                                width: 198,
-                                alignSelf: "flex-start",
-                                backgroundColor: "#ffffff",
+                                backgroundColor: "#f2f3f7",
                                 borderRadius: 15,
-                                paddingVertical: 9,
-                                paddingHorizontal: 10,
-                                marginTop: 7,
+                                paddingVertical: 14,
+
                             }}>
                             <View
                                 style={{
                                     flexDirection: "row",
                                     alignItems: "center",
-                                    marginBottom: 10,
+                                    marginBottom: responsiveMargin(4),
+                                    marginHorizontal: responsiveMargin(7),
                                 }}>
-                                <Image
-                                    source={require("../../../assets/NGO/me.jpg")}
-                                    resizeMode={"stretch"}
+                                <Text
                                     style={{
-                                        borderRadius:100,
-                                        width: 30,
-                                        height: 30,
-                                        marginRight: 8,
+                                        color: "#000000",
+                                        fontSize: getFontSize(18),
+                                        marginRight: 4,
+                                        flex: 1,
+                                    }}>
+                                    {"Rubina Shah"}
+                                </Text>
+                                <Text
+                                    style={{
+                                        color: "#000000",
+                                        fontSize: getFontSize(14),
+                                        paddingRight: responsiveMargin(16)
+                                    }}>
+                                    {"Reivews"}
+                                </Text>
+                            </View>
+                            <View
+                                style={{
+                                    flexDirection: "row",
+                                    marginHorizontal: 20,
+                                }}>
+
+                                <Image
+                                    source={require("../../../assets/images/TopAchievers/Achiever1.jpg")}
+                                    style={{
+                                        borderRadius: 100,
+                                        width: 100,
+                                        height: 100,
                                     }}
                                 />
+
+                                <View
+                                    style={{
+                                        flex: 1,
+                                    }}>
+                                </View>
+                                <View
+                                    style={{
+                                        width: 198,
+                                        alignSelf: "flex-start",
+                                        backgroundColor: "#ffffff",
+                                        borderRadius: 15,
+                                        paddingVertical: 9,
+                                        paddingHorizontal: 10,
+                                        marginTop: 7,
+                                    }}>
+                                    <View
+                                        style={{
+                                            flexDirection: "row",
+                                            alignItems: "center",
+                                            marginBottom: 10,
+                                        }}>
+                                        <Image
+                                            source={require("../../../assets/NGO/me.jpg")}
+                                            resizeMode={"stretch"}
+                                            style={{
+                                                borderRadius: 100,
+                                                width: 30,
+                                                height: 30,
+                                                marginRight: 8,
+                                            }}
+                                        />
+                                        <Text
+                                            style={{
+                                                color: "#000000",
+                                                fontSize: getFontSize(10),
+                                                marginRight: 27,
+                                            }}>
+                                            {"Naishal Modi"}
+                                        </Text>
+                                        <Text
+                                            style={{
+                                                color: "#000000",
+                                                fontSize: getFontSize(10),
+                                                flex: 1,
+                                            }}>
+                                            {"2 day ago"}
+                                        </Text>
+                                    </View>
+                                    <Text
+                                        style={{
+                                            color: "#000000",
+                                            fontSize: 10,
+                                            width: 178,
+                                        }}>
+                                        {"Reviewed in India on 8 January 2024\nColour: Sheen GreenVerified Purchase\nNice productBass Quality is awesome.\nThe product is worth."}
+                                    </Text>
+                                </View>
+                            </View>
+                            <View
+                                style={{
+                                    flexDirection: "row",
+                                    justifyContent: "space-between",
+                                    alignItems: "center",
+                                    marginBottom: 4,
+                                    marginHorizontal: 7,
+                                }}>
+                                <View
+                                    style={{
+                                        width: 136,
+                                        alignItems: "center",
+                                        backgroundColor: "#ffffff",
+                                        borderRadius: 15,
+                                        paddingVertical: 8,
+                                    }}>
+                                    <Text
+                                        style={{
+                                            color: "#000000",
+                                            fontSize: 10,
+                                        }}>
+                                        {"past services: @Angle trust"}
+                                    </Text>
+                                </View>
                                 <Text
                                     style={{
                                         color: "#000000",
                                         fontSize: getFontSize(10),
-                                        marginRight: 27,
+                                        paddingRight: responsiveMargin(5)
                                     }}>
-                                    {"Naishal Modi"}
-                                </Text>
-                                <Text
-                                    style={{
-                                        color: "#000000",
-                                        fontSize:  getFontSize(10),
-                                        flex: 1,
-                                    }}>
-                                    {"2 day ago"}
+                                    {"See all review.."}
                                 </Text>
                             </View>
-                            <Text
+                            <View
                                 style={{
-                                    color: "#000000",
-                                    fontSize: 10,
-                                    width: 178,
+                                    flexDirection: "row",
+                                    justifyContent: "space-between",
+                                    alignItems: "center",
+                                    marginHorizontal: responsiveMargin(2),
+                                    paddingTop: responsiveMargin(2)
                                 }}>
-                                {"Reviewed in India on 8 January 2024\nColour: Sheen GreenVerified Purchase\nNice productBass Quality is awesome.\nThe product is worth."}
-                            </Text>
+                                <View
+                                    style={{
+                                        width: 60,
+                                        flexDirection: "row",
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        backgroundColor: "#ffffff",
+                                        borderRadius: 15,
+                                        paddingVertical: 4,
+                                    }}>
+                                    <Image
+                                        source={require("../../../assets/images/ratings.png")}
+                                        resizeMode={"stretch"}
+                                        style={{
+                                            width: 18,
+                                            height: 18,
+                                            marginRight: 8,
+                                        }}
+                                    />
+                                    <Text
+                                        style={{
+                                            color: "#000000",
+                                            fontSize: getFontSize(10),
+                                        }}>
+                                        {"4.5"}
+                                    </Text>
+                                </View>
+                                <View
+                                    style={{
+                                        width: 135,
+                                        flexDirection: "row",
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        backgroundColor: "#ffffff",
+                                        borderRadius: 15,
+                                        paddingVertical: 4,
+                                    }}>
+                                    <Image
+                                        source={require("../../../assets/images/email.png")}
+                                        resizeMode={"stretch"}
+                                        style={{
+                                            width: 18,
+                                            height: 18,
+                                            marginRight: 8,
+                                        }}
+                                    />
+                                    <Text
+                                        style={{
+                                            color: "#000000",
+                                            fontSize: getFontSize(10),
+                                        }}>
+                                        {"rubina@gmail.com"}
+                                    </Text>
+                                </View>
+                                <View
+                                    style={{
+                                        width: 120,
+                                        alignItems: "center",
+                                        backgroundColor: "#ffffff",
+                                        borderRadius: 15,
+                                        paddingVertical: 7,
+                                    }}>
+                                    <Text
+                                        style={{
+                                            color: "#000000",
+                                            fontSize: getFontSize(10),
+                                        }}>
+                                        {"11th Jan - 20th jan 24"}
+                                    </Text>
+                                </View>
+                            </View>
                         </View>
-                    </View>
-                    <View
-                        style={{
-                            flexDirection: "row",
-                            justifyContent: "space-between",
-                            alignItems: "center",
-                            marginBottom: 4,
-                            marginHorizontal: 7,
-                        }}>
-                        <View
-                            style={{
-                                width: 136,
-                                alignItems: "center",
-                                backgroundColor: "#ffffff",
-                                borderRadius: 15,
-                                paddingVertical: 8,
-                            }}>
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: 10,
-                                }}>
-                                {"past services: @Angle trust"}
-                            </Text>
-                        </View>
-                        <Text
-                            style={{
-                                color: "#000000",
-                                fontSize: getFontSize(10),
-                                paddingRight:responsiveMargin(5)
-                            }}>
-                            {"See all review.."}
-                        </Text>
-                    </View>
-                    <View
-                        style={{
-                            flexDirection: "row",
-                            justifyContent: "space-between",
-                            alignItems: "center",
-                            marginHorizontal: responsiveMargin(2),
-                            paddingTop:responsiveMargin(2)
-                        }}>
-                        <View
-                            style={{
-                                width: 60,
-                                flexDirection: "row",
-                                justifyContent: "center",
-                                alignItems: "center",
-                                backgroundColor: "#ffffff",
-                                borderRadius: 15,
-                                paddingVertical: 4,
-                            }}>
-                            <Image
-                                source={require("../../../assets/images/ratings.png")}
-                                resizeMode={"stretch"}
-                                style={{
-                                    width: 18,
-                                    height: 18,
-                                    marginRight: 8,
-                                }}
-                            />
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: getFontSize(10),
-                                }}>
-                                {"4.5"}
-                            </Text>
-                        </View>
-                        <View
-                            style={{
-                                width: 135,
-                                flexDirection: "row",
-                                justifyContent: "center",
-                                alignItems: "center",
-                                backgroundColor: "#ffffff",
-                                borderRadius: 15,
-                                paddingVertical: 4,
-                            }}>
-                            <Image
-                                source={require("../../../assets/images/email.png")}
-                                resizeMode={"stretch"}
-                                style={{
-                                    width: 18,
-                                    height: 18,
-                                    marginRight: 8,
-                                }}
-                            />
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: getFontSize(10),
-                                }}>
-                                {"rubina@gmail.com"}
-                            </Text>
-                        </View>
-                        <View
-                            style={{
-                                width: 120,
-                                alignItems: "center",
-                                backgroundColor: "#ffffff",
-                                borderRadius: 15,
-                                paddingVertical: 7,
-                            }}>
-                            <Text
-                                style={{
-                                    color: "#000000",
-                                    fontSize: getFontSize(10),
-                                }}>
-                                {"11th Jan - 20th jan 24"}
-                            </Text>
-                        </View>
-                    </View>
-                </View>
 
-                        
 
-                        <Pressable
-                            style={[styles.button, styles.buttonClose]}
-                            onPress={() => setModalVisible(!modalVisible)}>
-                            <Text style={styles.textStyle}>  CLOSE  </Text>
-                        </Pressable>
+
+
                     </View>
                 </View>
             </Modal>
 
-        <TouchableOpacity onPress={() => setModalVisible(true)}>
-            <View style={{ width: 70, marginHorizontal: 10 }}>
-                <Image
-                    source={require("../../../assets/NGO/me.jpg")}
-                    resizeMode={"stretch"}
-                    style={{
-                        borderRadius: 35,
-                        width: 70,
-                        height: 70,
-                    }}
-                />
-                <Text
-                    style={{
-                        color: "#000000",
-                        fontSize: 12,
-                        textAlign: "center",
-                    }}>
-                    Aniket
-                </Text>
-            </View>
-        </TouchableOpacity>
+            <TouchableOpacity onPress={() => setModalVisible(true)}>
+                <View style={{ width: 70, marginHorizontal: 10 }}>
+                    <Image
+                        source={require("../../../assets/NGO/me.jpg")}
+                        resizeMode={"stretch"}
+                        style={{
+                            borderRadius: 35,
+                            width: 70,
+                            height: 70,
+                        }}
+                    />
+                    <Text
+                        style={{
+                            color: "#000000",
+                            fontSize: 12,
+                            textAlign: "center",
+                        }}>
+                        Aniket
+                    </Text>
+                </View>
+            </TouchableOpacity>
         </View>
-        
+
     )
 }
 
@@ -327,16 +331,16 @@ const Achiever = () => {
 
 const styles = StyleSheet.create({
     centeredView: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 22,
+        position: 'absolute',
+        bottom: 0,
     },
     modalView: {
-        margin: 20,
+        width: width * 0.90,
+        marginLeft: responsiveMargin(5.5),
+        flex: 1,
         backgroundColor: 'white',
         borderRadius: 20,
-        padding: 35,
+        paddingVertical: responsiveMargin(1.5),
         alignItems: 'center',
         shadowColor: '#000',
         shadowOffset: {
@@ -348,15 +352,19 @@ const styles = StyleSheet.create({
         elevation: 5,
     },
     button: {
+        top:5,
+        right:5,
+        position:'absolute',
         borderRadius: 20,
-        padding: 10,
+        padding: 5,
         elevation: 2,
+        zIndex:1,
     },
     buttonOpen: {
-        backgroundColor: '#F194FF',
+        backgroundColor: 'white',
     },
     buttonClose: {
-        backgroundColor: '#2196F3',
+        backgroundColor: Base_Color,
     },
     textStyle: {
         color: 'white',

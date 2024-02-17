@@ -4,7 +4,7 @@ import React from "react";
 import { SafeAreaView, View, ScrollView, Image, Text, TouchableOpacity, } from "react-native";
 import { Base_Color } from "../../../lib/React Query/variables";
 
-export default NGOResult = (props) => {
+export default NGOResults = (props) => {
 
 
     return (
