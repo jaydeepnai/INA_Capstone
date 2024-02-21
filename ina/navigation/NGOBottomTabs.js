@@ -1,11 +1,10 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { AntDesign, Entypo, FontAwesome, FontAwesome5, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
-import { AntDesign, Entypo, FontAwesome, FontAwesome5, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
+// import { AntDesign, Entypo, FontAwesome, FontAwesome5, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
+
 import HeaderLeft, { HeaderRight } from '../components/User/Home/Header/Header';
 import DonationList from '../screens/User/Donation/DonationList';
 import { HiringSearch } from '../screens/NGO/Hiring/HiringFilter';
 import { NGOTopTab } from './NGOTopTab';
-import Plan from '../screens/NGO/Plans/Plan';
 import Plan from '../screens/NGO/Plans/Plan';
 const Tab = createBottomTabNavigator();
 
@@ -33,7 +32,7 @@ export function NGOBottomTabs() {
   return (
     <Tab.Navigator>
       <Tab.Screen
-        name="NGOHome1"
+        name="NGOHome2"
         component={NGOTopTab}
         options={{
           tabBarLabel: "Home",
@@ -97,7 +96,7 @@ export function NGOBottomTabs() {
             focused ? (
               <MaterialIcons name="schedule-send" size={24} color="#2bc5b4" />
             ) : (
-              <MaterialIcons name="schedule-send" size={24} color="black" />
+              <MaterialIcons name="schedule-sends" size={24} color="black" />
             ),
           headerLeft: () => <HeaderLeft />,
           headerRight: () => <HeaderRight />,
@@ -143,7 +142,7 @@ export function NGOBottomTabs() {
 
     </Tab.Navigator>
   );
-}
+
       <Tab.Screen
         name="Hiring"
         component={HiringSearch}

@@ -43,9 +43,7 @@ const StackNavigator = () => {
         screenOptions={{ presentation: "containedModal", headerShown: false }}
       >
         <Stack.Screen name="User" component={BottomTabs} />
-        <Stack.Screen name="User" component={BottomTabs} />
         <Stack.Screen name="NGO" component={NGOBottomTabs} />
-        <Stack.Screen name="User" component={BottomTabs} />
         <Stack.Screen name="NGOImage" options={{
           headerShown: true,
           headerTitleAlign: "center",
@@ -117,19 +115,9 @@ const StackNavigator = () => {
           title: 'TOP ACHIEVERS'
         }}
         />
-        <Stack.Screen
-          name="NGOResult"
-          component={NGOResults}
-          options={{ headerShown: false }}
-        />
 
       </Stack.Navigator>
-
-
-
-
-
-    </NavigationContainer>
+</NavigationContainer>
   );
 };
 

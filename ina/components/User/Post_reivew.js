@@ -31,6 +31,7 @@ export default (props) => {
 							width: 60,
 							height: 56,
 							marginRight: 92,
+							marginTop:35,
 						}}
 					/>
 					<Text 
@@ -47,16 +48,17 @@ export default (props) => {
 						}}>
 					</View>
 					<Image
-						source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+						source={require("../../assets/NGO/post.jpg")}
 						resizeMode = {"stretch"}
 						style = {{
 							width: 33,
 							height: 31,
+							borderRadius:100,
 						}}
 					/>
 				</View>
 				<Image
-					source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+					source={require("../../assets/NGO/post.jpg")}
 					resizeMode = {"stretch"}
 					style = {{
 						borderRadius: 10,
@@ -73,29 +75,29 @@ export default (props) => {
 						marginHorizontal: 23,
 					}}>
 					<Image
-						source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+						source={require("../../assets/NGO/heart.png")}  
 						resizeMode = {"stretch"}
 						style = {{
-							width: 29,
-							height: 30,
+							width: 25,
+							height: 25,
 							marginRight: 11,
 						}}
 					/>
 					<Image
-						source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+						source={require("../../assets/NGO/comments.png")}  
 						resizeMode = {"stretch"}
 						style = {{
-							width: 29,
-							height: 30,
+							width: 25,
+							height: 25,
 							marginRight: 11,
 						}}
 					/>
 					<Image
-						source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+						source={require("../../assets/NGO/share.png")} 
 						resizeMode = {"stretch"}
 						style = {{
-							width: 29,
-							height: 30,
+							width: 22,
+							height: 22,
 						}}
 					/>
 					<View 
@@ -105,11 +107,11 @@ export default (props) => {
 						}}>
 					</View>
 					<Image
-						source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+						source={require("../../assets/NGO/save.png")} 
 						resizeMode = {"stretch"}
 						style = {{
-							width: 29,
-							height: 30,
+							width: 25,
+							height: 25,
 						}}
 					/>
 				</View>
@@ -120,7 +122,7 @@ export default (props) => {
 						marginBottom: 9,
 						marginHorizontal: 35,
 					}}>
-					{"Study is more important in our life ✏📝📏🖍"}
+					{"Study is more important in our life📝🖍"}
 				</Text>
 				<Text 
 					style = {{
@@ -164,12 +166,13 @@ export default (props) => {
 						marginHorizontal: 13,
 					}}>
 					<Image
-						source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+						source={require("../../assets/NGO/me.jpg")}  
 						resizeMode = {"stretch"}
 						style = {{
 							width: 40,
 							height: 40,
 							marginRight: 11,
+							borderRadius:100,
 						}}
 					/>
 					<View 
@@ -192,7 +195,7 @@ export default (props) => {
 								{"Narendra modi "}
 							</Text>
 							<Image
-								source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+								source={require("../../assets/NGO/correct.png")} 
 								resizeMode = {"stretch"}
 								style = {{
 									width: 15,
@@ -222,7 +225,7 @@ export default (props) => {
 							width: 20,
 						}}>
 						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+							source={require("../../assets/NGO/like.png")} 
 							resizeMode = {"stretch"}
 							style = {{
 								height: 17,
@@ -279,12 +282,13 @@ export default (props) => {
 						marginHorizontal: 13,
 					}}>
 					<Image
-						source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+						source={require("../../assets/NGO/me.jpg")} 
 						resizeMode = {"stretch"}
 						style = {{
 							width: 40,
 							height: 40,
 							marginRight: 11,
+							borderRadius:100
 						}}
 					/>
 					<View 
@@ -307,7 +311,7 @@ export default (props) => {
 								{"Narendra modi "}
 							</Text>
 							<Image
-								source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+								source={require("../../assets/NGO/correct.png")} 
 								resizeMode = {"stretch"}
 								style = {{
 									width: 15,
@@ -337,7 +341,7 @@ export default (props) => {
 							width: 20,
 						}}>
 						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+							source={require("../../assets/NGO/like.png")} 
 							resizeMode = {"stretch"}
 							style = {{
 								height: 17,
@@ -394,12 +398,13 @@ export default (props) => {
 						marginHorizontal: 13,
 					}}>
 					<Image
-						source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+						source={require("../../assets/NGO/me.jpg")} 
 						resizeMode = {"stretch"}
 						style = {{
 							width: 40,
 							height: 40,
 							marginRight: 11,
+							borderRadius:100
 						}}
 					/>
 					<View 
@@ -422,7 +427,7 @@ export default (props) => {
 								{"Narendra modi "}
 							</Text>
 							<Image
-								source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+								source={require("../../assets/NGO/correct.png")} 
 								resizeMode = {"stretch"}
 								style = {{
 									width: 15,
@@ -452,7 +457,7 @@ export default (props) => {
 							width: 20,
 						}}>
 						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+							source={require("../../assets/NGO/like.png")} 
 							resizeMode = {"stretch"}
 							style = {{
 								height: 17,
@@ -509,12 +514,13 @@ export default (props) => {
 						marginHorizontal: 13,
 					}}>
 					<Image
-						source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+						source={require("../../assets/NGO/me.jpg")} 
 						resizeMode = {"stretch"}
 						style = {{
 							width: 40,
 							height: 40,
 							marginRight: 11,
+							borderRadius:100
 						}}
 					/>
 					<View 
@@ -537,7 +543,7 @@ export default (props) => {
 								{"Narendra modi "}
 							</Text>
 							<Image
-								source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+								source={require("../../assets/NGO/correct.png")} 
 								resizeMode = {"stretch"}
 								style = {{
 									width: 15,
@@ -567,7 +573,7 @@ export default (props) => {
 							width: 20,
 						}}>
 						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+							source={require("../../assets/NGO/like.png")} 
 							resizeMode = {"stretch"}
 							style = {{
 								height: 17,
@@ -624,12 +630,13 @@ export default (props) => {
 						marginHorizontal: 13,
 					}}>
 					<Image
-						source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+						source={require("../../assets/NGO/me.jpg")} 
 						resizeMode = {"stretch"}
 						style = {{
 							width: 40,
 							height: 40,
 							marginRight: 11,
+							borderRadius:100
 						}}
 					/>
 					<View 
@@ -652,7 +659,7 @@ export default (props) => {
 								{"Narendra modi "}
 							</Text>
 							<Image
-								source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+								source={require("../../assets/NGO/correct.png")} 
 								resizeMode = {"stretch"}
 								style = {{
 									width: 15,
@@ -682,7 +689,7 @@ export default (props) => {
 							width: 20,
 						}}>
 						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+							source={require("../../assets/NGO/like.png")} 
 							resizeMode = {"stretch"}
 							style = {{
 								height: 17,
@@ -739,12 +746,13 @@ export default (props) => {
 						marginHorizontal: 13,
 					}}>
 					<Image
-						source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+						source={require("../../assets/NGO/me.jpg")} 
 						resizeMode = {"stretch"}
 						style = {{
 							width: 40,
 							height: 40,
 							marginRight: 11,
+							borderRadius:100
 						}}
 					/>
 					<View 
@@ -767,7 +775,7 @@ export default (props) => {
 								{"Narendra modi "}
 							</Text>
 							<Image
-								source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+								source={require("../../assets/NGO/correct.png")} 
 								resizeMode = {"stretch"}
 								style = {{
 									width: 15,
@@ -797,7 +805,7 @@ export default (props) => {
 							width: 20,
 						}}>
 						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+							source={require("../../assets/NGO/like.png")} 
 							resizeMode = {"stretch"}
 							style = {{
 								height: 17,
@@ -854,12 +862,13 @@ export default (props) => {
 						marginHorizontal: 13,
 					}}>
 					<Image
-						source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+						source={require("../../assets/NGO/me.jpg")} 
 						resizeMode = {"stretch"}
 						style = {{
 							width: 40,
 							height: 40,
 							marginRight: 11,
+							borderRadius:100
 						}}
 					/>
 					<View 
@@ -882,7 +891,7 @@ export default (props) => {
 								{"Narendra modi "}
 							</Text>
 							<Image
-								source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+								source={require("../../assets/NGO/correct.png")} 
 								resizeMode = {"stretch"}
 								style = {{
 									width: 15,
@@ -912,7 +921,7 @@ export default (props) => {
 							width: 20,
 						}}>
 						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+							source={require("../../assets/NGO/like.png")}  
 							resizeMode = {"stretch"}
 							style = {{
 								height: 17,
@@ -983,12 +992,13 @@ export default (props) => {
 						marginHorizontal: 14,
 					}}>
 					<Image
-						source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+						source={require("../../assets/NGO/me.jpg")} 
 						resizeMode = {"stretch"}
 						style = {{
 							width: 40,
 							height: 40,
 							marginRight: 15,
+							borderRadius:100
 						}}
 					/>
 					<Text 

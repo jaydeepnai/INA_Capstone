@@ -8,6 +8,7 @@ import Profile from '../screens/User/Profile/Profile';
 import DonationList from '../screens/User/Donation/DonationList';
 import FundReqList from '../screens/User/FundReq/FundList';
 import { DonationTopTabs } from './DonationTopTab';
+
 const Tab = createBottomTabNavigator();
 
 
@@ -39,12 +40,12 @@ export function BottomTabs() {
             tabBarLabel: "Search",
             headerShown:false,
             tabBarLabelStyle: { color: "#008E97" },
-            tabBarIcon: ({ focused }) =>
-              focused ? (
-                <FontAwesome name="search" size={24} color="#2bc5b4"/>
-              ) : (
-                <AntDesign name="search1" size={24} color="black" />
-              ),
+            // tabBarIcon: ({ focused }) =>
+            //   focused ? (
+            //     <FontAwesome name="search" size={24} color="#2bc5b4"/>
+            //   ) : (
+            //     <AntDesign name="search1" size={24} color="black" />
+            //   ),
           }}
         />
         <Tab.Screen
@@ -107,13 +108,13 @@ export function BottomTabs() {
             tabBarLabelStyle: { color: "black" },
             
             headerShown: false,
-            tabBarIcon: ({ focused }) =>
-              focused ? (
-                <FontAwesome name="user-circle-o" size={24} color="#2bc5b4"/>
-              ) : (
-                // <FontAwesome name="user-o" size={24} color="black" />
-                <FontAwesome name="user-circle-o" size={24} color="black" />
-              ),
+            // tabBarIcon: ({ focused }) =>
+            //   focused ? (
+            //     <FontAwesome6 name="user-circle-o" size={24} color="#2bc5b4"/>
+            //   ) : (
+            //     // <FontAwesome name="user-o" size={24} color="black" />
+            //     <FontAwesome5 name="user-circle-o" size={24} color="black" />
+            //   ),
           }}
         />
       </Tab.Navigator>

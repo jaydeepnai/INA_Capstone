@@ -2,18 +2,17 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { AntDesign, EvilIcons, Feather, FontAwesome5 } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-const  navigation = useNavigation();    import axios from 'axios';
+import axios from 'axios';
+import { api_domain } from '../../../lib/React Query/variables';
 
 const TopPosts = () => {
-
     const [posts, setPosts] = useState([]);
-
     console.log(posts)
     useEffect(() => {
         const fetchPosts = async () => {
             try {
                 // Using axios to fetch data
-                const response = await axios.get('http://192.168.33.127:3000/getAllPost');
+                const response = await axios.get(api_domain + '/getAllPost');
                 setPosts(response.data); // Axios automatically parses the JSON response
             } catch (error) {
                 console.error("Failed to fetch posts:", error);
@@ -55,13 +54,12 @@ const TopPosts = () => {
         </View>
     )
 }
-
 export default TopPosts
 
 const styles = StyleSheet.create({})
 
-
 export const Post = ({ post }) => {
+    const navigation  = useNavigation();    
 
     console.log("post", post)
     return (
@@ -129,16 +127,8 @@ export const Post = ({ post }) => {
                 
                 <TouchableOpacity
                     onPress={() => navigation.navigate("Post_reivew")}>
-                <FontAwesome5  style={{marginHorizontal:5}} name="comment" size={24} color="black" />
-                {/* <View>
-                    <Text>
-                        {"naishal modi"}
-                    </Text>
-                </View> */}
+                <FontAwesome5 style={{marginHorizontal:5}} name="comment" size={24} color="black" />
                 </TouchableOpacity>
-
-                
-                    
                 <AntDesign name="sharealt" style={{marginHorizontal:5}} size={24} color="black" />
 
                 <View
