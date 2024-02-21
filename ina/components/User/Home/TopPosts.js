@@ -2,18 +2,20 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { AntDesign, EvilIcons, Feather, FontAwesome5 } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-const  navigation = useNavigation();    import axios from 'axios';
+import axios from 'axios';
+import { api_domain } from '../../../lib/React Query/variables';
+
 
 const TopPosts = () => {
-
-    const [posts, setPosts] = useState([]);
+    const  navigation = useNavigation(); 
+    const [posts, setPosts] = useState([]);   
 
     console.log(posts)
     useEffect(() => {
         const fetchPosts = async () => {
             try {
                 // Using axios to fetch data
-                const response = await axios.get('http://192.168.33.127:3000/getAllPost');
+                const response = await axios.get(api_domain + '/getAllPost');
                 setPosts(response.data); // Axios automatically parses the JSON response
             } catch (error) {
                 console.error("Failed to fetch posts:", error);
@@ -51,6 +53,9 @@ const TopPosts = () => {
             </View>
             {
                 posts.map((post, index) => <Post post={post} />)
+
+                // posts.map((post, index) => post && <Post key={index} post={post} />)
+
             }
         </View>
     )
@@ -62,9 +67,11 @@ const styles = StyleSheet.create({})
 
 
 export const Post = ({ post }) => {
-
+    
     console.log("post", post)
+    
     return (
+        
         <View>
             <View style={{
                 flexDirection: "row",
@@ -79,14 +86,16 @@ export const Post = ({ post }) => {
                         width: 39,
                         height: 40,
                         marginRight: 11,
-                        borderRadius: 50
+                        borderRadius: 50,
                     }}
                 />
+
                 <View
                     style={{
                         flex: 1,
                         marginRight: 4,
                     }}>
+
                     <Text
                         style={{
                             color: "#000000",
@@ -156,7 +165,9 @@ export const Post = ({ post }) => {
                     marginBottom: 7,
                     marginHorizontal: 46,
                 }}>
+ 
                 {post.content}
+
             </Text>
             <Text
                 style={{

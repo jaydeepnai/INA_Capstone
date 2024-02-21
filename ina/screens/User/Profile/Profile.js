@@ -66,7 +66,7 @@ export default Profile = (props) => {
                 }}
               >
                 
-                <Pressable onPress={() => props.navigation.navigate(goback())}>
+                <Pressable onPress={() => goback()}>
                 
                   <Ionicons name="arrow-back-circle" size={34} color="white" />
                 </Pressable>

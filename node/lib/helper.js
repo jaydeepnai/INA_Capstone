@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 const imageToBase64 = (imagePath) => {
     return new Promise((resolve, reject) => {
       fs.readFile(imagePath, (err, data) => {

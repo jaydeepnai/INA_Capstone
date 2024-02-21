@@ -15,15 +15,17 @@ import {
   ImageBackground,
   StatusBar,
   TouchableOpacity,
+  Pressable,
 } from "react-native";
 // import { PieChart } from 'react-native-svg-charts';
 import PieChart from "react-native-pie-chart";
 import Categories from "./Categories";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import { Button, Card } from "react-native-paper";
-import { Post } from "./TopPosts";
+import TopPosts, { Post } from "./TopPosts";
 import { getFontSize, responsiveMargin, width } from "../../../lib/Validation/RelativeValues";
 import { useNavigation } from "@react-navigation/native";
+import Trending from "../../../screens/User/Home/Trending";
 const widthAndHeight = 60;
 const series = [50, 20];
 const sliceColor = ["orange", "white"];
@@ -37,6 +39,7 @@ export default EventDetails = (props) => {
         backgroundColor: "#FFFFFF",
       }}
     >
+      
       <EventHeader />
       <Tab.Navigator>
         <Tab.Screen name="About" component={About} />
@@ -161,6 +164,7 @@ const About = () => {
       >
         {"LANGUAGE SPOKEN"}
       </Text>
+
       <View
         style={{
           flexDirection: "row",
@@ -718,17 +722,18 @@ const About = () => {
 const Posts = ()=>{
   return (
     <ScrollView style={{marginTop:20}}>
-       <Post/>
-       <Post/>
-       <Post/>
-       <Post/>
-       <Post/>
-       <Post/>
+
+      <TopPosts/>
+      <TopPosts/>
+      <TopPosts/>
+    
     </ScrollView>
   )
 }
 
 const EventHeader = () => {
+  const navigation = useNavigation();
+
   return (
     <View>
       <View>
@@ -756,7 +761,10 @@ const EventHeader = () => {
                 paddingTop: responsiveMargin(3)
               }}
             >
-              <Ionicons name="arrow-back-circle" size={34} color="white" />
+
+                <Ionicons name="arrow-back-circle" size={34} color="white" />    
+              
+              
               <Text
                 style={{
                   color: "white",
@@ -891,3 +899,4 @@ const EventHeader = () => {
     </View>
   );
 };
+

@@ -1,11 +1,9 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { AntDesign, Entypo, FontAwesome, FontAwesome5, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
-import { AntDesign, Entypo, FontAwesome, FontAwesome5, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 import HeaderLeft, { HeaderRight } from '../components/User/Home/Header/Header';
 import DonationList from '../screens/User/Donation/DonationList';
 import { HiringSearch } from '../screens/NGO/Hiring/HiringFilter';
 import { NGOTopTab } from './NGOTopTab';
-import Plan from '../screens/NGO/Plans/Plan';
 import Plan from '../screens/NGO/Plans/Plan';
 const Tab = createBottomTabNavigator();
 
@@ -143,7 +141,7 @@ export function NGOBottomTabs() {
 
     </Tab.Navigator>
   );
-}
+
       <Tab.Screen
         name="Hiring"
         component={HiringSearch}
