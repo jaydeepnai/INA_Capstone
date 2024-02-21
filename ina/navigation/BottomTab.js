@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { HomeTopTabs } from './HomeTopTab';
-import { AntDesign, Entypo, FontAwesome, FontAwesome5, FontAwesome6, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
+import { AntDesign, Entypo, FontAwesome, FontAwesome5, FontAwesome6, Fontisto, Ionicons, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 import HeaderLeft, { HeaderRight } from '../components/User/Home/Header/Header';
 import Trending from '../screens/User/Home/Trending';
 import Search from '../screens/User/Search/Search';
@@ -40,12 +40,12 @@ export function BottomTabs() {
             tabBarLabel: "Search",
             headerShown:false,
             tabBarLabelStyle: { color: "#008E97" },
-            // tabBarIcon: ({ focused }) =>
-            //   focused ? (
-            //     <FontAwesome name="search" size={24} color="#2bc5b4"/>
-            //   ) : (
-            //     <AntDesign name="search1" size={24} color="black" />
-            //   ),
+            tabBarIcon: ({ focused }) =>
+              focused ? (
+                <FontAwesome name="search" size={24} color="#2bc5b4"/>
+              ) : (
+                <AntDesign name="search1" size={24} color="black" />
+              ),
           }}
         />
         <Tab.Screen
@@ -105,16 +105,17 @@ export function BottomTabs() {
           component={Profile}
           options={{
             tabBarLabel: "Profile",
-            tabBarLabelStyle: { color: "black" },
-            
-            headerShown: false,
-            // tabBarIcon: ({ focused }) =>
-            //   focused ? (
-            //     <FontAwesome6 name="user-circle-o" size={24} color="#2bc5b4"/>
-            //   ) : (
-            //     // <FontAwesome name="user-o" size={24} color="black" />
-            //     <FontAwesome5 name="user-circle-o" size={24} color="black" />
-            //   ),
+            headerShown: true,
+            tabBarIcon: ({ focused }) =>
+              focused ? (
+                <Fontisto name="person" size={24} color="#2bc5b4" />
+              ) : (
+                <Fontisto name="person" size={24} color="black" />
+
+              ),
+              headerLeft : ()=><HeaderLeft/>,
+              headerRight : ()=><HeaderRight/>,
+              headerTitleAlign : "center"
           }}
         />
       </Tab.Navigator>

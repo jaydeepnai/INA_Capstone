@@ -113,12 +113,12 @@ export const Post = ({ post }) => {
             </View>
             <Image
                 source={{ uri: post?.image }}
-                resizeMode="contain"
+                resizeMode="cover"
                 style={{
                     borderRadius: 10,
                     height: 200,
                     width: "83%",
-                    backgroundColor: "red",
+                    // backgroundColor: "red",
                     marginBottom: 10,
                     marginHorizontal: 32,
                 }}
