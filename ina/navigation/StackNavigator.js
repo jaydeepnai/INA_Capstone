@@ -57,6 +57,7 @@ const StackNavigator = () => {
           }}
           component={Categories}
         />
+
         <Stack.Screen
           name="ServiceList"
           options={{
@@ -66,9 +67,9 @@ const StackNavigator = () => {
           }}
           component={ServiceList}
         />
+        
         <Stack.Screen name="Achievers" component={Achievers} />
-
-        <Stack.Screen name="NGOResult" component={NGOResults} options={{headerShown:false}}/>
+        <Stack.Screen name="NGOResult" component={NGOResults} options={{ headerShown: false }}/>
 
         <Stack.Screen name="UserSchedule" component={Schedule} />
         <Stack.Screen name="EventDetails" component={EventDetails} />
@@ -115,6 +116,7 @@ const StackNavigator = () => {
           title: 'TOP ACHIEVERS'
         }}
         />
+        
 
       </Stack.Navigator>
 </NavigationContainer>

@@ -5,6 +5,7 @@ import {
   StyleSheet,
   ScrollView,
   Button as RNButton,
+  Image,
 } from "react-native";
 import {
   TextInput as PaperTextInput,
@@ -39,6 +40,7 @@ const MyForm = () => {
   ];
 
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selected, setSelected] = useState(null);
   const [snackbarVisible, setSnackbarVisible] = useState(false);
 
   const pickImage = async () => {

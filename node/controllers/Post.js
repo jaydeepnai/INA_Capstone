@@ -1,5 +1,7 @@
 const { CusFileName, imageToBase64 } = require("../lib/helper");
 const { Post, Comment } = require("../models/post");
+const path = require('path');
+
 
 const createPost = async (req, res) => {
     const { ngoID, NGOServiceID, content, image } = req.body;
@@ -87,7 +89,8 @@ const getAllPost = async (req, res) => {
             }
         });
         const updatedPosts = await Promise.all(posts.map(async (post) => {
-            const imagePath = path.join(__dirname, 'uploads', post.image);
+            console.log(__dirname)
+            const imagePath = path.join('C:/Users/Aniket/Documents/COLL_PROJECT/INA_Capstone/node/routes', 'uploads', post.image);
             try {
                 const imgSrcString = await imageToBase64(imagePath);
                 return {

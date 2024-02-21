@@ -6,7 +6,7 @@ import axios from 'axios';
 import { api_domain } from '../../../lib/React Query/variables';
 
 const TopPosts = () => {
-    const [posts, setPosts] = useState([]);
+    const  navigation = useNavigation();     const [posts, setPosts] = useState([]);   
     console.log(posts)
     useEffect(() => {
         const fetchPosts = async () => {
@@ -50,6 +50,9 @@ const TopPosts = () => {
             </View>
             {
                 posts.map((post, index) => <Post post={post} />)
+
+                // posts.map((post, index) => post && <Post key={index} post={post} />)
+
             }
         </View>
     )
@@ -62,7 +65,9 @@ export const Post = ({ post }) => {
     const navigation  = useNavigation();    
 
     console.log("post", post)
+    
     return (
+        
         <View>
             <View style={{
                 flexDirection: "row",
@@ -77,14 +82,16 @@ export const Post = ({ post }) => {
                         width: 39,
                         height: 40,
                         marginRight: 11,
-                        borderRadius: 50
+                        borderRadius: 50,
                     }}
                 />
+
                 <View
                     style={{
                         flex: 1,
                         marginRight: 4,
                     }}>
+
                     <Text
                         style={{
                             color: "#000000",
@@ -146,7 +153,9 @@ export const Post = ({ post }) => {
                     marginBottom: 7,
                     marginHorizontal: 46,
                 }}>
+ 
                 {post.content}
+
             </Text>
             <Text
                 style={{
