@@ -44,6 +44,8 @@ const StackNavigator = () => {
       >
         <Stack.Screen name="User" component={BottomTabs} />
         <Stack.Screen name="NGO" component={NGOBottomTabs} />
+        
+        
         <Stack.Screen name="NGOImage" options={{
           headerShown: true,
           headerTitleAlign: "center",
@@ -90,7 +92,9 @@ const StackNavigator = () => {
         <Stack.Screen name="Appointment_com_ngo" component={Appointment_com_ngo} />
 
         <Stack.Screen name="LoginAuth" component={LoginAuth} />
-        <Stack.Screen name="Post_reivew" component={Post_reivew} />
+        <Stack.Screen name="Post_reivew" options={{
+          headerShown: true,
+        }} component={Post_reivew} />
         <Stack.Screen name="NGOProfile" component={NGOProfile} />
         <Stack.Screen name="HiringResult" component={HiringResult} />
         <Stack.Screen name="Appointment" options={{

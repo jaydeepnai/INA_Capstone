@@ -45,7 +45,7 @@ export default Categories = (props) => {
             }}
           >
             <Image
-              source={require("../../../assets/family.jpg")}
+              source={require("../../../assets/dog.jpeg")}
               resizeMode={"cover"}
               style={{
                 borderRadius: 15,
@@ -68,7 +68,7 @@ export default Categories = (props) => {
             }}
           >
             <Image
-              source={require("../../../assets/family.jpg")}
+              source={require("../../../assets/cherity.jpeg")}
               resizeMode={"cover"}
               style={{
                 borderRadius: 15,
@@ -79,63 +79,7 @@ export default Categories = (props) => {
               }}
             />
             <Text style={{ textAlign: "center", fontSize: 18 }}>
-              Animal
-            </Text>
-          </TouchableOpacity>
-        </View>
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-            marginBottom: responsiveMargin(2),
-          }}
-        >
-          <TouchableOpacity
-          onPress={()=>props.navigation.navigate("NGOResult")}
-            style={{
-              width: 160,
-              backgroundColor: "#FFFFFF",
-              borderRadius: 20,
-              marginBottom: responsiveMargin(4),
-            }}
-          >
-            <Image
-              source={require("../../../assets/family.jpg")}
-              resizeMode={"cover"}
-              style={{
-                borderRadius: 15,
-                height: 140,
-                width: width * 0.40,
-                marginLeft: responsiveMargin(1),
-
-              }}
-            />
-            <Text style={{ textAlign: "center", fontSize: 18 }}>
-              Animal
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={{
-              width: 160,
-              backgroundColor: "#FFFFFF",
-              borderRadius: 20,
-              marginBottom: responsiveMargin(4),
-            }}
-          >
-            <Image
-              source={require("../../../assets/family.jpg")}
-              resizeMode={"cover"}
-              style={{
-                borderRadius: 15,
-                height: 140,
-                width: width * 0.40,
-                marginLeft: responsiveMargin(1),
-
-              }}
-            />
-            <Text style={{ textAlign: "center", fontSize: 18 }}>
-              Animal
+              Cherity
             </Text>
           </TouchableOpacity>
         </View>
@@ -157,7 +101,7 @@ export default Categories = (props) => {
             }}
           >
             <Image
-              source={require("../../../assets/family.jpg")}
+              source={require("../../../assets/medical.jpeg")}
               resizeMode={"cover"}
               style={{
                 borderRadius: 15,
@@ -168,7 +112,7 @@ export default Categories = (props) => {
               }}
             />
             <Text style={{ textAlign: "center", fontSize: 18 }}>
-              Animal
+              Medical
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -180,7 +124,7 @@ export default Categories = (props) => {
             }}
           >
             <Image
-              source={require("../../../assets/family.jpg")}
+              source={require("../../../assets/lerning.jpeg")}
               resizeMode={"cover"}
               style={{
                 borderRadius: 15,
@@ -191,7 +135,63 @@ export default Categories = (props) => {
               }}
             />
             <Text style={{ textAlign: "center", fontSize: 18 }}>
-              Animal
+              Learning
+            </Text>
+          </TouchableOpacity>
+        </View>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            marginBottom: responsiveMargin(2),
+          }}
+        >
+          <TouchableOpacity
+          onPress={()=>props.navigation.navigate("NGOResult")}
+            style={{
+              width: 160,
+              backgroundColor: "#FFFFFF",
+              borderRadius: 20,
+              marginBottom: responsiveMargin(4),
+            }}
+          >
+            <Image
+              source={require("../../../assets/women.jpeg")}
+              resizeMode={"cover"}
+              style={{
+                borderRadius: 15,
+                height: 140,
+                width: width * 0.40,
+                marginLeft: responsiveMargin(1),
+
+              }}
+            />
+            <Text style={{ textAlign: "center", fontSize: 18 }}>
+              Women empowerment
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              width: 160,
+              backgroundColor: "#FFFFFF",
+              borderRadius: 20,
+              marginBottom: responsiveMargin(4),
+            }}
+          >
+            <Image
+              source={require("../../../assets/orphans.jpeg")}
+              resizeMode={"cover"}
+              style={{
+                borderRadius: 15,
+                height: 140,
+                width: width * 0.40,
+                marginLeft: responsiveMargin(1),
+
+              }}
+            />
+            <Text style={{ textAlign: "center", fontSize: 18 }}>
+              Orphans
             </Text>
           </TouchableOpacity>
         </View>

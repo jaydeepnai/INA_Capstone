@@ -103,6 +103,7 @@ export const Service = () => {
               }}
             />
           </View>
+          
         </TouchableOpacity>
       </Card.Content>
     </Card>

@@ -231,7 +231,7 @@ export default Search = ({navigation}) => {
                                 fontSize: 20,
                                 flex: 1,
                             }}>
-                            {"NGOs for Animals"}
+                            {"NGOs for Education"}
                         </Text>
                     </View>
                     <View style={{
@@ -258,7 +258,7 @@ export default Search = ({navigation}) => {
                                 fontSize: 20,
                                 flex: 1,
                             }}>
-                            {"NGOs for Animals"}
+                            {"NGOs for Food & cloth"}
                         </Text>
                     </View>
                     <View style={{
@@ -285,7 +285,7 @@ export default Search = ({navigation}) => {
                                 fontSize: 20,
                                 flex: 1,
                             }}>
-                            {"NGOs for Animals"}
+                            {"NGOs for Learning"}
                         </Text>
                     </View>
                     <View style={{
@@ -312,7 +312,7 @@ export default Search = ({navigation}) => {
                                 fontSize: 20,
                                 flex: 1,
                             }}>
-                            {"NGOs for Animals"}
+                            {"NGOs for donating books"}
                         </Text>
                     </View>
                     <View style={{
@@ -339,7 +339,7 @@ export default Search = ({navigation}) => {
                                 fontSize: 20,
                                 flex: 1,
                             }}>
-                            {"NGOs for Animals"}
+                            {"NGOs for orphans"}
                         </Text>
                     </View>
                 </View>
@@ -394,7 +394,7 @@ export default Search = ({navigation}) => {
                             color: "white",
                             fontSize: 16,
                         }}>
-                        {"Animals"}
+                        {"Learning"}
                     </Text>
                     <AntDesign name="closecircle" size={18} color="black" />
 
@@ -416,7 +416,7 @@ export default Search = ({navigation}) => {
                             color: "white",
                             fontSize: 16,
                         }}>
-                        {"Animals"}
+                        {"Orphans"}
                     </Text>
                     <AntDesign name="closecircle" size={18} color="black" />
 

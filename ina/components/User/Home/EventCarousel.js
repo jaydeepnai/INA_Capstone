@@ -156,7 +156,7 @@ export const EventCard = ({ scrollX, item, translateX, navigation }) => {
               color: "white",
             }}
           >
-            Hare Krishna
+            {/* Hare Krishna */}
           </Text>
           {/* </View> */}
         </LinearGradient>

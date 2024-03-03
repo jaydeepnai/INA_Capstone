@@ -171,7 +171,7 @@ const NGOCard = () => {
         }}>
         <View>
             <View style={{ marginBottom: 15, }}>
-                <Image source={require("../../../assets/animals.jpg")}
+                <Image source={require("../../../assets/cherity.jpeg")}
                     resizeMode={"cover"}
                     style={{
                         borderRadius: 10,
@@ -199,7 +199,7 @@ const NGOCard = () => {
                     marginLeft: 95,
                     bottom: 10,
                 }}>
-                ANIMAL FRIENDS UNITED
+                ANIMAL FRIENDS UNITEDThe
             </Text>
             <Text
                 style={{

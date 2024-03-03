@@ -1,5 +1,6 @@
 import React from "react";
-import { SafeAreaView, View, ScrollView, Image, Text, } from "react-native";
+import { SafeAreaView, View, ScrollView, Image, Text, TextInput} from "react-native";
+import { responsiveMargin } from "../../lib/Validation/RelativeValues";
 
 export default (props) => {
     
@@ -24,30 +25,30 @@ export default (props) => {
 						marginBottom: 39,
 						marginHorizontal: 30,
 					}}>
-					<Image
+					{/* <Image
 						source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
 						resizeMode = {"stretch"}
 						style = {{
-							width: 60,
-							height: 56,
+							width: 33,
+							height: 33,
 							marginRight: 92,
 							marginTop:35,
 						}}
-					/>
-					<Text 
+					/> */}
+					{/* <Text 
 						style = {{
 							color: "#000000",
 							fontSize: 20,
 						}}>
 						{"HOME"}
-					</Text>
+					</Text> */}
 					<View 
 						style = {{
 							flex: 1,
 							alignSelf: "stretch",
 						}}>
 					</View>
-					<Image
+					{/* <Image
 						source={require("../../assets/NGO/post.jpg")}
 						resizeMode = {"stretch"}
 						style = {{
@@ -55,16 +56,18 @@ export default (props) => {
 							height: 31,
 							borderRadius:100,
 						}}
-					/>
+					/> */}
 				</View>
 				<Image
 					source={require("../../assets/NGO/post.jpg")}
 					resizeMode = {"stretch"}
 					style = {{
 						borderRadius: 10,
-						height: 243,
+						height: 200,
+						width:300,
 						marginBottom: 18,
 						marginHorizontal: 31,
+						marginRight:responsiveMargin(100),
 					}}
 				/>
 				<View 
@@ -78,8 +81,8 @@ export default (props) => {
 						source={require("../../assets/NGO/heart.png")}  
 						resizeMode = {"stretch"}
 						style = {{
-							width: 25,
-							height: 25,
+							width: 20,
+							height: 20,
 							marginRight: 11,
 						}}
 					/>
@@ -87,8 +90,8 @@ export default (props) => {
 						source={require("../../assets/NGO/comments.png")}  
 						resizeMode = {"stretch"}
 						style = {{
-							width: 25,
-							height: 25,
+							width: 20,
+							height: 20,
 							marginRight: 11,
 						}}
 					/>
@@ -96,7 +99,7 @@ export default (props) => {
 						source={require("../../assets/NGO/share.png")} 
 						resizeMode = {"stretch"}
 						style = {{
-							width: 22,
+							width: 20,
 							height: 22,
 						}}
 					/>
@@ -224,13 +227,14 @@ export default (props) => {
 						style = {{
 							width: 20,
 						}}>
-						<Image
+						{/* <Image
 							source={require("../../assets/NGO/like.png")} 
 							resizeMode = {"stretch"}
 							style = {{
 								height: 17,
 								marginBottom: 6,
 								marginHorizontal: 2,
+								
 							}}
 						/>
 						<Text 
@@ -239,7 +243,7 @@ export default (props) => {
 								fontSize: 13,
 							}}>
 							{"390"}
-						</Text>
+						</Text> */}
 					</View>
 				</View>
 				<Text 
@@ -340,7 +344,7 @@ export default (props) => {
 						style = {{
 							width: 20,
 						}}>
-						<Image
+						{/* <Image
 							source={require("../../assets/NGO/like.png")} 
 							resizeMode = {"stretch"}
 							style = {{
@@ -355,7 +359,7 @@ export default (props) => {
 								fontSize: 13,
 							}}>
 							{"390"}
-						</Text>
+						</Text> */}
 					</View>
 				</View>
 				<Text 
@@ -456,7 +460,7 @@ export default (props) => {
 						style = {{
 							width: 20,
 						}}>
-						<Image
+						{/* <Image
 							source={require("../../assets/NGO/like.png")} 
 							resizeMode = {"stretch"}
 							style = {{
@@ -471,7 +475,7 @@ export default (props) => {
 								fontSize: 13,
 							}}>
 							{"390"}
-						</Text>
+						</Text> */}
 					</View>
 				</View>
 				<Text 
@@ -572,7 +576,7 @@ export default (props) => {
 						style = {{
 							width: 20,
 						}}>
-						<Image
+						{/* <Image
 							source={require("../../assets/NGO/like.png")} 
 							resizeMode = {"stretch"}
 							style = {{
@@ -587,7 +591,7 @@ export default (props) => {
 								fontSize: 13,
 							}}>
 							{"390"}
-						</Text>
+						</Text> */}
 					</View>
 				</View>
 				<Text 
@@ -688,7 +692,7 @@ export default (props) => {
 						style = {{
 							width: 20,
 						}}>
-						<Image
+						{/* <Image
 							source={require("../../assets/NGO/like.png")} 
 							resizeMode = {"stretch"}
 							style = {{
@@ -703,7 +707,7 @@ export default (props) => {
 								fontSize: 13,
 							}}>
 							{"390"}
-						</Text>
+						</Text> */}
 					</View>
 				</View>
 				<Text 
@@ -804,7 +808,7 @@ export default (props) => {
 						style = {{
 							width: 20,
 						}}>
-						<Image
+						{/* <Image
 							source={require("../../assets/NGO/like.png")} 
 							resizeMode = {"stretch"}
 							style = {{
@@ -819,7 +823,7 @@ export default (props) => {
 								fontSize: 13,
 							}}>
 							{"390"}
-						</Text>
+						</Text> */}
 					</View>
 				</View>
 				<Text 
@@ -920,7 +924,7 @@ export default (props) => {
 						style = {{
 							width: 20,
 						}}>
-						<Image
+						{/* <Image
 							source={require("../../assets/NGO/like.png")}  
 							resizeMode = {"stretch"}
 							style = {{
@@ -935,7 +939,7 @@ export default (props) => {
 								fontSize: 13,
 							}}>
 							{"390"}
-						</Text>
+						</Text> */}
 					</View>
 				</View>
 				<Text 
@@ -1001,14 +1005,24 @@ export default (props) => {
 							borderRadius:100
 						}}
 					/>
-					<Text 
-						style = {{
-							color: "#000000",
-							fontSize: 13,
-							flex: 1,
-						}}>
-						{"Add a comment......"}
-					</Text>
+
+							<TextInput
+							 	style={styles.input}
+        						placeholder="Add a Comment..."
+        						keyboardType="web-search"
+							/>
+								{/* const styles = StyleSheet.create({
+									input: {
+									  height: 40,
+									  borderColor: 'gray',
+									  borderWidth: 1,
+									  paddingHorizontal: 10,
+									  marginBottom: 10,
+									  borderRadius: 5,
+									}
+								  }); */}
+      						
+							
 				</View>
 			</ScrollView>
 		</SafeAreaView>

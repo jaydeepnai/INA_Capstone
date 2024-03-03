@@ -49,7 +49,7 @@ export default Profile = (props) => {
         >
           <View style={{ marginBottom: 13 }}>
             <ImageBackground
-              source={require("../../../assets/family.jpg")}
+              source={require("../../../assets/idea.jpg")}
               resizeMode={"contain"}
               style={{
                 paddingTop: 53,
@@ -73,7 +73,7 @@ export default Profile = (props) => {
 
                 <Text
                   style={{
-                    color: "white",
+                    color: "black",
                     fontWeight: "bold",
                     fontSize: 25,
                   }}
@@ -86,18 +86,18 @@ export default Profile = (props) => {
                 style={{
                   color: "white",
                   fontSize: 24,
-                  marginBottom: 5,
+                  marginBottom: 15,
                   marginHorizontal: 102,
                   marginLeft: 150,
                   width: "70%",
                   fontWeight: "bold",
                 }}
               >
-                {"Hannah Baker"}
+                {"Team INA"}
               </Text>
               <Text
                 style={{
-                  color: "#000000",
+                  color: "black",
                   fontSize: 13,
                   marginBottom: 5,
                   marginHorizontal: 102,
@@ -105,11 +105,11 @@ export default Profile = (props) => {
                   width: "70%",
                 }}
               >
-                {"Software Engineer"}
+                {/* {"Software Engineer"} */}
               </Text>
             </ImageBackground>
             <Image
-              source={require("../../../assets/profile.jpg")}
+              source={require("../../../assets/naishal.jpg")}
               resizeMode={"cover"}
               style={{
                 position: "absolute",
@@ -220,8 +220,8 @@ export default Profile = (props) => {
             </Text>
             <Text
               style={{
-                color: "#000000",
-                fontSize: 16,
+                color: "grey",
+                fontSize: 14,
               }}
             >
               {"(Volunteering &  Services timelines etc.)"}
@@ -256,8 +256,8 @@ export default Profile = (props) => {
             </Text>
             <Text
               style={{
-                color: "#000000",
-                fontSize: 16,
+                color: "grey",
+                fontSize: 14,
               }}
             >
               {"(Record of your works & Experience)"}
@@ -291,8 +291,8 @@ export default Profile = (props) => {
             </Text>
             <Text
               style={{
-                color: "#000000",
-                fontSize: 16,
+                color: "grey",
+                fontSize: 14,
               }}
             >
               {"(Upcoming meetings & Appointment d...)"}
@@ -326,8 +326,8 @@ export default Profile = (props) => {
             </Text>
             <Text
               style={{
-                color: "#000000",
-                fontSize: 16,
+                color: "grey",
+                fontSize: 14,
               }}
             >
               {"(History of records for Funding)"}
@@ -362,8 +362,8 @@ export default Profile = (props) => {
             </Text>
             <Text
               style={{
-                color: "#000000",
-                fontSize: 16,
+                color: "grey",
+                fontSize: 14,
               }}
             >
               {"(Edit your profile & personal details)"}
@@ -399,8 +399,8 @@ export default Profile = (props) => {
             </Text>
             <Text
               style={{
-                color: "#000000",
-                fontSize: 16,
+                color: "grey",
+                fontSize: 14,
               }}
             >
               {"(User logout and go to Home page)"}
