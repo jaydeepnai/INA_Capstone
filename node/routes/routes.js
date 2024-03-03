@@ -9,6 +9,7 @@ const { DeleteNgoService, UpdateNgoService, FindNgoServiceByID, FindNgoServices,
 const { createPost, likePost, AddComment, getAllPost } = require('../controllers/Post');
 const { getEvent } = require('../controllers/NGOEvents');
 const { getNGOs } = require('../controllers/NGO');
+const { CusFileName } = require('../lib/helper');
 
 
 const uploadDir = path.join(__dirname, 'uploads');

@@ -7,9 +7,24 @@ import { AntDesign, Feather } from '@expo/vector-icons'
 const TopNGOList = () => {
     return (
         <View style={{marginTop:-10}}>
-                <NGOCard />
-                <NGOCard />
-                <NGOCard />
+                <NGOCard 
+                image={"https://images.unsplash.com/photo-1535090467336-9501f96eef89?q=80&w=1500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+                logo={"https://images.unsplash.com/photo-1492496913980-501348b61469?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+                ngoName= {"GreenGrowth Learning "}
+                aim={"Empowering communities through sustainable agriculture "}
+                />
+                <NGOCard 
+                logo={"https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+                image={"https://images.unsplash.com/photo-1506617564039-2f3b650b7010?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+                ngoName= {"NourishNexus Foundation"}
+                aim={"Connecting agriculture and education to combat"}
+                />
+                <NGOCard 
+                logo={"https://images.unsplash.com/photo-1543002588-bfa74002ed7e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+                image={"https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+                ngoName= {"Cultivate Initiative"}
+                aim={"Fostering agricultural skills and knowledge"}
+                />
         </View>
     )
 }
@@ -19,7 +34,7 @@ export default TopNGOList
 const styles = StyleSheet.create({})
 
 
-const NGOCard = () => {
+const NGOCard = ({image,logo,ngoName,aim}) => {
     const navigation = useNavigation()
 
     return (
@@ -36,18 +51,19 @@ const NGOCard = () => {
         }}>
         <View>
             <View style={{ marginBottom: 15, }}>
-                <Image source={require("../../../assets/animals.jpg")}
+                <Image 
+                source={{uri:image}}
                     resizeMode={"cover"}
                     style={{
                         borderRadius: 10,
                         height: 175,
                         width: "100%"
                     }} />
-                <Image source={require("../../../assets/ngologo.jpg")}
+                <Image  source={{uri:logo}}
                     resizeMode={"stretch"}
                     style={{
                         position: "absolute",
-                        bottom: -40,
+                        bottom: -50,
                         left: 2,
                         borderRadius: 50,
                         width: 90,
@@ -64,7 +80,7 @@ const NGOCard = () => {
                     marginLeft: 95,
                     bottom: 10,
                 }}>
-                ANIMAL FRIENDS UNITED
+                {ngoName}
             </Text>
             <Text
                 style={{
@@ -73,7 +89,7 @@ const NGOCard = () => {
                     marginLeft: 95,
                     bottom: 10,
                 }}>
-                {"Empowering Paws, Enriching Lives"}
+                    {aim}
             </Text>
             <View
                 style={{

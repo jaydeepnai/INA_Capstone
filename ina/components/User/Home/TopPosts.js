@@ -7,7 +7,7 @@ import { api_domain } from '../../../lib/React Query/variables';
 
 const TopPosts = () => {
     const  navigation = useNavigation();     const [posts, setPosts] = useState([]);   
-    console.log(posts)
+    // console.log(posts)
     useEffect(() => {
         const fetchPosts = async () => {
             try {
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({})
 export const Post = ({ post }) => {
     const navigation  = useNavigation();    
 
-    console.log("post", post)
+    // console.log("post", post)
     
     return (
         

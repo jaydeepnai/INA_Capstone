@@ -90,7 +90,7 @@ const getAllPost = async (req, res) => {
         });
         const updatedPosts = await Promise.all(posts.map(async (post) => {
             console.log(__dirname)
-            const imagePath = path.join('C:/Users/Aniket/Documents/COLL_PROJECT/INA_Capstone/node/routes', 'uploads', post.image);
+            const imagePath = path.join('C:/projects/INA_Capstone/node/routes', 'uploads', post.image);
             try {
                 const imgSrcString = await imageToBase64(imagePath);
                 return {

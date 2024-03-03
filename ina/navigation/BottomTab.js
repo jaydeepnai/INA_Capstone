@@ -113,9 +113,9 @@ export function BottomTabs() {
                 <Fontisto name="person" size={24} color="black" />
 
               ),
-              headerLeft : ()=><HeaderLeft/>,
-              headerRight : ()=><HeaderRight/>,
-              headerTitleAlign : "center"
+              // headerLeft : ()=><HeaderLeft/>,
+              // headerRight : ()=><HeaderRight/>,
+              // headerTitleAlign : "center"
           }}
         />
       </Tab.Navigator>

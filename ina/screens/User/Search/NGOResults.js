@@ -3,6 +3,7 @@ import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { SafeAreaView, View, ScrollView, Image, Text, TouchableOpacity, } from "react-native";
 import { Base_Color } from "../../../lib/React Query/variables";
+import TopNGOList from "../../../components/User/Home/TopNGOList";
 
 export default NGOResults = (props) => {
 
@@ -142,10 +143,12 @@ export default NGOResults = (props) => {
                     </View>
                 </View>
                 <View style={{marginBottom:55}}>
+                {/* <NGOCard />
                 <NGOCard />
                 <NGOCard />
-                <NGOCard />
-                <NGOCard />
+                <NGOCard /> */}
+                	<TopNGOList>
+			</TopNGOList>
                 </View>
             </ScrollView>
         </SafeAreaView>

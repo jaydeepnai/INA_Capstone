@@ -23,19 +23,33 @@ const Achievers = () => {
                 <ScrollView horizontal
                     style={{
                         margin: 10,
+                        paddingRight:150
                     }}>
-                    <Achiever />
-                    <Achiever />
-                    <Achiever />
-                    <Achiever />
-                    <Achiever />
-                    <Achiever />
-                    <Achiever />
-                    <Achiever />
-                    <Achiever />
-                    <Achiever />
-                    <Achiever />
-                    <Achiever />
+                    <Achiever image={"https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} 
+                    name={"John"}
+                    />
+                    <Achiever image={"https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} 
+                    name={"Lisa"}
+                    />
+                    <Achiever image={"https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} 
+                    name={"Mona"}
+                    />
+                    <Achiever image={"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} 
+                    name={"jey"}
+                    />
+                     <Achiever image={"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} 
+                    name={"dalli"}
+                    />
+                     <Achiever image={"https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} 
+                    name={"soun"}
+                    />
+                     <Achiever image={"https://images.unsplash.com/photo-1474176857210-7287d38d27c6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} 
+                    name={"dalli"}
+                    />
+                     <Achiever image={"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} 
+                    name={"dalli"}
+                    />
+                    <View style={{marginLeft:50}}></View>
                 </ScrollView>
             </View>
         </View>
@@ -48,7 +62,7 @@ export default Achievers
 
 
 
-const Achiever = () => {
+const Achiever = ({image,name}) => {
 
     const [modalVisible, setModalVisible] = useState(false);
 
@@ -62,10 +76,6 @@ const Achiever = () => {
                     Alert.alert('Modal has been closed.');
                     setModalVisible(!modalVisible);
                 }}>
-
-
-
-
                 <View style={styles.centeredView}>
                     <View style={styles.modalView}>
 
@@ -114,7 +124,7 @@ const Achiever = () => {
                                 }}>
 
                                 <Image
-                                    source={require("../../../assets/images/TopAchievers/Achiever1.jpg")}
+                                    source={{uri:image}}
                                     style={{
                                         borderRadius: 100,
                                         width: 100,
@@ -159,7 +169,7 @@ const Achiever = () => {
                                                 fontSize: getFontSize(10),
                                                 marginRight: 27,
                                             }}>
-                                            {"Naishal Modi"}
+                                            {name}
                                         </Text>
                                         <Text
                                             style={{
@@ -304,7 +314,7 @@ const Achiever = () => {
             <TouchableOpacity onPress={() => setModalVisible(true)}>
                 <View style={{ width: 70, marginHorizontal: 10 }}>
                     <Image
-                        source={require("../../../assets/NGO/me.jpg")}
+                        source={{uri:image}}
                         resizeMode={"stretch"}
                         style={{
                             borderRadius: 35,
@@ -318,7 +328,7 @@ const Achiever = () => {
                             fontSize: 12,
                             textAlign: "center",
                         }}>
-                        Aniket
+                        {name}
                     </Text>
                 </View>
             </TouchableOpacity>

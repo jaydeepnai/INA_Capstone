@@ -20,7 +20,7 @@ import PieChart from "react-native-pie-chart";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import { Button, Card } from "react-native-paper";
 import { getFontSize, responsiveMargin, width } from "../../../lib/Validation/RelativeValues";
-import { Post } from "../../../components/User/Home/TopPosts";
+import TopPosts, { Post } from "../../../components/User/Home/TopPosts";
 import Categories from "../../../components/User/Home/Categories";
 width
 const widthAndHeight = 60;
@@ -713,12 +713,7 @@ const About = () => {
 const Posts = ()=>{
   return (
     <ScrollView style={{marginTop:20}}>
-       <Post/>
-       <Post/>
-       <Post/>
-       <Post/>
-       <Post/>
-       <Post/>
+       <TopPosts/>
     </ScrollView>
   )
 }

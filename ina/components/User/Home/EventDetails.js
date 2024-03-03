@@ -745,7 +745,7 @@ const EventHeader = () => {
         />
         <View style={{ marginBottom: responsiveMargin(20),marginTop:25}}>
           <ImageBackground
-            source={require("../../../assets/family.jpg")}
+            source={require("../../../assets/workd.jpg")}
             resizeMode={"contain"}
             style={{
               width: "100%",

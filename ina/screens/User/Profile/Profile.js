@@ -73,7 +73,7 @@ export default Profile = (props) => {
 
                 <Text
                   style={{
-                    color: "black",
+                    color: "white",
                     fontWeight: "bold",
                     fontSize: 25,
                   }}

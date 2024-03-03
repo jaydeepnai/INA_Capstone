@@ -28,7 +28,6 @@ export default Search = ({navigation}) => {
                         marginBottom: 10,
                         marginHorizontal: 21,
                     }}>
-                    {/* <FontAwesome name="search" size={24} color="black" /> */}
                     <View
                         style={{
                             width: "85%",

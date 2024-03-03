@@ -458,7 +458,7 @@ const About = () => {
                       padding: responsiveMargin(1),
                     }}
                   >
-                    <Text style={{ fontSize: getFontSize(18) }}>Hare Krishn</Text>
+                    <Text style={{ fontSize: getFontSize(18) }}>Adopt An Animal</Text>
                     <View style={{ flexDirection: "row" }}>
                       <Chip
                         style={{
@@ -485,7 +485,7 @@ const About = () => {
               <Card.Content>
                 <TouchableOpacity onPress={goToService}>
                   <Image
-                    source={require("../../../assets/NGO/dog_adopt.jpg")}
+                    source={require("../../../assets/NGOServices_card.jpg")}
                     resizeMode={"stretch"}
                     style={{
                       borderRadius: 10,
@@ -498,7 +498,7 @@ const About = () => {
                       padding: responsiveMargin(1),
                     }}
                   >
-                    <Text style={{ fontSize: getFontSize(18) }}>Hare Krishn</Text>
+                    <Text style={{ fontSize: getFontSize(18) }}>12A</Text>
                     <View style={{ flexDirection: "row" }}>
                       <Chip
                         style={{
@@ -690,7 +690,7 @@ const About = () => {
           <Card.Content>
             <TouchableOpacity onPress={RedirectTOEvent}>
               <Image
-                source={require("../../../assets/NGO/dog_adopt.jpg")}
+                source={require("../../../assets/eventcard.png")}
                 resizeMode={"stretch"}
                 style={{
                   borderRadius: 10,
@@ -703,7 +703,7 @@ const About = () => {
                   padding: responsiveMargin(1),
                 }}
               >
-                <Text style={{ fontSize: getFontSize(18) }}>Hare Krishn</Text>
+                <Text style={{ fontSize: getFontSize(18) }}>Domestic Help</Text>
                 <View style={{ flexDirection: "row" }}>
                   <Chip
                     style={{

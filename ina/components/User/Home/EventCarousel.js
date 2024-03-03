@@ -19,26 +19,26 @@ const ITEM_WIDTH = width * 0.90;
 const ITEM_HEIGHT = ITEM_WIDTH * 1.2;
 
 const images = [
-  "https://images.unsplash.com/photo-1551316679-9c6ae9dec224?w=800&q=80",
-  "https://images.unsplash.com/photo-1562569633-622303bafef5?w=800&q=80",
-  "https://images.unsplash.com/photo-1503656142023-618e7d1f435a?w=800&q=80",
-  "https://images.unsplash.com/photo-1555096462-c1c5eb4e4d64?w=800&q=80",
-  "https://images.unsplash.com/photo-1517957754642-2870518e16f8?w=800&q=80",
-  "https://images.unsplash.com/photo-1546484959-f9a381d1330d?w=800&q=80",
-  "https://images.unsplash.com/photo-1548761208-b7896a6ff225?w=800&q=80",
-  "https://images.unsplash.com/photo-1511208687438-2c5a5abb810c?w=800&q=80",
-  "https://images.unsplash.com/photo-1548614606-52b4451f994b?w=800&q=80",
-  "https://images.unsplash.com/photo-1548600916-dc8492f8e845?w=800&q=80",
-];
+  { image: "https://images.unsplash.com/photo-1535090042247-30387644aec5?q=80&w=1375&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", logo: "https://images.unsplash.com/photo-1492496913980-501348b61469?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", ngoName: "Agriation Drive", eventName: "" },
+  { image: "https://plus.unsplash.com/premium_photo-1683135024497-dc3398592783?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", logo: "https://images.unsplash.com/photo-1484723091739-30a097e8f929?q=80&w=1498&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", ngoName: "Food-Feastival", eventName: "" },
+  { image: "https://plus.unsplash.com/premium_photo-1683140516842-74c378a43d76?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", logo: "https://images.unsplash.com/photo-1584473457406-6240486418e9?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", ngoName: "Irving Cares", eventName: "Irving Cares" },
+  { image: "https://images.unsplash.com/photo-1555096462-c1c5eb4e4d64?w=800&q=80", logo: "https://images.unsplash.com/photo-1555169062-013468b47731?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", ngoName: "Animal Wellfare", eventName: "" },
+  { image: "https://images.unsplash.com/photo-1511174511562-5f7f18b874f8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", logo: "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", ngoName: "MediAid Fest", eventName: "" },
+  { image: "https://plus.unsplash.com/premium_photo-1682125773446-259ce64f9dd7?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", logo: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", ngoName: "Books-Bash", eventName: "" },
+]
+
 const data = images.map((image, index) => ({
   key: String(index),
-  photo: image,
-  avatar_url: `https://randomuser.me/api/portraits/women/${Math.floor(
-    Math.random() * 40
-  )}.jpg`,
+  photo: image.image,
+  logo: image.logo,
+  ngoName: image.ngoName,
+  eventName: image.eventName,
+  // avatar_url: `https://randomuser.me/api/portraits/women/${Math.floor(
+  //   Math.random() * 40
+  // )}.jpg`,
 }));
 
-export const Events = ({}) => {
+export const Events = ({ }) => {
   const scrollX = React.useRef(new Animated.Value(0)).current;
   const navigation = useNavigation();
   return (
@@ -100,10 +100,10 @@ export const EventCard = ({ scrollX, item, translateX, navigation }) => {
           overflow: "hidden",
           borderRadius: 10,
           margin: 10,
-        //   marginLeft:50
+          //   marginLeft:50
         }}
       >
-        
+
         <Animated.Image
           style={{
             width: ITEM_WIDTH * 1.4,
@@ -129,10 +129,10 @@ export const EventCard = ({ scrollX, item, translateX, navigation }) => {
               left: "35%",
               alignItems: "center",
               justifyContent: "center",
-              borderColor:"white",
-              borderWidth:2,
+              borderColor: "white",
+              borderWidth: 2,
             }}
-            source={{ uri: item.photo }}
+            source={{ uri: item.logo }}
           ></Image>
           <Text
             style={{
@@ -144,7 +144,7 @@ export const EventCard = ({ scrollX, item, translateX, navigation }) => {
               color: "white",
             }}
           >
-            Hare Krishna
+            {item.ngoName}
           </Text>
           <Text
             style={{

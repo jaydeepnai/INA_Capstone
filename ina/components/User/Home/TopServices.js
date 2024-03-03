@@ -37,7 +37,11 @@ const TopServices = () => {
           </Text>
         </TouchableOpacity>
       </View>
-      <Service />
+      <Service des={
+                  "Our NGOated to facilitating animal adoption, connecting compassionate individuals with rescue animals in search of loving homes."
+                }
+                
+      />
       <Service />
       <Service />
       <Service />
