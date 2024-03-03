@@ -12,7 +12,42 @@ import {
   responsiveMargin,
 } from "../../../lib/Validation/RelativeValues";
 
-export default DonationList = (props) => {
+
+// const images = [
+//   // { image: '../../../assets/images/Donation List Profile Pictures/Donation1.webp'},
+//   { image: "https://images.unsplash.com/photo-1555096462-c1c5eb4e4d64?w=800&q=80"},
+//   { image: ""},
+//   { image: ""},
+//   { image: ""},
+// ]
+
+// const data = images.map((image, index) => ({
+//   key: String(index),
+//   photo: image.image,
+// }));
+
+// export const images1 = () =>{
+
+//   const p1 = require('../../../assets/images/Donation_List_PP/Donation1.webp');
+
+
+//   return (
+//       <DonationList image={p1}/>
+//   );
+// }
+
+
+export default DonationList = ({ image }) => {
+
+  const imageUrls = [
+    require('../../../assets/images/Donation_List_PP/Donation1.webp'),
+    require('../../../assets/images/Donation_List_PP/Donation2.jpg'),
+    require('../../../assets/images/Donation_List_PP/Donation3.webp'),
+    require('../../../assets/images/Donation_List_PP/Donation4.jpg'),
+    require('../../../assets/images/Donation_List_PP/Donation5.jpg'),
+    // Add more image paths as needed
+  ];
+
   return (
     <SafeAreaView
       style={{
@@ -29,6 +64,8 @@ export default DonationList = (props) => {
           paddingBottom: 20,
         }}
       >
+
+
         <View
           style={{
             marginBottom: 20,
@@ -57,30 +94,20 @@ export default DonationList = (props) => {
               {"Hey User,\nYou recently donated ₹5000 in INA"}
             </Text>
 
-
-
-
-
-
-
-
-
-
-
             <View style={{
-				flex: 1,
-				flexDirection: "row",
-				alignItems: "center",
-				marginLeft: responsiveMargin(4),
-				marginRight: responsiveMargin(14),
-			}}>
+              flex: 1,
+              flexDirection: "row",
+              alignItems: "center",
+              marginLeft: responsiveMargin(4),
+              marginRight: responsiveMargin(14),
+            }}>
 
 
-			<View
+              <View
                 style={{
                   flex: 1,
                   marginRight: responsiveMargin(2),
-				  marginTop:responsiveMargin(4),
+                  marginTop: responsiveMargin(4),
                 }}
               >
                 <Text
@@ -101,7 +128,7 @@ export default DonationList = (props) => {
                 >
                   {"Events: ₹35,000"}
                 </Text>
-            </View>
+              </View>
 
 
 
@@ -149,9 +176,9 @@ export default DonationList = (props) => {
                   </Text>
                 </View>
               </View>
-            
-			
-			</View>
+
+
+            </View>
           </View>
         </View>
 
@@ -172,6 +199,77 @@ export default DonationList = (props) => {
           >
             Donation List
           </Text>
+
+          {/* LIST 1 */}
+
+          {imageUrls.map((imageUrl, index) => (
+            <View
+              style={{
+                marginHorizontal: 15,
+                marginBottom: 10,
+              }}
+            >
+              <View
+                style={{
+                  backgroundColor: "#D2F694",
+                  borderRadius: 15,
+                  paddingTop: 20,
+                  paddingBottom: 20,
+                  paddingLeft: 75,
+                  marginLeft: 55,
+                }}
+              >
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 20,
+                    marginBottom: 6,
+                  }}
+                >
+                  {"Donation 1"}
+                </Text>
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 15,
+                    marginBottom: 7,
+                  }}
+                >
+                  {"₹5000 from UPI in INA"}
+                </Text>
+                <Text
+                  style={{
+                    color: "#000000",
+                    fontSize: 15,
+                  }}
+                >
+                  {"12/08/2023"}
+                </Text>
+              </View>
+
+              <Image
+                key={index}
+                source={imageUrl}
+                resizeMode={"cover"}
+                style={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: 0,
+                  borderRadius: 100,
+                  width: 120,
+                  height: 120,
+                }}
+              />
+
+
+
+            </View>
+
+          ))}
+
+
+
+          {/* LIST 5
           <View
             style={{
               marginHorizontal: 15,
@@ -215,243 +313,27 @@ export default DonationList = (props) => {
                 {"12/08/2023"}
               </Text>
             </View>
-            <Image
-              source={require("../../../assets/animals.jpg")}
-              resizeMode={"stretch"}
-              style={{
-                position: "absolute",
-                bottom: 0,
-                left: 0,
-                borderRadius: 100,
-                width: 120,
-                height: 120,
-              }}
-            />
-          </View>
-          <View
-            style={{
-              marginHorizontal: 15,
-              marginBottom: 10,
-            }}
-          >
-            <View
-              style={{
-                backgroundColor: "#D2F694",
-                borderRadius: 15,
-                paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 75,
-                marginLeft: 55,
-              }}
-            >
-              <Text
+
+            {imageUrls.map((imageUrl, index) => (
+              <Image
+                key={index}
+                source={imageUrl}
+                resizeMode={"cover"}
                 style={{
-                  color: "#000000",
-                  fontSize: 20,
-                  marginBottom: 6,
+                  position: "absolute",
+                  bottom: 0,
+                  left: 0,
+                  borderRadius: 100,
+                  width: 120,
+                  height: 120,
                 }}
-              >
-                {"Donation 1"}
-              </Text>
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 15,
-                  marginBottom: 7,
-                }}
-              >
-                {"₹5000 from UPI in INA"}
-              </Text>
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 15,
-                }}
-              >
-                {"12/08/2023"}
-              </Text>
-            </View>
-            <Image
-              source={require("../../../assets/animals.jpg")}
-              resizeMode={"stretch"}
-              style={{
-                position: "absolute",
-                bottom: 0,
-                left: 0,
-                borderRadius: 100,
-                width: 120,
-                height: 120,
-              }}
-            />
-          </View>
-          <View
-            style={{
-              marginHorizontal: 15,
-              marginBottom: 10,
-            }}
-          >
-            <View
-              style={{
-                backgroundColor: "#D2F694",
-                borderRadius: 15,
-                paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 75,
-                marginLeft: 55,
-              }}
-            >
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 20,
-                  marginBottom: 6,
-                }}
-              >
-                {"Donation 1"}
-              </Text>
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 15,
-                  marginBottom: 7,
-                }}
-              >
-                {"₹5000 from UPI in INA"}
-              </Text>
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 15,
-                }}
-              >
-                {"12/08/2023"}
-              </Text>
-            </View>
-            <Image
-              source={require("../../../assets/animals.jpg")}
-              resizeMode={"stretch"}
-              style={{
-                position: "absolute",
-                bottom: 0,
-                left: 0,
-                borderRadius: 100,
-                width: 120,
-                height: 120,
-              }}
-            />
-          </View>
-          <View
-            style={{
-              marginHorizontal: 15,
-              marginBottom: 10,
-            }}
-          >
-            <View
-              style={{
-                backgroundColor: "#D2F694",
-                borderRadius: 15,
-                paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 75,
-                marginLeft: 55,
-              }}
-            >
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 20,
-                  marginBottom: 6,
-                }}
-              >
-                {"Donation 1"}
-              </Text>
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 15,
-                  marginBottom: 7,
-                }}
-              >
-                {"₹5000 from UPI in INA"}
-              </Text>
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 15,
-                }}
-              >
-                {"12/08/2023"}
-              </Text>
-            </View>
-            <Image
-              source={require("../../../assets/animals.jpg")}
-              resizeMode={"stretch"}
-              style={{
-                position: "absolute",
-                bottom: 0,
-                left: 0,
-                borderRadius: 100,
-                width: 120,
-                height: 120,
-              }}
-            />
-          </View>
-          <View
-            style={{
-              marginHorizontal: 15,
-              marginBottom: 10,
-            }}
-          >
-            <View
-              style={{
-                backgroundColor: "#D2F694",
-                borderRadius: 15,
-                paddingTop: 20,
-                paddingBottom: 20,
-                paddingLeft: 75,
-                marginLeft: 55,
-              }}
-            >
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 20,
-                  marginBottom: 6,
-                }}
-              >
-                {"Donation 1"}
-              </Text>
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 15,
-                  marginBottom: 7,
-                }}
-              >
-                {"₹5000 from UPI in INA"}
-              </Text>
-              <Text
-                style={{
-                  color: "#000000",
-                  fontSize: 15,
-                }}
-              >
-                {"12/08/2023"}
-              </Text>
-            </View>
-            <Image
-              source={require("../../../assets/animals.jpg")}
-              resizeMode={"stretch"}
-              style={{
-                position: "absolute",
-                bottom: 0,
-                left: 0,
-                borderRadius: 100,
-                width: 120,
-                height: 120,
-              }}
-            />
-          </View>
+              />
+
+            ))}
+
+          </View> */}
+
+
         </View>
       </ScrollView>
     </SafeAreaView>
