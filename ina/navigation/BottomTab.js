@@ -105,7 +105,7 @@ export function BottomTabs() {
           component={Profile}
           options={{
             tabBarLabel: "Profile",
-            headerShown: true,
+            headerShown: false,
             tabBarIcon: ({ focused }) =>
               focused ? (
                 <Fontisto name="person" size={24} color="#2bc5b4" />

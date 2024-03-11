@@ -155,7 +155,6 @@ const Trending = () => {
                                 alignItems: 'center',
                                 marginBottom: responsiveMargin(6)
                             }}>
-                                {/* {/* <Progress.Bar progress={0.7} width={350} /> */} */
                             </View>
 
                             <View
@@ -453,6 +452,13 @@ const Trending = () => {
         </SafeAreaView>
     )
 }
+// const Trending = () => {
+//   return (
+//     <View>
+//       <Text>Trending</Text>
+//     </View>
+//   )
+// }
 
 export default Trending
 

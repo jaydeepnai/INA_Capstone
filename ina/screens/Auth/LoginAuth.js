@@ -21,7 +21,7 @@ const LoginAuth = ({ navigation }) => {
       //Restting form
       resetForm()
       //Redirecting
-      LoginResposnse.data.role == "USER" ?  navigation.navigate("User"): navigation.navigate("NGOHome");
+      LoginResposnse.data.role == "USER" ?  navigation.navigate("User"): navigation.navigate("NGO");
       return
     }else{
       resetForm()

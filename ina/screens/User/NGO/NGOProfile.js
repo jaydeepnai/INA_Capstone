@@ -101,7 +101,7 @@ const NGOHeader = () => {
                   fontWeight: "bold",
                 }}
               >
-                {"Hannah Baker"}
+                {"Rahi Foundation"}
               </Text>
               <Text
                 style={{
@@ -115,7 +115,7 @@ const NGOHeader = () => {
                   width: "70%",
                 }}
               >
-                {"Software Engineer"}
+                {"Education Aid"}
               </Text>
             </ImageBackground>
             <Image

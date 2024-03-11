@@ -68,9 +68,9 @@ export default MasterAuth = ({ navigation }) => {
           />
           <View style={{flexDirection:"row",justifyContent:"center",alignItems:"center",marginTop: responsiveMargin(5)}}>
             <Text style={{ fontSize: getFontSize(40), fontWeight: "bold" }}>INA</Text>
-            <Text style={{ fontSize: getFontSize(20), fontWeight: "bold" }}>
+            {/* <Text style={{ fontSize: getFontSize(20), fontWeight: "bold" }}>
               - Indian NGOs Alliance
-            </Text>
+            </Text> */}
           </View>
           <View style={{ marginTop: responsiveMargin(20) }}>
             <Text
