@@ -10,6 +10,8 @@ const { createPost, likePost, AddComment, getAllPost } = require('../controllers
 const { getEvent } = require('../controllers/NGOEvents');
 const { getNGOs } = require('../controllers/NGO');
 const { CusFileName } = require('../lib/helper');
+const { AddGrantApllication, UpdateGrantApllication, DelGrantApplication, GetAllGrantApplication } = require('../controllers/GrantApplication');
+const { AddDonation, GetAllDonations } = require('../controllers/Donations');
 
 
 const uploadDir = path.join(__dirname, 'uploads');
@@ -30,6 +32,10 @@ const upload = multer({ storage: storage });
 const cpUpload = upload.fields([
   { name: 'registrationDocument', maxCount: 1 },
   { name: 'NGOlogo', maxCount: 1 },
+]);
+
+const GAPUpload = upload.fields([
+  { name: 'images', maxCount: 10 },
 ]);
 
 
@@ -62,5 +68,17 @@ router.post('/createPost', upload.single('image'),createPost);
 router.post('/likePost', likePost);
 router.post('/AddComment', AddComment);
 router.get('/getAllPost', getAllPost);
+
+//Grant Applications
+router.post('/AddGrantApplication',GAPUpload, AddGrantApllication);
+router.post('/UpdateGrantApplication/:id', UpdateGrantApllication);
+router.delete('/DeleteGrantApplication/:id', DelGrantApplication);
+router.get('/GetAllGrantApplications/:userid', GetAllGrantApplication);
+
+//Donations
+router.post('/userDonations', AddDonation);
+router.get('/userDonations/byUser/:userId', GetAllDonations);
+
+
 
 module.exports = router;

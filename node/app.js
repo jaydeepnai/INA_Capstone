@@ -1,14 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const db = require('./db/db.js');
 const routes = require('./routes/routes.js');
-const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
-const router = express.Router();
-const path = require('path');
-const fs = require('fs');
 const cors = require("cors");
+const db = require("./db/db.js");
 
 
 const app = express();
