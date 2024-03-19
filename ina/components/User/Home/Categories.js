@@ -26,7 +26,7 @@ const Categories = ({}) => {
         <Text
           style={{
             color: "#000000",
-            fontSize: 20,
+            fontSize: 50,
             // marginBottom: 7,
             marginHorizontal: 23,
           }}

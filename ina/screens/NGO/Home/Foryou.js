@@ -25,6 +25,7 @@ const Foryou = () => {
 						fontSize: getFontSize(22),
 						marginBottom: 23,
 						marginLeft: 12,
+                        fontSize:20,
 					}}>
 					{"VOLUNTEER FOR VOLUNTEERING"}
 				</Text>
@@ -45,22 +46,23 @@ const Foryou = () => {
 						flexDirection: "row",
 						justifyContent: "space-between",
 						alignItems: "center",
-						marginBottom: 27,
+						marginBottom: 15,
 						marginHorizontal: 17,
+                        marginLeft: 10,
 					}}>
 					<View 
 						style = {{
 							width: 120,
 							backgroundColor: "#d9d9d9",
-							paddingTop: 3,
+							paddingTop: 4,
 							paddingBottom: 32,
 						}}>
 						<Text 
 							style = {{
 								color: "#000000",
 								fontSize: 10,
-								marginBottom: 2,
-								marginLeft: 49,
+								marginBottom: 5,
+								marginLeft: 20,
 							}}>
 							{"MON"}
 						</Text>
@@ -74,10 +76,10 @@ const Foryou = () => {
 							style = {{
 								color: "#000000",
 								fontSize: 10,
-								marginBottom: 5,
-								marginLeft: 6,
+								marginBottom: 10,
+								marginLeft: 4,
 							}}>
-							{"11"}
+							{"13"}
 						</Text>
 						<View 
 							style = {{
@@ -87,7 +89,7 @@ const Foryou = () => {
 								backgroundColor: "#f1b7b7",
 								borderRadius: 15,
 								paddingVertical: 1,
-								marginBottom: 4,
+								marginBottom: 7,
 							}}>
 							<Text 
 								style = {{
@@ -105,7 +107,7 @@ const Foryou = () => {
 								backgroundColor: "#fff400CF",
 								borderRadius: 15,
 								paddingVertical: 1,
-								marginBottom: 5,
+								marginBottom: 7,
 							}}>
 							<Text 
 								style = {{
@@ -123,7 +125,7 @@ const Foryou = () => {
 								backgroundColor: "#679d0a",
 								borderRadius: 15,
 								paddingVertical: 1,
-								marginBottom: 20,
+								marginBottom: 7,
 							}}>
 							<Text 
 								style = {{
@@ -153,8 +155,8 @@ const Foryou = () => {
 							style = {{
 								color: "#000000",
 								fontSize: 10,
-								marginBottom: 1,
-								marginLeft: 49,
+								marginBottom: 5,
+								marginLeft: 20,
 							}}>
 							{"THU"}
 						</Text>
@@ -168,10 +170,10 @@ const Foryou = () => {
 							style = {{
 								color: "#000000",
 								fontSize: 10,
-								marginBottom: 5,
+								marginBottom: 10,
 								marginLeft: 4,
 							}}>
-							{"12"}
+							{"13"}
 						</Text>
 						<View 
 							style = {{
@@ -181,7 +183,7 @@ const Foryou = () => {
 								backgroundColor: "#f1b7b7",
 								borderRadius: 15,
 								paddingVertical: 1,
-								marginBottom: 4,
+								marginBottom: 7,
 							}}>
 							<Text 
 								style = {{
@@ -199,7 +201,7 @@ const Foryou = () => {
 								backgroundColor: "#fff400CF",
 								borderRadius: 15,
 								paddingVertical: 1,
-								marginBottom: 5,
+								marginBottom: 7,
 							}}>
 							<Text 
 								style = {{
@@ -217,7 +219,7 @@ const Foryou = () => {
 								backgroundColor: "#679d0a",
 								borderRadius: 15,
 								paddingVertical: 1,
-								marginBottom: 20,
+								marginBottom: 7,
 							}}>
 							<Text 
 								style = {{
@@ -247,8 +249,8 @@ const Foryou = () => {
 							style = {{
 								color: "#000000",
 								fontSize: 10,
-								marginBottom: 1,
-								marginLeft: 49,
+								marginBottom: 5,
+								marginLeft: 20,
 							}}>
 							{"WED"}
 						</Text>
@@ -262,7 +264,7 @@ const Foryou = () => {
 							style = {{
 								color: "#000000",
 								fontSize: 10,
-								marginBottom: 5,
+								marginBottom: 10,
 								marginLeft: 4,
 							}}>
 							{"13"}
@@ -275,7 +277,7 @@ const Foryou = () => {
 								backgroundColor: "#f1b7b7",
 								borderRadius: 15,
 								paddingVertical: 1,
-								marginBottom: 4,
+								marginBottom: 7,
 							}}>
 							<Text 
 								style = {{
@@ -293,7 +295,7 @@ const Foryou = () => {
 								backgroundColor: "#fff400CF",
 								borderRadius: 15,
 								paddingVertical: 1,
-								marginBottom: 5,
+								marginBottom: 7,
 							}}>
 							<Text 
 								style = {{
@@ -311,7 +313,7 @@ const Foryou = () => {
 								backgroundColor: "#679d0a",
 								borderRadius: 15,
 								paddingVertical: 1,
-								marginBottom: 20,
+								marginBottom: 7,
 							}}>
 							<Text 
 								style = {{
@@ -385,7 +387,7 @@ const Foryou = () => {
                                     fontSize: getFontSize(16),
                                     flex: 1,
                                 }}>
-                                {"NGO name"}
+                                {"Sukrut parivar"}
                             </Text>
                         </View>
                         <Text
@@ -399,11 +401,11 @@ const Foryou = () => {
                             {"Help Little Padma Saranya Dance Back to \nHealth!"}
                         </Text>
                         <Image
-                            source={require("../../../assets/family.jpg")}
+                            source={require("../../../assets/ngo_event1.webp")}
                             style={{
                                 borderRadius: 20,
                                 height: 180,
-                                width:350,
+                                width:320,
                                 marginBottom: 26,
                                 marginHorizontal: responsiveMargin(2.5),
                             }}
@@ -435,7 +437,7 @@ const Foryou = () => {
                                 marginHorizontal: 20,
                             }}>
                             <Image
-                                source={require("../../../assets/family.jpg")}
+                                source={require("../../../assets/clock.png")}
                                 resizeMode={"cover"}
                                 style={{
                                     width: 40,
@@ -449,7 +451,7 @@ const Foryou = () => {
                                     color: "#000000",
                                     fontSize: getFontSize(16),
                                 }}>
-                                {"12 days left"}
+                                {"5 days left"}
                             </Text>
                             <View
                                 style={{
@@ -458,7 +460,7 @@ const Foryou = () => {
                                 }}>
                             </View>
                             <Image
-                                source={require("../../../assets/family.jpg")}
+                                source={require("../../../assets/vol1.png")}
                                 resizeMode={"stretch"}
                                 style={{
                                     width: 40,
@@ -494,12 +496,12 @@ const Foryou = () => {
                                     justifyContent:"flex-start"
                                 }}>
                                 <Image
-                                    source={require("../../../assets/family.jpg")}
+                                    source={require("../../../assets/share.png")}
                                     resizeMode={"stretch"}
                                     style={{
                                         borderRadius: 100,
-                                        width: 40,
-                                        height: 40,
+                                        width: 35,
+                                        height: 35,
                                         marginRight: 24,
                                     }}
                                 />
@@ -560,7 +562,7 @@ const Foryou = () => {
                                     fontSize: getFontSize(16),
                                     flex: 1,
                                 }}>
-                                {"NGO name"}
+                                {"Rahii Foundation"}
                             </Text>
                         </View>
                         <Text
@@ -574,11 +576,11 @@ const Foryou = () => {
                             {"Help Little Padma Saranya Dance Back to \nHealth!"}
                         </Text>
                         <Image
-                            source={require("../../../assets/family.jpg")}
+                            source={require("../../../assets/ngo_event2.jpg")}
                             style={{
                                 borderRadius: 20,
                                 height: 180,
-                                width:350,
+                                width:320,
                                 marginBottom: 26,
                                 marginHorizontal: responsiveMargin(2.5),
                             }}
@@ -592,7 +594,7 @@ const Foryou = () => {
                                 marginBottom: responsiveMargin(6),
                                 marginLeft: 30,
                             }}>
-                            {"₹ 13,948 raised of ₹ 20,000"}
+                            {"₹ 29,400 raised of ₹ 50,000"}
                         </Text>
 
                         <View style={{
@@ -610,7 +612,7 @@ const Foryou = () => {
                                 marginHorizontal: 20,
                             }}>
                             <Image
-                                source={require("../../../assets/family.jpg")}
+                                source={require("../../../assets/clock.png")}
                                 resizeMode={"cover"}
                                 style={{
                                     width: 40,
@@ -624,7 +626,7 @@ const Foryou = () => {
                                     color: "#000000",
                                     fontSize: getFontSize(16),
                                 }}>
-                                {"12 days left"}
+                                {"20 days left"}
                             </Text>
                             <View
                                 style={{
@@ -633,7 +635,7 @@ const Foryou = () => {
                                 }}>
                             </View>
                             <Image
-                                source={require("../../../assets/family.jpg")}
+                                source={require("../../../assets/vol2.png")}
                                 resizeMode={"stretch"}
                                 style={{
                                     width: 40,
@@ -669,12 +671,12 @@ const Foryou = () => {
                                     justifyContent:"flex-start"
                                 }}>
                                 <Image
-                                    source={require("../../../assets/family.jpg")}
+                                    source={require("../../../assets/share.png")}
                                     resizeMode={"stretch"}
                                     style={{
                                         borderRadius: 100,
-                                        width: 40,
-                                        height: 40,
+                                        width: 35,
+                                        height: 35,
                                         marginRight: 24,
                                     }}
                                 />
@@ -736,7 +738,7 @@ const Foryou = () => {
                                     fontSize: getFontSize(16),
                                     flex: 1,
                                 }}>
-                                {"NGO name"}
+                                {"Angle trust"}
                             </Text>
                         </View>
                         <Text
@@ -750,11 +752,11 @@ const Foryou = () => {
                             {"Help Little Padma Saranya Dance Back to \nHealth!"}
                         </Text>
                         <Image
-                            source={require("../../../assets/family.jpg")}
+                            source={require("../../../assets/ngo_event3.jpg")}
                             style={{
                                 borderRadius: 20,
                                 height: 180,
-                                width:350,
+                                width:320,
                                 marginBottom: 26,
                                 marginHorizontal: responsiveMargin(2.5),
                             }}
@@ -768,7 +770,7 @@ const Foryou = () => {
                                 marginBottom: responsiveMargin(6),
                                 marginLeft: 30,
                             }}>
-                            {"₹ 13,948 raised of ₹ 20,000"}
+                            {"₹ 20,200 raised of ₹ 40,000"}
                         </Text>
 
                         <View style={{
@@ -786,7 +788,7 @@ const Foryou = () => {
                                 marginHorizontal: 20,
                             }}>
                             <Image
-                                source={require("../../../assets/family.jpg")}
+                                source={require("../../../assets/clock.png")}
                                 resizeMode={"cover"}
                                 style={{
                                     width: 40,
@@ -800,7 +802,7 @@ const Foryou = () => {
                                     color: "#000000",
                                     fontSize: getFontSize(16),
                                 }}>
-                                {"12 days left"}
+                                {"15 days left"}
                             </Text>
                             <View
                                 style={{
@@ -809,7 +811,7 @@ const Foryou = () => {
                                 }}>
                             </View>
                             <Image
-                                source={require("../../../assets/family.jpg")}
+                                source={require("../../../assets/vol1.png")}
                                 resizeMode={"stretch"}
                                 style={{
                                     width: 40,
@@ -845,12 +847,12 @@ const Foryou = () => {
                                     justifyContent:"flex-start"
                                 }}>
                                 <Image
-                                    source={require("../../../assets/family.jpg")}
+                                    source={require("../../../assets/share.png")}
                                     resizeMode={"stretch"}
                                     style={{
                                         borderRadius: 100,
-                                        width: 40,
-                                        height: 40,
+                                        width: 35,
+                                        height: 35,
                                         marginRight: 24,
                                     }}
                                 />

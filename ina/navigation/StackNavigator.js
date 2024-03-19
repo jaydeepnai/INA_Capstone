@@ -42,8 +42,9 @@ const StackNavigator = () => {
       <Stack.Navigator 
         screenOptions={{ presentation: "containedModal", headerShown: false }}
       >
-        <Stack.Screen name="User" component={BottomTabs} />
         <Stack.Screen name="NGO" component={NGOBottomTabs} />
+        <Stack.Screen name="User" component={BottomTabs} />
+        
         
         <Stack.Screen name="NGOImage" options={{
           headerShown: true,

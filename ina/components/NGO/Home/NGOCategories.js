@@ -92,7 +92,7 @@ import {
 				}}
 			  >
 			  <Image
-				source={require("../../../assets/NGO/dog.png")}
+				source={require("../../../assets/NGO/charity.png")}
 				resizeMode={"stretch"}
 				style={{
 					position: "absolute",
@@ -106,17 +106,214 @@ import {
 				  <Text
 					style={{
 					  color: "black",
-					  fontSize: 18,
+					  fontSize: 14,
 					  position: "absolute",
 					  top:55,
 					  width: width*0.90,
 					  height: "100%",
 					}}
 				  >
-					Animal
+					Charity
 				  </Text>
 			</View>
 		  </View>
+		  <View
+			style={{
+			  width: 80,
+			  height: 125,
+			  flexDirection: "row",
+			  paddingTop: 20,
+			  paddingBottom: 3,
+			  paddingLeft: 10,
+			  paddingRight: 10,
+			}}
+		  >
+			<View
+			  style={{
+				width: 65,
+				margin: 10,
+			  }}
+			>
+			  <TouchableOpacity onPress={()=>{
+				navigation.navigate("NGOResult")
+			  }}
+  
+				style={{
+				  alignItems: "center",
+				  backgroundColor: "#FFFFFF",
+				  borderRadius: 35,
+				  paddingTop: 36,
+				  paddingBottom: 19,
+				  marginRight: 10,
+				  shadowColor: "#00000040",
+				  shadowOpacity: 0.3,
+				  shadowOffset: {
+					width: 0,
+					height: 0,
+				  },
+				  shadowRadius: 4,
+				  elevation: 4,
+				}}
+			  >
+			  <Image
+				source={require("../../../assets/NGO/learning.png")}
+				resizeMode={"stretch"}
+				style={{
+					position: "absolute",
+					top: -25,
+					right: 2,
+					width: 65,
+					height: 63,
+				  }}
+			  />
+			  </TouchableOpacity>
+				  <Text
+					style={{
+					  color: "black",
+					  fontSize: 14,
+					  position: "absolute",
+					  top:55,
+					  width: "90%",
+					  height: "100%",
+					}}
+				  >
+					Learning
+				  </Text>
+			</View>
+		  </View>
+
+		  <View
+			style={{
+			  width: 80,
+			  height: 125,
+			  flexDirection: "row",
+			  paddingTop: 20,
+			  paddingBottom: 3,
+			  paddingLeft: 10,
+			  paddingRight: 10,
+			}}
+		  >
+			<View
+			  style={{
+				width: 65,
+				margin: 10,
+			  }}
+			>
+			  <TouchableOpacity onPress={()=>{
+				navigation.navigate("NGOResult")
+			  }}
+  
+				style={{
+				  alignItems: "center",
+				  backgroundColor: "#FFFFFF",
+				  borderRadius: 35,
+				  paddingTop: 36,
+				  paddingBottom: 19,
+				  marginRight: 10,
+				  shadowColor: "#00000040",
+				  shadowOpacity: 0.3,
+				  shadowOffset: {
+					width: 0,
+					height: 0,
+				  },
+				  shadowRadius: 4,
+				  elevation: 4,
+				}}
+			  >
+			  <Image
+				source={require("../../../assets/NGO/doctor.png")}
+				resizeMode={"stretch"}
+				style={{
+					position: "absolute",
+					top: -25,
+					right: 2,
+					width: 65,
+					height: 63,
+				  }}
+			  />
+			  </TouchableOpacity>
+				  <Text
+					style={{
+					  color: "black",
+					  fontSize: 14,
+					  position: "absolute",
+					  top:55,
+					  width: "90%",
+					  height: "100%",
+					}}
+				  >
+					Medical
+				  </Text>
+			</View>
+		  </View>
+
+
+		  <View
+			style={{
+			  width: 80,
+			  height: 125,
+			  flexDirection: "row",
+			  paddingTop: 20,
+			  paddingBottom: 3,
+			  paddingLeft: 10,
+			  paddingRight: 10,
+			}}
+		  >
+			<View
+			  style={{
+				width: 65,
+				margin: 10,
+			  }}
+			>
+			  <TouchableOpacity onPress={()=>{
+				navigation.navigate("NGOResult")
+			  }}
+  
+				style={{
+				  alignItems: "center",
+				  backgroundColor: "#FFFFFF",
+				  borderRadius: 35,
+				  paddingTop: 36,
+				  paddingBottom: 19,
+				  marginRight: 10,
+				  shadowColor: "#00000040",
+				  shadowOpacity: 0.3,
+				  shadowOffset: {
+					width: 0,
+					height: 0,
+				  },
+				  shadowRadius: 4,
+				  elevation: 4,
+				}}
+			  >
+			  <Image
+				source={require("../../../assets/NGO/help.png")}
+				resizeMode={"stretch"}
+				style={{
+					position: "absolute",
+					top: -25,
+					right: 2,
+					width: 65,
+					height: 63,
+				  }}
+			  />
+			  </TouchableOpacity>
+				  <Text
+					style={{
+					  color: "black",
+					  fontSize: 14,
+					  position: "absolute",
+					  top:55,
+					  width: "90%",
+					  height: "100%",
+					}}
+				  >
+					Donating
+				  </Text>
+			</View>
+		  </View>
+
+
 		  <View
 			style={{
 			  width: 80,
@@ -170,7 +367,7 @@ import {
 				  <Text
 					style={{
 					  color: "black",
-					  fontSize: 18,
+					  fontSize: 14,
 					  position: "absolute",
 					  top:55,
 					  width: "90%",

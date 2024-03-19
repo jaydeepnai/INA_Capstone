@@ -116,7 +116,7 @@ const Trending = () => {
                                         fontSize: getFontSize(16),
                                         flex: 1,
                                     }}>
-                                    {"NGO name"}
+                                    {"Smile foundation"}
                                 </Text>
                             </View>
                             <Text
@@ -130,13 +130,14 @@ const Trending = () => {
                                 {"Help Little Padma Saranya Dance Back to \nHealth!"}
                             </Text>
                             <Image
-                                source={require("../../../assets/family.jpg")}
+                                source={require("../../../assets/ngo_event4.jpg")}
                                 style={{
                                     borderRadius: 20,
                                     height: 180,
-                                    width: 350,
+                                    width: 320,
                                     marginBottom: 26,
                                     marginHorizontal: responsiveMargin(2.5),
+                                    marginRight: 70,
                                 }}
                             />
 
@@ -148,7 +149,7 @@ const Trending = () => {
                                     marginBottom: responsiveMargin(6),
                                     marginLeft: 30,
                                 }}>
-                                {"₹ 13,948 raised of ₹ 20,000"}
+                                {"₹ 49,210 raised of ₹ 60,500"}
                             </Text>
 
                             <View style={{
@@ -165,13 +166,14 @@ const Trending = () => {
                                     marginHorizontal: 20,
                                 }}>
                                 <Image
-                                    source={require("../../../assets/family.jpg")}
+                                    source={require("../../../assets/clock.png")}
                                     resizeMode={"cover"}
                                     style={{
                                         width: 40,
                                         height: 40,
                                         marginRight: 10,
                                         borderRadius: 100,
+                                        marginBottom: 10,
                                     }}
                                 />
                                 <Text
@@ -188,13 +190,14 @@ const Trending = () => {
                                     }}>
                                 </View>
                                 <Image
-                                    source={require("../../../assets/family.jpg")}
+                                    source={require("../../../assets/vol2.png")}
                                     resizeMode={"stretch"}
                                     style={{
                                         width: 40,
                                         height: 40,
                                         marginRight: 12,
-                                        borderRadius: 100
+                                        borderRadius: 100,
+                                        marginBottom: 10,
                                     }}
                                 />
                                 <Text
@@ -206,6 +209,56 @@ const Trending = () => {
                                 </Text>
                             </View>
                             <View
+                                style={{
+                                    flexDirection: "row",
+                                    alignItems: "center",
+                                    marginBottom: 8,
+                                    marginHorizontal: 20,
+                                }}>
+                                <Image
+                                    source={require("../../../assets/share.png")}
+                                    resizeMode={"cover"}
+                                    style={{
+                                        width: 40,
+                                        height: 40,
+                                        marginRight: 10,
+                                        borderRadius: 100,
+                                    }}
+                                />
+                                <Text
+                                    style={{
+                                        color: "#000000",
+                                        fontSize: getFontSize(16),
+                                    }}>
+                                    {"Share"}
+                                </Text>
+                                <View
+                                    style={{
+                                        flex: 1,
+                                        alignSelf: "stretch",
+                                    }}>
+                                </View>
+                                <Image
+                                    // source={require("../../../assets/family.jpg")}
+                                    // resizeMode={"stretch"}
+                                    style={{
+                                        width: 40,
+                                        height: 40,
+                                        marginRight: 12,
+                                        borderRadius: 100,
+                                        marginRight: 12,
+                                    }}
+                                />
+                                {/* <Text
+                                    style={{
+                                        color: "#000000",
+                                        fontSize: getFontSize(16),
+                                        marginRight: 36,
+                                    }}>
+                                    {"cover"}
+                                </Text> */}
+                            </View>
+                            {/* <View
                                 style={{
                                     flexDirection: "row",
                                     alignItems: "center",
@@ -251,7 +304,7 @@ const Trending = () => {
                                         borderRadius: 100
                                     }}
                                 />
-                            </View>
+                            </View> */}
                         </View>
                     </View>
                 </View>
@@ -398,7 +451,7 @@ const Trending = () => {
                             </Text>
                         </View>
                     </View>
-                    <View
+                    {/* <View
                         style={{
                             position: "absolute",
                             top: 14,
@@ -410,6 +463,7 @@ const Trending = () => {
                             borderRadius: 20,
                             borderWidth: 1,
                             paddingHorizontal: 10,
+                            marginleft: 50,
                         }}>
                         <Text
                             style={{
@@ -420,7 +474,7 @@ const Trending = () => {
                             }}>
                             {"Lorem Ipsum is simply dummy text of the printing \nand typesetting industry. Lorem Ipsum has been \nthe industry's standard dummy text ever since the \n1500s, when an unknown printer took a galley of type\nand scrambled it to make a type specimen bookIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, READ MORE"}
                         </Text>
-                    </View>
+                    </View> */}
                 </View>
 
                 <View style={{
