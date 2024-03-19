@@ -92,25 +92,30 @@ const StackNavigator = () => {
         <Stack.Screen name="Appointment_com_ngo" component={Appointment_com_ngo} />
 
         <Stack.Screen name="LoginAuth" component={LoginAuth} />
+
         <Stack.Screen name="Post_reivew" options={{
           headerShown: true,
         }} component={Post_reivew} />
+        
         <Stack.Screen name="NGOProfile" component={NGOProfile} />
+
         <Stack.Screen name="HiringResult" component={HiringResult} />
+
         <Stack.Screen name="Appointment" options={{
           headerShown: true,
         }} component={Appointment} />
+
         <Stack.Screen name="NGOTotalImages" component={NGOTotalImages} options={{
           headerShown: true,
           headerTitleAlign: "center",
           title: 'NGO IMAGES'
         }} />
+
         <Stack.Screen name="WorkHistory" component={WorkHistory} options={{
           headerShown: true,
           headerTitleAlign: "center",
           title: 'USER WORKHISTORY'
         }} />
-
 
         <Stack.Screen name="TopAchievers" component={TopAchievers} options={{
           headerShown: true,

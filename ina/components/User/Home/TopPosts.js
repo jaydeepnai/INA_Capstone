@@ -12,24 +12,24 @@ import { api_domain } from "../../../lib/React Query/variables";
 
 
 const TopPosts = () => {
-  const navigation = useNavigation();
-  const [posts, setPosts] = useState([]);   
+    const  navigation = useNavigation();     
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        const fetchPosts = async () => {
+            try {
+                // Using axios to fetch data
+                const response = await axios.get(api_domain + '/getAllPost');
+                setPosts(response.data); // Axios automatically parses the JSON response
+            } catch (error) {
+                console.error("Failed to fetch posts:", error);
+            }
+        };
+
+        fetchPosts();
+    }, []);  // The empty array means this effect runs once on mount
 
 
-  // console.log(posts)
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        // Using axios to fetch data
-        const response = await axios.get(api_domain + "/getAllPost");
-        setPosts(response.data); // Axios automatically parses the JSON response
-      } catch (error) {
-        console.error("Failed to fetch posts:", error);
-      }
-    };
-
-    fetchPosts();
-  }, []); // The empty array means this effect runs once on mount
 
     return (
         <View>
@@ -57,7 +57,8 @@ const TopPosts = () => {
                 </Text>
             </View>
             {
-                posts.map((post, index) => <Post post={post} />)
+                posts.map((post,index) => <Post posts={posts} post={post} setPosts={setPosts} index={index} />)
+
             }
         </View>
     )
@@ -66,12 +67,93 @@ export default TopPosts
 
 const styles = StyleSheet.create({});
 
-export const Post = ({ post }) => {
-  const navigation = useNavigation();
 
-  // console.log("post", post)
 
-    console.log("post", post)
+// export const likeCount = (posts,post,setPosts,index)=>{
+
+
+
+//     likeIdx = -1
+//     likedPost = post.likes
+
+//     likedPost.map((elm,i) =>{
+//         if (elm.userId == '65e54aa01902bb044dceaa62') {
+//             likeIdx = i
+//         }
+//     })
+
+
+//     if (likeIdx == -1) {
+//         obj ={
+//             _id:post._id,
+//             userId:"65e54aa01902bb044dceaa62"
+//         }
+//         likedPost.push(obj)
+    
+//         fakePosts = posts
+//         fakePosts[index].likes =  likedPost
+//         setPosts(fakePosts)
+        
+//     }
+//     else{
+//         fakePosts = posts
+//         delete likedPost[likeIdx]
+//         fakePosts[index].likes =  likedPost
+//         setPosts(fakePosts);
+//     }
+
+// }   
+
+
+
+
+
+
+
+
+
+export const likeCount = (posts, post, setPosts, index) => {
+    const userId = "65e54aa01902bb044dceaa62";
+
+    // Check if the user has already liked the post
+    const alreadyLikedIndex = post.likes.findIndex(item => item.userId === userId);
+
+    // Create a copy of the post's likes array
+    const newLikes = [...post.likes];
+
+    if (alreadyLikedIndex === -1) {
+        // If the user hasn't liked the post yet, add their like
+        newLikes.push({ _id: post._id, userId });
+
+        // Create a copy of the posts array
+        const newPosts = [...posts];
+
+        // Update the likes array for the specific post
+        newPosts[index] = { ...post, likes: newLikes };
+
+        // Update the state with the new posts array
+        setPosts(newPosts);
+    } else {
+        // If the user has already liked the post, remove their like
+        newLikes.splice(alreadyLikedIndex, 1);
+
+        // Create a copy of the posts array
+        const newPosts = [...posts];
+
+        // Update the likes array for the specific post
+        newPosts[index] = { ...post, likes: newLikes };
+
+        // Update the state with the new posts array
+        setPosts(newPosts);
+    }
+}
+
+
+
+
+export const Post = ({posts, post,setPosts,index }) => {
+    const navigation  = useNavigation();    
+
     
     return (
         
@@ -130,6 +212,7 @@ export const Post = ({ post }) => {
                     marginHorizontal: 32,
                 }}
             />
+            
             <View
                 style={{
                     flexDirection: "row",
@@ -137,7 +220,13 @@ export const Post = ({ post }) => {
                     marginBottom: 5,
                     marginHorizontal: 42,
                 }}>
-                <AntDesign style={{marginHorizontal:5}} name="heart" size={24} color="red" />
+
+                <TouchableOpacity onPress={ ()=> likeCount(posts,post,setPosts,index)}>
+
+                    <AntDesign style={{marginHorizontal:5}} name="heart" size={24} color="red" />
+
+                </TouchableOpacity>
+                
                 
                 <TouchableOpacity
                     onPress={() => navigation.navigate("Post_reivew")}>
@@ -153,6 +242,7 @@ export const Post = ({ post }) => {
                 </View>
                 <AntDesign name="star" size={24} color="black" />
             </View>
+
             <Text
                 style={{
                     color: "#000000",
@@ -162,6 +252,7 @@ export const Post = ({ post }) => {
                 }}>
                 {post.content}
             </Text>
+
             <Text
                 style={{
                     color: "#000000",
@@ -169,8 +260,9 @@ export const Post = ({ post }) => {
                     marginBottom: 7,
                     marginHorizontal: 46,
                 }}>
-                {"398 likes"}
+                {post.likes?.length + " likes"}
             </Text>
+
             <Text
                 style={{
                     color: "#000000",
@@ -179,6 +271,7 @@ export const Post = ({ post }) => {
                     marginHorizontal: 42,
                 }}>View all 80 comments
             </Text>
+
         </View>
     )
 }

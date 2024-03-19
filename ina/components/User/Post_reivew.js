@@ -35,6 +35,7 @@ export default (props) => {
 							marginTop:35,
 						}}
 					/> */}
+					
 					{/* <Text 
 						style = {{
 							color: "#000000",

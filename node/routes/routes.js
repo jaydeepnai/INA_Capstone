@@ -40,12 +40,12 @@ const GAPUpload = upload.fields([
 
 
 
-//Registration 
+//Registration
 router.post('/registerUser',registerUser);
 router.post('/registerNgo', cpUpload, registerNgo);
 router.post('/login', login);
 
-//Profile 
+//Profile
 router.put('/updateUser/:id', updateUser);
 router.post('/updateUserLogo/:userId', upload.single('logo'), updateUserLogo);
 router.put('/updateNgo/:ngoId', updateNgo);
@@ -63,7 +63,7 @@ router.get('/getNGOs', getNGOs);
 //NGOEvent
 router.get('/getEvents', getEvent);
 
-//Posts 
+//Posts
 router.post('/createPost', upload.single('image'),createPost);
 router.post('/likePost', likePost);
 router.post('/AddComment', AddComment);

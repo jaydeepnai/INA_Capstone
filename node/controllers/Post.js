@@ -21,6 +21,7 @@ const likePost = async (req, res) => {
         if (!post) {
             return res.status(404).send('Post not found');
         }
+        
         const likeIndex = post.likes.findIndex(like => like.userId && like.userId.equals(userID));
         if (action === 'inc') {
             if (likeIndex === -1) {
@@ -89,8 +90,6 @@ const getAllPost = async (req, res) => {
             }
         });
         const updatedPosts = await Promise.all(posts.map(async (post) => {
-            console.log(__dirname)
-            const imagePath = path.join('C:/Users/Aniket/Documents/COLL_PROJECT/INA_Capstone/node/routes', 'uploads', post.image);
             console.log(__dirname)
             const imagePath = path.join('C:/Users/Aniket/Documents/COLL_PROJECT/INA_Capstone/node/routes', 'uploads', post.image);
             try {
