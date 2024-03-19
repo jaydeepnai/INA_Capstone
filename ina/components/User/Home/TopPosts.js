@@ -1,27 +1,35 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
-import React, { useEffect, useState } from 'react'
-import { AntDesign, EvilIcons, Feather, FontAwesome5 } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
-import axios from 'axios';
-import { api_domain } from '../../../lib/React Query/variables';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import React, { useEffect, useState } from "react";
+import {
+  AntDesign,
+  EvilIcons,
+  Feather,
+  FontAwesome5,
+} from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+import axios from "axios";
+import { api_domain } from "../../../lib/React Query/variables";
+
 
 const TopPosts = () => {
-    const  navigation = useNavigation();     const [posts, setPosts] = useState([]);   
-    // console.log(posts)
-    useEffect(() => {
-        const fetchPosts = async () => {
-            try {
-                // Using axios to fetch data
-                const response = await axios.get(api_domain + '/getAllPost');
-                setPosts(response.data); // Axios automatically parses the JSON response
-            } catch (error) {
-                console.error("Failed to fetch posts:", error);
-            }
-        };
+  const navigation = useNavigation();
+  const [posts, setPosts] = useState([]);   
 
-        fetchPosts();
-    }, []); // The empty array means this effect runs once on mount
 
+  // console.log(posts)
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        // Using axios to fetch data
+        const response = await axios.get(api_domain + "/getAllPost");
+        setPosts(response.data); // Axios automatically parses the JSON response
+      } catch (error) {
+        console.error("Failed to fetch posts:", error);
+      }
+    };
+
+    fetchPosts();
+  }, []); // The empty array means this effect runs once on mount
 
     return (
         <View>
@@ -50,21 +58,20 @@ const TopPosts = () => {
             </View>
             {
                 posts.map((post, index) => <Post post={post} />)
-
-                // posts.map((post, index) => post && <Post key={index} post={post} />)
-
             }
         </View>
     )
 }
 export default TopPosts
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
 
 export const Post = ({ post }) => {
-    const navigation  = useNavigation();    
+  const navigation = useNavigation();
 
-    // console.log("post", post)
+  // console.log("post", post)
+
+    console.log("post", post)
     
     return (
         
@@ -113,12 +120,12 @@ export const Post = ({ post }) => {
             </View>
             <Image
                 source={{ uri: post?.image }}
-                resizeMode="cover"
+                resizeMode="contain"
                 style={{
                     borderRadius: 10,
                     height: 200,
                     width: "83%",
-                    // backgroundColor: "red",
+                    backgroundColor: "red",
                     marginBottom: 10,
                     marginHorizontal: 32,
                 }}
@@ -153,9 +160,7 @@ export const Post = ({ post }) => {
                     marginBottom: 7,
                     marginHorizontal: 46,
                 }}>
- 
                 {post.content}
-
             </Text>
             <Text
                 style={{
