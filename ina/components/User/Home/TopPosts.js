@@ -106,12 +106,6 @@ const styles = StyleSheet.create({});
 
 
 
-
-
-
-
-
-
 export const likeCount = (posts, post, setPosts, index) => {
     const userId = "65e54aa01902bb044dceaa62";
 
@@ -147,9 +141,6 @@ export const likeCount = (posts, post, setPosts, index) => {
         setPosts(newPosts);
     }
 }
-
-
-
 
 export const Post = ({posts, post,setPosts,index }) => {
     const navigation  = useNavigation();    
@@ -202,12 +193,11 @@ export const Post = ({posts, post,setPosts,index }) => {
             </View>
             <Image
                 source={{ uri: post?.image }}
-                resizeMode="contain"
+                resizeMode="cover"
                 style={{
                     borderRadius: 10,
                     height: 200,
                     width: "83%",
-                    backgroundColor: "red",
                     marginBottom: 10,
                     marginHorizontal: 32,
                 }}
@@ -229,9 +219,11 @@ export const Post = ({posts, post,setPosts,index }) => {
                 
                 
                 <TouchableOpacity
-                    onPress={() => navigation.navigate("Post_reivew")}>
+                    // onPress={() => navigation.navigate("Post_Comments")}
+                    >
                 <FontAwesome5 style={{marginHorizontal:5}} name="comment" size={24} color="black" />
                 </TouchableOpacity>
+
                 <AntDesign name="sharealt" style={{marginHorizontal:5}} size={24} color="black" />
 
                 <View

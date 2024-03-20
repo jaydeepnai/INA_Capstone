@@ -33,7 +33,7 @@ import Appointment_list_ngo from "../screens/NGO/profile/Appointment_list_ngo";
 import Appointment_com_ngo from "../screens/NGO/profile/Appointment_com_ngo";
 import Create_event from "../screens/NGO/Plans/Create_event";
 import FormCheck from "../screens/NGO/Home/FormCheck";
-import Post_reivew from "../components/User/Post_reivew";
+import Post_reivew from "../components/User/Home/Post_reivew";
 const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
@@ -42,8 +42,8 @@ const StackNavigator = () => {
       <Stack.Navigator 
         screenOptions={{ presentation: "containedModal", headerShown: false }}
       >
-        <Stack.Screen name="NGO" component={NGOBottomTabs} />
         <Stack.Screen name="User" component={BottomTabs} />
+        <Stack.Screen name="NGO" component={NGOBottomTabs} />
         
         
         <Stack.Screen name="NGOImage" options={{
@@ -93,9 +93,28 @@ const StackNavigator = () => {
 
         <Stack.Screen name="LoginAuth" component={LoginAuth} />
 
+
+
+
+
+
+
+
+
+
         <Stack.Screen name="Post_reivew" options={{
           headerShown: true,
         }} component={Post_reivew} />
+        
+
+
+
+
+
+
+
+
+
         
         <Stack.Screen name="NGOProfile" component={NGOProfile} />
 

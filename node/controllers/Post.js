@@ -70,8 +70,8 @@ const AddComment = async (req, res) => {
             return res.status(404).send('Post not found');
         }
         post.comments.push(savedComment._id);
-        await post.save();
 
+        
         // Send back the saved comment
         res.status(201).json(savedComment);
     } catch (error) {

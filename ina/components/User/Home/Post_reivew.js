@@ -1,6 +1,6 @@
 import React from "react";
 import { SafeAreaView, View, ScrollView, Image, Text, TextInput} from "react-native";
-import { responsiveMargin } from "../../lib/Validation/RelativeValues";
+import { responsiveMargin } from "../../../lib/Validation/RelativeValues";
 
 export default (props) => {
     
@@ -59,7 +59,7 @@ export default (props) => {
 						}}
 					/> */}
 				</View>
-				<Image
+				{/* <Image
 					source={require("../../assets/NGO/post.jpg")}
 					resizeMode = {"stretch"}
 					style = {{
@@ -70,7 +70,7 @@ export default (props) => {
 						marginHorizontal: 31,
 						marginRight:responsiveMargin(100),
 					}}
-				/>
+				/> */}
 				<View 
 					style = {{
 						flexDirection: "row",
@@ -78,7 +78,7 @@ export default (props) => {
 						marginBottom: 6,
 						marginHorizontal: 23,
 					}}>
-					<Image
+					{/* <Image
 						source={require("../../assets/NGO/heart.png")}  
 						resizeMode = {"stretch"}
 						style = {{
@@ -86,8 +86,8 @@ export default (props) => {
 							height: 20,
 							marginRight: 11,
 						}}
-					/>
-					<Image
+					/> */}
+					{/* <Image
 						source={require("../../assets/NGO/comments.png")}  
 						resizeMode = {"stretch"}
 						style = {{
@@ -95,29 +95,29 @@ export default (props) => {
 							height: 20,
 							marginRight: 11,
 						}}
-					/>
-					<Image
+					/> */}
+					{/* <Image
 						source={require("../../assets/NGO/share.png")} 
 						resizeMode = {"stretch"}
 						style = {{
 							width: 20,
 							height: 22,
 						}}
-					/>
+					/> */}
 					<View 
 						style = {{
 							flex: 1,
 							alignSelf: "stretch",
 						}}>
 					</View>
-					<Image
+					{/* <Image
 						source={require("../../assets/NGO/save.png")} 
 						resizeMode = {"stretch"}
 						style = {{
 							width: 25,
 							height: 25,
 						}}
-					/>
+					/> */}
 				</View>
 				<Text 
 					style = {{
@@ -169,7 +169,7 @@ export default (props) => {
 						marginBottom: 4,
 						marginHorizontal: 13,
 					}}>
-					<Image
+					{/* <Image
 						source={require("../../assets/NGO/me.jpg")}  
 						resizeMode = {"stretch"}
 						style = {{
@@ -178,7 +178,7 @@ export default (props) => {
 							marginRight: 11,
 							borderRadius:100,
 						}}
-					/>
+					/> */}
 					<View 
 						style = {{
 							flex: 1,
@@ -198,7 +198,7 @@ export default (props) => {
 								}}>
 								{"Narendra modi "}
 							</Text>
-							<Image
+							{/* <Image
 								source={require("../../assets/NGO/correct.png")} 
 								resizeMode = {"stretch"}
 								style = {{
@@ -206,7 +206,7 @@ export default (props) => {
 									height: 15,
 									marginRight: 11,
 								}}
-							/>
+							/> */}
 							<Text 
 								style = {{
 									color: "#000000",
@@ -286,7 +286,7 @@ export default (props) => {
 						marginBottom: 4,
 						marginHorizontal: 13,
 					}}>
-					<Image
+					{/* <Image
 						source={require("../../assets/NGO/me.jpg")} 
 						resizeMode = {"stretch"}
 						style = {{
@@ -295,7 +295,7 @@ export default (props) => {
 							marginRight: 11,
 							borderRadius:100
 						}}
-					/>
+					/> */}
 					<View 
 						style = {{
 							flex: 1,
@@ -315,7 +315,7 @@ export default (props) => {
 								}}>
 								{"Narendra modi "}
 							</Text>
-							<Image
+							{/* <Image
 								source={require("../../assets/NGO/correct.png")} 
 								resizeMode = {"stretch"}
 								style = {{
@@ -323,7 +323,7 @@ export default (props) => {
 									height: 15,
 									marginRight: 11,
 								}}
-							/>
+							/> */}
 							<Text 
 								style = {{
 									color: "#000000",
@@ -402,7 +402,7 @@ export default (props) => {
 						marginBottom: 4,
 						marginHorizontal: 13,
 					}}>
-					<Image
+					{/* <Image
 						source={require("../../assets/NGO/me.jpg")} 
 						resizeMode = {"stretch"}
 						style = {{
@@ -411,7 +411,7 @@ export default (props) => {
 							marginRight: 11,
 							borderRadius:100
 						}}
-					/>
+					/> */}
 					<View 
 						style = {{
 							flex: 1,
@@ -431,7 +431,7 @@ export default (props) => {
 								}}>
 								{"Narendra modi "}
 							</Text>
-							<Image
+							{/* <Image
 								source={require("../../assets/NGO/correct.png")} 
 								resizeMode = {"stretch"}
 								style = {{
@@ -439,7 +439,7 @@ export default (props) => {
 									height: 15,
 									marginRight: 11,
 								}}
-							/>
+							/> */}
 							<Text 
 								style = {{
 									color: "#000000",
@@ -518,7 +518,7 @@ export default (props) => {
 						marginBottom: 4,
 						marginHorizontal: 13,
 					}}>
-					<Image
+					{/* <Image
 						source={require("../../assets/NGO/me.jpg")} 
 						resizeMode = {"stretch"}
 						style = {{
@@ -527,7 +527,7 @@ export default (props) => {
 							marginRight: 11,
 							borderRadius:100
 						}}
-					/>
+					/> */}
 					<View 
 						style = {{
 							flex: 1,
@@ -547,7 +547,7 @@ export default (props) => {
 								}}>
 								{"Narendra modi "}
 							</Text>
-							<Image
+							{/* <Image
 								source={require("../../assets/NGO/correct.png")} 
 								resizeMode = {"stretch"}
 								style = {{
@@ -555,7 +555,7 @@ export default (props) => {
 									height: 15,
 									marginRight: 11,
 								}}
-							/>
+							/> */}
 							<Text 
 								style = {{
 									color: "#000000",
@@ -634,7 +634,7 @@ export default (props) => {
 						marginBottom: 4,
 						marginHorizontal: 13,
 					}}>
-					<Image
+					{/* <Image
 						source={require("../../assets/NGO/me.jpg")} 
 						resizeMode = {"stretch"}
 						style = {{
@@ -643,7 +643,7 @@ export default (props) => {
 							marginRight: 11,
 							borderRadius:100
 						}}
-					/>
+					/> */}
 					<View 
 						style = {{
 							flex: 1,
@@ -663,7 +663,7 @@ export default (props) => {
 								}}>
 								{"Narendra modi "}
 							</Text>
-							<Image
+							{/* <Image
 								source={require("../../assets/NGO/correct.png")} 
 								resizeMode = {"stretch"}
 								style = {{
@@ -671,7 +671,7 @@ export default (props) => {
 									height: 15,
 									marginRight: 11,
 								}}
-							/>
+							/> */}
 							<Text 
 								style = {{
 									color: "#000000",
@@ -743,6 +743,8 @@ export default (props) => {
 						{"View 100 replies"}
 					</Text>
 				</View>
+
+
 				<View 
 					style = {{
 						flexDirection: "row",
@@ -750,7 +752,7 @@ export default (props) => {
 						marginBottom: 4,
 						marginHorizontal: 13,
 					}}>
-					<Image
+					{/* <Image
 						source={require("../../assets/NGO/me.jpg")} 
 						resizeMode = {"stretch"}
 						style = {{
@@ -759,7 +761,7 @@ export default (props) => {
 							marginRight: 11,
 							borderRadius:100
 						}}
-					/>
+					/> */}
 					<View 
 						style = {{
 							flex: 1,
@@ -779,7 +781,7 @@ export default (props) => {
 								}}>
 								{"Narendra modi "}
 							</Text>
-							<Image
+							{/* <Image
 								source={require("../../assets/NGO/correct.png")} 
 								resizeMode = {"stretch"}
 								style = {{
@@ -787,7 +789,7 @@ export default (props) => {
 									height: 15,
 									marginRight: 11,
 								}}
-							/>
+							/> */}
 							<Text 
 								style = {{
 									color: "#000000",
@@ -827,6 +829,7 @@ export default (props) => {
 						</Text> */}
 					</View>
 				</View>
+
 				<Text 
 					style = {{
 						color: "#000000",
@@ -836,6 +839,8 @@ export default (props) => {
 					}}>
 					{"Reply"}
 				</Text>
+
+
 				<View 
 					style = {{
 						flexDirection: "row",
@@ -859,6 +864,7 @@ export default (props) => {
 						{"View 100 replies"}
 					</Text>
 				</View>
+
 				<View 
 					style = {{
 						flexDirection: "row",
@@ -866,7 +872,7 @@ export default (props) => {
 						marginBottom: 4,
 						marginHorizontal: 13,
 					}}>
-					<Image
+					{/* <Image
 						source={require("../../assets/NGO/me.jpg")} 
 						resizeMode = {"stretch"}
 						style = {{
@@ -875,7 +881,7 @@ export default (props) => {
 							marginRight: 11,
 							borderRadius:100
 						}}
-					/>
+					/> */}
 					<View 
 						style = {{
 							flex: 1,
@@ -895,7 +901,7 @@ export default (props) => {
 								}}>
 								{"Narendra modi "}
 							</Text>
-							<Image
+							{/* <Image
 								source={require("../../assets/NGO/correct.png")} 
 								resizeMode = {"stretch"}
 								style = {{
@@ -903,7 +909,7 @@ export default (props) => {
 									height: 15,
 									marginRight: 11,
 								}}
-							/>
+							/> */}
 							<Text 
 								style = {{
 									color: "#000000",
@@ -943,6 +949,7 @@ export default (props) => {
 						</Text> */}
 					</View>
 				</View>
+
 				<Text 
 					style = {{
 						color: "#000000",
@@ -952,6 +959,8 @@ export default (props) => {
 					}}>
 					{"Reply"}
 				</Text>
+
+
 				<View 
 					style = {{
 						flexDirection: "row",
@@ -975,6 +984,7 @@ export default (props) => {
 						{"View 100 replies"}
 					</Text>
 				</View>
+
 				<Text 
 					style = {{
 						color: "#000000",
@@ -984,19 +994,21 @@ export default (props) => {
 					}}>
 					{"See more..."}
 				</Text>
+
 				<View 
 					style = {{
 						backgroundColor: "#D9D9D9",
 						marginBottom: 21,
 					}}>
 				</View>
+
 				<View 
 					style = {{
 						flexDirection: "row",
 						alignItems: "center",
 						marginHorizontal: 14,
 					}}>
-					<Image
+					{/* <Image
 						source={require("../../assets/NGO/me.jpg")} 
 						resizeMode = {"stretch"}
 						style = {{
@@ -1005,7 +1017,7 @@ export default (props) => {
 							marginRight: 15,
 							borderRadius:100
 						}}
-					/>
+					/> */}
 
 							<TextInput
 							 	style={styles.input}
@@ -1025,6 +1037,7 @@ export default (props) => {
       						
 							
 				</View>
+
 			</ScrollView>
 		</SafeAreaView>
 		
