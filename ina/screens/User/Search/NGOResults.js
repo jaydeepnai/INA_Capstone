@@ -5,8 +5,8 @@ import { SafeAreaView, View, ScrollView, Image, Text, TouchableOpacity, } from "
 import { Base_Color } from "../../../lib/React Query/variables";
 import TopNGOList from "../../../components/User/Home/TopNGOList";
 
-export default NGOResults = (props) => {
-
+export default NGOResults = ( {route} ) => {
+    const {selectedFilters} = route.params;
 
     return (
         <SafeAreaView
@@ -67,81 +67,45 @@ export default NGOResults = (props) => {
                         </View>
                     </View>
                 </View>
-                <View
-                    style={{
-                        flexDirection: "row",
-                        justifyContent: "space-between",
-                        alignItems: "center",
-                        marginBottom: 25,
-                        marginHorizontal: 25,
-                    }}>
-                    <View
-                        style={{
-                            width: 97,
-                            flexDirection: "row",
-                            justifyContent: "space-between",
-                            alignItems: "center",
-                            backgroundColor: Base_Color,
-                            borderRadius: 15,
-                            paddingVertical: 7,
-                            paddingHorizontal: 8,
-                            marginRight: 10,
-                        }}>
-                        <Text
-                            style={{
-                                color: "white",
-                                fontSize: 16,
-                            }}>
-                            {"Animals"}
-                        </Text>
-                        <AntDesign name="closecircle" size={18} color="black" />
+                
 
-                    </View>
-                    <View
-                        style={{
-                            width: 97,
-                            flexDirection: "row",
-                            justifyContent: "space-between",
-                            alignItems: "center",
-                            backgroundColor: Base_Color,
-                            borderRadius: 15,
-                            paddingVertical: 7,
-                            paddingHorizontal: 8,
-                            marginRight: 10,
-                        }}>
-                        <Text
-                            style={{
-                                color: "white",
-                                fontSize: 16,
-                            }}>
-                            {"Animals"}
-                        </Text>
-                        <AntDesign name="closecircle" size={18} color="black" />
+                <ScrollView horizontal>
+      
+      {selectedFilters.map((filter, index) => (
+        <View
+        style={{
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginBottom: 25,
+            marginHorizontal: 8,
+        }}>
+        <View
+            style={{
+                width: 100,
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center",
+                backgroundColor: Base_Color,
+                borderRadius: 15,
+                paddingVertical: 7,
+                paddingHorizontal: 8,
+                marginRight: 3,
+            }}>
+            <Text
+                style={{
+                    color: "white",
+                    fontSize: 16,
+                }}>
+                {filter.substring(0,10)}
+            </Text>
+            <AntDesign name="closecircle" size={18} color="black" />
 
-                    </View>
-                    <View
-                        style={{
-                            width: 97,
-                            flexDirection: "row",
-                            justifyContent: "space-between",
-                            alignItems: "center",
-                            backgroundColor: Base_Color,
-                            borderRadius: 15,
-                            paddingVertical: 7,
-                            paddingHorizontal: 8,
-                            marginRight: 10,
-                        }}>
-                        <Text
-                            style={{
-                                color: "white",
-                                fontSize: 16,
-                            }}>
-                            {"Animals"}
-                        </Text>
-                        <AntDesign name="closecircle" size={18} color="black" />
+        </View>
+        
+    </View>
+      ))}
+    </ScrollView>
 
-                    </View>
-                </View>
                 <View style={{marginBottom:55}}>
                 {/* <NGOCard />
                 <NGOCard />
