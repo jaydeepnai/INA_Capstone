@@ -34,6 +34,7 @@ import Appointment_com_ngo from "../screens/NGO/profile/Appointment_com_ngo";
 import Create_event from "../screens/NGO/Plans/Create_event";
 import FormCheck from "../screens/NGO/Home/FormCheck";
 import Post_reivew from "../components/User/Home/Post_reivew";
+import FilterPopUp from "../screens/User/Search/FilterPopUp";
 const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
@@ -92,6 +93,8 @@ const StackNavigator = () => {
         <Stack.Screen name="Appointment_com_ngo" component={Appointment_com_ngo} />
 
         <Stack.Screen name="LoginAuth" component={LoginAuth} />
+
+        <Stack.Screen name="FilterPopUp" component={FilterPopUp} />
 
 
 
