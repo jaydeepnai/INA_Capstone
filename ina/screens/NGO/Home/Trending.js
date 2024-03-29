@@ -1,8 +1,6 @@
 import { Image, ImageBackground, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 // import * as Progress from 'react-native-progress';
-import { LinearGradient } from 'expo-linear-gradient'
-import TopNGOListforNGO from '../../../components/NGO/Home/TopNGOListforNGO'
 import TopAchieverNGO from '../../../components/NGO/Home/TopAchieverNGO'
 import { getFontSize, responsiveMargin } from '../../../lib/Validation/RelativeValues'
 import NGOCategories from '../../../components/NGO/Home/NGOCategories'
@@ -152,11 +150,12 @@ const Trending = () => {
                                 {"₹ 49,210 raised of ₹ 60,500"}
                             </Text>
 
-                            <View style={{
-                                alignItems: 'center',
-                                marginBottom: responsiveMargin(6)
-                            }}>
-                            </View>
+                        <View style={{
+                            alignItems:'center',
+                            marginBottom:responsiveMargin(6)
+                        }}>
+                            {/* <Progress.Bar progress={0.7} width={350} /> */}
+                        </View>
 
                             <View
                                 style={{

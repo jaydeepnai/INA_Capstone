@@ -1,5 +1,6 @@
 const { imageToBase64 } = require("../lib/helper");
 const Ngo = require("../models/ngo");
+const path = require('path');
 
 const getNGOs =  async (req, res) => {
     try {
@@ -36,6 +37,7 @@ const getNGOs =  async (req, res) => {
     }
   };
 
+  
 
   module.exports = {
     getNGOs

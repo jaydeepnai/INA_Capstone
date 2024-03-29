@@ -29,6 +29,48 @@ export function NGOBottomTabs() {
         }}
       />
 
+        <Tab.Screen
+          name="Hiring"
+          component={HiringSearch}
+          options={{
+            tabBarLabel: "Hiring",
+            headerShown:false,
+            tabBarLabelStyle: { color: "#008E97" },
+            tabBarIcon: ({ focused }) =>
+              focused ? (
+                <FontAwesome name="search" size={24} color="#2bc5b4"/>
+              ) : (
+                <AntDesign name="search1" size={24} color="black" />
+              ),
+          }}
+        />
+        <Tab.Screen
+          name="UserDonation"
+          component={DonationList}
+          options={{
+            tabBarLabel: "Donation",
+            headerShown: true,
+            tabBarIcon: ({ focused }) =>
+              focused ? (
+                <MaterialIcons name="attach-money" size={24} color="#2bc5b4" />
+              ) : (
+                <MaterialIcons name="attach-money" size={24} color="black" />
+              ),
+              // headerLeft : ()=><HeaderLeft/>,
+              // headerRight : ()=><HeaderRight/>,
+              headerTitleAlign : "center",
+              title:"Donation List"
+          }}
+        />
+        <Tab.Screen
+          name="FundReq"
+          component={DonationTopTabs}
+          options={{
+            tabBarLabel: "Funds",
+            headerShown: true,
+            tabBarIcon: ({ focused }) =>
+              focused ? (
+                <MaterialCommunityIcons name="piggy-bank" size={24} color="#2bc5b4" />
       <Tab.Screen
         name="Hiring"
         component={Search}

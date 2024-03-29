@@ -51,6 +51,9 @@ const StackNavigator = () => {
           headerShown: true,
           headerTitleAlign: "center",
         }} component={NGOImage} />
+          headerShown: true,
+          headerTitleAlign: "center",
+        }} component={NGOImage} />
         <Stack.Screen name="Homescreen" component={Homescreen} />
         <Stack.Screen
           name="Categories"
@@ -120,7 +123,7 @@ const StackNavigator = () => {
 
         
         <Stack.Screen name="NGOProfile" component={NGOProfile} />
-
+        <Stack.Screen name="HiringResult" component={HiringResult} />
         <Stack.Screen name="HiringResult" component={HiringResult} />
 
         <Stack.Screen name="Appointment" options={{
@@ -138,7 +141,17 @@ const StackNavigator = () => {
           headerTitleAlign: "center",
           title: 'USER WORKHISTORY'
         }} />
+        }} />
 
+
+        <Stack.Screen name="TopAchievers" component={TopAchievers} options={{
+          headerShown: true,
+          // headerLeft: () => <HeaderLeft />,
+          // headerRight: () => <HeaderRight />,
+          headerTitleAlign: "center",
+          title: 'TOP ACHIEVERS'
+        }}
+        />
         <Stack.Screen name="TopAchievers" component={TopAchievers} options={{
           headerShown: true,
           // headerLeft: () => <HeaderLeft />,

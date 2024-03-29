@@ -7,17 +7,19 @@ const jwt = require('jsonwebtoken');
 
 const registerUser = async (req, res) => {
     try {
-        const { firstName, lastName, email, username, password } = req.body;
+        const { firstName, lastName, email, contactID,
+            addressID, username, password } = req.body;
         const hashedPassword = await bcrypt.hash(password, 10);
-        const UserContact = new Contact({
-            primaryEmailAddress: email
-        })
-        const savedUserContact = await UserContact.save();
+        // const UserContact = new Contact({
+        //     primaryEmailAddress: email
+        // })
+        // const savedUserContact = await UserContact.save();
 
         const user = new User({
             firstName,
             lastName,
-            contactID: savedUserContact._id,
+            contactID,
+            addressID,
             username,
             password: hashedPassword,
             role: 'User',
@@ -35,28 +37,40 @@ const registerUser = async (req, res) => {
 
 const registerNgo = async (req, res) => {
     try {
-        const { name, email, phone, username, password } = req.body;
+        const {
+            name, username, password, description, aim, foundingDate,
+            CategoryIDs, team, timing, addressID, contactID
+          } = req.body;
+
         const { registrationDocument, NGOlogo } = req.files
         const RegistrationDocumentName = CusFileName(registrationDocument[0])
         const NGOlogoName = CusFileName(NGOlogo[0])
         const hashedPassword = await bcrypt.hash(password, 10);
 
-        const UserContact = new Contact({
-            primaryEmailAddress: email
-        })
-        const savedUserContact = await UserContact.save();
-
         // Create a new NGO
         const ngo = new Ngo({
+            role: 'Ngo',
             name,
-            contactID: savedUserContact._id,
             username,
             password: hashedPassword,
+            description,
             documents: [{ id: Date.now(), Image: RegistrationDocumentName }],
+            aim,
+            foundingDate: new Date(foundingDate), // Converting string to Date
             logoURL: NGOlogoName,
-            role: 'Ngo',
-        });
-
+            bannerImageURL: '', // Assuming you handle banner image similarly
+            ImageIDs: [], // Assuming this needs separate handling or comes from the request
+            CategoryIDs: CategoryIDs.split(',').map(Number), // Assuming CSV string input
+            addressID,
+            contactID,
+            team: JSON.parse(team), // Assuming team is passed as JSON string
+            timing,
+            createdAt: new Date(),
+            updatedAt: new Date(),
+            isDeleted: false, // Assuming default false on creation
+            reviews: [], // Assuming reviews are added post-creation
+          });
+  
         // Save the NGO to the database
         const savedNGO = await ngo.save();
         res.status(201).json({ message: 'NGO registered successfully', NGO: savedNGO });
