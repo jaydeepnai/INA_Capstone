@@ -5,7 +5,7 @@ import {
   StyleSheet,
   ScrollView,
   Button as RNButton,
-  Image,
+  Image, 
 } from "react-native";
 import {
   TextInput as PaperTextInput,
@@ -16,27 +16,44 @@ import { Formik } from "formik";
 import * as ImagePicker from "expo-image-picker";
 import { SelectList } from "react-native-dropdown-select-list";
 import DateTimePicker from '@react-native-community/datetimepicker';
- 
+import * as yup from 'yup';
+
+const validationSchema = yup.object().shape({
+  title: yup.string().required('Title is required'),
+  desc: yup.string().required('Description is required'),
+  startDate: yup.date().required('Start Date is required'),
+  endDate: yup.date().min(yup.ref('startDate'), 'End Date must be after Start Date').required('End Date is required'),
+});
 
 const MyForm = () => {
-    const [date, setDate] = useState(new Date());
+    const [startDate, setStartDate] = useState(new Date());
+    const [endDate, setEndDate] = useState(new Date());
+    const [showStartDatePicker, setShowStartDatePicker] = useState(false);
+    const [showEndDatePicker, setShowEndDatePicker] = useState(false);
     const [show, setShow] = useState(false);
-  
-    const onChange = (event, selectedDate) => {
-      setShow(Platform.OS === 'ios');
+
+    const onStartDateChange = (event, selectedDate) => {
+      setShowStartDatePicker(Platform.OS === 'ios');
       if (selectedDate) {
-        setDate(selectedDate);
+        setStartDate(selectedDate);
       }
     };
-  
+
+    const onEndDateChange = (event, selectedDate) => {
+      setShowEndDatePicker(Platform.OS === 'ios');
+      if (selectedDate) {
+        setEndDate(selectedDate);
+      }
+    };
+
   const data = [
-    { key: "1", value: "Mobiles", disabled: true },
-    { key: "2", value: "Appliances" },
-    { key: "3", value: "Cameras" },
-    { key: "4", value: "Computers", disabled: true },
-    { key: "5", value: "Vegetables" },
-    { key: "6", value: "Diary Products" },
-    { key: "7", value: "Drinks" },
+    { key: "1", value: "Education Support"},
+    { key: "2", value: "Women Empowerment" },
+    { key: "3", value: "Healthcare Initiatives" },
+    { key: "4", value: "Disaster Relief" },
+    { key: "5", value: "Child Welfare" },
+    { key: "6", value: "Elderly Care" },
+    { key: "7", value: "Tribal Development" },
   ];
 
   const [selectedImage, setSelectedImage] = useState(null);
@@ -61,14 +78,14 @@ const MyForm = () => {
         <Button onPress={() => setShow(true)} title="Show Date Picker" />
       {show && (
         <DateTimePicker
-          value={date}
+          value={startDate}
           mode="date"
           display="spinner"
-          onChange={onChange}
+          onChange={onStartDateChange}
         />
       )}
       <Formik
-        initialValues={{ title: "", desc: "", fundType: "Donation" }}
+        initialValues={{ title: "", desc: "", fundType: "Donation", startDate: startDate, endDate: endDate }}
         onSubmit={(values, actions) => {
           // Handle form submission here
           console.log(values);
@@ -76,6 +93,7 @@ const MyForm = () => {
           setSnackbarVisible(true);
           actions.resetForm();
         }}
+        validationSchema={validationSchema}
       >
         {(formikProps) => (
           <>
@@ -83,21 +101,26 @@ const MyForm = () => {
               label="Title"
               value={formikProps.values.title}
               onChangeText={formikProps.handleChange("title")}
+              onBlur={formikProps.handleBlur('title')}
               style={styles.input}
             />
+            {formikProps.touched.title && formikProps.errors.title &&
+              <Text style={styles.error}>{formikProps.errors.title}</Text>
+            }
             <PaperTextInput
               label="Description"
               value={formikProps.values.desc}
               onChangeText={formikProps.handleChange("desc")}
+              onBlur={formikProps.handleBlur('desc')}
               multiline
               numberOfLines={4}
               style={styles.input}
             />
+            {formikProps.touched.desc && formikProps.errors.desc &&
+              <Text style={styles.error}>{formikProps.errors.desc}</Text>
+            }
             <View style={styles.input}>
               <Text style={styles.label}>Fund Type</Text>
-
-
-
               <SelectList
                 setSelected={(val) => setSelected(val)}
                 data={data}
@@ -123,22 +146,37 @@ const MyForm = () => {
             )}
             <View style={styles.input}>
               <Text style={styles.label}>Start Date</Text>
-              {/* <Button
+              <Button
                 mode="outlined"
                 onPress={() => setShowStartDatePicker(true)}
               >
                 {startDate.toDateString()}
-              </Button> */}
-          
+              </Button>
+              {showStartDatePicker && (
+                <DateTimePicker
+                  value={startDate}
+                  mode="date"
+                  display="spinner"
+                  onChange={onStartDateChange}
+                />
+              )}
             </View>
             <View style={styles.input}>
               <Text style={styles.label}>End Date</Text>
-              {/* <Button
+              <Button
                 mode="outlined"
                 onPress={() => setShowEndDatePicker(true)}
               >
                 {endDate.toDateString()}
-              </Button> */}
+              </Button>
+              {showEndDatePicker && (
+                <DateTimePicker
+                  value={endDate}
+                  mode="date"
+                  display="spinner"
+                  onChange={onEndDateChange}
+                />
+              )}
             </View>
             <Button
               mode="contained"
@@ -176,6 +214,10 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 16,
     marginBottom: 5,
+  },
+  error: {
+    fontSize: 12,
+    color: 'red',
   },
   imagePickerButton: {
     marginVertical: 10,
