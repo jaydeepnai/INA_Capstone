@@ -56,14 +56,14 @@ const registerNgo = async (req, res) => {
             description,
             documents: [{ id: Date.now(), Image: RegistrationDocumentName }],
             aim,
-            foundingDate: new Date(foundingDate), // Converting string to Date
+            // foundingDate: new Date(foundingDate), // Converting string to Date
             logoURL: NGOlogoName,
             bannerImageURL: '', // Assuming you handle banner image similarly
             ImageIDs: [], // Assuming this needs separate handling or comes from the request
-            CategoryIDs: CategoryIDs.split(',').map(Number), // Assuming CSV string input
+            // CategoryIDs: CategoryIDs.split(',').map(Number), // Assuming CSV string input
             addressID,
             contactID,
-            team: JSON.parse(team), // Assuming team is passed as JSON string
+            // team: JSON.parse(team), // Assuming team is passed as JSON string
             timing,
             createdAt: new Date(),
             updatedAt: new Date(),

@@ -5,6 +5,7 @@ import DonationList from '../screens/User/Donation/DonationList';
 import { HiringSearch } from '../screens/NGO/Hiring/HiringFilter';
 import { NGOTopTab } from './NGOTopTab';
 import Plan from '../screens/NGO/Plans/Plan';
+import { DonationTopTabs } from './DonationTopTab';
 const Tab = createBottomTabNavigator();
 
 export function NGOBottomTabs() {
@@ -71,6 +72,11 @@ export function NGOBottomTabs() {
             tabBarIcon: ({ focused }) =>
               focused ? (
                 <MaterialCommunityIcons name="piggy-bank" size={24} color="#2bc5b4" />
+              ): (
+                <FontAwesome5 name="hands-helping" size={24} color="black" />
+              )}}
+              />
+
       <Tab.Screen
         name="Hiring"
         component={Search}

@@ -1,9 +1,8 @@
 import React from "react";
-import { SafeAreaView, View, ScrollView, Image, Text, ImageBackground, } from "react-native";
-
-
+import { SafeAreaView, View, ScrollView, Image, Text, } from "react-native";
 
 export default (props) => {
+    
     
     return (
         <SafeAreaView 
@@ -15,38 +14,179 @@ export default (props) => {
 				style = {{
 					flex: 1,
 					backgroundColor: "#FFFFFF",
-					paddingTop: 9,
-					paddingBottom: 99,
+					paddingTop: 20,
+					paddingBottom: 54,
 				}}>
 				<View 
 					style = {{
 						flexDirection: "row",
 						alignItems: "center",
+						backgroundColor: "#D9D9D9",
+						borderRadius: 15,
+						paddingVertical: 15,
+						paddingHorizontal: 17,
 						marginBottom: 32,
-						marginHorizontal: 27,
+						marginHorizontal: 15,
 					}}>
 					<Image
 						source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
 						resizeMode = {"stretch"}
 						style = {{
-							width: 58,
-							height: 48,
-							marginRight: 84,
+							width: 30,
+							height: 30,
+							marginRight: 23,
 						}}
 					/>
 					<Text 
 						style = {{
 							color: "#000000",
-							fontSize: 32,
+							fontSize: 24,
+							flex: 1,
 						}}>
-						{"Filters"}
+						{"Search"}
 					</Text>
+				</View>
+				<Text 
+					style = {{
+						color: "#000000",
+						fontSize: 24,
+						marginBottom: 28,
+						marginHorizontal: 15,
+					}}>
+					{"Top rated NGOs"}
+				</Text>
+				<View 
+					style = {{
+						backgroundColor: "#D2F6941F",
+						paddingVertical: 11,
+						paddingHorizontal: 8,
+						marginBottom: 19,
+						shadowColor: "#00000036",
+						shadowOpacity: 0.2,
+						shadowOffset: {
+						    width: 0,
+						    height: 4
+						},
+						shadowRadius: 4,
+						elevation: 4,
+					}}>
 					<View 
 						style = {{
-							flex: 1,
-							alignSelf: "stretch",
+							flexDirection: "row",
+							justifyContent: "space-between",
+							alignItems: "center",
+							marginBottom: 17,
 						}}>
+						<Image
+							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+							resizeMode = {"stretch"}
+							style = {{
+								borderRadius: 10,
+								width: 130,
+								height: 130,
+							}}
+						/>
+						<Image
+							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+							resizeMode = {"stretch"}
+							style = {{
+								borderRadius: 10,
+								width: 130,
+								height: 130,
+							}}
+						/>
+						<Image
+							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
+							resizeMode = {"stretch"}
+							style = {{
+								borderRadius: 10,
+								width: 130,
+								height: 130,
+							}}
+						/>
 					</View>
+					<View 
+						style = {{
+							flexDirection: "row",
+							alignItems: "center",
+						}}>
+						<Text 
+							style = {{
+								color: "#000000",
+								fontSize: 24,
+								marginRight: 59,
+								width: 112,
+							}}>
+							{"Raahi\nFoundation"}
+						</Text>
+						<Text 
+							style = {{
+								color: "#000000",
+								fontSize: 24,
+								width: 55,
+							}}>
+							{"Angel\nTrust"}
+						</Text>
+						<View 
+							style = {{
+								flex: 1,
+								alignSelf: "stretch",
+							}}>
+						</View>
+						<Text 
+							style = {{
+								color: "#000000",
+								fontSize: 24,
+								width: 84,
+							}}>
+							{"Sukrut \nParivaar"}
+						</Text>
+					</View>
+				</View>
+				<Text 
+					style = {{
+						color: "#5E9400",
+						fontSize: 24,
+						marginBottom: 15,
+						marginHorizontal: 17,
+					}}>
+					{"see more"}
+				</Text>
+				<Text 
+					style = {{
+						color: "#000000",
+						fontSize: 24,
+						marginBottom: 44,
+						marginHorizontal: 23,
+					}}>
+					{"Near by NGOs"}
+				</Text>
+				<View 
+					style = {{
+						flexDirection: "row",
+						alignItems: "center",
+						backgroundColor: "#D2F6941C",
+						paddingVertical: 23,
+						paddingHorizontal: 28,
+						marginBottom: 58,
+						shadowColor: "#00000066",
+						shadowOpacity: 0.4,
+						shadowOffset: {
+						    width: 0,
+						    height: 4
+						},
+						shadowRadius: 4,
+						elevation: 4,
+					}}>
+					<Text 
+						style = {{
+							color: "#000000",
+							fontSize: 25,
+							marginRight: 4,
+							flex: 1,
+						}}>
+						{"Browse NGOs"}
+					</Text>
 					<Image
 						source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
 						resizeMode = {"stretch"}
@@ -59,1003 +199,279 @@ export default (props) => {
 				<Text 
 					style = {{
 						color: "#000000",
-						fontSize: 32,
-						marginBottom: 25,
-						marginHorizontal: 101,
+						fontSize: 24,
+						marginBottom: 32,
+						marginHorizontal: 23,
 					}}>
-					{"Top rated NGOs"}
+					{"Types of NGO"}
 				</Text>
 				<View 
 					style = {{
-						backgroundColor: "#F5F5F500",
-						borderRadius: 15,
-						paddingVertical: 15,
-						paddingHorizontal: 10,
-						marginBottom: 31,
-						marginHorizontal: 33,
-						shadowColor: "#00000040",
-						shadowOpacity: 0.3,
+						backgroundColor: "#D2F6941F",
+						paddingTop: 12,
+						paddingBottom: 33,
+						marginBottom: 57,
+						shadowColor: "#00000036",
+						shadowOpacity: 0.2,
 						shadowOffset: {
 						    width: 0,
-						    height: 0
+						    height: 4
 						},
 						shadowRadius: 4,
 						elevation: 4,
 					}}>
-					<View 
-						style = {{
-							marginBottom: 25,
-						}}>
-						<View 
-							style = {{
-								marginBottom: 15,
-							}}>
-							<Image
-								source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-								resizeMode = {"stretch"}
-								style = {{
-									borderRadius: 10,
-									height: 175,
-								}}
-							/>
-							<Image
-								source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-								resizeMode = {"stretch"}
-								style = {{
-									position: "absolute",
-									bottom: -62,
-									left: 2,
-									borderRadius: 50,
-									width: 90,
-									height: 90,
-								}}
-							/>
-						</View>
-						<Text 
-							style = {{
-								color: "#000000",
-								fontSize: 20,
-								marginBottom: 6,
-								marginHorizontal: 9,
-							}}>
-							{"ANIMAL FRIENDS UNITED"}
-						</Text>
-						<Text 
-							style = {{
-								color: "#000000",
-								fontSize: 14,
-								marginHorizontal: 24,
-							}}>
-							{"Empowering Paws, Enriching Lives"}
-						</Text>
-					</View>
 					<View 
 						style = {{
 							flexDirection: "row",
 							justifyContent: "space-between",
 							alignItems: "center",
+							marginBottom: 17,
+							marginHorizontal: 8,
 						}}>
 						<View 
 							style = {{
-								width: 68,
-								flexDirection: "row",
-								justifyContent: "center",
-								alignItems: "center",
-								backgroundColor: "#D2F694",
-								borderRadius: 30,
-								paddingVertical: 5,
-							}}>
-							<Image
-								source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-								resizeMode = {"stretch"}
-								style = {{
-									width: 22,
-									height: 22,
-									marginRight: 9,
-								}}
-							/>
-							<Text 
-								style = {{
-									color: "#000000",
-									fontSize: 16,
-								}}>
-								{"4.0"}
-							</Text>
-						</View>
-						<View 
-							style = {{
-								width: 114,
-								flexDirection: "row",
-								justifyContent: "center",
-								alignItems: "center",
-								backgroundColor: "#D2F694",
-								borderRadius: 30,
-								paddingVertical: 5,
-							}}>
-							<Image
-								source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-								resizeMode = {"stretch"}
-								style = {{
-									width: 22,
-									height: 22,
-									marginRight: 5,
-								}}
-							/>
-							<Text 
-								style = {{
-									color: "#000000",
-									fontSize: 14,
-								}}>
-								{"10am - 6pm"}
-							</Text>
-						</View>
-						<View 
-							style = {{
-								width: 114,
-								flexDirection: "row",
-								justifyContent: "space-between",
-								alignItems: "center",
-								backgroundColor: "#D2F694",
-								borderRadius: 30,
-								paddingVertical: 5,
-								paddingHorizontal: 11,
-							}}>
-							<Image
-								source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-								resizeMode = {"stretch"}
-								style = {{
-									width: 22,
-									height: 22,
-								}}
-							/>
-							<Text 
-								style = {{
-									color: "#000000",
-									fontSize: 14,
-								}}>
-								{"Maninagar"}
-							</Text>
-						</View>
-					</View>
-				</View>
-				<View 
-					style = {{
-						backgroundColor: "#F5F5F500",
-						borderRadius: 15,
-						paddingVertical: 15,
-						paddingHorizontal: 10,
-						marginBottom: 31,
-						marginHorizontal: 33,
-						shadowColor: "#00000040",
-						shadowOpacity: 0.3,
-						shadowOffset: {
-						    width: 0,
-						    height: 0
-						},
-						shadowRadius: 4,
-						elevation: 4,
-					}}>
-					<View 
-						style = {{
-							marginBottom: 26,
-						}}>
-						<View 
-							style = {{
-								marginBottom: 14,
-							}}>
-							<Image
-								source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-								resizeMode = {"stretch"}
-								style = {{
-									borderRadius: 10,
-									height: 175,
-								}}
-							/>
-							<Image
-								source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-								resizeMode = {"stretch"}
-								style = {{
-									position: "absolute",
-									bottom: -62,
-									left: 2,
-									borderRadius: 50,
-									width: 90,
-									height: 90,
-								}}
-							/>
-						</View>
-						<Text 
-							style = {{
-								color: "#000000",
-								fontSize: 20,
-								marginBottom: 6,
-								marginHorizontal: 12,
-							}}>
-							{"ATELIER AFRICA SAFARIS"}
-						</Text>
-						<Text 
-							style = {{
-								color: "#000000",
-								fontSize: 14,
-								marginHorizontal: 24,
-							}}>
-							{"Empowering Paws, Enriching Lives"}
-						</Text>
-					</View>
-					<View 
-						style = {{
-							flexDirection: "row",
-							justifyContent: "space-between",
-							alignItems: "center",
-						}}>
-						<View 
-							style = {{
-								width: 68,
-								flexDirection: "row",
-								justifyContent: "center",
-								alignItems: "center",
-								backgroundColor: "#D2F694",
-								borderRadius: 30,
-								paddingVertical: 5,
-							}}>
-							<Image
-								source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-								resizeMode = {"stretch"}
-								style = {{
-									width: 22,
-									height: 22,
-									marginRight: 9,
-								}}
-							/>
-							<Text 
-								style = {{
-									color: "#000000",
-									fontSize: 16,
-								}}>
-								{"4.0"}
-							</Text>
-						</View>
-						<View 
-							style = {{
-								width: 114,
-								flexDirection: "row",
-								justifyContent: "center",
-								alignItems: "center",
-								backgroundColor: "#D2F694",
-								borderRadius: 30,
-								paddingVertical: 5,
-							}}>
-							<Image
-								source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-								resizeMode = {"stretch"}
-								style = {{
-									width: 22,
-									height: 22,
-									marginRight: 5,
-								}}
-							/>
-							<Text 
-								style = {{
-									color: "#000000",
-									fontSize: 14,
-								}}>
-								{"10am - 6pm"}
-							</Text>
-						</View>
-						<View 
-							style = {{
-								width: 114,
-								flexDirection: "row",
-								justifyContent: "space-between",
-								alignItems: "center",
-								backgroundColor: "#D2F694",
-								borderRadius: 30,
-								paddingVertical: 5,
-								paddingHorizontal: 11,
-							}}>
-							<Image
-								source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-								resizeMode = {"stretch"}
-								style = {{
-									width: 22,
-									height: 22,
-								}}
-							/>
-							<Text 
-								style = {{
-									color: "#000000",
-									fontSize: 14,
-								}}>
-								{"Maninagar"}
-							</Text>
-						</View>
-					</View>
-				</View>
-				<View 
-					style = {{
-						backgroundColor: "#F5F5F500",
-						borderRadius: 15,
-						paddingVertical: 15,
-						paddingHorizontal: 10,
-						marginBottom: 18,
-						marginHorizontal: 33,
-						shadowColor: "#00000040",
-						shadowOpacity: 0.3,
-						shadowOffset: {
-						    width: 0,
-						    height: 0
-						},
-						shadowRadius: 4,
-						elevation: 4,
-					}}>
-					<View 
-						style = {{
-							marginBottom: 18,
-						}}>
-						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-							resizeMode = {"stretch"}
-							style = {{
+								width: 130,
+								backgroundColor: "#FFF400",
 								borderRadius: 10,
-								height: 175,
-								marginBottom: 14,
-							}}
-						/>
-						<Text 
-							style = {{
-								color: "#000000",
-								fontSize: 20,
-								marginBottom: 6,
-								marginHorizontal: 2,
 							}}>
-							{"ELEPHANTA REUNION NGO"}
-						</Text>
-						<Text 
+						</View>
+						<View 
 							style = {{
-								color: "#000000",
-								fontSize: 14,
-								marginHorizontal: 24,
+								width: 130,
+								backgroundColor: "#FFF400",
+								borderRadius: 10,
 							}}>
-							{"Empowering Paws, Enriching Lives"}
-						</Text>
+						</View>
+						<View 
+							style = {{
+								width: 130,
+								backgroundColor: "#FFF400",
+								borderRadius: 10,
+							}}>
+						</View>
 					</View>
 					<View 
 						style = {{
 							flexDirection: "row",
-							justifyContent: "space-between",
-							alignItems: "center",
-						}}>
-						<View 
-							style = {{
-								width: 68,
-								flexDirection: "row",
-								justifyContent: "center",
-								alignItems: "center",
-								backgroundColor: "#D2F694",
-								borderRadius: 30,
-								paddingVertical: 5,
-							}}>
-							<Image
-								source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-								resizeMode = {"stretch"}
-								style = {{
-									width: 22,
-									height: 22,
-									marginRight: 9,
-								}}
-							/>
-							<Text 
-								style = {{
-									color: "#000000",
-									fontSize: 16,
-								}}>
-								{"4.0"}
-							</Text>
-						</View>
-						<View 
-							style = {{
-								width: 114,
-								flexDirection: "row",
-								justifyContent: "center",
-								alignItems: "center",
-								backgroundColor: "#D2F694",
-								borderRadius: 30,
-								paddingVertical: 5,
-							}}>
-							<Image
-								source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-								resizeMode = {"stretch"}
-								style = {{
-									width: 22,
-									height: 22,
-									marginRight: 5,
-								}}
-							/>
-							<Text 
-								style = {{
-									color: "#000000",
-									fontSize: 14,
-								}}>
-								{"10am - 6pm"}
-							</Text>
-						</View>
-						<View 
-							style = {{
-								width: 114,
-								flexDirection: "row",
-								justifyContent: "space-between",
-								alignItems: "center",
-								backgroundColor: "#D2F694",
-								borderRadius: 30,
-								paddingVertical: 5,
-								paddingHorizontal: 11,
-							}}>
-							<Image
-								source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-								resizeMode = {"stretch"}
-								style = {{
-									width: 22,
-									height: 22,
-								}}
-							/>
-							<Text 
-								style = {{
-									color: "#000000",
-									fontSize: 14,
-								}}>
-								{"Maninagar"}
-							</Text>
-						</View>
-					</View>
-				</View>
-				<Text 
-					style = {{
-						color: "#D2F694",
-						fontSize: 14,
-						marginBottom: 28,
-						marginHorizontal: 17,
-					}}>
-					{"See More"}
-				</Text>
-				<Text 
-					style = {{
-						color: "#000000",
-						fontSize: 32,
-						marginBottom: 20,
-						marginHorizontal: 114,
-					}}>
-					{"Near by NGOs"}
-				</Text>
-				<View 
-					style = {{
-						marginBottom: 60,
-						marginHorizontal: 30,
-					}}>
-					<View 
-						style = {{
-							flexDirection: "row",
-							alignItems: "center",
-							backgroundColor: "#F5F5F5",
-							borderRadius: 10,
-							paddingVertical: 12,
-							paddingHorizontal: 11,
+							marginBottom: 49,
+							marginHorizontal: 15,
 						}}>
 						<Text 
 							style = {{
 								color: "#000000",
-								fontSize: 20,
+								fontSize: 24,
 								marginRight: 4,
 								flex: 1,
 							}}>
-							{"Browse NGOs"}
+							{"Donating\n books"}
 						</Text>
-						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-							resizeMode = {"stretch"}
+						<Text 
 							style = {{
-								width: 50,
-								height: 50,
-							}}
-						/>
+								color: "#000000",
+								fontSize: 24,
+								marginTop: 19,
+								marginRight: 43,
+							}}>
+							{"Medical"}
+						</Text>
+						<Text 
+							style = {{
+								color: "#000000",
+								fontSize: 24,
+								width: 120,
+							}}>
+							{"Distribution\nfood"}
+						</Text>
 					</View>
-					<Text 
+					<View 
 						style = {{
-							position: "absolute",
-							bottom: -3,
-							left: 12,
-							color: "#000000",
-							fontSize: 14,
-							width: 206,
+							flexDirection: "row",
+							marginBottom: 22,
+							marginHorizontal: 8,
 						}}>
-						{"Let’s find the best NGOs Around you."}
-					</Text>
+						<View 
+							style = {{
+								width: 130,
+								alignSelf: "flex-start",
+								backgroundColor: "#FFF400",
+								borderRadius: 10,
+								marginRight: 12,
+							}}>
+						</View>
+						<View 
+							style = {{
+								width: 130,
+								alignSelf: "flex-start",
+								backgroundColor: "#FFF400",
+								borderRadius: 10,
+								marginRight: 50,
+							}}>
+						</View>
+						<Text 
+							style = {{
+								color: "#5E9400",
+								fontSize: 24,
+								marginTop: 35,
+								flex: 1,
+							}}>
+							{"See\nmore"}
+						</Text>
+					</View>
+					<View 
+						style = {{
+							flexDirection: "row",
+							alignItems: "center",
+							marginHorizontal: 30,
+						}}>
+						<Text 
+							style = {{
+								color: "#000000",
+								fontSize: 24,
+								marginRight: 62,
+							}}>
+							{"Orphans"}
+						</Text>
+						<Text 
+							style = {{
+								color: "#000000",
+								fontSize: 24,
+								flex: 1,
+							}}>
+							{"Oldage \nhome"}
+						</Text>
+					</View>
 				</View>
 				<Text 
 					style = {{
 						color: "#000000",
-						fontSize: 32,
-						marginBottom: 53,
-						marginHorizontal: 56,
+						fontSize: 24,
+						marginBottom: 47,
+						marginHorizontal: 27,
 					}}>
-					{"Top Category of NGOs"}
+					{"Categoryis of NGO"}
 				</Text>
-				<ScrollView 
-					horizontal 
+				<View 
 					style = {{
-						flexDirection: "row",
-						marginBottom: 39,
-						marginHorizontal: 5,
+						backgroundColor: "#D2F6941F",
+						paddingTop: 28,
+						paddingBottom: 96,
+						paddingHorizontal: 8,
+						shadowColor: "#00000036",
+						shadowOpacity: 0.2,
+						shadowOffset: {
+						    width: 0,
+						    height: 4
+						},
+						shadowRadius: 4,
+						elevation: 4,
 					}}>
 					<View 
 						style = {{
-							width: 70,
-							alignSelf: "flex-start",
-							marginRight: 22,
+							flexDirection: "row",
+							justifyContent: "space-between",
+							alignItems: "center",
+							marginBottom: 14,
 						}}>
 						<View 
 							style = {{
+								width: 130,
 								alignItems: "center",
-								backgroundColor: "#FFFFFF",
-								borderRadius: 35,
-								paddingTop: 36,
-								paddingBottom: 19,
-								shadowColor: "#00000040",
-								shadowOpacity: 0.3,
-								shadowOffset: {
-								    width: 0,
-								    height: 0
-								},
-								shadowRadius: 4,
-								elevation: 4,
+								backgroundColor: "#30FFF2",
+								borderRadius: 10,
+								paddingVertical: 51,
 							}}>
 							<Text 
 								style = {{
 									color: "#000000",
-									fontSize: 13,
+									fontSize: 20,
 								}}>
-								{"Animal"}
+								{"Hunger"}
 							</Text>
 						</View>
-						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-							resizeMode = {"stretch"}
-							style = {{
-								position: "absolute",
-								top: -25,
-								right: 2,
-								width: 65,
-								height: 63,
-							}}
-						/>
-					</View>
-					<View 
-						style = {{
-							width: 70,
-							alignSelf: "flex-start",
-							marginRight: 21,
-						}}>
 						<View 
 							style = {{
+								width: 130,
 								alignItems: "center",
-								backgroundColor: "#FFFFFF",
-								borderColor: "#F5F5F5",
-								borderRadius: 35,
-								borderWidth: 1,
-								paddingTop: 36,
-								paddingBottom: 19,
-								shadowColor: "#FFF730",
-								shadowOpacity: 1.0,
-								shadowOffset: {
-								    width: 0,
-								    height: 0
-								},
-								shadowRadius: 5,
-								elevation: 5,
+								backgroundColor: "#30FFF2",
+								borderRadius: 10,
+								paddingVertical: 51,
 							}}>
 							<Text 
 								style = {{
 									color: "#000000",
-									fontSize: 13,
+									fontSize: 20,
 								}}>
-								{"Poverty"}
+								{"Medical"}
 							</Text>
 						</View>
-						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-							resizeMode = {"stretch"}
-							style = {{
-								position: "absolute",
-								top: -33,
-								left: 2,
-								width: 65,
-								height: 63,
-							}}
-						/>
-					</View>
-					<View 
-						style = {{
-							width: 70,
-							alignSelf: "flex-start",
-							marginRight: 21,
-						}}>
 						<View 
 							style = {{
-								backgroundColor: "#FFFFFF",
-								borderRadius: 35,
-								paddingTop: 31,
-								paddingBottom: 13,
-								paddingHorizontal: 13,
-								shadowColor: "#00000040",
-								shadowOpacity: 0.3,
-								shadowOffset: {
-								    width: 0,
-								    height: 0
-								},
-								shadowRadius: 4,
-								elevation: 4,
-							}}>
-							<Text 
-								style = {{
-									color: "#000000",
-									fontSize: 12,
-									width: 44,
-								}}>
-								{"Child Welfare"}
-							</Text>
-						</View>
-						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-							resizeMode = {"stretch"}
-							style = {{
-								position: "absolute",
-								top: -28,
-								left: 2,
-								width: 65,
-								height: 54,
-							}}
-						/>
-					</View>
-					<View 
-						style = {{
-							width: 70,
-							alignSelf: "flex-start",
-							marginRight: 20,
-						}}>
-						<View 
-							style = {{
+								width: 130,
 								alignItems: "center",
-								backgroundColor: "#FFFFFF",
-								borderRadius: 35,
-								paddingTop: 38,
-								paddingBottom: 18,
-								shadowColor: "#00000040",
-								shadowOpacity: 0.3,
-								shadowOffset: {
-								    width: 0,
-								    height: 0
-								},
-								shadowRadius: 4,
-								elevation: 4,
+								backgroundColor: "#30FFF2",
+								borderRadius: 10,
+								paddingVertical: 55,
 							}}>
 							<Text 
 								style = {{
 									color: "#000000",
-									fontSize: 12,
+									fontSize: 20,
 								}}>
 								{"Education"}
 							</Text>
 						</View>
-						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-							resizeMode = {"stretch"}
-							style = {{
-								position: "absolute",
-								top: -33,
-								left: 1,
-								width: 65,
-								height: 63,
-							}}
-						/>
 					</View>
 					<View 
 						style = {{
-							width: 70,
-							alignSelf: "flex-start",
+							flexDirection: "row",
 						}}>
 						<View 
 							style = {{
+								width: 130,
+								alignSelf: "flex-start",
 								alignItems: "center",
-								backgroundColor: "#FFFFFF",
-								borderRadius: 35,
-								paddingTop: 38,
-								paddingBottom: 18,
-								shadowColor: "#00000040",
-								shadowOpacity: 0.3,
-								shadowOffset: {
-								    width: 0,
-								    height: 0
-								},
-								shadowRadius: 4,
-								elevation: 4,
+								backgroundColor: "#30FFF2",
+								borderRadius: 10,
+								paddingTop: 60,
+								paddingBottom: 50,
+								marginTop: 1,
+								marginRight: 12,
 							}}>
 							<Text 
 								style = {{
 									color: "#000000",
-									fontSize: 12,
+									fontSize: 20,
 								}}>
-								{"Blood"}
+								{"Child Walfer"}
 							</Text>
 						</View>
-						<ImageBackground 
-							source={{uri:'https://i.imgur.com/1tMFzp8.png'}} 
-							resizeMode = {'stretch'}
+						<View 
 							style = {{
-								position: "absolute",
-								top: -32,
-								left: 2,
-								width: 65,
-								height: 63,
-								paddingHorizontal: 15,
-							}}
-							>
+								width: 130,
+								alignSelf: "flex-start",
+								backgroundColor: "#30FFF2",
+								borderRadius: 10,
+								paddingVertical: 41,
+								paddingHorizontal: 10,
+								marginRight: 50,
+							}}>
 							<Text 
 								style = {{
 									color: "#000000",
-									fontSize: 12,
-									marginTop: 33,
+									fontSize: 20,
+									width: 110,
 								}}>
-								{"Blood"}
+								{"Women \nEmporement"}
 							</Text>
-						</ImageBackground>
-					</View>
-				</ScrollView>
-				<Text 
-					style = {{
-						color: "#000000",
-						fontSize: 32,
-						marginBottom: 26,
-						marginHorizontal: 162,
-					}}>
-					{"Ratings"}
-				</Text>
-				<View 
-					style = {{
-						flexDirection: "row",
-						justifyContent: "space-between",
-						alignItems: "center",
-						marginBottom: 40,
-						marginHorizontal: 35,
-					}}>
-					<View 
-						style = {{
-							width: 80,
-							flexDirection: "row",
-							alignItems: "center",
-							backgroundColor: "#F2F3F7",
-							borderRadius: 15,
-							padding: 5,
-						}}>
-						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-							resizeMode = {"stretch"}
-							style = {{
-								width: 20,
-								height: 20,
-								marginRight: 11,
-							}}
-						/>
+						</View>
 						<Text 
 							style = {{
-								color: "#000000",
-								fontSize: 20,
+								color: "#5E9400",
+								fontSize: 24,
+								marginTop: 29,
 								flex: 1,
 							}}>
-							{"4.5"}
-						</Text>
-					</View>
-					<View 
-						style = {{
-							width: 80,
-							flexDirection: "row",
-							justifyContent: "center",
-							alignItems: "center",
-							backgroundColor: "#F2F3F7",
-							borderRadius: 15,
-							paddingVertical: 5,
-						}}>
-						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-							resizeMode = {"stretch"}
-							style = {{
-								width: 20,
-								height: 20,
-								marginRight: 11,
-							}}
-						/>
-						<Text 
-							style = {{
-								color: "#000000",
-								fontSize: 20,
-							}}>
-							{"4.5"}
-						</Text>
-					</View>
-					<View 
-						style = {{
-							width: 80,
-							flexDirection: "row",
-							alignItems: "center",
-							backgroundColor: "#F2F3F7",
-							borderRadius: 15,
-							padding: 5,
-						}}>
-						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-							resizeMode = {"stretch"}
-							style = {{
-								width: 20,
-								height: 20,
-								marginRight: 11,
-							}}
-						/>
-						<Text 
-							style = {{
-								color: "#000000",
-								fontSize: 20,
-								flex: 1,
-							}}>
-							{"4.5"}
-						</Text>
-					</View>
-					<View 
-						style = {{
-							width: 80,
-							flexDirection: "row",
-							justifyContent: "space-between",
-							alignItems: "center",
-							backgroundColor: "#F2F3F7",
-							borderRadius: 15,
-							paddingVertical: 5,
-							paddingLeft: 5,
-							paddingRight: 17,
-						}}>
-						<Image
-							source = {{uri:"https://i.imgur.com/1tMFzp8.png"}} 
-							resizeMode = {"stretch"}
-							style = {{
-								width: 20,
-								height: 20,
-							}}
-						/>
-						<Text 
-							style = {{
-								color: "#000000",
-								fontSize: 20,
-							}}>
-							{"4.5"}
-						</Text>
-					</View>
-				</View>
-				<Text 
-					style = {{
-						color: "#000000",
-						fontSize: 32,
-						marginBottom: 41,
-						marginHorizontal: 138,
-					}}>
-					{"NGO types"}
-				</Text>
-				<View 
-					style = {{
-						flexDirection: "row",
-						justifyContent: "space-between",
-						alignItems: "center",
-						marginBottom: 15,
-						marginHorizontal: 12,
-					}}>
-					<View 
-						style = {{
-							width: 84,
-							alignItems: "center",
-							backgroundColor: "#F2F3F7",
-							borderRadius: 15,
-							paddingVertical: 11,
-						}}>
-						<Text 
-							style = {{
-								color: "#000000",
-								fontSize: 20,
-							}}>
-							{"Hunger"}
-						</Text>
-					</View>
-					<View 
-						style = {{
-							width: 90,
-							alignItems: "center",
-							backgroundColor: "#F2F3F7",
-							borderRadius: 15,
-							paddingVertical: 11,
-						}}>
-						<Text 
-							style = {{
-								color: "#000000",
-								fontSize: 20,
-							}}>
-							{"Medical"}
-						</Text>
-					</View>
-					<View 
-						style = {{
-							width: 199,
-							alignItems: "center",
-							backgroundColor: "#F2F3F7",
-							borderRadius: 15,
-							paddingVertical: 11,
-						}}>
-						<Text 
-							style = {{
-								color: "#000000",
-								fontSize: 20,
-							}}>
-							{"Women Emporement"}
-						</Text>
-					</View>
-				</View>
-				<View 
-					style = {{
-						flexDirection: "row",
-						alignItems: "center",
-						marginHorizontal: 28,
-					}}>
-					<View 
-						style = {{
-							width: 101,
-							alignItems: "center",
-							backgroundColor: "#F2F3F7",
-							borderRadius: 15,
-							paddingVertical: 11,
-							marginRight: 13,
-						}}>
-						<Text 
-							style = {{
-								color: "#000000",
-								fontSize: 20,
-							}}>
-							{"Education"}
-						</Text>
-					</View>
-					<View 
-						style = {{
-							width: 124,
-							alignItems: "center",
-							backgroundColor: "#F2F3F7",
-							borderRadius: 15,
-							paddingVertical: 11,
-							marginRight: 8,
-						}}>
-						<Text 
-							style = {{
-								color: "#000000",
-								fontSize: 20,
-							}}>
-							{"Child Walfer"}
-						</Text>
-					</View>
-					<View 
-						style = {{
-							width: 89,
-							alignItems: "center",
-							backgroundColor: "#F2F3F7",
-							borderRadius: 15,
-							paddingVertical: 11,
-						}}>
-						<Text 
-							style = {{
-								color: "#000000",
-								fontSize: 20,
-							}}>
-							{"See All..."}
+							{"See\nmore"}
 						</Text>
 					</View>
 				</View>
