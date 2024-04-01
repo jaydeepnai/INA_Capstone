@@ -101,7 +101,7 @@ export default (props) => {
                                 }}>
                                 <Image
                                     source={require("../../../assets/NGO/me.jpg")}
-                                    resizeMode={"stretch"}
+                                    resizeMode={"cover"}
                                     style={{
                                         borderRadius:100,
                                         width: 30,

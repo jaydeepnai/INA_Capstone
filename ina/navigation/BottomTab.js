@@ -39,7 +39,6 @@ export function BottomTabs() {
           options={{
             tabBarLabel: "Search",
             headerShown:false,
-            tabBarLabelStyle: { color: "#008E97" },
             tabBarIcon: ({ focused }) =>
               focused ? (
                 <FontAwesome name="search" size={24} color="#2bc5b4"/>

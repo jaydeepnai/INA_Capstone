@@ -234,6 +234,8 @@ const StackNavigator = () => {
       >
         <Stack.Screen name="User" component={BottomTabs} />
         <Stack.Screen name="NGO" component={NGOBottomTabs} />
+      
+        
 
 
         <Stack.Screen name="NGOImage" options={{

@@ -5,15 +5,6 @@ import { getFontSize, responsiveMargin, width } from '../../../lib/Validation/Re
 import { AntDesign, Entypo } from '@expo/vector-icons';
 
 
-
-// const WorkHistory = () => {
-//   return (
-//     <View>
-//       <Text>WorkHistory</Text>
-//     </View>
-//   )
-// }
-
 export default WorkHistory = (props) => {
     const Tab = createMaterialTopTabNavigator();
     return (

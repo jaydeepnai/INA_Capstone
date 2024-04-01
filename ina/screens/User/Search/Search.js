@@ -31,16 +31,16 @@ const Search = ({ navigation }) => {
   };
 
   const ngos = [
-        { id: 1, name: "Animal", image: "https://images.pexels.com/photos/19254446/pexels-photo-19254446/free-photo-of-couple-embracing-by-river-in-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-        { id: 2, name: "Education", image: "https://images.pexels.com/photos/19254446/pexels-photo-19254446/free-photo-of-couple-embracing-by-river-in-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-        { id: 3, name: "Poverty", image: "https://images.pexels.com/photos/19254446/pexels-photo-19254446/free-photo-of-couple-embracing-by-river-in-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-        { id: 4, name: "Child Warefare", image: "https://images.pexels.com/photos/19254446/pexels-photo-19254446/free-photo-of-couple-embracing-by-river-in-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-        { id: 5, name: "Human Rights", image: "https://images.pexels.com/photos/19254446/pexels-photo-19254446/free-photo-of-couple-embracing-by-river-in-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-        { id: 6, name: "Refugee and Migrant", image: "https://images.pexels.com/photos/19254446/pexels-photo-19254446/free-photo-of-couple-embracing-by-river-in-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-        { id: 7, name: "Disability Rights", image: "https://images.pexels.com/photos/19254446/pexels-photo-19254446/free-photo-of-couple-embracing-by-river-in-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-        { id: 8, name: "Health and Medical", image: "https://images.pexels.com/photos/19254446/pexels-photo-19254446/free-photo-of-couple-embracing-by-river-in-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-        { id: 9, name: "Rural Development", image: "https://images.pexels.com/photos/19254446/pexels-photo-19254446/free-photo-of-couple-embracing-by-river-in-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-        { id: 10, name: "Disaster Relief", image: "https://images.pexels.com/photos/19254446/pexels-photo-19254446/free-photo-of-couple-embracing-by-river-in-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+        { id: 1, name: "Animal", image: "https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+        { id: 2, name: "Education", image: "https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+        { id: 3, name: "Poverty", image: "https://images.pexels.com/photos/8078366/pexels-photo-8078366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+        { id: 4, name: "Child Warefare", image: "https://images.pexels.com/photos/17756695/pexels-photo-17756695/free-photo-of-boy-with-cotton-candy-in-town.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+        { id: 5, name: "Human Rights", image: "https://images.pexels.com/photos/5935752/pexels-photo-5935752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+        { id: 6, name: "Refugee and Migrant", image: "https://images.pexels.com/photos/4959222/pexels-photo-4959222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+        // { id: 7, name: "Disability Rights", image: "https://images.pexels.com/photos/19254446/pexels-photo-19254446/free-photo-of-couple-embracing-by-river-in-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+        // { id: 8, name: "Health and Medical", image: "https://images.pexels.com/photos/19254446/pexels-photo-19254446/free-photo-of-couple-embracing-by-river-in-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+        // { id: 9, name: "Rural Development", image: "https://images.pexels.com/photos/19254446/pexels-photo-19254446/free-photo-of-couple-embracing-by-river-in-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+        // { id: 10, name: "Disaster Relief", image: "https://images.pexels.com/photos/19254446/pexels-photo-19254446/free-photo-of-couple-embracing-by-river-in-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
       ];
 
   return (

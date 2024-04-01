@@ -59,7 +59,7 @@ export default MasterAuth = ({ navigation }) => {
         >
           <Image
             source={require("../../assets/mainbanner.png")}
-            resizeMode={"stretch"}
+            resizeMode={"cover"}
             style={{
               width: "100%",
               height: height * 0.30,

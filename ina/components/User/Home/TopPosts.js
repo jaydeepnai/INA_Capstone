@@ -9,6 +9,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
 import { api_domain } from "../../../lib/React Query/variables";
+import { responsiveMargin } from "../../../lib/Validation/RelativeValues";
 
 
 const TopPosts = () => {
@@ -69,43 +70,6 @@ const styles = StyleSheet.create({});
 
 
 
-// export const likeCount = (posts,post,setPosts,index)=>{
-
-
-
-//     likeIdx = -1
-//     likedPost = post.likes
-
-//     likedPost.map((elm,i) =>{
-//         if (elm.userId == '65e54aa01902bb044dceaa62') {
-//             likeIdx = i
-//         }
-//     })
-
-
-//     if (likeIdx == -1) {
-//         obj ={
-//             _id:post._id,
-//             userId:"65e54aa01902bb044dceaa62"
-//         }
-//         likedPost.push(obj)
-    
-//         fakePosts = posts
-//         fakePosts[index].likes =  likedPost
-//         setPosts(fakePosts)
-        
-//     }
-//     else{
-//         fakePosts = posts
-//         delete likedPost[likeIdx]
-//         fakePosts[index].likes =  likedPost
-//         setPosts(fakePosts);
-//     }
-
-// }   
-
-
-
 export const likeCount = (posts, post, setPosts, index) => {
     const userId = "65e54aa01902bb044dceaa62";
 
@@ -141,6 +105,134 @@ export const likeCount = (posts, post, setPosts, index) => {
         setPosts(newPosts);
     }
 }
+
+// export const Post = ({posts, post,setPosts,index }) => {
+//     const navigation  = useNavigation();    
+
+    
+//     return (
+        
+//         <View>
+//             <View style={{
+//                 flexDirection: "row",
+//                 alignItems: "center",
+//                 marginBottom: 8,
+//                 marginHorizontal: 32,
+//             }}>
+//                 <Image
+//                     source={{ uri: post?.image }}
+//                     resizeMode="cover"
+//                     style={{
+//                         width: 39,
+//                         height: 40,
+//                         marginRight: 11,
+//                         borderRadius: 50,
+//                     }}
+//                 />
+
+//                 <View
+//                     style={{
+//                         flex: 1,
+//                         marginRight: 4,
+//                     }}>
+
+//                     <Text
+//                         style={{
+//                             color: "#000000",
+//                             fontSize: 16,
+//                             marginBottom: 7,
+//                             marginHorizontal: 2,
+//                         }}>
+//                         {"opad_ngo"}
+//                     </Text>
+//                     <Text
+//                         style={{
+//                             color: "#000000",
+//                             fontSize: 12,
+//                         }}>
+//                         {"Vaccination of Animals  "}
+//                     </Text>
+//                 </View>
+//                 <Feather name="more-vertical" size={24} color="black" />
+//             </View>
+//             <Image
+//                 source={{ uri: post?.image }}
+//                 resizeMode="cover"
+//                 style={{
+//                     borderRadius: 10,
+//                     height: 200,
+//                     width: "83%",
+//                     marginBottom: 10,
+//                     marginHorizontal: 32,
+//                 }}
+//             />
+            
+//             <View
+//                 style={{
+//                     flexDirection: "row",
+//                     alignItems: "center",
+//                     marginBottom: 5,
+//                     marginHorizontal: 42,
+//                 }}>
+
+//                 <TouchableOpacity onPress={ ()=> likeCount(posts,post,setPosts,index)}>
+
+//                     <AntDesign style={{marginHorizontal:5}} name="heart" size={24} color="red" />
+
+//                 </TouchableOpacity>
+                
+                
+//                 <TouchableOpacity
+//                     // onPress={() => navigation.navigate("Post_Comments")}
+//                     >
+//                 <FontAwesome5 style={{marginHorizontal:5}} name="comment" size={24} color="black" />
+//                 </TouchableOpacity>
+
+//                 <AntDesign name="sharealt" style={{marginHorizontal:5}} size={24} color="black" />
+
+//                 <View
+//                     style={{
+//                         flex: 1,
+//                         alignSelf: "stretch",
+//                     }}>
+//                 </View>
+//                 <AntDesign name="star" size={24} color="black" />
+//             </View>
+
+//             <Text
+//                 style={{
+//                     color: "#000000",
+//                     fontSize: 16,
+//                     marginBottom: 7,
+//                     marginHorizontal: 46,
+//                 }}>
+//                 {post.content}
+//             </Text>
+
+//             <Text
+//                 style={{
+//                     color: "#000000",
+//                     fontSize: 16,
+//                     marginBottom: 7,
+//                     marginHorizontal: 46,
+//                 }}>
+//                 {post.likes?.length + " likes"}
+//             </Text>
+
+//             <Text
+//                 style={{
+//                     color: "#000000",
+//                     fontSize: 16,
+//                     marginBottom: 29,
+//                     marginHorizontal: 42,
+//                 }}>View all 80 comments
+//             </Text>
+
+//         </View>
+//     )
+// }
+
+
 
 export const Post = ({posts, post,setPosts,index }) => {
     const navigation  = useNavigation();    
@@ -211,9 +303,11 @@ export const Post = ({posts, post,setPosts,index }) => {
                     marginHorizontal: 42,
                 }}>
 
-                <TouchableOpacity onPress={ ()=> likeCount(posts,post,setPosts,index)}>
+                <TouchableOpacity onPress={ ()=> likeCount(posts,post,setPosts,index)} style={{marginRight:responsiveMargin(2)}}>
 
-                    <AntDesign style={{marginHorizontal:5}} name="heart" size={24} color="red" />
+                    {post.likes.find(item => item.userId === "65e54aa01902bb044dceaa62") 
+                      ? <AntDesign name="heart" size={24} color="red" /> 
+                      : <AntDesign name="hearto" size={24} color="red" />} 
 
                 </TouchableOpacity>
                 
@@ -224,7 +318,11 @@ export const Post = ({posts, post,setPosts,index }) => {
                 <FontAwesome5 style={{marginHorizontal:5}} name="comment" size={24} color="black" />
                 </TouchableOpacity>
 
-                <AntDesign name="sharealt" style={{marginHorizontal:5}} size={24} color="black" />
+                <TouchableOpacity>
+                    <AntDesign name="sharealt" style={{marginHorizontal:5}} size={24} color="black" />
+                </TouchableOpacity>
+
+                
 
                 <View
                     style={{
@@ -232,7 +330,10 @@ export const Post = ({posts, post,setPosts,index }) => {
                         alignSelf: "stretch",
                     }}>
                 </View>
-                <AntDesign name="star" size={24} color="black" />
+                <TouchableOpacity>
+                    <AntDesign name="star" size={24} color="black" />
+                </TouchableOpacity>
+                
             </View>
 
             <Text
@@ -267,3 +368,8 @@ export const Post = ({posts, post,setPosts,index }) => {
         </View>
     )
 }
+
+
+
+
+

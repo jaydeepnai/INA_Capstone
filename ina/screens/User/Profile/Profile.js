@@ -20,6 +20,8 @@ import {
   TouchableOpacity,
   Pressable,
 } from "react-native";
+import { responsiveMargin } from "../../../lib/Validation/RelativeValues";
+import { Base_Color } from "../../../lib/React Query/variables";
 
 export default Profile = (props) => {
   return (
@@ -59,29 +61,18 @@ export default Profile = (props) => {
               <View
                 style={{
                   flexDirection: "row",
-                  justifyContent: "space-between",
+                  justifyContent: "center",
                   alignItems: "center",
                   marginBottom: 158,
                   marginHorizontal: 20,
                 }}
               >
                 
-                <Pressable onPress={() => goback()}>
-                
-                  <Ionicons name="arrow-back-circle" size={34} color="white" />
-                </Pressable>
 
-                <Text
-                  style={{
-                    color: "white",
-                    fontWeight: "bold",
-                    fontSize: 25,
-                  }}
-                >
-                  {"PROFILE"}
-                </Text>
-                <FontAwesome name="share-alt" size={24} color="white" />
+                
               </View>
+
+
               <Text
                 style={{
                   color: "white",
@@ -135,7 +126,7 @@ export default Profile = (props) => {
                   borderRadius: 100,
                   borderColor: "white",
                   borderWidth: 5,
-                  backgroundColor: "whitesmoke",
+                  backgroundColor: Base_Color,
                 }}
               >
                 <AntDesign name="instagram" size={24} color="black" />
@@ -152,7 +143,7 @@ export default Profile = (props) => {
                   borderRadius: 100,
                   borderColor: "white",
                   borderWidth: 5,
-                  backgroundColor: "whitesmoke",
+                  backgroundColor: Base_Color,
                 }}
               >
                 <Entypo name="facebook" size={24} color="black" />
@@ -169,7 +160,7 @@ export default Profile = (props) => {
                   borderRadius: 100,
                   borderColor: "white",
                   borderWidth: 5,
-                  backgroundColor: "whitesmoke",
+                  backgroundColor: Base_Color,
                 }}
               >
                 <FontAwesome name="twitter-square" size={24} color="black" />
@@ -186,7 +177,7 @@ export default Profile = (props) => {
                   borderRadius: 100,
                   borderColor: "white",
                   borderWidth: 5,
-                  backgroundColor: "whitesmoke",
+                  backgroundColor: Base_Color,
                 }}
               >
                 <Foundation name="web" size={24} color="black" />

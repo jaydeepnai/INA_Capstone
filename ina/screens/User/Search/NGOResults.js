@@ -4,11 +4,12 @@ import React, { useState } from "react";
 import { SafeAreaView, View, ScrollView, Image, Text, TouchableOpacity, } from "react-native";
 import { Base_Color } from "../../../lib/React Query/variables";
 import TopNGOList from "../../../components/User/Home/TopNGOList";
+import { responsiveMargin } from "../../../lib/Validation/RelativeValues";
 
 const NGOResults = ({ route }) => {
-      
+
     const navigation = useNavigation();
-    const { selectedFilters } = route.params;
+    const { selectedFilters } = route.params ?? {};
     const [filters, setFilters] = useState(selectedFilters);
 
     const removeFilter = (filterToRemove) => {
@@ -44,6 +45,8 @@ const NGOResults = ({ route }) => {
                             backgroundColor: "#F5F5F5",
                             borderRadius: 10,
                             padding: 11,
+                            marginBottom: responsiveMargin(4)
+
                         }}>
                         <FontAwesome name="search" size={24} color="black" />
                         <Text
@@ -77,45 +80,90 @@ const NGOResults = ({ route }) => {
                 </View>
 
 
-                <ScrollView horizontal>
+                {/* <ScrollView horizontal>
 
-                    {filters.map((filter, index) => (
-                        <View
-                            key={index}
-                            style={{
-                                justifyContent: "space-between",
-                                alignItems: "center",
-                                marginBottom: 25,
-                                marginHorizontal: 8,
-                            }}>
+                        {filters.map((filter, index) => (
                             <View
+                                key={index}
                                 style={{
-                                    width: 100,
-                                    flexDirection: "row",
                                     justifyContent: "space-between",
                                     alignItems: "center",
-                                    backgroundColor: Base_Color,
-                                    borderRadius: 15,
-                                    paddingVertical: 7,
-                                    paddingHorizontal: 8,
-                                    marginRight: 3,
+                                    marginBottom: 25,
+                                    marginHorizontal: 8,
                                 }}>
-                                <Text
+                                <View
                                     style={{
-                                        color: "white",
-                                        fontSize: 16,
+                                        width: 100,
+                                        flexDirection: "row",
+                                        justifyContent: "space-between",
+                                        alignItems: "center",
+                                        backgroundColor: Base_Color,
+                                        borderRadius: 15,
+                                        paddingVertical: 7,
+                                        paddingHorizontal: 8,
+                                        marginRight: 3,
                                     }}>
-                                    {filter.substring(0, 6)}
-                                </Text>
-                                <TouchableOpacity onPress={() => removeFilter(filter)}>
-                                    <AntDesign name="closecircle" size={18} color="white" />
-                                </TouchableOpacity>
+                                    <Text
+                                        style={{
+                                            color: "white",
+                                            fontSize: 16,
+                                        }}>
+                                        {filter.substring(0, 6)}
+                                    </Text>
+                                    <TouchableOpacity onPress={() => removeFilter(filter)}>
+                                        <AntDesign name="closecircle" size={18} color="white" />
+                                    </TouchableOpacity>
+
+                                </View>
 
                             </View>
+                        ))}
+                    </ScrollView> */}
 
-                        </View>
-                    ))}
+
+
+                <ScrollView horizontal>
+                    {filters ? (
+                        filters.map((filter, index) => (
+                            <View
+                                key={index}
+                                style={{
+                                    justifyContent: "space-between",
+                                    alignItems: "center",
+                                    marginBottom: 25,
+                                    marginHorizontal: 8,
+                                }}
+                            >
+                                <View
+                                    style={{
+                                        width: 100,
+                                        flexDirection: "row",
+                                        justifyContent: "space-between",
+                                        alignItems: "center",
+                                        backgroundColor: Base_Color,
+                                        borderRadius: 15,
+                                        paddingVertical: 7,
+                                        paddingHorizontal: 8,
+                                        marginRight: 3,
+                                    }}
+                                >
+                                    <Text
+                                        style={{
+                                            color: "white",
+                                            fontSize: 16,
+                                        }}
+                                    >
+                                        {filter.substring(0, 6)}
+                                    </Text>
+                                    <TouchableOpacity onPress={() => removeFilter(filter)}>
+                                        <AntDesign name="closecircle" size={18} color="white" />
+                                    </TouchableOpacity>
+                                </View>
+                            </View>
+                        ))
+                    ) : null}
                 </ScrollView>
+
 
                 <View style={{ marginBottom: 55 }}>
                     <TopNGOList>

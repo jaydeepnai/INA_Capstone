@@ -36,7 +36,7 @@ export function NGOBottomTabs() {
           options={{
             tabBarLabel: "Hiring",
             headerShown:false,
-            tabBarLabelStyle: { color: "#008E97" },
+            // tabBarLabelStyle: { color: "#008E97" },
             tabBarIcon: ({ focused }) =>
               focused ? (
                 <FontAwesome name="search" size={24} color="#2bc5b4"/>
@@ -45,7 +45,8 @@ export function NGOBottomTabs() {
               ),
           }}
         />
-        <Tab.Screen
+
+        {/* <Tab.Screen
           name="UserDonation"
           component={DonationList}
           options={{
@@ -62,7 +63,8 @@ export function NGOBottomTabs() {
               headerTitleAlign : "center",
               title:"Donation List"
           }}
-        />
+        /> */}
+
         <Tab.Screen
           name="FundReq"
           component={DonationTopTabs}
@@ -77,7 +79,7 @@ export function NGOBottomTabs() {
               )}}
               />
 
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Hiring"
         component={Search}
         options={{
@@ -91,7 +93,7 @@ export function NGOBottomTabs() {
               <FontAwesome5 name="hands-helping" size={24} color="black" />
             ),
         }}
-      />
+      /> */}
 
       <Tab.Screen
         name="NGODonation"
@@ -123,7 +125,7 @@ export function NGOBottomTabs() {
             focused ? (
               <MaterialIcons name="schedule-send" size={24} color="#2bc5b4" />
               ) : (
-              <MaterialIcons name="schedule-send" size={24} color="#2bc5b4" />
+              <MaterialIcons name="schedule-send" size={24} color="black" />
             ),
           headerLeft: () => <HeaderLeft />,
           headerRight: () => <HeaderRight />,
