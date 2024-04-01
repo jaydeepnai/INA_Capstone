@@ -131,6 +131,7 @@ export default Profile = (props) => {
               >
                 <AntDesign name="instagram" size={24} color="black" />
               </View>
+
               <View
                 style={{
                   position: "absolute",
@@ -146,7 +147,9 @@ export default Profile = (props) => {
                   backgroundColor: Base_Color,
                 }}
               >
+              
                 <Entypo name="facebook" size={24} color="black" />
+              
               </View>
               <View
                 style={{
