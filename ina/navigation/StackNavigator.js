@@ -1,5 +1,5 @@
 // import { NavigationContainer } from "@react-navigation/native";
-// import { createNativeStackNavigator } from "@react-navigation/native-stack";
+// imrport { createNativeStackNavigator } from "@react-navigation/native-stack";
 // import MasterAuth from "../screens/Auth/MasterAuth";
 // import LoginAuth from "../screens/Auth/LoginAuth";
 // import RegisterUserAuth from "../screens/Auth/RegisterUserAuth";
@@ -232,8 +232,11 @@ const StackNavigator = () => {
       <Stack.Navigator
         screenOptions={{ presentation: "containedModal", headerShown: false }}
       >
+
         <Stack.Screen name="User" component={BottomTabs} />
         <Stack.Screen name="NGO" component={NGOBottomTabs} />
+        
+        
       
         
 

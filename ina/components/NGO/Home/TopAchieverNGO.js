@@ -35,26 +35,26 @@ const TopAchieverNGO = () => {
         >
           <Achiever
             title="Aniket"
-            img={require("../../../assets/NGO/men1.jpg")}
+            img={{uri:'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600'}}
           />
           <Achiever
             title="Naishal"
-            img={require("../../../assets/NGO/me.jpg")}
+            img={{uri:'https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=600'}}
           />
           <Achiever
-            title="jaydeep"
-            img={require("../../../assets/NGO/men1.jpg")}
+            title="Jaydeep"
+            img={{uri:'https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?auto=compress&cs=tinysrgb&w=600'}}
           />
           <Achiever
-            title="krupesh"
-            img={require("../../../assets/NGO/man2.png")}
+            title="Shashank"
+            img={{uri:'https://images.pexels.com/photos/1760901/pexels-photo-1760901.jpeg?auto=compress&cs=tinysrgb&w=600'}}
           />
           <Achiever
-            title="keval"
-            img={require("../../../assets/NGO/jaydip.jpg")}
+            title="Nirmal"
+            img={{uri:'https://images.pexels.com/photos/977796/pexels-photo-977796.jpeg?auto=compress&cs=tinysrgb&w=600'}}
           />
-            <Achiever title="k" img={require("../../../assets/NGO/jaydip.jpg")}/>
-            <Achiever img={require("../../../assets/NGO/jaydip.jpg")}/>
+            {/* <Achiever title="k" img={require("../../../assets/NGO/jaydip.jpg")}/> */}
+            {/* <Achiever img={require("../../../assets/NGO/jaydip.jpg")}/> */}
                     {/* <Achiever source={require("../../../assets/NGO/jaydip.jpg")}/>
                     <Achiever source={require("../../../assets/NGO/jaydip.jpg")}/> */}
         </ScrollView>

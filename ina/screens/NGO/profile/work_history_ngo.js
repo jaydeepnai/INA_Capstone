@@ -133,6 +133,217 @@ const NGO = () => {
             </View>
           </View>
         </View>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+            backgroundColor: "#F2F3F7",
+            borderRadius: 15,
+            paddingVertical: 10,
+            paddingLeft: 20,
+            marginHorizontal: 15,
+          }}
+        >
+          <Image
+            source={require("../../../assets/images/WorkHistory/NGO/Aniket.jpg")}
+            resizeMode={"stretch"}
+            style={{
+              borderRadius: 50,
+              width: 60,
+              height: 60,
+            }}
+          />
+
+          <View
+            style={{
+              marginLeft: 20,
+            }}
+          >
+            <View
+              style={{
+                width: "80%",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <Text
+                style={{
+                  color: "#000000",
+                  fontSize: getFontSize(16),
+                  marginBottom: responsiveMargin(1),
+                }}
+              >
+                {"Aniket Bhatti"}
+              </Text>
+              <Text
+                style={{
+                  color: "#000000",
+                  fontSize: getFontSize(10),
+                  marginTop: responsiveMargin(2),
+                  marginBottom: responsiveMargin(5),
+                  paddingRight: responsiveMargin(3),
+                }}
+              >
+                {"01/01/24 to 31/1/24"}
+              </Text>
+            </View>
+
+            <View>
+              <Text
+                style={{
+                  color: "#000000",
+                  fontSize: getFontSize(12),
+                  marginBottom: responsiveMargin(2),
+                }}
+              >
+                {"Progress Promoter"}
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+            backgroundColor: "#F2F3F7",
+            borderRadius: 15,
+            paddingVertical: 10,
+            paddingLeft: 20,
+            marginHorizontal: 15,
+          }}
+        >
+          <Image
+            source={require("../../../assets/images/WorkHistory/NGO/Aniket.jpg")}
+            resizeMode={"stretch"}
+            style={{
+              borderRadius: 50,
+              width: 60,
+              height: 60,
+            }}
+          />
+
+          <View
+            style={{
+              marginLeft: 20,
+            }}
+          >
+            <View
+              style={{
+                width: "80%",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <Text
+                style={{
+                  color: "#000000",
+                  fontSize: getFontSize(16),
+                  marginBottom: responsiveMargin(1),
+                }}
+              >
+                {"Aniket Bhatti"}
+              </Text>
+              <Text
+                style={{
+                  color: "#000000",
+                  fontSize: getFontSize(10),
+                  marginTop: responsiveMargin(2),
+                  marginBottom: responsiveMargin(5),
+                  paddingRight: responsiveMargin(3),
+                }}
+              >
+                {"01/01/24 to 31/1/24"}
+              </Text>
+            </View>
+
+            <View>
+              <Text
+                style={{
+                  color: "#000000",
+                  fontSize: getFontSize(12),
+                  marginBottom: responsiveMargin(2),
+                }}
+              >
+                {"Progress Promoter"}
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+            backgroundColor: "#F2F3F7",
+            borderRadius: 15,
+            paddingVertical: 10,
+            paddingLeft: 20,
+            marginHorizontal: 15,
+          }}
+        >
+          <Image
+            source={require("../../../assets/images/WorkHistory/NGO/Aniket.jpg")}
+            resizeMode={"stretch"}
+            style={{
+              borderRadius: 50,
+              width: 60,
+              height: 60,
+            }}
+          />
+
+          <View
+            style={{
+              marginLeft: 20,
+            }}
+          >
+            <View
+              style={{
+                width: "80%",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <Text
+                style={{
+                  color: "#000000",
+                  fontSize: getFontSize(16),
+                  marginBottom: responsiveMargin(1),
+                }}
+              >
+                {"Aniket Bhatti"}
+              </Text>
+              <Text
+                style={{
+                  color: "#000000",
+                  fontSize: getFontSize(10),
+                  marginTop: responsiveMargin(2),
+                  marginBottom: responsiveMargin(5),
+                  paddingRight: responsiveMargin(3),
+                }}
+              >
+                {"01/01/24 to 31/1/24"}
+              </Text>
+            </View>
+
+            <View>
+              <Text
+                style={{
+                  color: "#000000",
+                  fontSize: getFontSize(12),
+                  marginBottom: responsiveMargin(2),
+                }}
+              >
+                {"Progress Promoter"}
+              </Text>
+            </View>
+          </View>
+        </View>
+
       </ScrollView>
     </SafeAreaView>
   );
@@ -343,7 +554,7 @@ const Events = () => {
               }}
             >
               <Image
-                source={require("../../../assets/images/WorkHistory/NGO/Aniket.jpg")}
+                img={{uri:'https://images.unsplash.com/photo-1607892379516-5ff729bbc620?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8TkdPJTIwZXZlbnRzfGVufDB8fDB8fHww'}}
                 resizeMode={"stretch"}
                 style={{
                   width: 50,

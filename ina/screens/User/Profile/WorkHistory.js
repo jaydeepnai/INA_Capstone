@@ -121,6 +121,73 @@ const NGO = () => {
                     </View>
 
                 </View>
+
+                <View
+                    style={{
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        backgroundColor: "#F2F3F7",
+                        borderRadius: 15,
+                        paddingVertical: 10,
+                        paddingLeft: 20,
+                        marginHorizontal: 15,
+                    }}>
+
+                    <Image
+                        source={require('../../../assets/images/WorkHistory/NGO/Aniket.jpg')}
+                        resizeMode={"stretch"}
+                        style={{
+                            borderRadius: 50,
+                            width: 60,
+                            height: 60,
+                        }}
+                    />
+
+                    <View style={{
+                        marginLeft: 20,
+                    }}>
+                        <View
+                            style={{
+                                width: "80%",
+                                flexDirection: "row",
+                                justifyContent: "space-between",
+                                alignItems:'center'
+                            }}>
+                            <Text
+                                style={{
+                                    color: "#000000",
+                                    fontSize: getFontSize(16),
+                                    marginBottom: responsiveMargin(1),
+                                }}>
+                                {"Aniket Bhatti"}
+                            </Text>
+                            <Text
+                                style={{
+                                    color: "#000000",
+                                    fontSize: getFontSize(10),
+                                    marginTop:responsiveMargin(2),
+                                    marginBottom: responsiveMargin(5),
+                                    paddingRight: responsiveMargin(3),
+                                }}>
+                                {"01/01/24 to 31/1/24"}
+                            </Text>
+                        </View>
+
+                        <View>
+                            <Text
+                                style={{
+                                    color: "#000000",
+                                    fontSize: getFontSize(12),
+                                    marginBottom: responsiveMargin(2),
+                                }}>
+                                {"Progress Promoter"}
+                            </Text>
+                        </View>
+
+                    </View>
+
+                </View>
             </ScrollView>
         </SafeAreaView>
 
@@ -188,7 +255,7 @@ const Events = () => {
                                         fontSize: 28,
                                         marginBottom: 1,
                                     }}>
-                                    {"Teeth Check-up"}
+                                    {"Food destribution"}
                                 </Text>
                                 <Text
                                     style={{
